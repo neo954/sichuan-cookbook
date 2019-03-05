@@ -1,6 +1,8 @@
-TARGETS = sichuan-cookbook-1972.pdf sichuan-cookbook-1972.txt
+pdf: sichuan-cookbook-1972.pdf
 
-all: $(TARGETS)
+txt: sichuan-cookbook-1972.txt
+
+all: pdf txt
 
 page-list.txt: page-neat \
 	$(addprefix page-neat/, $(addsuffix .jpg, $(basename $(notdir \
@@ -44,4 +46,4 @@ sichuan-cookbook-1972.txt: page-list.txt
 clean:
 	$(RM) $(TARGETS) page-neat page-list.txt
 
-.PHONY: all clean
+.PHONY: all clean pdf txt
