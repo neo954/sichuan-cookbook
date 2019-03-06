@@ -28,30 +28,33 @@ page-neat/%.jpg: tiff/%.tif
 		$@
 
 page-neat/b001.png: tiff/b001.tif
-	# Chairman Mao quotes are printed in red color
-	# Half inch width margin of the page will be filled with background color.
+# Chairman Mao quotes are printed in red color
 	convert $^ \
-		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! -scale 3901x300! \) \
+		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! -scale 3091x450! \) \
 			-geometry +0+0      -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 300x3770! \) \
-			-geometry +0+300    -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 3091x300! \) \
-			-geometry +0+4070   -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 300x3770! \) \
-			-geometry +2791+300 -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
+			-geometry +0+450    -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 3091x150! \) \
+			-geometry +0+4220   -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
+			-geometry +2716+450 -composite \
 		-quality 100 -alpha off -depth 2 \
 		$@
 
 page-neat/%.png: tiff/%.tif
+# Margins will be filled with background color of the page.
+# 3/4 inch width margin on top. With 600dpi, it is 450px.
+# 5/8 inch width margin on left and right. With 600 dpi, it is 375px.
+# 1/4 inch width margin on bottom. With 600dpi, it is 150px.
 	convert $^ \
-		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! -scale 3901x300! \) \
+		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! -scale 3091x450! \) \
 			-geometry +0+0      -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 300x3770! \) \
-			-geometry +0+300    -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 3091x300! \) \
-			-geometry +0+4070   -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 300x3770! \) \
-			-geometry +2791+300 -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
+			-geometry +0+450    -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 3091x150! \) \
+			-geometry +0+4220   -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
+			-geometry +2716+450 -composite \
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
