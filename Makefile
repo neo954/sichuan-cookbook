@@ -1,10 +1,12 @@
+OUTPUT_BASENAME := sichuan-cookbook-1972
+
 build: pdf
 
 all: pdf txt
 
-pdf: sichuan-cookbook-1972.pdf
+pdf: $(OUTPUT_BASENAME).pdf
 
-txt: sichuan-cookbook-1972.txt
+txt: $(OUTPUT_BASENAME).txt
 
 page-list.txt: page-neat \
 	$(addprefix page-neat/, $(addsuffix .jpg, $(basename $(notdir \
@@ -53,10 +55,10 @@ page-neat/%.png: tiff/%.tif
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
-sichuan-cookbook-1972.pdf: page-list.txt
+%.pdf: page-list.txt
 	tesseract $^ $(basename $@) -l chi_sim pdf
 
-sichuan-cookbook-1972.txt: page-list.txt
+%.txt: page-list.txt
 	tesseract $^ $(basename $@) -l chi_sim txt
 
 clean:
