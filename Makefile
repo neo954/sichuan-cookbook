@@ -40,7 +40,7 @@ page-neat/b001.png: lightness/b001.png page-neat
 		-quality 100 -alpha off -depth 2 \
 		$@
 
-page-neat/%.png: lightness/%.png page-neat
+page-neat/%.png: retinex/%.png page-neat
 # Margins will be filled with background color of the page.
 # 3/4 inch width margin on top. With 600dpi, it is 450px.
 # 5/8 inch width margin on left and right. With 600 dpi, it is 375px.
@@ -54,29 +54,29 @@ page-neat/%.png: lightness/%.png page-neat
 			-geometry +0+4220   -composite \
 		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
 			-geometry +2716+450 -composite \
-		-auto-level \
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
 page-neat:
 	mkdir -p $@
 
-lightness/%.png: tiff/%.tif blur/%.png lightness
-	composite $< -compose Divide_Dst $(word 2, $^) \
-		-quality 100 -alpha off -depth 8 \
-		$@
-
-lightness:
-	mkdir -p $@
-
-blur/%.png: tiff/%.tif blur
+retinex/%.png: tiff/%.tif retinex
+# Retinex-based intensity correction and thresholding
+# https://www.hpl.hp.com/techreports/2002/HPL-2002-82.html
 	convert $< \
 		-filter Gaussian -resize 309x437 \
 		-define filter:sigma=5 -resize 3091x4370 \
 		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	composite $< -compose Divide_Dst png:- \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	convert png:- \
+		-auto-level \
+		-quality 100 -alpha off -depth 8 \
 		$@
 
-blur:
+retinex:
 	mkdir -p $@
 
 %.pdf: page-list.txt
