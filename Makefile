@@ -71,7 +71,8 @@ lightness:
 
 blur/%.png: tiff/%.tif blur
 	convert $< \
-		-blur 0x50 \
+		-filter Gaussian -resize 309x437 \
+		-define filter:sigma=5 -resize 3091x4370 \
 		-quality 100 -alpha off -depth 8 \
 		$@
 
