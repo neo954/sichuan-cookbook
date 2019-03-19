@@ -19,13 +19,13 @@ page-list.txt: \
 # is roughly equal to sqrt(2):1. Thus, with a 600dpi resolution, the image size
 # of all the pages will be 4370px x 3091px.
 
-page-neat/%.jpg: lightness/%.png page-neat
+page-neat/%.jpg: retinex/%.png page-neat
 	convert $< \
 		-auto-level \
 		-quality 85 -depth 6 \
 		$@
 
-page-neat/b001.png: lightness/b001.png page-neat
+page-neat/b001.png: retinex/b001.png page-neat
 # Chairman Mao quotes are printed in red color
 	convert $< \
 		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! -scale 3091x450! \) \
@@ -36,7 +36,6 @@ page-neat/b001.png: lightness/b001.png page-neat
 			-geometry +0+4220   -composite \
 		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
 			-geometry +2716+450 -composite \
-		-auto-level \
 		-quality 100 -alpha off -depth 2 \
 		$@
 
@@ -54,6 +53,7 @@ page-neat/%.png: retinex/%.png page-neat
 			-geometry +0+4220   -composite \
 		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
 			-geometry +2716+450 -composite \
+		-auto-level \
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
@@ -86,7 +86,7 @@ retinex:
 	tesseract $< $(basename $@) -l chi_sim txt
 
 clean:
-	$(RM) -r page-neat
+	$(RM) -r page-neat retinex
 	$(RM) *.pdf *.txt
 
 .PHONY: all build clean pdf txt
