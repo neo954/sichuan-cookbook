@@ -5,21 +5,20 @@ are described in detail. Many recipes have been lost now.
 
 The goal of this project is to digitize *Sichuan Cookbook 1972* properly.
 
-* Take photos to each page of the book with camera.
-* Process the photos, correct exposure, perspective distortion, and adjust the
-  type area.
-* Create binary images from the processed photos.
-* Run OCR (optical character recognition) on the binary images.
-* Create PDF book of the original book from the binary images and the OCR
-  results.
-* Organize each recipe in the book with an abstract data structure, and save
-  them with an open-standard file format, say JSON (JavaScript Object
-  Notation).
-* Write program to compile the JSON data to LaTeX documents.
-* Reproduce the appearance of the original book with LaTeX typesetting.
-* Render LaTeX documents and create PDF book.
-* Optionally, add comments to the book based on research.
-* ...
+* [x] Take photos to each page of the book with camera.
+* [ ] Process the photos, correct exposure, perspective distortion, and adjust
+      the type area.
+* [x] Create binary images from the processed photos.
+* [x] Run OCR (optical character recognition) on the binary images.
+* [x] Create PDF book of the original book from the binary images and the OCR
+      results.
+* [ ] Organize each recipe in the book with an abstract data structure, and
+	  save them with an open-standard file format, say JSON (JavaScript Object
+      Notation).
+* [ ] Write program to compile the JSON data to LaTeX documents.
+* [ ] Reproduce the appearance of the original book with LaTeX typesetting.
+* [ ] Render LaTeX documents and create PDF book.
+* [ ] Optionally, add comments to the book based on research.
 
 According to the Copyright Law of China, with respect to a work of a legal
 person or other organization, the term of protection for the copyrights to
