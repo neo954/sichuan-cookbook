@@ -53,7 +53,7 @@ page-neat/%.png: retinex/%.png page-neat
 			-geometry +0+4220   -composite \
 		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
 			-geometry +2716+450 -composite \
-		-auto-level \
+		-level 12%,88%,0.618 \
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
