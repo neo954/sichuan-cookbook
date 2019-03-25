@@ -82,6 +82,7 @@ retinex/%.png: jpeg/%.jpeg
 	tesseract $< $(basename $@) -l chi_sim txt
 
 clean:
+	$(RM) retinex/*.png page-neat/*.png
 	$(RM) *.pdf *.txt
 
 .PHONY: all build clean pdf txt
