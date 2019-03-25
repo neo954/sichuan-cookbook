@@ -1,0 +1,46 @@
+OUTPUT_BASENAME := sichuan-cookbook
+
+build: pdf
+
+all: pdf
+
+pdf: $(OUTPUT_BASENAME).pdf
+
+%.dvi: %.tex
+	latex $^
+
+%.ps: %.dvi
+	dvips -D 1200 -j -Ppdf -o $@ $^
+
+%.eps: %.ps
+	ps2eps $^
+
+%.eps: %.png
+	convert $^ $@
+
+%.pdf: %.ps
+	ps2pdf -r1200 $^ $@
+
+%.png: %.pdf
+	pdftoppm -r 1200 -gray -png $^ >$@
+
+%.eps: %.vcf
+	qrencode -o $@ -t EPS -l L -m 0 <$^
+
+%.png: %.vcf
+	qrencode -o $@ -l L -s 1 -m 0 <$^
+
+%.gif: %.png
+	convert $^ $@
+
+%.jpg: %.png
+	convert -quality 99 $^ $@
+
+%.txt: %.pdf
+	pdftotext -layout $^ $@
+
+clean:
+	$(RM) *.aux *.dvi *.eps *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
+		*.pdf *.png *.ps *.txt *.toc
+
+.PHONY: all build clean pdf
