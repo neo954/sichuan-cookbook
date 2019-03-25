@@ -28,7 +28,8 @@ page-neat/%.jpg: retinex/%.png
 page-neat/b001.png: retinex/b001.png
 # Chairman Mao quotes are printed in red color
 	convert $< \
-		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! -scale 3091x450! \) \
+		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
+			-scale 3091x450! \) \
 			-geometry +0+0      -composite \
 		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
 			-geometry +0+450    -composite \
@@ -45,7 +46,8 @@ page-neat/%.png: retinex/%.png
 # 5/8 inch width margin on left and right. With 600 dpi, it is 375px.
 # 1/4 inch width margin on bottom. With 600dpi, it is 150px.
 	convert $< \
-		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! -scale 3091x450! \) \
+		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
+			-scale 3091x450! \) \
 			-geometry +0+0      -composite \
 		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
 			-geometry +0+450    -composite \
