@@ -10,22 +10,22 @@ txt: $(OUTPUT_BASENAME).txt
 
 page-list.txt: \
 	$(addprefix page-neat/, $(addsuffix .jpg, $(basename $(notdir \
-		$(wildcard tiff/a*.tif))))) \
+		$(wildcard jpeg/a*.jpeg))))) \
 	$(addprefix page-neat/, $(addsuffix .png, $(basename $(notdir \
-		$(wildcard tiff/[bcpz]*.tif)))))
+		$(wildcard jpeg/[bcpz]*.jpeg)))))
 	ls -1 page-neat/* >$@
 
 # The original book has the page size 185mm x 130mm. This length-to-width ratio
 # is roughly equal to sqrt(2):1. Thus, with a 600dpi resolution, the image size
 # of all the pages will be 4370px x 3091px.
 
-page-neat/%.jpg: retinex/%.png page-neat
+page-neat/%.jpg: retinex/%.png
 	convert $< \
 		-auto-level \
 		-quality 85 -depth 6 \
 		$@
 
-page-neat/b001.png: retinex/b001.png page-neat
+page-neat/b001.png: retinex/b001.png
 # Chairman Mao quotes are printed in red color
 	convert $< \
 		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! -scale 3091x450! \) \
@@ -39,7 +39,7 @@ page-neat/b001.png: retinex/b001.png page-neat
 		-quality 100 -alpha off -depth 2 \
 		$@
 
-page-neat/%.png: retinex/%.png page-neat
+page-neat/%.png: retinex/%.png
 # Margins will be filled with background color of the page.
 # 3/4 inch width margin on top. With 600dpi, it is 450px.
 # 5/8 inch width margin on left and right. With 600 dpi, it is 375px.
@@ -57,10 +57,7 @@ page-neat/%.png: retinex/%.png page-neat
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
-page-neat:
-	mkdir -p $@
-
-retinex/%.png: tiff/%.tif retinex
+retinex/%.png: jpeg/%.jpeg
 # Retinex-based intensity correction and thresholding
 # https://www.hpl.hp.com/techreports/2002/HPL-2002-82.html
 	convert $< \
@@ -76,9 +73,6 @@ retinex/%.png: tiff/%.tif retinex
 		-quality 100 -alpha off -depth 8 \
 		$@
 
-retinex:
-	mkdir -p $@
-
 %.pdf: page-list.txt
 	tesseract $< $(basename $@) -l chi_sim pdf
 
@@ -86,7 +80,6 @@ retinex:
 	tesseract $< $(basename $@) -l chi_sim txt
 
 clean:
-	$(RM) -r page-neat retinex
 	$(RM) *.pdf *.txt
 
 .PHONY: all build clean pdf txt
