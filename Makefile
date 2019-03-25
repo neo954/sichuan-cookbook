@@ -10,9 +10,9 @@ txt: $(OUTPUT_BASENAME).txt
 
 page-list.txt: \
 	$(addprefix page-neat/, $(addsuffix .jpg, $(basename $(notdir \
-		$(wildcard jpeg/a*.jpeg))))) \
+		$(wildcard jpeg/a*.jpg))))) \
 	$(addprefix page-neat/, $(addsuffix .png, $(basename $(notdir \
-		$(wildcard jpeg/[bcpz]*.jpeg)))))
+		$(wildcard jpeg/[bcpz]*.jpg)))))
 	ls -1 page-neat/* >$@
 
 # The original book has the page size 185mm x 130mm. This length-to-width ratio
@@ -59,7 +59,7 @@ page-neat/%.png: retinex/%.png
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
-retinex/%.png: jpeg/%.jpeg
+retinex/%.png: jpeg/%.jpg
 # Retinex-based intensity correction and thresholding
 # https://www.hpl.hp.com/techreports/2002/HPL-2002-82.html
 	convert $< \
