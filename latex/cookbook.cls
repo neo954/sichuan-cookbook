@@ -19,8 +19,8 @@
 \def\step#1{\def\@step{#1}}
 \def\@step{}
 
-\def\characteristic#1{\def\@characteristic{#1}}
-\def\@characteristic{}
+\def\note#1{\def\@note{#1}}
+\def\@note{}
 
 \newenvironment{recipe}{\begingroup
 }{\endgroup}
