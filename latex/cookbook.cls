@@ -16,6 +16,12 @@
 \def\ingredient#1{\def\@ingredientl{#1}}
 \def\@ingredient{}
 
+\def\step#1{\def\@step{#1}}
+\def\@step{}
+
+\def\characteristic#1{\def\@characteristic{#1}}
+\def\@characteristic{}
+
 \newenvironment{recipe}{\begingroup
 }{\endgroup}
 

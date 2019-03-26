@@ -6,6 +6,10 @@ all: pdf
 
 pdf: $(OUTPUT_BASENAME).pdf
 
+sichuan-cookbook.dvi: sichuan-cookbook.tex cookbook.cls \
+	$(wildcard recipe-*.tex)
+	latex $< $(word 2, $^)
+
 %.dvi: %.tex
 	latex $^
 
