@@ -19,9 +19,9 @@ page-list.txt: \
 # is roughly equal to sqrt(2):1. Thus, with a 600dpi resolution, the image size
 # of all the pages will be 4370px x 3091px.
 
-trim/%.jpg: retinex/%.png
+trim/a000.jpg: jpeg/a000.jpg
 	convert $< \
-		-auto-level \
+		-level 12%,88%,1.618 \
 		-quality 85 -depth 6 \
 		$@
 
@@ -37,7 +37,8 @@ trim/b001.png: retinex/b001.png
 			-geometry +0+4220   -composite \
 		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
 			-geometry +2716+450 -composite \
-		-quality 100 -alpha off -depth 2 \
+		-level 12%,88%,0.618 \
+		-quality 100 -alpha off -depth 6 \
 		$@
 
 trim/%.png: retinex/%.png
