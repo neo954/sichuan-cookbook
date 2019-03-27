@@ -23,10 +23,10 @@ sichuan-cookbook.dvi: sichuan-cookbook.tex cookbook.cls \
 	convert $^ $@
 
 %.pdf: %.ps
-	ps2pdf -r1200 $^ $@
+	ps2pdf -r600 $^ $@
 
 %.png: %.pdf
-	pdftoppm -r 1200 -gray -png $^ >$@
+	pdftoppm -r 600 -gray -png $^ >$@
 
 %.eps: %.vcf
 	qrencode -o $@ -t EPS -l L -m 0 <$^

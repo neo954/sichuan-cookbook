@@ -13,22 +13,38 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 
-\def\ingredient#1{\def\@ingredientl{#1}}
-\def\@ingredient{}
-
-\def\step#1{\def\@step{#1}}
-\def\@step{}
-
-\def\note#1{\def\@note{#1}}
-\def\@note{}
-
 \newenvironment{recipe}[1]{
+\subsection{#1}
+}{}
+
+\newenvironment{ingredients}{
+\textbf{一、原料：\\}
+\begin{tabbing}
+\hspace{38mm}\= \kill
+}{
+\end{tabbing}
+}
+
+\newcommand{\ingredient}[2]{
+#1
+\>#2\\
+}
+
+\newenvironment{method}{
+\textbf{二、制作方法：\\}
+\begin{enumerate}
+}{
+\end{enumerate}
+}
+
+\newenvironment{note}{
+\textbf{三、特点：}\\
 }{}
 
 \newenvironment{cookbook}{
-	\begin{CJK*}{UTF8}{gbsn}
+\begin{CJK*}{UTF8}{gbsn}
 }{
-	\end{CJK*}
+\end{CJK*}
 }
 
 % Disable chapter, section and subsection numbering
