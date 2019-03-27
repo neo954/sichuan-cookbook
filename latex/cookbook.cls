@@ -2,7 +2,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cookbook}
 \typeout{Document Style `cookbook' <Mar 25, 2019>.}
-\LoadClass{article}
+\LoadClass{book}
 \pagestyle{empty}
 \usepackage[a5paper,
 	tmargin=33mm, bmargin=27mm,
@@ -14,19 +14,40 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+{\huge\filcenter\bfseries}	% Format
+{}	% Label
+{0pt}	% Sep
+{}	% Before
+{}	% After
+\titleformat{\section}[hang]
+{\LARGE\filcenter\bfseries}	% Format
+{}	% Label
+{0pt}	% Sep
+{}	% Before
+{}	% After
+\titleformat{\subsection}[hang]
+{\normalsize\bfseries}	% Format
+{}	% Label
+{0pt}	% Sep
+{}	% Before
+{}	% After
 
 \newenvironment{recipe}[1]{
-\subsection{#1}
+\section{#1}
 }{}
 
 \newenvironment{ingredients}{
-\textbf{一、原料：}
+\subsection{原料}
 \begin{CJK*}{UTF8}{gkai}
 \begin{tabbing}
 \hspace{38mm}\= \kill
 }{
 \end{tabbing}
 \end{CJK*}
+\vspace{-2\baselineskip}
 }
 
 \newcommand{\ingredient}[2]{
@@ -35,14 +56,14 @@
 }
 
 \newenvironment{method}{
-\textbf{二、制作方法：}
+\subsection{制作方法}
 \begin{enumerate}
 }{
 \end{enumerate}
 }
 
 \newenvironment{note}{
-\textbf{三、特点：}\\
+\subsection{特点}
 }{}
 
 \newenvironment{cookbook}{
