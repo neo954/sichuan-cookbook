@@ -19,19 +19,19 @@
 \titleformat{\chapter}[display]
 {\huge\filcenter\bfseries}	% Format
 {}	% Label
-{0pt}	% Sep
+{0em}	% Sep
 {}	% Before
 {}	% After
 \titleformat{\section}[hang]
 {\LARGE\filcenter\bfseries}	% Format
-{}	% Label
-{0pt}	% Sep
+{\thesection}	% Label
+{1em}	% Sep
 {}	% Before
 {}	% After
 \titleformat{\subsection}[hang]
 {\normalsize\bfseries}	% Format
-{}	% Label
-{0pt}	% Sep
+{\thesubsection}	% Label
+{1em}	% Sep
 {}	% Before
 {}	% After
 
@@ -43,7 +43,7 @@
 \subsection{原料}
 \begin{CJK*}{UTF8}{gkai}
 \begin{tabbing}
-\hspace{38mm}\= \kill
+\hspace{30mm}\= \kill
 }{
 \end{tabbing}
 \end{CJK*}
