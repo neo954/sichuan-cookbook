@@ -7,7 +7,9 @@ all: pdf
 pdf: $(OUTPUT_BASENAME).pdf
 
 sichuan-cookbook.dvi: sichuan-cookbook.tex cookbook.cls \
+	chairman-mao-quotes.tex foreword.tex \
 	$(wildcard recipe-*.tex)
+	latex $< $(word 2, $^)
 	latex $< $(word 2, $^)
 
 %.dvi: %.tex

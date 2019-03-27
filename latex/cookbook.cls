@@ -10,6 +10,8 @@
 	nohead, nofoot]{geometry}
 \usepackage{CJKutf8}
 \usepackage[T1]{fontenc}
+\usepackage{makeidx}
+\usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 
@@ -18,7 +20,7 @@
 }{}
 
 \newenvironment{ingredients}{
-\textbf{一、原料：\\}
+\textbf{一、原料：}
 \begin{tabbing}
 \hspace{38mm}\= \kill
 }{
@@ -31,7 +33,7 @@
 }
 
 \newenvironment{method}{
-\textbf{二、制作方法：\\}
+\textbf{二、制作方法：}
 \begin{enumerate}
 }{
 \end{enumerate}
@@ -43,10 +45,8 @@
 
 \newenvironment{cookbook}{
 \begin{CJK*}{UTF8}{gbsn}
+\renewcommand*\contentsname{目录}
 }{
 \clearpage
 \end{CJK*}
 }
-
-% Disable chapter, section and subsection numbering
-%\setcounter{secnumdepth}{0} 
