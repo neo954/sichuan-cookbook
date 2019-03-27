@@ -44,6 +44,7 @@
 \newenvironment{cookbook}{
 \begin{CJK*}{UTF8}{gbsn}
 }{
+\clearpage
 \end{CJK*}
 }
 
