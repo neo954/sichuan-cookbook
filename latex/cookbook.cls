@@ -15,25 +15,45 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{titlesec}
+\usepackage{xstring}
+\usepackage[encoding=UTF8]{zhnumber}
+
+\newcommand\category[1]{%
+\chapter*{#1}%
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{#1}
+}
+
+\newcommand{\sectionseq}[1]{
+\StrBehind[1]{#1}{.}[\seq]
+\zhdigits{\seq}
+}
+
+\newcommand{\subsectionseq}[1]{%
+\StrBehind[2]{#1}{.}[\seq]
+\zhdigits{\seq}
+}
 
 \titleformat{\chapter}[display]
 {\huge\filcenter\bfseries}	% Format
 {}	% Label
 {0em}	% Sep
 {}	% Before
-{}	% After
+[]	% After
+
 \titleformat{\section}[hang]
 {\LARGE\filcenter\bfseries}	% Format
-{\thesection}	% Label
-{1em}	% Sep
-{}	% Before
-{}	% After
+{\sectionseq{\thesection}}	% Label
+{0em}	% Sep
+{、}	% Before
+[]	% After
+
 \titleformat{\subsection}[hang]
 {\normalsize\bfseries}	% Format
-{\thesubsection}	% Label
-{1em}	% Sep
-{}	% Before
-{}	% After
+{\subsectionseq{\thesubsection}}	% Label
+{0em}	% Sep
+{、}	% Before
+[]	% After
 
 \newenvironment{recipe}[1]{
 \section{#1}
@@ -50,7 +70,7 @@
 \vspace{-2\baselineskip}
 }
 
-\newcommand{\ingredient}[2]{
+\newcommand{\ingredient}[2]{%
 #1
 \>#2\\
 }
@@ -65,6 +85,8 @@
 \newenvironment{note}{
 \subsection{特点}
 }{}
+
+
 
 \newenvironment{cookbook}{
 \begin{CJK*}{UTF8}{gbsn}
