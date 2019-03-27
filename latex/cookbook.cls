@@ -15,23 +15,12 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{titlesec}
-\usepackage{xstring}
 \usepackage[encoding=UTF8]{zhnumber}
 
 \newcommand\category[1]{%
 \chapter*{#1}%
 \thispagestyle{empty}
 \addcontentsline{toc}{chapter}{#1}
-}
-
-\newcommand{\sectionseq}[1]{
-\StrBehind[1]{#1}{.}[\seq]
-\zhdigits{\seq}
-}
-
-\newcommand{\subsectionseq}[1]{%
-\StrBehind[2]{#1}{.}[\seq]
-\zhdigits{\seq}
 }
 
 \titleformat{\chapter}[display]
@@ -43,14 +32,14 @@
 
 \titleformat{\section}[hang]
 {\LARGE\filcenter\bfseries}	% Format
-{\sectionseq{\thesection}}	% Label
+{\zhdigits{\arabic{section}}}	% Label
 {0em}	% Sep
 {、}	% Before
 []	% After
 
 \titleformat{\subsection}[hang]
 {\normalsize\bfseries}	% Format
-{\subsectionseq{\thesubsection}}	% Label
+{\zhdigits{\arabic{subsection}}}	% Label
 {0em}	% Sep
 {、}	% Before
 []	% After
