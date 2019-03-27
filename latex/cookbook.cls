@@ -39,7 +39,7 @@
 {}	% Label
 {0em}	% Sep
 {}	% Before
-[]	% After
+[\vspace{-1.2\baselineskip}]	% After
 
 \titleformat{\section}[hang]
 {\LARGE\filcenter\bfseries}	% Format
