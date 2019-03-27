@@ -2,7 +2,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cookbook}
 \typeout{Document Style `cookbook' <Mar 25, 2019>.}
-\LoadClass{article}
+\LoadClass[11pt]{extarticle}
 \pagestyle{empty}
 \usepackage[a5paper,
 	tmargin=33mm, bmargin=27mm,
