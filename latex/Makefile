@@ -14,7 +14,7 @@ sichuan-cookbook.dvi: sichuan-cookbook.tex cookbook.cls \
 	latex $^
 
 %.ps: %.dvi
-	dvips -D 1200 -j -Ppdf -o $@ $^
+	dvips -D 600 -j -Ppdf -o $@ $^
 
 %.eps: %.ps
 	ps2eps $^

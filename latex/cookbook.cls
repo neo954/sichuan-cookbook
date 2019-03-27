@@ -22,11 +22,14 @@
 \def\note#1{\def\@note{#1}}
 \def\@note{}
 
-\newenvironment{recipe}{\begingroup
-}{\endgroup}
+\newenvironment{recipe}[1]{
+}{}
 
-\newenvironment{cookbook}{\begingroup
-}{\endgroup}
+\newenvironment{cookbook}{
+	\begin{CJK*}{UTF8}{gbsn}
+}{
+	\end{CJK*}
+}
 
 % Disable chapter, section and subsection numbering
 %\setcounter{secnumdepth}{0} 
