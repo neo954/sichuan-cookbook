@@ -2,7 +2,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cookbook}
 \typeout{Document Style `cookbook' <Mar 25, 2019>.}
-\LoadClass[11pt]{extarticle}
+\LoadClass{article}
 \pagestyle{empty}
 \usepackage[a5paper,
 	tmargin=33mm, bmargin=27mm,
@@ -21,10 +21,12 @@
 
 \newenvironment{ingredients}{
 \textbf{一、原料：}
+\begin{CJK*}{UTF8}{gkai}
 \begin{tabbing}
 \hspace{38mm}\= \kill
 }{
 \end{tabbing}
+\end{CJK*}
 }
 
 \newcommand{\ingredient}[2]{
