@@ -41,113 +41,112 @@
 \usepackage{setspace}
 \usepackage[encoding=UTF8]{zhnumber}
 
-\titleformat{\chapter}[display]{%
-%	Format
-	\huge\filcenter\sffamily
-}{%	Label
-}{%	Sep
-	0em
-}{%	Before-code
-}[%	After-code
-]
-
-\titlespacing{\chapter}{%
-%	Left
-	0pt
-}{%	Before-sep
-	0pt
-}{%	After-sep
-	0pt
-}[%	Right-sep
-	0pt
-]
-
-\titleformat{\section}[hang]{%
-%	Format
-	\LARGE\filcenter\rmfamily
-}{%	Label
-	\zhdigits{\arabic{section}}%
-}{%	Sep
-	0em
-}{%	Before-code
-	{、}%
-}[%	After-code
-]
-
-\titlespacing{\section}{%
-%	Left
-	0pt
-}{%	Before-sep
-	0pt
-}{%	After-sep
-	0pt
-}[%	Right-sep
-	0pt
-]
-
-\titleformat{\subsection}[hang]{%
-%	Format
-	\normalsize\sffamily
-}{%	Label
-	\zhdigits{\arabic{subsection}}%
-}{%	Sep
-	0em
-}{%	Before-code
-	{、}%
-}[%	After-code
-]
-
-\titlespacing{\subsection}{%
-%	Left
-	0pt
-}{%	Before-sep
-	0pt
-}{%	After-sep
-	0pt
-}[%	Right-sep
-	0pt
-]
-
-\newcommand\category[1]{%
-	\chapter*{#1}
-	\thispagestyle{empty}
-	\addcontentsline{toc}{chapter}{#1}
-}
-
-\newenvironment{recipe}[1]{%
-	\section{#1}
-}{%
-}
-
-\newenvironment{ingredients}{%
-	\subsection{原料}
-	\script%
-	\begin{tabbing}
-	\hspace{30mm}\= \kill
-}{%
-	\end{tabbing}
-}
-
-\newcommand{\ingredient}[2]{%
-	#1
-	\>#2\\
-}
-
-\newenvironment{cooking}{%
-	\newcommand{\step}{%
-		\stepcounter{step}
-		\par\arabic{step}.%
-	}
-	\subsection{制作方法}
-}{%
-}
-
-\newenvironment{note}{%
-	\subsection{特点}
-}{%
-}
-
 \newenvironment{cookbook}{%
+	\titleformat{\chapter}[display]{%
+	%	Format
+		\huge\filcenter\sffamily
+	}{%	Label
+	}{%	Sep
+		0em
+	}{%	Before-code
+	}[%	After-code
+	]
+
+	\titlespacing{\chapter}{%
+	%	Left
+		0pt
+	}{%	Before-sep
+		0pt
+	}{%	After-sep
+		0pt
+	}[%	Right-sep
+		0pt
+	]
+
+	\titleformat{\section}[hang]{%
+	%	Format
+		\LARGE\filcenter\rmfamily
+	}{%	Label
+		\zhdigits{\arabic{section}}%
+	}{%	Sep
+		0em
+	}{%	Before-code
+		{、}%
+	}[%	After-code
+	]
+
+	\titlespacing{\section}{%
+	%	Left
+		0pt
+	}{%	Before-sep
+		0pt
+	}{%	After-sep
+		0pt
+	}[%	Right-sep
+		0pt
+	]
+
+	\titleformat{\subsection}[hang]{%
+	%	Format
+		\normalsize\sffamily
+	}{%	Label
+		\zhdigits{\arabic{subsection}}%
+	}{%	Sep
+		0em
+	}{%	Before-code
+		{、}%
+	}[%	After-code
+	]
+
+	\titlespacing{\subsection}{%
+	%	Left
+		0pt
+	}{%	Before-sep
+		0pt
+	}{%	After-sep
+		0pt
+	}[%	Right-sep
+		0pt
+	]
+
+	\newcommand\category[1]{%
+		\chapter*{##1}
+		\thispagestyle{empty}
+		\addcontentsline{toc}{chapter}{##1}
+	}
+
+	\newenvironment{recipe}[1]{%
+		\newenvironment{ingredients}{%
+			\subsection{原料}
+			\script%
+			\begin{tabbing}
+			\hspace{30mm}\= \kill
+		}{%
+			\end{tabbing}
+		}
+
+		\newcommand{\ingredient}[2]{%
+			####1
+			\>####2\\
+		}
+
+		\newenvironment{cooking}{%
+			\newcommand{\step}{%
+				\stepcounter{step}
+				\par\arabic{step}.%
+			}
+			\subsection{制作方法}
+		}{%
+		}
+
+		\newenvironment{note}{%
+			\subsection{特点}
+		}{%
+		}
+		\section{##1}
+	}{%
+	}
+
 	\newcounter{step}[subsection]
 	\renewcommand*\contentsname{目录}
 	% Setting the indentation to be two Chinese characters size.
