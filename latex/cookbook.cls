@@ -138,7 +138,7 @@
 \newenvironment{cooking}{%
 	\newcommand{\step}{%
 		\stepcounter{step}
-		\par\arabic{step}. %
+		\par\arabic{step}.%
 	}
 	\subsection{制作方法}
 }{%
