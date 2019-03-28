@@ -133,8 +133,6 @@
 	\>#2\\
 }
 
-\newcounter{step}[subsection]
-
 \newenvironment{cooking}{%
 	\newcommand{\step}{%
 		\stepcounter{step}
@@ -150,6 +148,7 @@
 }
 
 \newenvironment{cookbook}{%
+	\newcounter{step}[subsection]
 	\renewcommand*\contentsname{目录}
 	% Setting the indentation to be two Chinese characters size.
 	\setlength{\parindent}{2em}
