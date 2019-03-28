@@ -1,4 +1,18 @@
 % $Id$
+%
+% Copyright (C) 2019 by GONG Jie <gongjie.jie@gmail.com>
+%
+% Permission to use, copy, modify, and/or distribute this software for any
+% purpose with or without fee is hereby granted.
+%
+% THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+% WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+% MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+% SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+% WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+% OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+% CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cookbook}
 \typeout{Document Style `cookbook' <Mar 25, 2019>.}
@@ -133,3 +147,7 @@
 	\clearpage
 	\end{CJK*}
 }
+
+% vim: filetype=tex noautoindent
+% vim: fileencoding=utf-8
+% vim: textwidth=78 tabstop=4 shiftwidth=4 softtabstop=4
