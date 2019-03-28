@@ -66,7 +66,7 @@
 %	Format
 	\LARGE\filcenter\rmfamily
 }{%	Label
-	\zhdigits{\arabic{section}}
+	\zhdigits{\arabic{section}}%
 }{%	Sep
 	0em
 }{%	Before-code
@@ -89,7 +89,7 @@
 %	Format
 	\normalsize\sffamily
 }{%	Label
-	\zhdigits{\arabic{subsection}}
+	\zhdigits{\arabic{subsection}}%
 }{%	Sep
 	0em
 }{%	Before-code
@@ -136,7 +136,7 @@
 	\subsection{制作方法}
 	\begin{enumerate}
 }{%
-	\end{enumerate}%
+	\end{enumerate}
 }
 
 \newenvironment{note}{%
@@ -149,9 +149,7 @@
 	\setlength{\parindent}{2em}
 	\setlength{\parskip}{0pt}
 	\onehalfspacing
-}{%
-	\clearpage
-}
+}{}
 
 % vim: filetype=tex noautoindent
 % vim: fileencoding=utf-8
