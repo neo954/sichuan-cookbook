@@ -27,7 +27,12 @@
 	nohead,
 	nofoot
 ]{geometry}
-\usepackage{CJKutf8}
+%\usepackage{CJKutf8}
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont=FandolSong-Bold.otf]{FandolSong-Regular.otf}
+\setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
+\setCJKmonofont{FandolFang-Regular.otf}
+\newCJKfontfamily\kaiti{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
 \usepackage{makeidx}
 \usepackage{xcolor}
@@ -115,12 +120,12 @@
 
 \newenvironment{ingredients}{%
 	\subsection{原料}
-	\begin{CJK*}{UTF8}{gkai}
+%	\begin{CJK*}{UTF8}{gkai}
 	\begin{tabbing}
 	\hspace{30mm}\= \kill
 }{%
 	\end{tabbing}
-	\end{CJK*}
+%	\end{CJK*}
 	\vspace{-2\baselineskip}
 }
 
@@ -141,11 +146,11 @@
 }{}
 
 \newenvironment{cookbook}{%
-	\begin{CJK*}{UTF8}{gbsn}
+%	\begin{CJK*}{UTF8}{gbsn}
 	\renewcommand*\contentsname{目录}
 }{%
 	\clearpage
-	\end{CJK*}
+%	\end{CJK*}
 }
 
 % vim: filetype=tex noautoindent
