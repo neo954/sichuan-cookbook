@@ -28,10 +28,10 @@
 	nofoot
 ]{geometry}
 \usepackage{xeCJK}
-\setCJKmainfont[BoldFont=FandolSong-Bold.otf]{FandolSong-Regular.otf}
-\setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
-\setCJKmonofont{FandolFang-Regular.otf}
-\newCJKfontfamily\script{FandolKai-Regular.otf}
+	\setCJKmainfont[BoldFont=FandolSong-Bold.otf]{FandolSong-Regular.otf}
+	\setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
+	\setCJKmonofont{FandolFang-Regular.otf}
+	\newCJKfontfamily\script{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
 \usepackage{makeidx}
 \usepackage{xcolor}
