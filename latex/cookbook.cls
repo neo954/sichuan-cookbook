@@ -133,11 +133,15 @@
 	\>#2\\
 }
 
-\newenvironment{method}{%
+\newcounter{step}[subsection]
+
+\newenvironment{cooking}{%
+	\newcommand{\step}{%
+		\stepcounter{step}
+		\par\arabic{step}. %
+	}
 	\subsection{制作方法}
-	\begin{enumerate}
 }{%
-	\end{enumerate}
 }
 
 \newenvironment{note}{%
