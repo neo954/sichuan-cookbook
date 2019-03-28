@@ -20,30 +20,30 @@
 \pagestyle{empty}
 \usepackage[
 	a5paper,
-	tmargin=33mm,
-	bmargin=27mm,
-	lmargin=26mm,
-	rmargin=26mm,
+	tmargin=34mm,
+	bmargin=28mm,
+	lmargin=28mm,
+	rmargin=28mm,
 	nohead,
 	nofoot
 ]{geometry}
-%\usepackage{CJKutf8}
 \usepackage{xeCJK}
 \setCJKmainfont[BoldFont=FandolSong-Bold.otf]{FandolSong-Regular.otf}
 \setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
 \setCJKmonofont{FandolFang-Regular.otf}
-\newCJKfontfamily\kaiti{FandolKai-Regular.otf}
+\newCJKfontfamily\script{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
 \usepackage{makeidx}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{titlesec}
+\usepackage{setspace}
 \usepackage[encoding=UTF8]{zhnumber}
 
 \titleformat{\chapter}[display]{%
 %	Format
-	\huge\filcenter\bfseries
+	\huge\filcenter\sffamily
 }{%	Label
 }{%	Sep
 	0em
@@ -64,7 +64,7 @@
 
 \titleformat{\section}[hang]{%
 %	Format
-	\LARGE\filcenter\bfseries
+	\LARGE\filcenter\rmfamily
 }{%	Label
 	\zhdigits{\arabic{section}}
 }{%	Sep
@@ -87,7 +87,7 @@
 
 \titleformat{\subsection}[hang]{%
 %	Format
-	\normalsize\bfseries
+	\normalsize\sffamily
 }{%	Label
 	\zhdigits{\arabic{subsection}}
 }{%	Sep
@@ -120,13 +120,11 @@
 
 \newenvironment{ingredients}{%
 	\subsection{原料}
-%	\begin{CJK*}{UTF8}{gkai}
+	\script%
 	\begin{tabbing}
 	\hspace{30mm}\= \kill
 }{%
 	\end{tabbing}
-%	\end{CJK*}
-	\vspace{-2\baselineskip}
 }
 
 \newcommand{\ingredient}[2]{%
@@ -146,11 +144,13 @@
 }{}
 
 \newenvironment{cookbook}{%
-%	\begin{CJK*}{UTF8}{gbsn}
 	\renewcommand*\contentsname{目录}
+	% Setting the indentation to be two Chinese characters size.
+	\setlength{\parindent}{2em}
+	\setlength{\parskip}{0pt}
+	\onehalfspacing
 }{%
 	\clearpage
-%	\end{CJK*}
 }
 
 % vim: filetype=tex noautoindent
