@@ -6,14 +6,17 @@ all: pdf
 
 pdf: $(OUTPUT_BASENAME).pdf
 
-sichuan-cookbook.pdf: sichuan-cookbook.tex cookbook.cls \
+sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	chairman-mao-quotes.tex foreword.tex \
 	$(wildcard recipe-*.tex)
-	xelatex $< $(word 2, $^)
-	xelatex $< $(word 2, $^)
+	xelatex -no-pdf $< $(word 2, $^)
+	xelatex -no-pdf $< $(word 2, $^)
 
-%.dvi: %.tex
-	latex $^
+%.xdv: %.tex
+	xelatex -no-pdf $^
+
+%.pdf: %.xdv
+	xdvipdfmx -r 600 $^
 
 %.ps: %.dvi
 	dvips -D 600 -j -Ppdf -o $@ $^
@@ -47,6 +50,6 @@ sichuan-cookbook.pdf: sichuan-cookbook.tex cookbook.cls \
 
 clean:
 	$(RM) *.aux *.dvi *.eps *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
-		*.pdf *.png *.ps *.txt *.toc
+		*.pdf *.png *.ps *.txt *.toc *.xdv
 
 .PHONY: all build clean pdf
