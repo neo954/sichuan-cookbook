@@ -116,7 +116,8 @@
 
 \newenvironment{recipe}[1]{%
 	\section{#1}
-}{}
+}{%
+}
 
 \newenvironment{ingredients}{%
 	\subsection{原料}
@@ -141,7 +142,8 @@
 
 \newenvironment{note}{%
 	\subsection{特点}
-}{}
+}{%
+}
 
 \newenvironment{cookbook}{%
 	\renewcommand*\contentsname{目录}
@@ -149,7 +151,8 @@
 	\setlength{\parindent}{2em}
 	\setlength{\parskip}{0pt}
 	\onehalfspacing
-}{}
+}{%
+}
 
 % vim: filetype=tex noautoindent
 % vim: fileencoding=utf-8
