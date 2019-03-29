@@ -111,7 +111,7 @@
 	]
 
 	\newcommand\category[1]{%
-		\chapter*{\makebox[6em][s]{##1}}
+		\chapter*{\makebox[5.6em][s]{##1}}
 		\thispagestyle{empty}
 		\addcontentsline{toc}{chapter}{##1}
 	}
