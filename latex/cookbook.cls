@@ -32,18 +32,20 @@
 	\setCJKsansfont{Noto Sans CJK SC}
 	\setCJKmonofont{Noto Sans Mono CJK SC}
 	\newCJKfontfamily[kai]\kafamily{FandolKai-Regular.otf}
+\usepackage[T1]{fontenc}
+\usepackage[encoding=UTF8]{zhnumber}
 \usepackage{makeidx}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{titlesec}
 \usepackage{setspace}
-\usepackage[encoding=UTF8]{zhnumber}
+\usepackage[open]{bookmark}
 
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
 	%	Format
-		\huge\filcenter\sffamily
+		\Huge\filcenter\sffamily
 	}{%	Label
 	}{%	Sep
 		0em
@@ -109,24 +111,32 @@
 	]
 
 	\newcommand\category[1]{%
-		\chapter*{##1}
+		\chapter*{\makebox[6em][s]{##1}}
 		\thispagestyle{empty}
 		\addcontentsline{toc}{chapter}{##1}
 	}
 
+	\newcommand\foobar[1]{%
+		\subsection[##1]{\makebox[4em][s]{##1}：}
+	}
+
 	\newenvironment{recipe}[1]{%
-		\newenvironment{ingredients}{%
-			\subsection{原料}
-			\kafamily%
-			\begin{tabbing}
-			\hspace{30mm}\= \kill
-		}{%
-			\end{tabbing}
+		\newcommand{\ingredients}{%
+			\foobar{原料}
 		}
 
 		\newcommand{\ingredient}[2]{%
-			####1
-			\>####2\\
+			{%
+				\kafamily%
+				\noindent%
+				\mbox{%
+					\hspace{2em}%
+					\makebox[9em][s]{%
+						\mbox{####1} \mbox{####2}%
+					}%
+					\hspace{1.55em}%
+				}%
+			}
 		}
 
 		\newcommand{\step}{%
@@ -134,17 +144,17 @@
 			\par\arabic{step}.%
 		}
 
-		\newenvironment{cooking}{%
-			\subsection{制作方法}
-		}{%
+		\newcommand{\cooking}{%
+			\foobar{制作方法}
 		}
 
-		\newenvironment{note}{%
-			\subsection{特点}
-		}{%
+		\newcommand{\notes}{%
+			\foobar{特点}
 		}
-		\section{##1}
+
+		\section[##1]{\makebox[5em][s]{##1}}
 	}{%
+		\vspace{1\baselineskip}
 	}
 
 	\newcounter{step}[subsection]
