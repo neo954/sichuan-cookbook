@@ -45,7 +45,7 @@
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
 	%	Format
-		\Huge\filcenter\sffamily
+		\Huge\filcenter\sffamily\bfseries%
 	}{%	Label
 	}{%	Sep
 		0em
@@ -66,7 +66,7 @@
 
 	\titleformat{\section}[hang]{%
 	%	Format
-		\LARGE\filcenter\rmfamily
+		\LARGE\filcenter\rmfamily%
 	}{%	Label
 		\zhdigits{\arabic{section}}%
 	}{%	Sep
@@ -89,7 +89,7 @@
 
 	\titleformat{\subsection}[hang]{%
 	%	Format
-		\normalsize\sffamily
+		\normalsize\sffamily%
 	}{%	Label
 		\zhdigits{\arabic{subsection}}%
 	}{%	Sep
@@ -111,7 +111,7 @@
 	]
 
 	\newcommand\category[1]{%
-		\chapter*{\makebox[5.6em][s]{##1}}
+		\chapter*{\makebox[5em][s]{##1}}
 		\thispagestyle{empty}
 		\addcontentsline{toc}{chapter}{##1}
 	}
