@@ -28,11 +28,10 @@
 	nofoot
 ]{geometry}
 \usepackage{xeCJK}
-	\setCJKmainfont[BoldFont=FandolSong-Bold.otf]{FandolSong-Regular.otf}
-	\setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
-	\setCJKmonofont{FandolFang-Regular.otf}
-	\newCJKfontfamily\script{FandolKai-Regular.otf}
-\usepackage[T1]{fontenc}
+	\setCJKmainfont{Noto Serif CJK SC}
+	\setCJKsansfont{Noto Sans CJK SC}
+	\setCJKmonofont{Noto Sans Mono CJK SC}
+	\newCJKfontfamily[kai]\kafamily{FandolKai-Regular.otf}
 \usepackage{makeidx}
 \usepackage{xcolor}
 \usepackage{graphicx}
@@ -118,7 +117,7 @@
 	\newenvironment{recipe}[1]{%
 		\newenvironment{ingredients}{%
 			\subsection{原料}
-			\script%
+			\kafamily%
 			\begin{tabbing}
 			\hspace{30mm}\= \kill
 		}{%
@@ -130,11 +129,12 @@
 			\>####2\\
 		}
 
+		\newcommand{\step}{%
+			\stepcounter{step}
+			\par\arabic{step}.%
+		}
+
 		\newenvironment{cooking}{%
-			\newcommand{\step}{%
-				\stepcounter{step}
-				\par\arabic{step}.%
-			}
 			\subsection{制作方法}
 		}{%
 		}
