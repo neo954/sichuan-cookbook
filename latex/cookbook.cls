@@ -134,9 +134,9 @@
 					\makebox[9em][s]{%
 						\mbox{####1} \mbox{####2}%
 					}%
-					\hspace{1.55em}%
+					\hspace{2em}%
 				}%
-			}
+			}%
 		}
 
 		\newcommand{\step}{%
