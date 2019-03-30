@@ -157,9 +157,8 @@
 		\ifthenelse{\equal{##1}{}}%
 		{%
 		}{%
-			\sffamily%
 			\begin{center}%
-			（原##1）%
+			\sffamily（原##1）%
 			\end{center}%
 		}%
 	}{%
