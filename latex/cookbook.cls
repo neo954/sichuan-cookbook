@@ -154,8 +154,7 @@
 		}
 
 		\section[##2]{\makebox[5em][s]{##2}}
-		\ifthenelse{\equal{##1}{}}%
-		{%
+		\ifthenelse{\equal{##1}{}}{%
 		}{%
 			\begin{center}%
 			\sffamily（原##1）%
