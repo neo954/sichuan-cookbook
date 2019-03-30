@@ -133,7 +133,7 @@
 				\mbox{%
 					\hspace{2em}%
 					\makebox[9em][s]{%
-						\mbox{####1} \mbox{####2}%
+						\mbox{####1}\hfil\mbox{####2}%
 					}%
 					\hspace{2em}%
 				}%
