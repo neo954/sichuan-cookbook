@@ -41,6 +41,7 @@
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage[open]{bookmark}
+\usepackage{ifthen}
 
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
@@ -120,7 +121,7 @@
 		\subsection[##1]{\makebox[4em][s]{##1}：}
 	}
 
-	\newenvironment{recipe}[1]{%
+	\newenvironment{recipe}[2][]{%
 		\newcommand{\ingredients}{%
 			\foobar{原料}
 		}
@@ -152,7 +153,15 @@
 			\foobar{特点}
 		}
 
-		\section[##1]{\makebox[5em][s]{##1}}
+		\section[##2]{\makebox[5em][s]{##2}}
+		\ifthenelse{\equal{##1}{}}%
+		{%
+		}{%
+			\sffamily%
+			\begin{center}%
+			（原##1）%
+			\end{center}%
+		}%
 	}{%
 		\vspace{1\baselineskip}
 	}
