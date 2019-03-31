@@ -117,13 +117,13 @@
 		\addcontentsline{toc}{chapter}{##1}
 	}
 
-	\newcommand\foobar[1]{%
+	\newcommand\division[1]{%
 		\subsection[##1]{\makebox[4em][s]{##1}：}
 	}
 
 	\newenvironment{recipe}[2][]{%
 		\newcommand{\ingredients}{%
-			\foobar{原料}
+			\division{原料}
 		}
 
 		\newcommand{\ingredient}[2]{%
@@ -146,11 +146,15 @@
 		}
 
 		\newcommand{\cooking}{%
-			\foobar{制作方法}
+			\division{制作方法}
+		}
+
+		\newcommand{\notice}{%
+			\division{注意事项}
 		}
 
 		\newcommand{\notes}{%
-			\foobar{特点}
+			\division{特点}
 		}
 
 		\section[##2]{\makebox[5em][s]{##2}}
