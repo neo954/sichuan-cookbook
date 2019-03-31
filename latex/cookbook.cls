@@ -127,7 +127,11 @@
 	]
 
 	\newcommand\category[1]{%
-		\chapter*{\makebox[5em][s]{##1}}%
+		\ifthenelse{\lengthtest{\titlewidth<5em}}{%
+			\chapter*{\makebox[5em][s]{##1}}%
+		}{%
+			\chapter*{##1}%
+		}
 		\thispagestyle{empty}%
 		\addcontentsline{toc}{chapter}{##1}%
 	}
