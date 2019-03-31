@@ -141,7 +141,7 @@
 		}
 
 		\newcommand{\step}{%
-			\stepcounter{step}
+			\stepcounter{step}%
 			\par\arabic{step}.%
 		}
 
