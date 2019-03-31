@@ -112,9 +112,9 @@
 	]
 
 	\newcommand\category[1]{%
-		\chapter*{\makebox[5em][s]{##1}}
-		\thispagestyle{empty}
-		\addcontentsline{toc}{chapter}{##1}
+		\chapter*{\makebox[5em][s]{##1}}%
+		\thispagestyle{empty}%
+		\addcontentsline{toc}{chapter}{##1}%
 	}
 
 	\newcommand\division[1]{%
@@ -123,7 +123,7 @@
 
 	\newenvironment{recipe}[2][]{%
 		\newcommand{\ingredients}{%
-			\division{原料}
+			\division{原料}%
 		}
 
 		\newcommand{\ingredient}[2]{%
@@ -146,15 +146,15 @@
 		}
 
 		\newcommand{\cooking}{%
-			\division{制作方法}
+			\division{制作方法}%
 		}
 
 		\newcommand{\notice}{%
-			\division{注意事项}
+			\division{注意事项}%
 		}
 
 		\newcommand{\notes}{%
-			\division{特点}
+			\division{特点}%
 		}
 
 		\section[##2]{\makebox[5em][s]{##2}}
