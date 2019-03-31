@@ -28,8 +28,17 @@
 	nofoot
 ]{geometry}
 \usepackage{xeCJK}
-	\setCJKmainfont{Noto Serif CJK SC}
-	\setCJKsansfont{Noto Sans CJK SC}
+	\xeCJKDeclareSubCJKBlock{Tofu}{
+		`𤆵
+	}
+	\setCJKmainfont[
+		BoldFont=Noto Serif CJK SC Medium,
+		Tofu=Noto Sans CJK SC,
+		FallBack=Noto Sans CJK SC
+	]{Noto Serif CJK SC}
+	\setCJKsansfont[
+		BoldFont=Noto Sans CJK SC Bold
+	]{Noto Sans CJK SC Medium}
 	\setCJKmonofont{Noto Sans Mono CJK SC}
 	\newCJKfontfamily[kai]\kafamily{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
@@ -67,13 +76,19 @@
 
 	\titleformat{\section}[hang]{%
 	%	Format
-		\LARGE\filcenter\rmfamily%
+		\LARGE\filcenter\rmfamily\bfseries%
 	}{%	Label
-		\zhdigits{\arabic{section}}%
+		\ifthenelse{\value{chapter}>999}{%
+		}{%
+			\zhdigits{\arabic{section}}%
+		}%
 	}{%	Sep
 		0em
 	}{%	Before-code
-		{、}%
+		\ifthenelse{\value{chapter}>999}{%
+		}{%
+			{、}%
+		}%
 	}[%	After-code
 	]
 
