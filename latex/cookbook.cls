@@ -127,13 +127,16 @@
 	]
 
 	\newcommand\category[1]{%
-		\ifthenelse{\lengthtest{\titlewidth<5em}}{%
+		\newlength{\headerwidth}%
+		\settowidth{\headerwidth}{##1}%
+		\ifthenelse{\lengthtest{\headerwidth<5em}}{%
 			\chapter*{\makebox[5em][s]{##1}}%
 		}{%
 			\chapter*{##1}%
 		}
 		\thispagestyle{empty}%
 		\addcontentsline{toc}{chapter}{##1}%
+		\let\headerwidth\@undefined%
 	}
 
 	\newcommand\division[1]{%
