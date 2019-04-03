@@ -126,8 +126,9 @@
 		0pt
 	]
 
+	\newlength{\headerwidth}%
+
 	\newcommand\category[1]{%
-		\newlength{\headerwidth}%
 		\settowidth{\headerwidth}{##1}%
 		\ifthenelse{\lengthtest{\headerwidth<5em}}{%
 			\chapter*{\makebox[5em][s]{##1}}%
@@ -136,11 +137,13 @@
 		}
 		\thispagestyle{empty}%
 		\addcontentsline{toc}{chapter}{##1}%
-		\let\headerwidth\@undefined%
+		\setlength{\headerwidth}{0pt}%
 	}
 
 	\newcommand\division[1]{%
+		\settowidth{\headerwidth}{##1}%
 		\subsection[##1]{\makebox[4em][s]{##1}：}
+		\setlength{\headerwidth}{0pt}%
 	}
 
 	\newenvironment{recipe}[2][]{%
