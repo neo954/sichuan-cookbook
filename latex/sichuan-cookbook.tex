@@ -14,6 +14,25 @@
 % CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 %
 \documentclass{cookbook}
+\input{git-revision.tex}
+\usepackage{hyperref}
+	\hypersetup{
+		pdfduplex={DuplexFlipLongEdge},
+		pdfprintscaling={AppDefault},
+		pdfpicktraybypdfsize={true},
+		pdftoolbar={false},
+		pdftitle={四川菜谱},
+		pdfauthor={成都市饮食公司革命委员会技术培训班},
+		pdfsubject={},
+		pdfkeywords={},
+		pdfcreator={},
+		pdflang={zh-CN},
+		pdfinfo={
+			GitCommitHash={\gitcommithash},
+			GitAuthorDate={\gitauthordate}
+		},
+		hidelinks
+	}
 
 \title{四川菜谱\\\small（内部资料）}
 \author{成都市饮食公司革命委员会\\技术培训班}
