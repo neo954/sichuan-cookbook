@@ -218,6 +218,7 @@
 	\renewcommand*\contentsname{\makebox[5em][s]{目录}}
 	\setcounter{tocdepth}{1}
 	\addtocontents{toc}{\cftpagenumbersoff{chapter}}
+	\addtocontents{toc}{\protect\thispagestyle{empty}}
 	% Setting the indentation to be two Chinese characters size.
 	\setlength{\parindent}{2em}
 	\setlength{\parskip}{0pt}
