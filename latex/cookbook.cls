@@ -43,14 +43,16 @@
 	\newCJKfontfamily[kai]\kafamily{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
 \usepackage[encoding=UTF8]{zhnumber}
+\usepackage[open]{bookmark}
+\usepackage{tocloft}
 \usepackage{makeidx}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{titlesec}
 \usepackage{setspace}
-\usepackage[open]{bookmark}
 \usepackage{ifthen}
+
 
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
@@ -182,7 +184,11 @@
 			\division{特点}%
 		}
 
-		\section[##2]{\makebox[5em][s]{##2}}
+		\ifthenelse{\value{chapter}>999}{%
+			\section[##2]{\makebox[5em][s]{##2}}
+		}{%
+			\section[\zhdigits{\arabic{section}}、##2]{\makebox[5em][s]{##2}}
+		}%
 		\ifthenelse{\equal{##1}{}}{%
 		}{%
 			\begin{center}%
@@ -194,7 +200,22 @@
 	}
 
 	\newcounter{step}[subsection]
-	\renewcommand*\contentsname{目录}
+	\tocloftpagestyle{plain}
+	\setlength{\cftbeforetoctitleskip}{0pt}
+	\setlength{\cftaftertoctitleskip}{0pt}
+	\renewcommand{\cfttoctitlefont}{\hfil\Large}
+	\renewcommand{\cftaftertoctitle}{\hfil}
+	\renewcommand{\cftchapfont}{\normalsize\sffamily}
+	\renewcommand{\cftsecfont}{\normalsize\rmfamily}
+	\renewcommand{\cftsecpagefont}{\normalsize\rmfamily}
+	\renewcommand{\cftsecpresnum}{}
+	\renewcommand{\cftsecaftersnum}{}
+	\setlength{\cftsecindent}{0em}
+	\setlength{\cftsecnumwidth}{0em}
+	\renewcommand{\thechapter}{}
+	\renewcommand{\thesection}{}
+	\renewcommand{\thesubsection}{}
+	\renewcommand*\contentsname{\makebox[5em][s]{目录}}
 	% Setting the indentation to be two Chinese characters size.
 	\setlength{\parindent}{2em}
 	\setlength{\parskip}{0pt}
