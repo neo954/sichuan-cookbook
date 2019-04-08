@@ -43,7 +43,6 @@
 	\newCJKfontfamily[kai]\kafamily{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
 \usepackage[encoding=UTF8]{zhnumber}
-\usepackage[open]{bookmark}
 \usepackage{tocloft}
 \usepackage{makeidx}
 \usepackage{xcolor}
@@ -52,7 +51,6 @@
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{ifthen}
-
 
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
@@ -138,7 +136,7 @@
 			\chapter*{##1}%
 		}
 		\thispagestyle{empty}%
-		\addcontentsline{toc}{chapter}{##1}%
+		\addcontentsline{toc}{chapter}{\makebox[10em][s]{##1}}%
 		\setlength{\headerwidth}{0pt}%
 	}
 
@@ -200,12 +198,20 @@
 	}
 
 	\newcounter{step}[subsection]
-	\tocloftpagestyle{plain}
+
+	\tocloftpagestyle{empty}
 	\setlength{\cftbeforetoctitleskip}{0pt}
 	\setlength{\cftaftertoctitleskip}{0pt}
 	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily}
 	\renewcommand{\cftaftertoctitle}{\hfil}
-	\renewcommand{\cftchapfont}{\normalsize\sffamily}
+	\renewcommand{\cftdot}{…}
+	\renewcommand\cftdotsep{0.2}
+	\cftsetpnumwidth{1.5em}
+	\cftsetrmarg{1.6em}
+	\renewcommand{\cftchapfont}{\hfil\normalsize\sffamily}
+	\renewcommand{\cftchapafterpnum}{\hfil}
+	\setlength{\cftchapindent}{1.6em}
+	\setlength{\cftchapnumwidth}{0em}
 	\renewcommand{\cftsecfont}{\normalsize\rmfamily}
 	\renewcommand{\cftsecpagefont}{\normalsize\rmfamily}
 	\renewcommand{\cftsecpresnum}{}
@@ -215,10 +221,12 @@
 	\renewcommand{\thechapter}{}
 	\renewcommand{\thesection}{}
 	\renewcommand{\thesubsection}{}
+	\renewcommand\cftsecdotsep{\cftdotsep}
 	\renewcommand*\contentsname{\makebox[5em][s]{目录}}
 	\setcounter{tocdepth}{1}
 	\addtocontents{toc}{\cftpagenumbersoff{chapter}}
-	\addtocontents{toc}{\protect\thispagestyle{empty}}
+	\addtocontents{toc}{\cftpagenumberson{section}}
+
 	% Setting the indentation to be two Chinese characters size.
 	\setlength{\parindent}{2em}
 	\setlength{\parskip}{0pt}
