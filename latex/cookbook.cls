@@ -203,7 +203,7 @@
 	\tocloftpagestyle{plain}
 	\setlength{\cftbeforetoctitleskip}{0pt}
 	\setlength{\cftaftertoctitleskip}{0pt}
-	\renewcommand{\cfttoctitlefont}{\hfil\Large}
+	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily}
 	\renewcommand{\cftaftertoctitle}{\hfil}
 	\renewcommand{\cftchapfont}{\normalsize\sffamily}
 	\renewcommand{\cftsecfont}{\normalsize\rmfamily}
