@@ -43,6 +43,8 @@
 \begin{document}
 \begin{cookbook}
 
+\pagestyle{empty}
+
 \definecolor{pantone485}{cmyk}{0, 1, 1, 0}
 \textcolor{pantone485}{%
 	\input{chairman-mao-quotes.tex}
@@ -51,14 +53,19 @@
 
 \begin{titlepage}
 \maketitle
-\thispagestyle{empty}
 \end{titlepage}
 \cleardoublepage
 
 \input{foreword.tex}
 \cleardoublepage
 
+\pagestyle{fancy}
+
+\frontmatter
+
 \tableofcontents
+
+\mainmatter
 
 \category{肉食类}
 \input{recipe-001.tex}
@@ -82,6 +89,10 @@
 \category{重庆市部分菜肴}
 \input{recipe-298.tex}
 \input{recipe-307.tex}
+
+\cleardoublepage
+
+\pagestyle{empty}
 
 \end{cookbook}
 \end{document}

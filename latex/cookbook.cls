@@ -17,15 +17,15 @@
 \ProvidesClass{cookbook}
 \typeout{Document Style `cookbook' <Mar 25, 2019>.}
 \LoadClass{book}
-\pagestyle{empty}
 \usepackage[
-	a5paper,
-	tmargin=34mm,
-	bmargin=28mm,
-	lmargin=28mm,
-	rmargin=28mm,
-	nohead,
-	nofoot
+	paper=a5paper,
+	top=34mm,
+	bottom=28mm,
+	inner=28mm,
+	outer=28mm,
+	headheight=7mm,
+	headsep=2mm,
+	footskip=7mm
 ]{geometry}
 \usepackage{xeCJK}
 	\xeCJKDeclareSubCJKBlock{Tofu}{
@@ -41,10 +41,13 @@
 	]{Noto Sans CJK SC Medium}
 	\setCJKmonofont{Noto Sans Mono CJK SC}
 	\newCJKfontfamily[kai]\kafamily{FandolKai-Regular.otf}
+	\xeCJKsetwidth{·}{1em}
 \usepackage[T1]{fontenc}
 \usepackage[encoding=UTF8]{zhnumber}
 \usepackage{tocloft}
 \usepackage{makeidx}
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -135,7 +138,7 @@
 		}{%
 			\chapter*{##1}%
 		}
-		\thispagestyle{empty}%
+		\thispagestyle{fancy}%
 		\addcontentsline{toc}{chapter}{\makebox[10em][s]{##1}}%
 		\setlength{\headerwidth}{0pt}%
 	}
@@ -199,7 +202,20 @@
 
 	\newcounter{step}[subsection]
 
-	\tocloftpagestyle{empty}
+	\fancyhead{} % clear all fields
+	\fancyfoot{} % clear all fields
+	\fancyhead[RO,LE]{}
+	\fancyfoot[LE,RO]{%
+		\hspace{2em}%
+		{·\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}·}%
+		\hspace{2em}%
+	}
+	\fancyfoot[LO,CE]{}
+	\fancyfoot[CO,RE]{}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+
+	\tocloftpagestyle{fancy}
 	\setlength{\cftbeforetoctitleskip}{0pt}
 	\setlength{\cftaftertoctitleskip}{0pt}
 	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily}
@@ -222,7 +238,11 @@
 	\renewcommand{\thesection}{}
 	\renewcommand{\thesubsection}{}
 	\renewcommand\cftsecdotsep{\cftdotsep}
-	\renewcommand*\contentsname{\makebox[5em][s]{目录}}
+	\renewcommand\contentsname{%
+		\makebox[\textwidth][s]{%
+			\hfil\makebox[5em][s]{目录}\hfil%
+		}%
+	}
 	\setcounter{tocdepth}{1}
 	\addtocontents{toc}{\cftpagenumbersoff{chapter}}
 	\addtocontents{toc}{\cftpagenumberson{section}}
