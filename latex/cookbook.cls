@@ -243,9 +243,11 @@
 	\renewcommand{\thesubsection}{}
 	\renewcommand\cftsecdotsep{\cftdotsep}
 	\renewcommand\contentsname{%
-		\makebox[\textwidth][s]{%
-			\hfil\makebox[5em][s]{目录}\hfil%
-		}%
+		\texorpdfstring{%
+			\makebox[\textwidth][s]{
+				\hfil\makebox[5em][s]{目录}\hfil%
+			}%
+		}{目录}%
 	}
 	\setcounter{tocdepth}{1}
 	\addtocontents{toc}{\cftpagenumbersoff{chapter}}
