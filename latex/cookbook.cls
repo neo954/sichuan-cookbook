@@ -128,9 +128,11 @@
 		0pt
 	]
 
+	% A temporary variable, use to store the text width of the chapter name
 	\newlength{\headerwidth}%
 
 	\newcommand\category[1]{%
+		% Calculate the text width of the chapter name
 		\settowidth{\headerwidth}{##1}%
 		\ifthenelse{\lengthtest{\headerwidth<5em}}{%
 			\chapter*{\makebox[5em][s]{##1}}%
@@ -139,6 +141,7 @@
 		}
 		\thispagestyle{fancy}%
 		\addcontentsline{toc}{chapter}{%
+			% Use different text for the table of contents and bookmarks
 			\texorpdfstring{\makebox[10em][s]{##1}}{##1}%
 		}%
 		\setlength{\headerwidth}{0pt}%
@@ -190,6 +193,7 @@
 			\section[##2]{\makebox[5em][s]{##2}}
 		}{%
 			\section[%
+				% Use different text for the table of contents and bookmarks
 				\texorpdfstring{\zhdigits{\arabic{section}}、##2}{##2}%
 			]{\makebox[5em][s]{##2}}
 		}%
@@ -203,11 +207,14 @@
 		\vspace{1\baselineskip}
 	}
 
+	% A new counter used in the command \step
 	\newcounter{step}[subsection]
 
-	\fancyhead{} % clear all fields
-	\fancyfoot{} % clear all fields
+	% Customize the head and foot
+	\fancyhead{}	% Clear all fields
+	\fancyfoot{}	% Clear all fields
 	\fancyhead[RO,LE]{}
+	% Customize the page numbers
 	\fancyfoot[LE,RO]{%
 		\hspace{2em}%
 		{‧\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}‧}%
@@ -218,15 +225,18 @@
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
 
+	% Customize the table of contents
 	\tocloftpagestyle{fancy}
 	\setlength{\cftbeforetoctitleskip}{0pt}
 	\setlength{\cftaftertoctitleskip}{0pt}
+	% Centering table of contents title by using \hfil
 	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily}
 	\renewcommand{\cftaftertoctitle}{\hfil}
 	\renewcommand{\cftdot}{…}
 	\renewcommand\cftdotsep{0.2}
 	\cftsetpnumwidth{1.5em}
 	\cftsetrmarg{1.6em}
+	% Centering chapter titles by using \hfil
 	\renewcommand{\cftchapfont}{\hfil\normalsize\sffamily}
 	\renewcommand{\cftchapafterpnum}{\hfil}
 	\setlength{\cftchapindent}{1.6em}
@@ -242,6 +252,7 @@
 	\renewcommand{\thesubsection}{}
 	\renewcommand\cftsecdotsep{\cftdotsep}
 	\renewcommand\contentsname{%
+		% Use different text for the table of contents and bookmarks
 		\texorpdfstring{%
 			\makebox[\textwidth][s]{
 				\hfil\makebox[5em][s]{目录}\hfil%
@@ -252,9 +263,10 @@
 	\addtocontents{toc}{\cftpagenumbersoff{chapter}}
 	\addtocontents{toc}{\cftpagenumberson{section}}
 
-	% Setting the indentation to be two Chinese characters size.
+	% Set the indentation to be two Chinese characters size.
 	\setlength{\parindent}{2em}
 	\setlength{\parskip}{0pt}
+	% Set line spacing
 	\onehalfspacing
 }{%
 }
