@@ -1,0 +1,97 @@
+% $Id$
+%
+% Copyright (C) 2019 by GONG Jie <gongjie.jie@gmail.com>
+%
+% Permission to use, copy, modify, and/or distribute this software for any
+% purpose with or without fee is hereby granted.
+%
+% THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+% WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+% MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+% SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+% WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+% OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+% CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+%
+\documentclass{cookbook}
+\input{git-revision.tex}
+\usepackage{hyperref}
+	\hypersetup{
+		bookmarks=true,
+		unicode=true,
+		pdfduplex={DuplexFlipLongEdge},
+		pdfprintscaling={AppDefault},
+		pdfpicktraybypdfsize={true},
+		pdftoolbar={false},
+		pdftitle={四川菜谱},
+		pdfauthor={成都市饮食公司革命委员会技术培训班},
+		pdfsubject={},
+		pdfkeywords={},
+		pdfcreator={},
+		pdflang={zh-CN},
+		pdfinfo={
+			GitCommitHash={\gitcommithash},
+			GitAuthorDate={\gitauthordate}
+		},
+		hidelinks
+	}
+
+\begin{document}
+\begin{cookbook}
+
+\pagestyle{empty}
+
+\definecolor{pantone485}{cmyk}{0, 1, 1, 0}
+\textcolor{pantone485}{%
+	\input{chairman-mao-quotes.tex}
+}
+\cleardoublepage
+
+\input{title.tex}
+\cleardoublepage
+
+\input{foreword.tex}
+\cleardoublepage
+
+\pagestyle{fancy}
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+
+\category{肉食类}
+\input{recipe-001.tex}
+\input{recipe-002.tex}
+\input{recipe-029.tex}
+\input{recipe-031.tex}
+\input{recipe-055.tex}
+
+\category{鸡鸭类}
+
+\category{鱼虾类}
+
+\category{山海味类}
+
+\category{甜食类}
+
+\category{蔬菜类}
+
+\category{其它类}
+
+\addtocounter{chapter}{2000}%
+\category{重庆市部分菜肴}
+\input{recipe-298.tex}
+\input{recipe-307.tex}
+
+\cleardoublepage
+
+\pagestyle{empty}
+
+\end{cookbook}
+\end{document}
+
+% vim: filetype=tex noautoindent
+% vim: fileencoding=utf-8
+% vim: textwidth=78 tabstop=4 shiftwidth=4 softtabstop=4
