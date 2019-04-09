@@ -244,10 +244,10 @@
 
 	% Customize the table of contents
 	\tocloftpagestyle{fancy}
-	\setlength{\cftbeforetoctitleskip}{0pt}
-	\setlength{\cftaftertoctitleskip}{0pt}
+	\setlength{\cftbeforetoctitleskip}{0.4\baselineskip}
+	\setlength{\cftaftertoctitleskip}{0.6\baselineskip}
 	% Centering table of contents title by using \hfil
-	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily}
+	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily\bfseries}
 	\renewcommand{\cftaftertoctitle}{\hfil}
 	\renewcommand{\cftdot}{…}
 	\renewcommand\cftdotsep{0.2}
@@ -271,7 +271,6 @@
 	\renewcommand\contentsname{%
 		% Use different text for the table of contents and bookmarks
 		\texorpdfstring{%
-			\bfseries%
 			\makebox[\textwidth][s]{%
 				\hfil\makebox[6em][s]{目录}\hfil%
 			}%
@@ -280,6 +279,24 @@
 	\setcounter{tocdepth}{1}
 	\addtocontents{toc}{\cftpagenumbersoff{chapter}}
 	\addtocontents{toc}{\cftpagenumberson{section}}
+
+	\newenvironment{tocminipageleft}{%
+		\addtocontents{toc}{\protect\begin{minipage}[t]{0.45\textwidth}}%
+	}{%
+		\addtocontents{toc}{\protect\end{minipage}}%
+		\addtocontents{toc}{\protect\begin{minipage}[t]{0.08\textwidth}}%
+		\addtocontents{toc}{\protect\hfil}%
+		\addtocontents{toc}{\protect\end{minipage}}%
+	}
+	\newenvironment{tocminipageright}{%
+		\addtocontents{toc}{\protect\begin{minipage}[t]{0.45\textwidth}}%
+	}{%
+		\addtocontents{toc}{\protect\end{minipage}}%
+		\addtocontents{toc}{\protect\vfil}%
+	}
+	\newcommand{\tocclearpage}{%
+		\addtocontents{toc}{\protect\clearpage}%
+	}
 
 	% Set the indentation to be two Chinese characters size.
 	\setlength{\parindent}{2em}
