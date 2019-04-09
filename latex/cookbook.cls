@@ -20,12 +20,12 @@
 \usepackage[
 	paper=a5paper,
 	top=34mm,
-	bottom=28mm,
+	bottom=30mm,
 	inner=28mm,
 	outer=28mm,
-	headheight=7mm,
+	headheight=5mm,
 	headsep=2mm,
-	footskip=7mm
+	footskip=5mm
 ]{geometry}
 \usepackage{xeCJK}
 	\xeCJKDeclareSubCJKBlock{Tofu}{
