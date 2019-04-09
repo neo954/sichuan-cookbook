@@ -139,7 +139,9 @@
 			\chapter*{##1}%
 		}
 		\thispagestyle{fancy}%
-		\addcontentsline{toc}{chapter}{\makebox[10em][s]{##1}}%
+		\addcontentsline{toc}{chapter}{%
+			\texorpdfstring{\makebox[10em][s]{##1}}{##1}%
+		}%
 		\setlength{\headerwidth}{0pt}%
 	}
 
@@ -188,7 +190,9 @@
 		\ifthenelse{\value{chapter}>999}{%
 			\section[##2]{\makebox[5em][s]{##2}}
 		}{%
-			\section[\zhdigits{\arabic{section}}、##2]{\makebox[5em][s]{##2}}
+			\section[%
+				\texorpdfstring{\zhdigits{\arabic{section}}、##2}{##2}%
+			]{\makebox[5em][s]{##2}}
 		}%
 		\ifthenelse{\equal{##1}{}}{%
 		}{%
