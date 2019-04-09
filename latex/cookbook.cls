@@ -41,7 +41,6 @@
 	]{Noto Sans CJK SC Medium}
 	\setCJKmonofont{Noto Sans Mono CJK SC}
 	\newCJKfontfamily[kai]\kafamily{FandolKai-Regular.otf}
-	\xeCJKsetwidth{·}{1em}
 \usepackage[T1]{fontenc}
 \usepackage[encoding=UTF8]{zhnumber}
 \usepackage{tocloft}
@@ -211,7 +210,7 @@
 	\fancyhead[RO,LE]{}
 	\fancyfoot[LE,RO]{%
 		\hspace{2em}%
-		{·\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}·}%
+		{‧\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}‧}%
 		\hspace{2em}%
 	}
 	\fancyfoot[LO,CE]{}
