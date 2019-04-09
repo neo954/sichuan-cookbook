@@ -159,7 +159,7 @@
 		\thispagestyle{fancy}%
 		\addcontentsline{toc}{chapter}{%
 			% Use different text for the table of contents and bookmarks
-			\texorpdfstring{\makebox[10em][s]{##1}}{##1}%
+			\texorpdfstring{\makebox[12em][s]{##1}}{##1}%
 		}%
 		\setlength{\headerwidth}{0pt}%
 	}
@@ -271,8 +271,9 @@
 	\renewcommand\contentsname{%
 		% Use different text for the table of contents and bookmarks
 		\texorpdfstring{%
-			\makebox[\textwidth][s]{
-				\hfil\makebox[5em][s]{目录}\hfil%
+			\bfseries%
+			\makebox[\textwidth][s]{%
+				\hfil\makebox[6em][s]{目录}\hfil%
 			}%
 		}{目录}%
 	}
