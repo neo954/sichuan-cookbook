@@ -70,6 +70,8 @@
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{ifthen}
+% Empty all blank pages created by \cleardoublepage
+\usepackage{emptypage}
 
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
