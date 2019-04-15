@@ -52,14 +52,14 @@ page-list.txt: \
 # is roughly equal to sqrt(2):1. Thus, with a 600dpi resolution, the image size
 # of all the pages will be 4370px x 3091px.
 
-trim/a000.jpg: jpeg/a000.jpg
+trim/a000.jpg: retinex/a000.png
 	convert $< \
-		-level 12%,88%,1.618 \
+		-auto-level \
 		-quality 85 -depth 6 \
 		$@
 
-trim/b001.png: retinex/b001.png
 # Chairman Mao quotes are printed in red color
+trim/b001.png: retinex/b001.png
 	convert $< \
 		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
 			-scale 3091x450! \) \
@@ -74,11 +74,11 @@ trim/b001.png: retinex/b001.png
 		-quality 100 -alpha off -depth 6 \
 		$@
 
-trim/%.png: retinex/%.png
 # Margins will be filled with background color of the page.
 # 3/4 inch width margin on top. With 600dpi, it is 450px.
 # 5/8 inch width margin on left and right. With 600 dpi, it is 375px.
 # 1/4 inch width margin on bottom. With 600dpi, it is 150px.
+trim/%.png: retinex/%.png
 	convert $< \
 		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
 			-scale 3091x450! \) \
@@ -93,9 +93,23 @@ trim/%.png: retinex/%.png
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
-retinex/%.png: jpeg/%.jpg
 # Retinex-based intensity correction and thresholding
 # https://www.hpl.hp.com/techreports/2002/HPL-2002-82.html
+retinex/a000.png: jpeg/a000.jpg
+	convert $< \
+		-filter Gaussian -resize 309x437 \
+		-define filter:sigma=25 -resize 3091x4370 \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	composite $< -compose Divide_Dst png:- \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	convert png:- \
+		-auto-level \
+		-quality 100 -alpha off -depth 8 \
+		$@
+
+retinex/%.png: jpeg/%.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
 		-define filter:sigma=5 -resize 3091x4370 \
