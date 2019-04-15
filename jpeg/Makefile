@@ -1,11 +1,12 @@
-jpeg: $(addsuffix .jpg, $(basename $(notdir $(wildcard ../tiff/*.tif))))
+jpeg: $(shell awk -F '|' '{ print $$1 }' FILELIST)
 
-%.jpg: ../tiff/%.tif
-	convert $< \
-		-quality 85 \
-		$@
+%.jpg: FILELIST
+	curl $$(awk -F '|' '/^$@\|/ { print $$NF }' $<) -o $@
+
+check: SHA512SUMS
+	shasum -a 512 -c $<
 
 clean:
 	$(RM) *.jpg
 
-.PHONY: jpeg clean
+.PHONY: jpeg check clean
