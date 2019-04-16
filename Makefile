@@ -52,15 +52,39 @@ page-list.txt: \
 # is roughly equal to sqrt(2):1. Thus, with a 600dpi resolution, the image size
 # of all the pages will be 4370px x 3091px.
 
-trim/a000.jpg: retinex/a000.png
+trim/a000.jpg: jpeg/a000.jpg
 	convert $< \
+		-filter Gaussian -resize 309x437 \
+		-define filter:sigma=25 -resize 3091x4370 \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	composite $< -compose Divide_Dst png:- \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	convert png:- \
+		-auto-level \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	convert png:- \
 		-auto-level \
 		-quality 85 -depth 6 \
 		$@
 
 # Chairman Mao quotes are printed in red color
-trim/b001.png: retinex/b001.png
+trim/b001.png: jpeg/b001.jpg
 	convert $< \
+		-filter Gaussian -resize 309x437 \
+		-define filter:sigma=5 -resize 3091x4370 \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	composite $< -compose Divide_Dst png:- \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	convert png:- \
+		-auto-level \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	convert png:- \
 		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
 			-scale 3091x450! \) \
 			-geometry +0+0      -composite \
@@ -74,42 +98,14 @@ trim/b001.png: retinex/b001.png
 		-quality 100 -alpha off -depth 6 \
 		$@
 
+# Retinex-based intensity correction and thresholding
+# https://www.hpl.hp.com/techreports/2002/HPL-2002-82.html
+
 # Margins will be filled with background color of the page.
 # 3/4 inch width margin on top. With 600dpi, it is 450px.
 # 5/8 inch width margin on left and right. With 600 dpi, it is 375px.
 # 1/4 inch width margin on bottom. With 600dpi, it is 150px.
-trim/%.png: retinex/%.png
-	convert $< \
-		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
-			-scale 3091x450! \) \
-			-geometry +0+0      -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
-			-geometry +0+450    -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 3091x150! \) \
-			-geometry +0+4220   -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
-			-geometry +2716+450 -composite \
-		-level 12%,88%,0.618 \
-		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
-		$@
-
-# Retinex-based intensity correction and thresholding
-# https://www.hpl.hp.com/techreports/2002/HPL-2002-82.html
-retinex/a000.png: jpeg/a000.jpg
-	convert $< \
-		-filter Gaussian -resize 309x437 \
-		-define filter:sigma=25 -resize 3091x4370 \
-		-quality 100 -alpha off -depth 8 \
-		png:- | \
-	composite $< -compose Divide_Dst png:- \
-		-quality 100 -alpha off -depth 8 \
-		png:- | \
-	convert png:- \
-		-auto-level \
-		-quality 100 -alpha off -depth 8 \
-		$@
-
-retinex/%.png: jpeg/%.jpg
+trim/%.png: jpeg/%.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
 		-define filter:sigma=5 -resize 3091x4370 \
@@ -121,6 +117,19 @@ retinex/%.png: jpeg/%.jpg
 	convert png:- \
 		-auto-level \
 		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	convert png:- \
+		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
+			-scale 3091x450! \) \
+			-geometry +0+0      -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
+			-geometry +0+450    -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 3091x150! \) \
+			-geometry +0+4220   -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
+			-geometry +2716+450 -composite \
+		-level 12%,88%,0.618 \
+		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
 %.pdf: page-list.txt
