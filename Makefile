@@ -41,7 +41,7 @@ pdf: $(OUTPUT_BASENAME).pdf
 
 txt: $(OUTPUT_BASENAME).txt
 
-page-list.txt: \
+FILELIST.txt: \
 	$(addprefix trim/, $(addsuffix .jpg, $(basename $(notdir \
 		$(wildcard jpeg/a*.jpg))))) \
 	$(addprefix trim/, $(addsuffix .png, $(basename $(notdir \
@@ -132,10 +132,10 @@ trim/%.png: jpeg/%.jpg
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
-%.pdf: page-list.txt
+%.pdf: FILELIST.txt
 	tesseract $< $(basename $@) -l chi_sim pdf
 
-%.txt: page-list.txt
+%.txt: FILELIST.txt
 	tesseract $< $(basename $@) -l chi_sim txt
 
 clean:
