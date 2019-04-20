@@ -98,6 +98,34 @@ trim/b001.png: jpeg/b001.jpg
 		-quality 100 -alpha off -depth 6 \
 		$@
 
+trim/z999.png: jpeg/z999.jpg
+	convert $< \
+		-filter Gaussian -resize 309x437 \
+		-define filter:sigma=5 -resize 3091x4370 \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	composite $< -compose Divide_Dst png:- \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	convert png:- \
+		-auto-level \
+		-quality 100 -alpha off -depth 8 \
+		png:- | \
+	convert png:- \
+		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
+			-scale 2896x3856! \) \
+			-geometry +0+0      -composite \
+		\( +clone -crop 16x16+2944+256 +repage -scale 1x1! \
+			-scale  195x4370! \) \
+			-geometry +2896+0   -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 1984x272! \) \
+			-geometry +0+3856   -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 2896x242! \) \
+			-geometry +0+4128   -composite \
+		-level 12%,88%,0.618 \
+		-quality 100 -alpha off -depth 6 \
+		$@
+
 # Retinex-based intensity correction and thresholding
 # https://www.hpl.hp.com/techreports/2002/HPL-2002-82.html
 
