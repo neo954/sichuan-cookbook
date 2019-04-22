@@ -1,7 +1,10 @@
-jpeg: $(shell awk -F ' ' '{ print $$1 }' FILELIST)
+download: $(shell awk '{ print $$1 }' FILELIST)
+
+update: $(shell shasum -a 512 -c SHA512SUMS 2>/dev/null | \
+	awk -F ':' '!/ OK$$/ { print $$1 }')
 
 %.jpg: FILELIST
-	curl $$(awk -F ' ' '/^$@ / { print $$NF }' $<) -o $@
+	curl $$(awk '/^$@ / { print $$NF }' $<) -o $@
 
 check: SHA512SUMS
 	shasum -a 512 -c $<
@@ -9,4 +12,4 @@ check: SHA512SUMS
 clean:
 	$(RM) *.jpg
 
-.PHONY: jpeg check clean
+.PHONY: check clean download update
