@@ -52,37 +52,35 @@ FILELIST.txt: \
 # is roughly equal to sqrt(2):1. Thus, with a 600dpi resolution, the image size
 # of all the pages will be 4370px x 3091px.
 
-trim/a000.jpg: jpeg/a000.jpg
+trim/%.jpg: jpeg/%.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
-		-define filter:sigma=25 -resize 3091x4370 \
-		-quality 100 -alpha off -depth 8 \
+		-define filter:sigma=25 -resize 3090x4370 \
+		-background white -extent 3091x4370-0-0 \
+		-quality 100 -alpha off \
 		png:- | \
 	composite $< -compose Divide_Dst png:- \
-		-quality 100 -alpha off -depth 8 \
+		-quality 100 -alpha off \
 		png:- | \
 	convert png:- \
 		-auto-level \
-		-quality 100 -alpha off -depth 8 \
+		-quality 100 -alpha off \
 		png:- | \
 	convert png:- \
 		-auto-level \
-		-quality 85 -depth 6 \
+		-quality 85 \
 		$@
 
 # Chairman Mao quotes are printed in red color
 trim/b001.png: jpeg/b001.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
-		-define filter:sigma=5 -resize 3091x4370 \
-		-quality 100 -alpha off -depth 8 \
+		-define filter:sigma=8 -resize 3090x4370 \
+		-background white -extent 3091x4370-0-0 \
+		-quality 100 -alpha off \
 		png:- | \
 	composite $< -compose Divide_Dst png:- \
-		-quality 100 -alpha off -depth 8 \
-		png:- | \
-	convert png:- \
-		-auto-level \
-		-quality 100 -alpha off -depth 8 \
+		-quality 100 -alpha off \
 		png:- | \
 	convert png:- \
 		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
@@ -94,36 +92,14 @@ trim/b001.png: jpeg/b001.jpg
 			-geometry +0+4220   -composite \
 		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
 			-geometry +2716+450 -composite \
-		-level 12%,88%,0.618 \
-		-quality 100 -alpha off -depth 6 \
-		$@
-
-trim/z999.png: jpeg/z999.jpg
-	convert $< \
-		-filter Gaussian -resize 309x437 \
-		-define filter:sigma=5 -resize 3091x4370 \
-		-quality 100 -alpha off -depth 8 \
-		png:- | \
-	composite $< -compose Divide_Dst png:- \
-		-quality 100 -alpha off -depth 8 \
-		png:- | \
-	convert png:- \
 		-auto-level \
-		-quality 100 -alpha off -depth 8 \
+		-level 50%,84%,0.618 \
+		-quality 100 -alpha off \
 		png:- | \
 	convert png:- \
-		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
-			-scale 2896x3856! \) \
-			-geometry +0+0      -composite \
-		\( +clone -crop 16x16+2944+256 +repage -scale 1x1! \
-			-scale  195x4370! \) \
-			-geometry +2896+0   -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 1984x272! \) \
-			-geometry +0+3856   -composite \
-		\( +clone -crop 1x1+0+0 +repage -scale 2896x242! \) \
-			-geometry +0+4128   -composite \
-		-level 12%,88%,0.618 \
-		-quality 100 -alpha off -depth 6 \
+		-filter Gaussian -resize 3091x4370 \
+		-fuzz 2% +level-colors '#e60012,white' \
+		-quality 100 -alpha off +dither -colors 4 \
 		$@
 
 # Retinex-based intensity correction and thresholding
@@ -136,15 +112,12 @@ trim/z999.png: jpeg/z999.jpg
 trim/%.png: jpeg/%.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
-		-define filter:sigma=5 -resize 3091x4370 \
-		-quality 100 -alpha off -depth 8 \
+		-define filter:sigma=8 -resize 3090x4370 \
+		-background white -extent 3091x4370-0-0 \
+		-quality 100 -alpha off \
 		png:- | \
 	composite $< -compose Divide_Dst png:- \
-		-quality 100 -alpha off -depth 8 \
-		png:- | \
-	convert png:- \
-		-auto-level \
-		-quality 100 -alpha off -depth 8 \
+		-quality 100 -alpha off \
 		png:- | \
 	convert png:- \
 		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
@@ -156,7 +129,12 @@ trim/%.png: jpeg/%.jpg
 			-geometry +0+4220   -composite \
 		\( +clone -crop 1x1+0+0 +repage -scale 375x3770! \) \
 			-geometry +2716+450 -composite \
-		-level 12%,88%,0.618 \
+		-auto-level \
+		-level 50%,84%,0.618 \
+		-quality 100 -alpha off -grayscale Rec709Luma \
+		png:- | \
+	convert png:- \
+		-filter Gaussian -resize 3091x4370 \
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
