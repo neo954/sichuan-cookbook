@@ -102,6 +102,42 @@ trim/b001.png: jpeg/b001.jpg
 		-quality 100 -alpha off +dither -colors 4 \
 		$@
 
+trim/z999.png: jpeg/z999.jpg
+	convert $< \
+		-filter Gaussian -resize 309x437 \
+		-define filter:sigma=8 -resize 3090x4370 \
+		-background white -extent 3091x4370-0-0 \
+		-quality 100 -alpha off \
+		png:- | \
+	composite $< -compose Divide_Dst png:- \
+		-quality 100 -alpha off \
+		png:- | \
+	convert png:- \
+		\( +clone -crop 16x16+1280+256 +repage -scale 1x1! \
+			-scale 2896x3856! \) \
+			-geometry +0+0      -composite \
+		\( +clone -crop 16x16+2944+256 +repage -scale 1x1! \
+			-scale  195x4370! \) \
+			-geometry +2896+0   -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 1984x272! \) \
+			-geometry +0+3856   -composite \
+		\( +clone -crop 1x1+0+0 +repage -scale 2896x242! \) \
+			-geometry +0+4128   -composite \
+		-auto-level \
+		-level 50%,84%,0.618 \
+		-quality 100 -alpha off \
+		png:- | \
+	convert png:- \
+		-filter Gaussian -resize 3091x4370 \
+		-quality 100 -alpha off +dither -colors 4 \
+		$@
+
+trim/b002.png trim/b022.png trim/b042.png trim/c088.png trim/p266.png trim/p300.png: trim/%.png: jpeg/%.jpg
+	convert $< \
+		-fill white \
+		-quality 100 -alpha off -grayscale Rec709Luma -depth 1 \
+		$@
+
 # Retinex-based intensity correction and thresholding
 # https://www.hpl.hp.com/techreports/2002/HPL-2002-82.html
 
