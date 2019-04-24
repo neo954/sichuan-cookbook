@@ -132,12 +132,12 @@ trim/z999.png: jpeg/z999.jpg
 		-quality 100 -alpha off +dither -colors 4 \
 		$@
 
-trim/b002.png trim/b022.png trim/b042.png trim/c088.png trim/p266.png trim/p300.png: trim/%.png: jpeg/%.jpg
+trim/b002.png trim/b022.png trim/b042.png trim/c008.png trim/p266.png trim/p300.png: trim/%.png: jpeg/%.jpg
 	convert $< \
-		-fill white \
+		-fill white -draw 'rectangle 0,0 3091,4370' \
 		png:- | \
 	convert png:- \
-		-filter Gaussian -resize 3091x4370 \
+		-filter Gaussian -resize 2060x2913 \
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 1 \
 		$@
 
