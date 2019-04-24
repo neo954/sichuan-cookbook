@@ -67,7 +67,7 @@ trim/%.jpg: jpeg/%.jpg
 		-quality 100 -alpha off \
 		png:- | \
 	convert png:- \
-		-filter Gaussian -resize 2060x2913 \
+		-auto-level \
 		-quality 85 \
 		$@
 
@@ -97,7 +97,7 @@ trim/b001.png: jpeg/b001.jpg
 		-quality 100 -alpha off \
 		png:- | \
 	convert png:- \
-		-filter Gaussian -resize 2060x2913 \
+		-filter Gaussian -resize 3091x4370 \
 		-fuzz 2% +level-colors '#e60012,white' \
 		-quality 100 -alpha off +dither -colors 4 \
 		$@
@@ -128,16 +128,13 @@ trim/z999.png: jpeg/z999.jpg
 		-quality 100 -alpha off \
 		png:- | \
 	convert png:- \
-		-filter Gaussian -resize 2060x2913 \
+		-filter Gaussian -resize 3091x4370 \
 		-quality 100 -alpha off +dither -colors 4 \
 		$@
 
 trim/b002.png trim/b022.png trim/b042.png trim/c008.png trim/p266.png trim/p300.png: trim/%.png: jpeg/%.jpg
 	convert $< \
 		-fill white -draw 'rectangle 0,0 3091,4370' \
-		png:- | \
-	convert png:- \
-		-filter Gaussian -resize 2060x2913 \
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 1 \
 		$@
 
@@ -173,7 +170,7 @@ trim/%.png: jpeg/%.jpg
 		-quality 100 -alpha off -grayscale Rec709Luma \
 		png:- | \
 	convert png:- \
-		-filter Gaussian -resize 2060x2913 \
+		-filter Gaussian -resize 3091x4370 \
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
