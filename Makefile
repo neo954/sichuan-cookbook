@@ -55,8 +55,7 @@ FILELIST.txt: \
 trim/%.jpg: jpeg/%.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
-		-define filter:sigma=25 -resize 3090x4370 \
-		-background white -extent 3091x4370-0-0 \
+		-define filter:sigma=25 -resize 3090x4370! \
 		-quality 100 -alpha off \
 		png:- | \
 	composite $< -compose Divide_Dst png:- \
@@ -75,8 +74,7 @@ trim/%.jpg: jpeg/%.jpg
 trim/b001.png: jpeg/b001.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
-		-define filter:sigma=8 -resize 3090x4370 \
-		-background white -extent 3091x4370-0-0 \
+		-define filter:sigma=8 -resize 3091x4370! \
 		-quality 100 -alpha off \
 		png:- | \
 	composite $< -compose Divide_Dst png:- \
@@ -105,8 +103,7 @@ trim/b001.png: jpeg/b001.jpg
 trim/z999.png: jpeg/z999.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
-		-define filter:sigma=8 -resize 3090x4370 \
-		-background white -extent 3091x4370-0-0 \
+		-define filter:sigma=8 -resize 3091x4370! \
 		-quality 100 -alpha off \
 		png:- | \
 	composite $< -compose Divide_Dst png:- \
@@ -148,8 +145,7 @@ trim/b002.png trim/b022.png trim/b042.png trim/c008.png trim/p266.png trim/p300.
 trim/%.png: jpeg/%.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
-		-define filter:sigma=8 -resize 3090x4370 \
-		-background white -extent 3091x4370-0-0 \
+		-define filter:sigma=8 -resize 3091x4370! \
 		-quality 100 -alpha off \
 		png:- | \
 	composite $< -compose Divide_Dst png:- \
