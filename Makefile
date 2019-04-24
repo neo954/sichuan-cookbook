@@ -97,7 +97,7 @@ trim/b001.png: trim/%.png: jpeg/%.jpg
 	convert png:- \
 		-filter Gaussian -resize 3091x4370 \
 		-fuzz 2% +level-colors '#e60012,white' \
-		-quality 100 -alpha off +dither -colors 4 \
+		-quality 100 -alpha off +dither -colors 16 \
 		$@
 
 trim/z999.png: trim/%.png: jpeg/%.jpg
@@ -122,11 +122,12 @@ trim/z999.png: trim/%.png: jpeg/%.jpg
 			-geometry +0+4128   -composite \
 		-auto-level \
 		-level 50%,84%,0.618 \
-		-quality 100 -alpha off \
+		-quality 100 -alpha off -grayscale Rec709Luma \
 		png:- | \
 	convert png:- \
 		-filter Gaussian -resize 3091x4370 \
-		-quality 100 -alpha off +dither -colors 4 \
+		-fill '#ffffcc' -draw 'rectangle 2896,0 3091,4370' \
+		-quality 100 -alpha off +dither -colors 16 \
 		$@
 
 trim/b002.png trim/b022.png trim/b042.png trim/c008.png trim/p266.png trim/p300.png: trim/%.png: jpeg/%.jpg
