@@ -52,7 +52,7 @@ FILELIST.txt: \
 # is roughly equal to sqrt(2):1. Thus, with a 600dpi resolution, the image size
 # of all the pages will be 4370px x 3091px.
 
-trim/%.jpg: jpeg/%.jpg
+trim/a000.jpg: trim/%.jpg: jpeg/%.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
 		-define filter:sigma=25 -resize 3090x4370! \
@@ -71,7 +71,7 @@ trim/%.jpg: jpeg/%.jpg
 		$@
 
 # Chairman Mao quotes are printed in red color
-trim/b001.png: jpeg/b001.jpg
+trim/b001.png: trim/%.png: jpeg/%.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
 		-define filter:sigma=8 -resize 3091x4370! \
@@ -100,7 +100,7 @@ trim/b001.png: jpeg/b001.jpg
 		-quality 100 -alpha off +dither -colors 4 \
 		$@
 
-trim/z999.png: jpeg/z999.jpg
+trim/z999.png: trim/%.png: jpeg/%.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
 		-define filter:sigma=8 -resize 3091x4370! \
