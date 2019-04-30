@@ -171,6 +171,70 @@ trim/%.png: jpeg/%.jpg
 		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
 		$@
 
+# A4 size galley proof
+# 297mm x 210mm in 600 dpi => 7016px x 4961px
+proof/p001.png: trim/a000.jpg trim/b001.png
+	convert -density 600 -units PixelsPerInch \
+		-size 7016x4961 xc:transparent \
+		-fill none -stroke black -strokewidth 1 \
+		-draw 'circle 283,1535 283,1677' \
+		-draw 'line   283,1511 283,1559' \
+		-draw 'line   259,1535 307,1535' \
+		-draw 'line   283,1297 283,1321' \
+		-draw 'line   283,1345 283,1369' \
+		-draw 'line   283,1701 283,1725' \
+		-draw 'line   283,1749 283,1773' \
+		-draw 'circle 283,3425 283,3567' \
+		-draw 'line   283,3401 283,3449' \
+		-draw 'line   259,3425 307,3425' \
+		-draw 'line   283,3187 283,3211' \
+		-draw 'line   283,3235 283,3259' \
+		-draw 'line   283,3591 283,3615' \
+		-draw 'line   283,3639 283,3663' \
+		png:- | \
+	composite $< \
+		-geometry +531+295 png:- \
+		-quality 100 \
+		png:- | \
+	composite $(word 2, $^) \
+		-geometry +3622+295 png:- \
+		-quality 100 \
+		png:- | \
+	convert png:- \
+		-quality 100 \
+		$@
+
+proof/p002.png: trim/b002.png trim/b021.png
+	convert -density 600 -units PixelsPerInch \
+		-size 7016x4961 xc:transparent \
+		-fill none -stroke black -strokewidth 1 \
+		-draw 'circle 6733,1535 6733,1677' \
+		-draw 'line   6733,1511 6733,1559' \
+		-draw 'line   6709,1535 6757,1535' \
+		-draw 'line   6733,1297 6733,1321' \
+		-draw 'line   6733,1345 6733,1369' \
+		-draw 'line   6733,1701 6733,1725' \
+		-draw 'line   6733,1749 6733,1773' \
+		-draw 'circle 6733,3425 6733,3567' \
+		-draw 'line   6733,3401 6733,3449' \
+		-draw 'line   6709,3425 6757,3425' \
+		-draw 'line   6733,3187 6733,3211' \
+		-draw 'line   6733,3235 6733,3259' \
+		-draw 'line   6733,3591 6733,3615' \
+		-draw 'line   6733,3639 6733,3663' \
+		png:- | \
+	composite $< \
+		-geometry +295+295 png:- \
+		-quality 100 \
+		png:- | \
+	composite $(word 2, $^) \
+		-geometry +3386+295 png:- \
+		-quality 100 \
+		png:- | \
+	convert png:- \
+		-quality 100 \
+		$@
+
 %.pdf: FILELIST.txt
 	tesseract $< $(basename $@) -l chi_sim pdf
 
