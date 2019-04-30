@@ -173,7 +173,7 @@ trim/%.png: jpeg/%.jpg
 
 # A4 size galley proof
 # 297mm x 210mm in 600 dpi => 7016px x 4961px
-proof/p001.png: trim/a000.jpg trim/b001.png
+proof/%-r.png:
 	convert -density 600 -units PixelsPerInch \
 		-size 7016x4961 xc:transparent \
 		-fill none -stroke black -strokewidth 1 \
@@ -192,11 +192,13 @@ proof/p001.png: trim/a000.jpg trim/b001.png
 		-draw 'line   283,3591 283,3615' \
 		-draw 'line   283,3639 283,3663' \
 		png:- | \
-	composite $< \
+	composite $(wildcard trim/$(firstword $(subst -, , \
+			$(basename $(notdir $@)))).*) \
 		-geometry +531+295 png:- \
 		-quality 100 \
 		png:- | \
-	composite $(word 2, $^) \
+	composite $(wildcard trim/$(word 2, $(subst -, , \
+			$(basename $(notdir $@)))).*) \
 		-geometry +3622+295 png:- \
 		-quality 100 \
 		png:- | \
@@ -204,7 +206,7 @@ proof/p001.png: trim/a000.jpg trim/b001.png
 		-quality 100 \
 		$@
 
-proof/p002.png: trim/b002.png trim/b021.png
+proof/%-l.png:
 	convert -density 600 -units PixelsPerInch \
 		-size 7016x4961 xc:transparent \
 		-fill none -stroke black -strokewidth 1 \
@@ -223,11 +225,13 @@ proof/p002.png: trim/b002.png trim/b021.png
 		-draw 'line   6733,3591 6733,3615' \
 		-draw 'line   6733,3639 6733,3663' \
 		png:- | \
-	composite $< \
+	composite $(wildcard trim/$(firstword $(subst -, , \
+			$(basename $(notdir $@)))).*) \
 		-geometry +295+295 png:- \
 		-quality 100 \
 		png:- | \
-	composite $(word 2, $^) \
+	composite $(wildcard trim/$(word 2, $(subst -, , \
+			$(basename $(notdir $@)))).*) \
 		-geometry +3386+295 png:- \
 		-quality 100 \
 		png:- | \
