@@ -174,34 +174,34 @@ trim/%.png: jpeg/%.jpg
 		$@
 
 # A4 size galley proof
-# 297mm x 210mm in 600 dpi => 7016px x 4961px
+# 296.7mm x 209.9mm in 600 dpi => 7008px x 4958px
 proof/%-r.png: deps
 	convert -density 600 -units PixelsPerInch \
-		-size 7016x4961 xc:transparent \
+		-size 7008x4958 xc:transparent \
 		-fill none -stroke black -strokewidth 1 \
-		-draw 'circle 283,1535 283,1677' \
-		-draw 'line   283,1511 283,1559' \
-		-draw 'line   259,1535 307,1535' \
-		-draw 'line   283,1297 283,1321' \
-		-draw 'line   283,1345 283,1369' \
-		-draw 'line   283,1701 283,1725' \
-		-draw 'line   283,1749 283,1773' \
-		-draw 'circle 283,3425 283,3567' \
-		-draw 'line   283,3401 283,3449' \
-		-draw 'line   259,3425 307,3425' \
-		-draw 'line   283,3187 283,3211' \
-		-draw 'line   283,3235 283,3259' \
-		-draw 'line   283,3591 283,3615' \
-		-draw 'line   283,3639 283,3663' \
+		-draw 'circle 282,1534 282,1676' \
+		-draw 'line   282,1510 282,1558' \
+		-draw 'line   258,1534 306,1534' \
+		-draw 'line   282,1296 282,1320' \
+		-draw 'line   282,1344 282,1368' \
+		-draw 'line   282,1700 282,1724' \
+		-draw 'line   282,1748 282,1772' \
+		-draw 'circle 282,3424 282,3566' \
+		-draw 'line   282,3400 282,3448' \
+		-draw 'line   258,3424 306,3424' \
+		-draw 'line   282,3186 282,3210' \
+		-draw 'line   282,3234 282,3258' \
+		-draw 'line   282,3590 282,3614' \
+		-draw 'line   282,3638 282,3662' \
 		png:- | \
 	composite $(wildcard trim/$(firstword $(subst -, , \
 			$(basename $(notdir $@)))).*) \
-		-geometry +531+295 png:- \
+		-geometry +532+294 png:- \
 		-quality 100 \
 		png:- | \
 	composite $(wildcard trim/$(word 2, $(subst -, , \
 			$(basename $(notdir $@)))).*) \
-		-geometry +3622+295 png:- \
+		-geometry +3623+294 png:- \
 		-quality 100 \
 		png:- | \
 	convert png:- \
@@ -210,31 +210,31 @@ proof/%-r.png: deps
 
 proof/%-l.png: deps
 	convert -density 600 -units PixelsPerInch \
-		-size 7016x4961 xc:transparent \
+		-size 7008x4958 xc:transparent \
 		-fill none -stroke black -strokewidth 1 \
-		-draw 'circle 6733,1535 6733,1677' \
-		-draw 'line   6733,1511 6733,1559' \
-		-draw 'line   6709,1535 6757,1535' \
-		-draw 'line   6733,1297 6733,1321' \
-		-draw 'line   6733,1345 6733,1369' \
-		-draw 'line   6733,1701 6733,1725' \
-		-draw 'line   6733,1749 6733,1773' \
-		-draw 'circle 6733,3425 6733,3567' \
-		-draw 'line   6733,3401 6733,3449' \
-		-draw 'line   6709,3425 6757,3425' \
-		-draw 'line   6733,3187 6733,3211' \
-		-draw 'line   6733,3235 6733,3259' \
-		-draw 'line   6733,3591 6733,3615' \
-		-draw 'line   6733,3639 6733,3663' \
+		-draw 'circle 6726,1534 6726,1676' \
+		-draw 'line   6726,1510 6726,1558' \
+		-draw 'line   6702,1534 6750,1534' \
+		-draw 'line   6726,1296 6726,1320' \
+		-draw 'line   6726,1344 6726,1368' \
+		-draw 'line   6726,1700 6726,1724' \
+		-draw 'line   6726,1748 6726,1772' \
+		-draw 'circle 6726,3424 6726,3566' \
+		-draw 'line   6726,3400 6726,3448' \
+		-draw 'line   6702,3424 6750,3424' \
+		-draw 'line   6726,3186 6726,3210' \
+		-draw 'line   6726,3234 6726,3258' \
+		-draw 'line   6726,3590 6726,3614' \
+		-draw 'line   6726,3638 6726,3662' \
 		png:- | \
 	composite $(wildcard trim/$(firstword $(subst -, , \
 			$(basename $(notdir $@)))).*) \
-		-geometry +295+295 png:- \
+		-geometry +294+294 png:- \
 		-quality 100 \
 		png:- | \
 	composite $(wildcard trim/$(word 2, $(subst -, , \
 			$(basename $(notdir $@)))).*) \
-		-geometry +3386+295 png:- \
+		-geometry +3385+294 png:- \
 		-quality 100 \
 		png:- | \
 	convert png:- \
@@ -251,11 +251,10 @@ clean:
 	$(RM) retinex/*.png trim/*.png
 	$(RM) *.pdf *.txt
 
-$(OUTPUT_BASENAME)-proof-a4.pdf: $(wildcard proof/*.png)
+$(OUTPUT_BASENAME)-proof-a4.pdf: deps $(wildcard proof/*.png)
 	convert -density 600 -units PixelsPerInch \
-		$^ $@
-
-$(OUTPUT_BASENAME)-proof-a4.pdf: deps
+		$(wildcard proof/*.png) \
+		$@
 
 deps: FILELIST.txt
 	while read -r FILE_ONE && read -r FILE_TWO ; \
