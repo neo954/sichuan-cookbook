@@ -41,6 +41,8 @@ pdf: $(OUTPUT_BASENAME).pdf
 
 txt: $(OUTPUT_BASENAME).txt
 
+proof: $(OUTPUT_BASENAME)-proof-a4.pdf
+
 FILELIST.txt: \
 	$(addprefix trim/, $(addsuffix .jpg, $(basename $(notdir \
 		$(wildcard jpeg/a*.jpg))))) \
@@ -173,7 +175,7 @@ trim/%.png: jpeg/%.jpg
 
 # A4 size galley proof
 # 297mm x 210mm in 600 dpi => 7016px x 4961px
-proof/%-r.png:
+proof/%-r.png: deps
 	convert -density 600 -units PixelsPerInch \
 		-size 7016x4961 xc:transparent \
 		-fill none -stroke black -strokewidth 1 \
@@ -206,7 +208,7 @@ proof/%-r.png:
 		-quality 100 \
 		$@
 
-proof/%-l.png:
+proof/%-l.png: deps
 	convert -density 600 -units PixelsPerInch \
 		-size 7016x4961 xc:transparent \
 		-fill none -stroke black -strokewidth 1 \
@@ -249,4 +251,27 @@ clean:
 	$(RM) retinex/*.png trim/*.png
 	$(RM) *.pdf *.txt
 
+$(OUTPUT_BASENAME)-proof-a4.pdf: $(wildcard proof/*.png)
+	convert -density 600 -units PixelsPerInch \
+		$^ $@
+
+$(OUTPUT_BASENAME)-proof-a4.pdf: deps
+
+deps: FILELIST.txt
+	while read -r FILE_ONE && read -r FILE_TWO ; \
+	do \
+		if [ "$${SIDE}" != "r" ] ; \
+		then \
+			SIDE="r" ; \
+		else \
+			SIDE="l" ; \
+		fi ; \
+		PAGE_ONE="$${FILE_ONE%.*}" ; \
+		PAGE_ONE="$${PAGE_ONE#*/}" ; \
+		PAGE_TWO="$${FILE_TWO%.*}" ; \
+		PAGE_TWO="$${PAGE_TWO#*/}" ; \
+		echo "proof/$${PAGE_ONE}-$${PAGE_TWO}-$${SIDE}.png: $${FILE_ONE} $${FILE_TWO}" ; \
+	done <$< >$@
+
+include deps
 .PHONY: all build clean pdf txt
