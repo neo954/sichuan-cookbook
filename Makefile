@@ -177,7 +177,7 @@ trim/%.png: jpeg/%.jpg
 # 296.7mm x 209.9mm in 600 dpi => 7008px x 4958px
 proof/%-r.png: deps
 	convert -density 600 -units PixelsPerInch \
-		-size 7008x4958 xc:transparent \
+		-size 7008x4958 xc:white \
 		-fill none -stroke black -strokewidth 1 \
 		-draw 'circle 282,1534 282,1676' \
 		-draw 'line   282,1510 282,1558' \
@@ -205,12 +205,12 @@ proof/%-r.png: deps
 		-quality 100 \
 		png:- | \
 	convert png:- \
-		-quality 100 \
+		-quality 100 -alpha off \
 		$@
 
 proof/%-l.png: deps
 	convert -density 600 -units PixelsPerInch \
-		-size 7008x4958 xc:transparent \
+		-size 7008x4958 xc:white \
 		-fill none -stroke black -strokewidth 1 \
 		-draw 'circle 6726,1534 6726,1676' \
 		-draw 'line   6726,1510 6726,1558' \
@@ -238,7 +238,7 @@ proof/%-l.png: deps
 		-quality 100 \
 		png:- | \
 	convert png:- \
-		-quality 100 \
+		-quality 100 -alpha off \
 		$@
 
 %.pdf: FILELIST.txt
