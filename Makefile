@@ -253,7 +253,11 @@ clean:
 	$(RM) retinex/*.png trim/*.png
 	$(RM) *.pdf *.txt
 
-$(OUTPUT_BASENAME)-proof-a4.pdf: deps $(wildcard proof/*.png)
+$(OUTPUT_BASENAME)-proof-a4.pdf: deps $(shell \
+	while read -r LINE ; \
+	do \
+		echo "$${LINE%:*}" ; \
+	done <deps)
 	convert -density 600 -units PixelsPerInch \
 		$(wildcard proof/*.png) \
 		$@
