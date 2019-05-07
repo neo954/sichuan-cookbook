@@ -175,18 +175,20 @@ trim/%.png: jpeg/%.jpg
 
 # A4 size galley proof
 # 296.7mm x 209.9mm in 600 dpi => 7008px x 4958px
+
+# With ISO 838 filing holes marked.
 proof/%-r.png: deps
 	convert -density 600 -units PixelsPerInch \
 		-size 7008x4958 xc:white \
 		-fill none -stroke black -strokewidth 1 \
-		-draw 'circle 282,1534 282,1676' \
+		-draw 'circle 282,1534 282,1605' \
 		-draw 'line   282,1510 282,1558' \
 		-draw 'line   258,1534 306,1534' \
 		-draw 'line   282,1296 282,1320' \
 		-draw 'line   282,1344 282,1368' \
 		-draw 'line   282,1700 282,1724' \
 		-draw 'line   282,1748 282,1772' \
-		-draw 'circle 282,3424 282,3566' \
+		-draw 'circle 282,3424 282,3495' \
 		-draw 'line   282,3400 282,3448' \
 		-draw 'line   258,3424 306,3424' \
 		-draw 'line   282,3186 282,3210' \
@@ -212,14 +214,14 @@ proof/%-l.png: deps
 	convert -density 600 -units PixelsPerInch \
 		-size 7008x4958 xc:white \
 		-fill none -stroke black -strokewidth 1 \
-		-draw 'circle 6726,1534 6726,1676' \
+		-draw 'circle 6726,1534 6726,1605' \
 		-draw 'line   6726,1510 6726,1558' \
 		-draw 'line   6702,1534 6750,1534' \
 		-draw 'line   6726,1296 6726,1320' \
 		-draw 'line   6726,1344 6726,1368' \
 		-draw 'line   6726,1700 6726,1724' \
 		-draw 'line   6726,1748 6726,1772' \
-		-draw 'circle 6726,3424 6726,3566' \
+		-draw 'circle 6726,3424 6726,3495' \
 		-draw 'line   6726,3400 6726,3448' \
 		-draw 'line   6702,3424 6750,3424' \
 		-draw 'line   6726,3186 6726,3210' \
