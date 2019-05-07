@@ -184,17 +184,17 @@ proof/%-r.png: deps
 		-draw 'circle 282,1534 282,1605' \
 		-draw 'line   282,1510 282,1558' \
 		-draw 'line   258,1534 306,1534' \
-		-draw 'line   282,1296 282,1320' \
-		-draw 'line   282,1344 282,1368' \
-		-draw 'line   282,1700 282,1724' \
-		-draw 'line   282,1748 282,1772' \
+		-draw 'line   282,1357 282,1381' \
+		-draw 'line   282,1405 282,1429' \
+		-draw 'line   282,1639 282,1663' \
+		-draw 'line   282,1687 282,1711' \
 		-draw 'circle 282,3424 282,3495' \
 		-draw 'line   282,3400 282,3448' \
 		-draw 'line   258,3424 306,3424' \
-		-draw 'line   282,3186 282,3210' \
-		-draw 'line   282,3234 282,3258' \
-		-draw 'line   282,3590 282,3614' \
-		-draw 'line   282,3638 282,3662' \
+		-draw 'line   282,3247 282,3271' \
+		-draw 'line   282,3295 282,3319' \
+		-draw 'line   282,3529 282,3553' \
+		-draw 'line   282,3577 282,3601' \
 		png:- | \
 	composite $(wildcard trim/$(firstword $(subst -, , \
 			$(basename $(notdir $@)))).*) \
@@ -217,17 +217,17 @@ proof/%-l.png: deps
 		-draw 'circle 6726,1534 6726,1605' \
 		-draw 'line   6726,1510 6726,1558' \
 		-draw 'line   6702,1534 6750,1534' \
-		-draw 'line   6726,1296 6726,1320' \
-		-draw 'line   6726,1344 6726,1368' \
-		-draw 'line   6726,1700 6726,1724' \
-		-draw 'line   6726,1748 6726,1772' \
+		-draw 'line   6726,1357 6726,1381' \
+		-draw 'line   6726,1405 6726,1429' \
+		-draw 'line   6726,1639 6726,1663' \
+		-draw 'line   6726,1687 6726,1711' \
 		-draw 'circle 6726,3424 6726,3495' \
 		-draw 'line   6726,3400 6726,3448' \
 		-draw 'line   6702,3424 6750,3424' \
-		-draw 'line   6726,3186 6726,3210' \
-		-draw 'line   6726,3234 6726,3258' \
-		-draw 'line   6726,3590 6726,3614' \
-		-draw 'line   6726,3638 6726,3662' \
+		-draw 'line   6726,3247 6726,3271' \
+		-draw 'line   6726,3295 6726,3319' \
+		-draw 'line   6726,3529 6726,3553' \
+		-draw 'line   6726,3577 6726,3601' \
 		png:- | \
 	composite $(wildcard trim/$(firstword $(subst -, , \
 			$(basename $(notdir $@)))).*) \
