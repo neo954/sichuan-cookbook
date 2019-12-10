@@ -4,7 +4,7 @@ update: $(shell shasum -a 512 -c SHA512SUMS 2>/dev/null | \
 	awk -F ':' '!/ OK$$/ { print $$1 }')
 
 %.jpg: FILELIST
-	curl $$(awk '/^$@ / { print $$NF }' $<) -o $@
+	curl -L $$(awk '/^$@ / { print $$NF }' $<) -o $@
 
 check: SHA512SUMS
 	shasum -a 512 -c $<
