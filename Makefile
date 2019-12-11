@@ -41,7 +41,7 @@ scan: $(OUTPUT_BASENAME)-scan.pdf
 
 proof: $(OUTPUT_BASENAME)-proof-a4.pdf
 
-FILELIST.txt: \
+FILELIST: \
 	$(addprefix trim/, $(addsuffix .jpg, $(basename $(notdir \
 		$(wildcard jpeg/a*.jpg))))) \
 	$(addprefix trim/, $(addsuffix .png, $(basename $(notdir \
@@ -242,10 +242,10 @@ proof/%-l.png: deps
 		-quality 100 -alpha off \
 		$@
 
-$(OUTPUT_BASENAME)-scan.pdf: FILELIST.txt
+$(OUTPUT_BASENAME)-scan.pdf: FILELIST
 	tesseract $< $(basename $@) -l chi_sim pdf
 
-$(OUTPUT_BASENAME)-scan.txt: FILELIST.txt
+$(OUTPUT_BASENAME)-scan.txt: FILELIST
 	tesseract $< $(basename $@) -l chi_sim txt
 
 clean:
@@ -262,7 +262,7 @@ $(OUTPUT_BASENAME)-proof-a4.pdf: deps $(shell \
 		$(wildcard proof/*.png) \
 		$@
 
-deps: FILELIST.txt
+deps: FILELIST
 	mkdir -p proof
 	while read -r FILE_ONE && read -r FILE_TWO ; \
 	do \
