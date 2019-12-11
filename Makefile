@@ -33,13 +33,11 @@
 
 OUTPUT_BASENAME := sichuan-cookbook-1972
 
-build: pdf
+build: scan
 
-all: pdf txt
+all: scan
 
-pdf: $(OUTPUT_BASENAME).pdf
-
-txt: $(OUTPUT_BASENAME).txt
+scan: $(OUTPUT_BASENAME)-scan.pdf
 
 proof: $(OUTPUT_BASENAME)-proof-a4.pdf
 
@@ -48,6 +46,7 @@ FILELIST.txt: \
 		$(wildcard jpeg/a*.jpg))))) \
 	$(addprefix trim/, $(addsuffix .png, $(basename $(notdir \
 		$(wildcard jpeg/[bcpz]*.jpg)))))
+	mkdir -p trim
 	ls -1 trim/* >$@
 
 # The original book has the page size 185mm x 130mm. This length-to-width ratio
@@ -243,14 +242,15 @@ proof/%-l.png: deps
 		-quality 100 -alpha off \
 		$@
 
-%.pdf: FILELIST.txt
+$(OUTPUT_BASENAME)-scan.pdf: FILELIST.txt
 	tesseract $< $(basename $@) -l chi_sim pdf
 
-%.txt: FILELIST.txt
+$(OUTPUT_BASENAME)-scan.txt: FILELIST.txt
 	tesseract $< $(basename $@) -l chi_sim txt
 
 clean:
-	$(RM) retinex/*.png trim/*.png
+	$(RM) trim/*.png
+	$(RM) proof/*.png
 	$(RM) *.pdf *.txt
 
 $(OUTPUT_BASENAME)-proof-a4.pdf: deps $(shell \
@@ -263,6 +263,7 @@ $(OUTPUT_BASENAME)-proof-a4.pdf: deps $(shell \
 		$@
 
 deps: FILELIST.txt
+	mkdir -p proof
 	while read -r FILE_ONE && read -r FILE_TWO ; \
 	do \
 		if [ "$${SIDE}" != "r" ] ; \
