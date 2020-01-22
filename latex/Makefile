@@ -53,6 +53,7 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 
 	xelatex -no-pdf $< $(word 2, $^)
 	xelatex -no-pdf $< $(word 2, $^)
+	xelatex -no-pdf $< $(word 2, $^)
 
 %.xdv: %.tex
 	xelatex -no-pdf $^
