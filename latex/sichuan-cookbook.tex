@@ -2,7 +2,7 @@
 %
 % BSD 3-Clause License
 %
-% Copyright (C) 2019 GONG Jie <gongjie.jie@gmail.com>
+% Copyright (C) 2019, 2020 GONG Jie <gongjie.jie@gmail.com>
 % All rights reserved.
 %
 % Redistribution and use in source and binary forms, with or without
