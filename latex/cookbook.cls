@@ -70,8 +70,8 @@
 		BoldFont=Noto Serif CJK SC Medium,
 		Ext-B=SimSun-ExtB,
 		Ext-C=SimSun-ExtB,
-		Ext-D=ZhongHuaSongPlane02,
-		Ext-E=ZhongHuaSongPlane02,
+		Ext-D=SimSun-ExtB,
+		Ext-E=SimSun-ExtB,
 		Ext-F=ZhongHuaSongPlane02,
 		FallBack=ZhongHuaSongPlane02
 	]{Noto Serif CJK SC}
