@@ -45,12 +45,29 @@
 	footskip=5mm
 ]{geometry}
 \usepackage{xeCJK}
-	\xeCJKDeclareSubCJKBlock{Tofu}{
-		`𤆵
+	\xeCJKDeclareSubCJKBlock{Ext-A}{
+		"3400 -> "4DBF
+	}
+	\xeCJKDeclareSubCJKBlock{Ext-B}{
+		"20000 -> "2A6D6
+	}
+	\xeCJKDeclareSubCJKBlock{Ext-C}{
+		"2A700 -> "2B734
+	}
+	\xeCJKDeclareSubCJKBlock{Ext-D}{
+		"2B740 -> "2B81D
+	}
+	\xeCJKDeclareSubCJKBlock{Ext-E}{
+		"2B820 -> "2CEA1
+	}
+	\xeCJKDeclareSubCJKBlock{Ext-F}{
+		"2CEB0 -> "2EBE0
+	}
+	\xeCJKDeclareSubCJKBlock{Ext-G}{
+		"30000 -> "3134A
 	}
 	\setCJKmainfont[
 		BoldFont=Noto Serif CJK SC Medium,
-		Tofu=Noto Sans CJK SC,
 		FallBack=Noto Sans CJK SC
 	]{Noto Serif CJK SC}
 	\setCJKsansfont[
