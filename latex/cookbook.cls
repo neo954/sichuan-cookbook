@@ -68,6 +68,11 @@
 	}
 	\setCJKmainfont[
 		BoldFont=Noto Serif CJK SC Medium,
+		Ext-B=ZhongHuaSongPlane02,
+		Ext-C=ZhongHuaSongPlane02,
+		Ext-D=ZhongHuaSongPlane02,
+		Ext-E=ZhongHuaSongPlane02,
+		Ext-F=ZhongHuaSongPlane02,
 		FallBack=Noto Sans CJK SC
 	]{Noto Serif CJK SC}
 	\setCJKsansfont[
