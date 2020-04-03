@@ -68,8 +68,8 @@
 	}
 	\setCJKmainfont[
 		BoldFont=Noto Serif CJK SC Medium,
-		Ext-B=ZhongHuaSongPlane02,
-		Ext-C=ZhongHuaSongPlane02,
+		Ext-B=SimSun-ExtB,
+		Ext-C=SimSun-ExtB,
 		Ext-D=ZhongHuaSongPlane02,
 		Ext-E=ZhongHuaSongPlane02,
 		Ext-F=ZhongHuaSongPlane02,
