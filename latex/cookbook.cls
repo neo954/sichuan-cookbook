@@ -73,7 +73,7 @@
 		Ext-D=ZhongHuaSongPlane02,
 		Ext-E=ZhongHuaSongPlane02,
 		Ext-F=ZhongHuaSongPlane02,
-		FallBack=Noto Sans CJK SC
+		FallBack=ZhongHuaSongPlane02
 	]{Noto Serif CJK SC}
 	\setCJKsansfont[
 		BoldFont=Noto Sans CJK SC Bold
