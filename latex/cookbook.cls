@@ -79,7 +79,14 @@
 		BoldFont=Noto Sans CJK SC Bold
 	]{Noto Sans CJK SC Medium}
 	\setCJKmonofont{Noto Sans Mono CJK SC}
-	\newCJKfontfamily[kai]\kafamily{FandolKai-Regular.otf}
+	\newCJKfontfamily[kai]\kafamily[
+		Ext-B=TW-Kai-Ext-B,
+		Ext-C=TW-Kai-Ext-B,
+		Ext-D=TW-Kai-Ext-B,
+		Ext-E=TW-Kai-Ext-B,
+		Ext-F=TW-Kai-Ext-B,
+		FallBack=TW-Kai
+	]{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
 \usepackage[encoding=UTF8]{zhnumber}
 \usepackage{tocloft}
