@@ -237,13 +237,24 @@
 			\division{特点}%
 		}
 
+		\settowidth{\headerwidth}{##2}%
 		\ifthenelse{\value{chapter}>999}{%
-			\section[##2]{\makebox[5em][s]{##2}}
+			\ifthenelse{\lengthtest{\headerwidth<5em}}{%
+				\section[##2]{\makebox[5em][s]{##2}}%
+			}{%
+				\section{##2}%
+			}
 		}{%
-			\section[%
+			\ifthenelse{\lengthtest{\headerwidth<5em}}{%
 				% Use different text for the table of contents and bookmarks
-				\texorpdfstring{\zhdigits{\arabic{section}}、##2}{##2}%
-			]{\makebox[5em][s]{##2}}
+				\section[%
+					\texorpdfstring{\zhdigits{\arabic{section}}、##2}{##2}%
+				]{\makebox[5em][s]{##2}}%
+			}{%
+				\section[%
+					\texorpdfstring{\zhdigits{\arabic{section}}、##2}{##2}%
+				]{##2}%
+			}
 		}%
 		\ifthenelse{\equal{##1}{}}{%
 		}{%
