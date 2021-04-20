@@ -74,6 +74,7 @@
 		Ext-E=ZhongHuaSongPlane02,
 		Ext-F=ZhongHuaSongPlane02,
 		Supplement=ZhongHuaSongPlane02,
+		Ext-G=sim-ch_n5100 Regular,
 		FallBack=ZhongHuaSongPlane02
 	]{Noto Serif CJK SC}
 	\setCJKsansfont[
