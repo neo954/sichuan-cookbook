@@ -46,30 +46,34 @@
 		"3400 -> "4DBF
 	}
 	\xeCJKDeclareSubCJKBlock{Ext-B}{
-		"20000 -> "2A6D6
+		"20000 -> "2A6DF
 	}
 	\xeCJKDeclareSubCJKBlock{Ext-C}{
-		"2A700 -> "2B734
+		"2A700 -> "2B73F
 	}
 	\xeCJKDeclareSubCJKBlock{Ext-D}{
-		"2B740 -> "2B81D
+		"2B740 -> "2B81F
 	}
 	\xeCJKDeclareSubCJKBlock{Ext-E}{
-		"2B820 -> "2CEA1
+		"2B820 -> "2CEAF
 	}
 	\xeCJKDeclareSubCJKBlock{Ext-F}{
-		"2CEB0 -> "2EBE0
+		"2CEB0 -> "2EBEF
+	}
+	\xeCJKDeclareSubCJKBlock{Supplement}{
+		"2F800 -> "2FA1F
 	}
 	\xeCJKDeclareSubCJKBlock{Ext-G}{
-		"30000 -> "3134A
+		"30000 -> "3134F
 	}
 	\setCJKmainfont[
 		BoldFont=Noto Serif CJK SC Medium,
 		Ext-B=SimSun-ExtB,
 		Ext-C=SimSun-ExtB,
 		Ext-D=SimSun-ExtB,
-		Ext-E=SimSun-ExtB,
+		Ext-E=ZhongHuaSongPlane02,
 		Ext-F=ZhongHuaSongPlane02,
+		Supplement=ZhongHuaSongPlane02,
 		FallBack=ZhongHuaSongPlane02
 	]{Noto Serif CJK SC}
 	\setCJKsansfont[
@@ -80,11 +84,12 @@
 		BoldFont=Noto Sans CJK SC
 	]{Noto Sans CJK SC DemiLight}
 	\newCJKfontfamily[kai]\kafamily[
+		Ext-A=TW-Kai,
 		Ext-B=TW-Kai-Ext-B,
 		Ext-C=TW-Kai-Ext-B,
 		Ext-D=TW-Kai-Ext-B,
 		Ext-E=TW-Kai-Ext-B,
-		Ext-F=TW-Kai-Ext-B,
+		Supplement=TW-Kai-Ext-B,
 		FallBack=TW-Kai
 	]{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
