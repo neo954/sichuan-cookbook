@@ -6,7 +6,7 @@ are described in detail. Many recipes have been lost now.
 The goal of this project is to digitize *Sichuan Cookbook 1972* properly.
 
 * [x] Take photos to each page of the book with camera.
-* [ ] Process the photos, correct exposure, perspective distortion, and adjust
+* [x] Process the photos, correct exposure, perspective distortion, and adjust
       the type area.
 * [x] Create binary images from the processed photos.
 * [x] Run OCR (optical character recognition) on the binary images.
@@ -38,9 +38,9 @@ tools needed are proper installed.
 ### The scan copy of the book
 
 Each page of the book is captured by digital camera, and then processed with
-Adobe Lightroom for RAW decoding, perspective distortion correction and some
-other minor adjustments. In order to keep large JPEG photos out of the git
-repository, all the JPEG photos are stored in
+Adobe Lightroom Classic for RAW decoding, perspective distortion correction
+and some other minor adjustments. In order to keep large JPEG photos out of
+the git repository, all the JPEG photos are stored in
 ``user-images.githubusercontent.com``. Download all the JPEG photos with the
 following command.  All these JPEG photos are around 626MiB.
 ```
