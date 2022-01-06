@@ -1,5 +1,5 @@
 *Sichuan Cookbook 1972* (四川菜谱) is a legendary classic book. It was
-compiled by Chengdu, Sichuan Province Catering Company (四川省成都市饮食公司)
+compiled by Chengdu Catering Company of Sichuan (四川省成都市饮食公司)
 and released in Jul 1972. In this book, a large number of traditional recipes
 are described in detail. Many recipes have been lost now.
 
