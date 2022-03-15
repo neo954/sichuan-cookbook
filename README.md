@@ -25,6 +25,13 @@ the work's first publication. Thus, after Dec 31, 2022, *Sichuan Cookbook
 1972* will enter the public domain. Therefore, this project is planned to be
 released to public on Jan 1, 2023.
 
+## Download the scan copy of the book
+
+A draft copy of *[Sichuan Cookbook
+1972](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alpha/sichuan-cookbook-1972.pdf)*
+<sub>(75.6 MB)</sub> can be downloaded. This is an A5 paper size scanned copy
+with unproofread OCR text underlayer.
+
 ## Set up a developing environment
 
 ### The selection of operating system
