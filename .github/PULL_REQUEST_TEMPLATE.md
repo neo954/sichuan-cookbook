@@ -11,6 +11,8 @@
 
 ### Check lists (check `x` in `[ ]` of list items)
 
+- [ ] Proofreading
+- [ ] New feature
 - [ ] Test passed
 - [ ] Coding style (indentation, etc)
 
