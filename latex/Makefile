@@ -38,6 +38,7 @@ all: pdf
 pdf: $(OUTPUT_BASENAME).pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
+	front-cover.tex back-cover.tex \
 	chairman-mao-quotes.tex title-page.tex preface.tex \
 	$(wildcard recipe-*.tex)
 
