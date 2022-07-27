@@ -91,7 +91,7 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 
 clean:
 	$(RM) git-revision.tex
-	$(RM) *.aux *.dvi *.eps *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
+	$(RM) *.aux *.dvi *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
 		*.pdf *.png *.ps *.txt *.toc *.xdv
 
 .PHONY: all build clean pdf
