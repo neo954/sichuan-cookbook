@@ -1,5 +1,3 @@
-% $Id$
-%
 % BSD 3-Clause License
 %
 % Copyright (C) 2019 GONG Jie <gongjie.jie@gmail.com>
