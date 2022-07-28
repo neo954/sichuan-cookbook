@@ -34,8 +34,8 @@
 \LoadClass{book}
 \usepackage[
 	paper=a5paper,
-	top=34mm,
-	bottom=30mm,
+	top=25mm,
+	bottom=39mm,
 	inner=28mm,
 	outer=28mm,
 	headheight=5mm,
