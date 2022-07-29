@@ -70,6 +70,9 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 %.eps: %.png
 	convert $^ $@
 
+%.pdf: %.eps
+	epstopdf --res=600 $^ $@
+
 %.pdf: %.ps
 	ps2pdf -r600 $^ $@
 
