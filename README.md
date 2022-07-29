@@ -5,7 +5,7 @@ in detail. Many recipes have been lost now.
 
 The goal of this project is to digitize *Sichuan Cookbook 1972* properly.
 
-* [x] Take photos of each page of the book with a camera.
+* [x] Take photos of each page of the book with a digital camera.
 * [x] Process the photos, correct exposure, and perspective distortion, and
       adjust the type area.
 * [x] Create binary images from the processed photos.
@@ -18,7 +18,7 @@ The goal of this project is to digitize *Sichuan Cookbook 1972* properly.
 * [ ] Render LaTeX documents and create a PDF book.
 * [ ] Optionally, add comments to the book based on research.
 
-According to the Copyright Law of China, with respect to a work of a legal
+According to the Copyright Law of China, concerning a work of a legal
 person or other organization, the term of protection for the copyrights to
 that work shall be 50 years and shall end on Dec 31 of the 50th year after the
 work's first publication. Thus, after Dec 31, 2022, Sichuan Cookbook 1972 will
@@ -46,22 +46,22 @@ line tools needed are properly installed.
 
 Each page of the book is captured by a digital camera, and then processed with
 Adobe Lightroom Classic for RAW decoding, perspective distortion correction,
-and some other minor adjustments. In order to keep large JPEG photos out of
+and some other minor adjustments. To keep large JPEG photos out of
 the git repository, all the JPEG photos are stored in
 ``user-images.githubusercontent.com``. Download all the JPEG photos with the
-following command.  All these JPEG photos are around 626MiB.
+following command.  All these JPEG photos are around 626 MiB.
 ```
 make -C jpeg
 ```
 
 #### Prerequisite
 
-The original book has a page size of 185mm x 130mm. This length-to-width ratio
-is roughly equal to sqrt(2):1. Thus, with a 600dpi resolution, the image size
-of all the pages will be 4370px x 3091px.
+The original book has a page size of 185 mm $\times$ 130 mm. This
+length-to-width ratio is roughly equal to $\sqrt{2} : 1$. Thus, with a 600 dpi
+resolution, the image size of all the pages will be 4370 px $\times$ 3091 px.
 
-All the JPEG photos will be processed with ``imagemagick``, and then OCRed
-with ``tesseract``.
+All the JPEG photos will be processed with ImageMagick, and then OCRed
+with Tesseract Open Source OCR Engine.
 ```
 sudo apt-get install imagemagick tesseract-ocr tesseract-ocr-chi-sim
 ```
@@ -76,7 +76,7 @@ make scan
 
 #### Prerequisite
 
-The book is recreated with ``xelatex``.
+The book is recreated with XeTeX.
 ```
 sudo apt-get install texlive-latex-recommended texlive-xetex texlive-lang-cjk \
     fonts-noto-cjk fonts-noto-cjk-extra
@@ -90,14 +90,15 @@ make -C latex
 
 ## Proofreading
 
-For each receipt under the `latex` directory, proofreading is needed. If you
+For each receipt under the `latex` directory, proofreading is wanted. If you
 want to help to proofread, please claim the unassigned working items from
 [GitHub
 issues](https://github.com/neo954/sichuan-cookbook/issues?q=is%3Aissue+is%3Aopen+Proofread+sort%3Acreated-asc+no%3Aassignee).
 
 This [A4 paper size scanned copy for
 printing](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alpha/sichuan-cookbook-1972-proof-a4.pdf)
-<sub>(80.6 MB)</sub> is recommended to be used for proofreading.
+<sub>(80.6 MB)</sub> is preferred to be utilized as a reference for
+proofreading.
 
 Please report typos of a receipt with a new comment on the same issue page you
 claimed. Of course, pull requests are always welcome!
