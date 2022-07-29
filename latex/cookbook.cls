@@ -77,6 +77,9 @@
 		BoldFont=Noto Sans CJK SC Bold
 	]{Noto Sans CJK SC Medium}
 	\setCJKmonofont{Noto Sans Mono CJK SC}
+	\newCJKfontfamily[hei]\hefamily[
+		BoldFont=Noto Sans CJK SC
+	]{Noto Sans CJK SC DemiLight}
 	\newCJKfontfamily[kai]\kafamily[
 		Ext-B=TW-Kai-Ext-B,
 		Ext-C=TW-Kai-Ext-B,
