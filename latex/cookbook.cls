@@ -99,6 +99,7 @@
 \usepackage{ifthen}
 % Empty all blank pages created by \cleardoublepage
 \usepackage{emptypage}
+\usepackage{pdfpages}
 
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
