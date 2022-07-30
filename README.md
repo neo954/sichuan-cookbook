@@ -40,19 +40,23 @@ Debian or Ubuntu is preferred. But other Linux distros can be used. I do not
 see any obstruction here. Apple macOS can also be used, if all the command
 line tools needed are properly installed.
 
-## Build a PDF of the book
+## Build a PDF copy of the book
 
 ### The scan copy of the book
 
-Each page of the book is captured by a digital camera, and then processed with
+Each page of the book was captured by a digital camera, and then processed with
 Adobe Lightroom Classic for RAW decoding, perspective distortion correction,
 and some other minor adjustments. To keep large JPEG photos out of
 the git repository, all the JPEG photos are stored in
 ``user-images.githubusercontent.com``. Download all the JPEG photos with the
-following command.  All these JPEG photos are around 626 MiB.
+following command.  All these JPEG photos are around 625 MiB.
 ```
 make -C jpeg
 ```
+
+Or, all the JPEG files can be downloaded in [one
+tarball](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alpha/sichuan-cookbook-1972.jpeg.tar)
+<sub>(625 MB)</sub>.
 
 #### Prerequisite
 
