@@ -13,9 +13,9 @@ The goal of this project is to digitize *Sichuan Cookbook 1972* properly.
 * [x] Create a PDF book of the original book from the binary images and the
       OCR results.
 * [ ] Organize each recipe in the book with an abstract data structure, and
-      save them as a XeTeX document.
-* [ ] Reproduce the appearance of the original book with XeTeX typesetting.
-* [ ] Render XeTeX documents and create a PDF book.
+      save them as a LaTeX document.
+* [ ] Reproduce the appearance of the original book with LaTeX typesetting.
+* [ ] Render LaTeX documents and create a PDF book.
 * [ ] Optionally, add comments to the book based on research.
 
 According to the Copyright Law of China, concerning a work of a legal
@@ -72,11 +72,11 @@ make -C jpeg
 make scan
 ```
 
-### The XeTeX copy of the book
+### The LaTeX copy of the book
 
 #### Prerequisite
 
-The book is recreated with XeTeX.
+The book is recreated with XeLaTeX.
 ```
 sudo apt-get install texlive-latex-recommended texlive-xetex texlive-lang-cjk \
     fonts-noto-cjk fonts-noto-cjk-extra
