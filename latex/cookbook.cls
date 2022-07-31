@@ -233,7 +233,7 @@
 			\division{注意事项}%
 		}
 
-		\newcommand{\notes}{%
+		\newcommand{\features}{%
 			\division{特点}%
 		}
 
