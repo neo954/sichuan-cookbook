@@ -229,7 +229,7 @@
 			\division{制作方法}%
 		}
 
-		\newcommand{\notice}{%
+		\newcommand{\notes}{%
 			\division{注意事项}%
 		}
 
