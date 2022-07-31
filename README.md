@@ -1,4 +1,4 @@
-<!---
+<!--
 BSD 3-Clause License
 
 Copyright (c) 2019-2022 Quux System and Technology. All rights reserved.
