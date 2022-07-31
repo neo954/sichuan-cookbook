@@ -58,7 +58,7 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	xelatex -no-pdf $^
 
 %.pdf: %.xdv
-	xdvipdfmx -r 600 $^
+	xdvipdfmx -r 600 -o $@ $^
 
 %.ps: %.dvi
 	dvips -D 600 -j -Ppdf -o $@ $^
