@@ -286,7 +286,7 @@
 	% Customize the footnote
 	\makeatletter
 	\renewcommand{\@makefnmark}{%
-		\makebox{\normalfont{\@thefnmark}}%
+		\makebox{\rmfamily{\@thefnmark}}%
 	}
 	\makeatother
 	% "24EA             Circled Digit Zero
