@@ -175,6 +175,7 @@ trim/%.png: jpeg/%.jpg
 
 # With ISO 838 filing holes marked.
 proof/%-r.png: deps
+	mkdir -p proof
 	convert -density 600 -units PixelsPerInch \
 		-size 7008x4958 xc:white \
 		-fill none -stroke black -strokewidth 1 \
@@ -208,6 +209,7 @@ proof/%-r.png: deps
 		$@
 
 proof/%-l.png: deps
+	mkdir -p proof
 	convert -density 600 -units PixelsPerInch \
 		-size 7008x4958 xc:white \
 		-fill none -stroke black -strokewidth 1 \
@@ -261,7 +263,6 @@ $(OUTPUT_BASENAME)-proof-a4.pdf: deps $(shell \
 		$@
 
 deps: FILELIST
-	mkdir -p proof
 	while read -r FILE_ONE && read -r FILE_TWO ; \
 	do \
 		if [ "$${SIDE}" != "r" ] ; \
