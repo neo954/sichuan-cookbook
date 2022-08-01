@@ -46,9 +46,9 @@ FILELIST: \
 		$(wildcard jpeg/[bcpz]*.jpg)))))
 	ls -1 trim/* >$@
 
-# The original book has the page size 185mm x 130mm. This length-to-width ratio
-# is roughly equal to sqrt(2):1. Thus, with a 600dpi resolution, the image size
-# of all the pages will be 4370px x 3091px.
+# The original book has the page size 185 mm x 130 mm. This length-to-width
+# ratio is roughly equal to sqrt(2) : 1. Thus, with a 600 dpi resolution, the
+# image size of all the pages will be 4370 px x 3091 px.
 
 trim/a000.jpg: trim/%.jpg: jpeg/%.jpg
 	mkdir -p trim
@@ -139,9 +139,9 @@ trim/b002.png trim/b022.png trim/b042.png trim/c008.png trim/p266.png trim/p300.
 # https://www.hpl.hp.com/techreports/2002/HPL-2002-82.html
 
 # Margins will be filled with background color of the page.
-# 3/4 inch width margin on top. With 600dpi, it is 450px.
-# 5/8 inch width margin on left and right. With 600 dpi, it is 375px.
-# 1/4 inch width margin on bottom. With 600dpi, it is 150px.
+# 3/4 inch width margin on top. With 600 dpi, it is 45 0px.
+# 5/8 inch width margin on left and right. With 600 dpi, it is 375 px.
+# 1/4 inch width margin on bottom. With 600 dpi, it is 150 px.
 trim/%.png: jpeg/%.jpg
 	convert $< \
 		-filter Gaussian -resize 309x437 \
@@ -171,7 +171,7 @@ trim/%.png: jpeg/%.jpg
 		$@
 
 # A4 size galley proof
-# 296.7mm x 209.9mm in 600 dpi => 7008px x 4958px
+# 296.7 mm x 209.9 mm in 600 dpi => 7008 px x 4958 px
 
 # With ISO 838 filing holes marked.
 proof/%-r.png: deps
