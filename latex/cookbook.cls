@@ -42,6 +42,12 @@
 	footskip=5mm
 ]{geometry}
 \usepackage{xeCJK}
+	\xeCJKDeclareCharClass{CJK}{%
+		"24EA,          % Circled Digit Zero
+		"2460 -> "2473, % Circled Digit One - Circled Number Twenty
+		"3251 -> "325F, % Circled Number Twenty One - Circled Number Thirty Five
+		"32B1 -> "32BF  % Circled Number Thirty Six - Circled Number Fifty
+	}
 	\xeCJKDeclareSubCJKBlock{Ext-A}{
 		"3400 -> "4DBF
 	}
@@ -274,6 +280,41 @@
 
 	% A new counter used in the command \step
 	\newcounter{step}[subsection]
+
+	% Customize the footnote
+	\makeatletter
+	\renewcommand{\@makefnmark}{%
+		\makebox{\normalfont{\@thefnmark}}%
+	}
+	\makeatother
+	% "24EA             Circled Digit Zero
+	% "2460 -> "2473    Circled Digit One - Circled Number Twenty
+	% "3251 -> "325F    Circled Number Twenty One - Circled Number Thirty Five
+	% "32B1 -> "32BF    Circled Number Thirty Six - Circled Number Fifty
+	\newcommand{\circled}[1]{%
+		\ifcase ##1 \symbol{"24EA}\or%
+		\symbol{"2460}\or\symbol{"2461}\or\symbol{"2462}\or\symbol{"2463}\or%
+		\symbol{"2464}\or\symbol{"2465}\or\symbol{"2466}\or\symbol{"2467}\or%
+		\symbol{"2468}\or\symbol{"2469}\or\symbol{"246A}\or\symbol{"246B}\or%
+		\symbol{"246C}\or\symbol{"246D}\or\symbol{"246E}\or\symbol{"246F}\or%
+		\symbol{"2470}\or\symbol{"2471}\or\symbol{"2472}\or\symbol{"2473}\or%
+		\symbol{"3251}\or\symbol{"3252}\or\symbol{"3253}\or\symbol{"3254}\or%
+		\symbol{"3255}\or\symbol{"3256}\or\symbol{"3257}\or\symbol{"3258}\or%
+		\symbol{"3259}\or\symbol{"325A}\or\symbol{"325B}\or\symbol{"325C}\or%
+		\symbol{"325D}\or\symbol{"325E}\or\symbol{"325F}\or\symbol{"32B1}\or%
+		\symbol{"32B2}\or\symbol{"32B3}\or\symbol{"32B4}\or\symbol{"32B5}\or%
+		\symbol{"32B6}\or\symbol{"32B7}\or\symbol{"32B8}\or\symbol{"32B9}\or%
+		\symbol{"32BA}\or\symbol{"32BB}\or\symbol{"32BC}\or\symbol{"32BD}\or%
+		\symbol{"32BE}\or\symbol{"32BF}\else\@ctrerr\fi%
+	}
+	\renewcommand{\thefootnote}{%
+		\circled{\value{footnote}}%
+	}
+	% Redefine the footnote style
+	\makeatletter
+	\def\footnoterule{\kern -3pt%
+	\hrule \@width 100pt \kern 2.6pt}% The \hrule is .4pt high
+	\makeatother
 
 	% Customize the head and foot
 	\fancyhead{}	% Clear all fields
