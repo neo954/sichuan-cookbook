@@ -167,7 +167,7 @@ trim/%.png: jpeg/%.jpg
 		png:- | \
 	convert png:- \
 		-filter Gaussian -resize 3091x4370 \
-		-quality 100 -alpha off -grayscale Rec709Luma -depth 2 \
+		-quality 100 -alpha off -grayscale Rec709Luma -depth 4 \
 		$@
 
 # A4 size galley proof
