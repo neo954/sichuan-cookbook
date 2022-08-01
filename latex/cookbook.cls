@@ -214,9 +214,6 @@
 	}
 
 	\newenvironment{recipe}[2][]{%
-		% Reset the footnote counter
-		\setcounter{footnote}{0}
-
 		\newcommand{\ingredients}{%
 			\division{原料}%
 		}
@@ -253,6 +250,8 @@
 		}
 
 		\settowidth{\headerwidth}{##2}%
+		% Reset the footnote counter
+		\setcounter{footnote}{0}
 		\ifthenelse{\value{chapter}>999}{%
 			\ifthenelse{\lengthtest{\headerwidth<5em}}{%
 				\section[##2]{\makebox[5em][s]{##2}}%
