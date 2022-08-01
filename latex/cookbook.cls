@@ -214,6 +214,9 @@
 	}
 
 	\newenvironment{recipe}[2][]{%
+		% Reset the footnote counter
+		\setcounter{footnote}{0}
+
 		\newcommand{\ingredients}{%
 			\division{原料}%
 		}
@@ -274,9 +277,6 @@
 			\sffamily（原##1）%
 			\end{center}%
 		}%
-
-		% Reset the footnote counter
-		\setcounter{footnote}{0}
 	}{%
 		\vspace{1\baselineskip}
 	}
