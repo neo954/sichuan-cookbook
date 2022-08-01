@@ -44,7 +44,6 @@ FILELIST: \
 		$(wildcard jpeg/a*.jpg))))) \
 	$(addprefix trim/, $(addsuffix .png, $(basename $(notdir \
 		$(wildcard jpeg/[bcpz]*.jpg)))))
-	mkdir -p trim
 	ls -1 trim/* >$@
 
 # The original book has the page size 185mm x 130mm. This length-to-width ratio
@@ -52,6 +51,7 @@ FILELIST: \
 # of all the pages will be 4370px x 3091px.
 
 trim/a000.jpg: trim/%.jpg: jpeg/%.jpg
+	mkdir -p trim
 	convert $< \
 		-filter Gaussian -resize 309x437 \
 		-define filter:sigma=25 -resize 3090x4370! \
