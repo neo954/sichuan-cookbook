@@ -298,8 +298,37 @@
 		\vspace{1\baselineskip}
 	}
 
+	\newenvironment{subrecipe}[1]{%
+		\renewcommand{\ingredients}{%
+			\noindent（一）\makebox[3.7em][s]{原料}%
+		}%
+		\renewcommand{\cooking}{%
+			\noindent（二）制作方法%
+		}%
+		\renewcommand{\ingredient}[2]{%
+			{%
+				\noindent%
+				\mbox{%
+					\hspace{2.2em}%
+					\makebox[10em][s]{%
+						\mbox{####1}\hfil\mbox{####2}%
+					}%
+					\hspace{3.4em}%
+				}%
+			}%
+		}%
+		\renewcommand{\step}{%
+			\stepcounter{step0}%
+			\par\arabic{step0}.%
+		}%
+		##1%
+	}{%
+	}
+
 	% A new counter used in the command \step
 	\newcounter{step}[subsection]
+	% A new counter used in the command \step
+	\newcounter{step0}[subsection]
 
 	% Customize the endnote
 	\makeatletter
