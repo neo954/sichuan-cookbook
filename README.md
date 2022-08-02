@@ -56,7 +56,7 @@ work's first publication. Thus, after Dec 31, 2022, Sichuan Cookbook 1972 will
 enter the public domain. Therefore, this project is planned to be released to
 the public on Jan 1, 2023.
 
-## Download the scan copy of the book
+## Download a digitized copy of the book
 
 A draft copy of *[Sichuan Cookbook
 1972](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alpha/sichuan-cookbook-1972.pdf)*
@@ -71,9 +71,9 @@ Debian or Ubuntu is preferred. But other Linux distros can be used. I do not
 see any obstruction here. Apple macOS can also be used, if all the command
 line tools needed are properly installed.
 
-## Build a PDF copy of the book
+## Build a digitized copy of the book
 
-### The scan copy of the book
+### The digitized remaster of the book
 
 Each page of the book was captured by a digital camera, and then processed with
 Adobe Lightroom Classic for RAW decoding, perspective distortion correction,
@@ -107,7 +107,7 @@ make -C jpeg
 make scan
 ```
 
-### The LaTeX copy of the book
+### The LaTeX remake of the book
 
 #### Prerequisite
 
