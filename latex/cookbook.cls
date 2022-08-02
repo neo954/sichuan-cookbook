@@ -336,6 +336,7 @@
 	\def\enoteheading{%
 		% The \hrule is .4pt high
 		\kern 4.8pt\hrule \@width 100pt \kern 4.8pt%
+		\nopagebreak%
 	}
 	\makeatother
 	% Redefine the enotesize
