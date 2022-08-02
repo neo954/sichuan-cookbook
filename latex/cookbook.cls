@@ -30,7 +30,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cookbook}
 \typeout{Document Style `cookbook' <Jul 31, 2022>.}
-\LoadClass{book}
+\LoadClass[openany]{book}
 \usepackage[
 	paper=a5paper,
 	top=25mm,
