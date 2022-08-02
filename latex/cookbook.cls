@@ -113,8 +113,15 @@
 \usepackage{ifthen}
 % Empty all blank pages created by \cleardoublepage
 \usepackage{emptypage}
+\usepackage{endnotes}
 
 \newenvironment{cookbook}{%
+
+	% Use endnote instead of footnote
+	\let\footnote=\endnote
+	\let\footnotemark=\endnotemark
+	\let\footnotetext=\endnotetext
+
 	\titleformat{\chapter}[display]{%
 	%	Format
 		\Huge\filcenter\sffamily\bfseries%
@@ -249,9 +256,14 @@
 			\division{特点}%
 		}
 
+		% Reset the endnote counter
+		\setcounter{endnote}{0}
+
 		\settowidth{\headerwidth}{##2}%
-		% Reset the footnote counter
-		\setcounter{footnote}{0}
+
+		% Reset the endnote counter, again
+		\setcounter{endnote}{0}
+
 		\ifthenelse{\value{chapter}>999}{%
 			\ifthenelse{\lengthtest{\headerwidth<5em}}{%
 				\section[##2]{\makebox[5em][s]{##2}}%
@@ -277,16 +289,22 @@
 			\end{center}%
 		}%
 	}{%
+		\ifthenelse{\equal{\value{endnote}}{0}}{%
+		}{%
+			\begingroup
+			\theendnotes
+			\endgroup
+		}%
 		\vspace{1\baselineskip}
 	}
 
 	% A new counter used in the command \step
 	\newcounter{step}[subsection]
 
-	% Customize the footnote
+	% Customize the endnote
 	\makeatletter
-	\renewcommand{\@makefnmark}{%
-		\makebox{\rmfamily{\@thefnmark}}%
+	\renewcommand{\@makeenmark}{%
+		\makebox{\rmfamily{\@theenmark}}%
 	}
 	\makeatother
 	% "24EA             Circled Digit Zero
@@ -309,14 +327,19 @@
 		\symbol{"32BA}\or\symbol{"32BB}\or\symbol{"32BC}\or\symbol{"32BD}\or%
 		\symbol{"32BE}\or\symbol{"32BF}\else\@ctrerr\fi%
 	}
-	\renewcommand{\thefootnote}{%
-		\circled{\value{footnote}}%
+	\renewcommand{\theendnote}{%
+		\circled{\value{endnote}}%
 	}
-	% Redefine the footnote style
+
+	% Redefine the endnote heading
 	\makeatletter
-	\def\footnoterule{\kern -3pt%
-	\hrule \@width 100pt \kern 2.6pt}% The \hrule is .4pt high
+	\def\enoteheading{%
+		% The \hrule is .4pt high
+		\kern 4.8pt\hrule \@width 100pt \kern 4.8pt%
+	}
 	\makeatother
+	% Redefine the enotesize
+	\def\enotesize{\footnotesize}
 
 	% Customize the head and foot
 	\fancyhead{}	% Clear all fields
