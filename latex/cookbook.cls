@@ -251,7 +251,7 @@
 			\division{制作方法}%
 		}
 
-		\newcommand{\notes}{%
+		\newcommand{\suggestion}{%
 			\division{注意事项}%
 		}
 
