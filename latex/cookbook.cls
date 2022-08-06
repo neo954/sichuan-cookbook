@@ -305,7 +305,7 @@
 		\renewcommand{\ingredients}{%
 			\noindent（一）\makebox[3.7em][s]{原料}%
 		}%
-		\renewcommand{\cooking}{%
+		\renewcommand{\preparation}{%
 			\noindent（二）制作方法%
 		}%
 		\renewcommand{\ingredient}[2]{%
