@@ -241,13 +241,13 @@
 			}%
 		}
 
+		\newcommand{\preparation}{%
+			\division{制作方法}%
+		}
+
 		\newcommand{\step}{%
 			\stepcounter{step}%
 			\par\arabic{step}.%
-		}
-
-		\newcommand{\preparation}{%
-			\division{制作方法}%
 		}
 
 		\newcommand{\suggestion}{%
