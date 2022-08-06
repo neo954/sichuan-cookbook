@@ -247,7 +247,7 @@
 			\par\arabic{step}.%
 		}
 
-		\newcommand{\cooking}{%
+		\newcommand{\preparation}{%
 			\division{制作方法}%
 		}
 
