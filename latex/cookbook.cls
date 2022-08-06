@@ -255,6 +255,15 @@
 			\division{注意事项}%
 		}
 
+		% With one optional argument
+		\newcommand{\hint}[1][]{%
+			\ifthenelse{\equal{####1}{}}{%
+				\step%
+			}{%
+				\step{\sffamily####1}%
+			}%
+		}
+
 		\newcommand{\features}{%
 			\division{特点}%
 		}
