@@ -269,9 +269,7 @@
 
 		% Reset the endnote counter
 		\setcounter{endnote}{0}
-
 		\settowidth{\headerwidth}{##2}%
-
 		% Reset the endnote counter, again
 		\setcounter{endnote}{0}
 
