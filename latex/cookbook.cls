@@ -119,12 +119,6 @@
 \usepackage{endnotes}
 
 \newenvironment{cookbook}{%
-
-	% Use endnote instead of footnote
-	\let\footnote=\endnote
-	\let\footnotemark=\endnotemark
-	\let\footnotetext=\endnotetext
-
 	\titleformat{\chapter}[display]{%
 	%	Format
 		\Huge\filcenter\sffamily\bfseries%
@@ -224,6 +218,11 @@
 	}
 
 	\newenvironment{recipe}[2][]{%
+		% Use endnote instead of footnote
+		\let\footnote=\endnote
+		\let\footnotemark=\endnotemark
+		\let\footnotetext=\endnotetext
+
 		\newcommand{\ingredients}{%
 			\division{原料}%
 		}
