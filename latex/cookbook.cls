@@ -223,6 +223,9 @@
 		\let\footnotemark=\endnotemark
 		\let\footnotetext=\endnotetext
 
+		% Allow 0.9em overfull
+		\hfuzz=0.9em%
+
 		\newcommand{\ingredients}{%
 			\division{原料}%
 		}
