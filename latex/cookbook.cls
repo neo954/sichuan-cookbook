@@ -235,12 +235,27 @@
 			\begingroup%
 			\kafamily%
 			\noindent%
+			\settowidth{\spanwidth}{####1####3}%
+			\ifthenelse{\lengthtest{\spanwidth>11em}}{%
+				\ifthenelse{\isodd{\value{step}}}{%
+					\\%
+					\stepcounter{step}%
+				}{%
+				}%
+			}{%
+			}%
 			\mbox{%
 				\hspace{2em}%
 				\makebox[9em][s]{%
 					\mbox{####1####2}\hfil\mbox{####3}%
 				}%
 				\hspace{2em}%
+			}%
+			\stepcounter{step}%
+			\ifthenelse{\lengthtest{\spanwidth>11em}}{%
+				\mbox{\hspace{14em}}%
+				\stepcounter{step}%
+			}{%
 			}%
 			\endgroup%
 		}%
