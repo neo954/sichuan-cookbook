@@ -80,11 +80,11 @@
 		Ext-B={[AutoFakeBold=1.2]{SimSun-ExtB}},
 		Ext-C={[AutoFakeBold=1.2]{SimSun-ExtB}},
 		Ext-D={[AutoFakeBold=1.2]{SimSun-ExtB}},
-		Ext-E={[AutoFakeBold=2.8]{ZhongHuaSongPlane02}},
-		Ext-F={[AutoFakeBold=2.8]{ZhongHuaSongPlane02}},
-		Supplement={[AutoFakeBold=2.8]{ZhongHuaSongPlane02}},
+		Ext-E={[AutoFakeBold=2.8,FakeBold=1.8]{ZhongHuaSongPlane02}},
+		Ext-F={[AutoFakeBold=2.8,FakeBold=1.8]{ZhongHuaSongPlane02}},
+		Supplement={[AutoFakeBold=2.8,FakeBold=1.8]{ZhongHuaSongPlane02}},
 		Ext-G={[AutoFakeBold=1.2]{sim-ch_n5100}},
-		FallBack={[AutoFakeBold=2.8]{ZhongHuaSongPlane02}}
+		FallBack={[AutoFakeBold=2.8,FakeBold=1.8]{ZhongHuaSongPlane02}}
 	]{Noto Serif CJK SC}
 	\setCJKsansfont[
 		BoldFont=Noto Sans CJK SC Bold
