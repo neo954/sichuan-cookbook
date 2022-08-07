@@ -334,7 +334,7 @@
 			\theendnotes%
 			\endgroup%
 		}%
-		\vspace{1.5\baselineskip}
+		\vspace{2\baselineskip plus 1.5\baselineskip minus 0.5\baselineskip}
 	}
 
 	% A new counter used in the command \step
