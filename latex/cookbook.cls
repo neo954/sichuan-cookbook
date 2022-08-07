@@ -193,12 +193,12 @@
 	]
 
 	% A temporary variable, use to store the text width of the chapter name
-	\newlength{\headerwidth}%
+	\newlength{\spanwidth}%
 
 	\newcommand\category[1]{%
 		% Calculate the text width of the chapter name
-		\settowidth{\headerwidth}{##1}%
-		\ifthenelse{\lengthtest{\headerwidth<5em}}{%
+		\settowidth{\spanwidth}{##1}%
+		\ifthenelse{\lengthtest{\spanwidth<5em}}{%
 			\chapter*{\hbadness=10000\makebox[5em][s]{##1}}%
 		}{%
 			\chapter*{##1}%
@@ -208,13 +208,13 @@
 			% Use different text for the table of contents and bookmarks
 			\texorpdfstring{\hbadness=10000\makebox[12em][s]{##1}}{##1}%
 		}%
-		\setlength{\headerwidth}{0pt}%
+		\setlength{\spanwidth}{0pt}%
 	}
 
 	\newcommand\division[1]{%
-		\settowidth{\headerwidth}{##1}%
+		\settowidth{\spanwidth}{##1}%
 		\subsection[##1]{\hbadness=10000\makebox[4em][s]{##1}：}
-		\setlength{\headerwidth}{0pt}%
+		\setlength{\spanwidth}{0pt}%
 	}
 
 	\newenvironment{recipe}[2][]{%
@@ -272,7 +272,7 @@
 
 		% Reset the endnote counter
 		\setcounter{endnote}{0}
-		\settowidth{\headerwidth}{##2}%
+		\settowidth{\spanwidth}{##2}%
 		% Reset the endnote counter, again
 		\setcounter{endnote}{0}
 
@@ -304,13 +304,13 @@
 		}
 
 		\ifthenelse{\value{chapter}>999}{%
-			\ifthenelse{\lengthtest{\headerwidth<5em}}{%
+			\ifthenelse{\lengthtest{\spanwidth<5em}}{%
 				\section[##2]{\hbadness=10000\makebox[5em][s]{##2}}%
 			}{%
 				\section{##2}%
 			}
 		}{%
-			\ifthenelse{\lengthtest{\headerwidth<5em}}{%
+			\ifthenelse{\lengthtest{\spanwidth<5em}}{%
 				% Use different text for the table of contents and bookmarks
 				\section[%
 					\texorpdfstring{\zhdigits{\arabic{section}}、##2}{##2}%
