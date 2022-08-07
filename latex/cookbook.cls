@@ -199,21 +199,21 @@
 		% Calculate the text width of the chapter name
 		\settowidth{\headerwidth}{##1}%
 		\ifthenelse{\lengthtest{\headerwidth<5em}}{%
-			\chapter*{\makebox[5em][s]{##1}}%
+			\chapter*{\hbadness=10000\makebox[5em][s]{##1}}%
 		}{%
 			\chapter*{##1}%
 		}
 		\thispagestyle{fancy}%
 		\addcontentsline{toc}{chapter}{%
 			% Use different text for the table of contents and bookmarks
-			\texorpdfstring{\makebox[12em][s]{##1}}{##1}%
+			\texorpdfstring{\hbadness=10000\makebox[12em][s]{##1}}{##1}%
 		}%
 		\setlength{\headerwidth}{0pt}%
 	}
 
 	\newcommand\division[1]{%
 		\settowidth{\headerwidth}{##1}%
-		\subsection[##1]{\makebox[4em][s]{##1}：}
+		\subsection[##1]{\hbadness=10000\makebox[4em][s]{##1}：}
 		\setlength{\headerwidth}{0pt}%
 	}
 
@@ -302,7 +302,7 @@
 
 		\ifthenelse{\value{chapter}>999}{%
 			\ifthenelse{\lengthtest{\headerwidth<5em}}{%
-				\section[##2]{\makebox[5em][s]{##2}}%
+				\section[##2]{\hbadness=10000\makebox[5em][s]{##2}}%
 			}{%
 				\section{##2}%
 			}
@@ -311,7 +311,7 @@
 				% Use different text for the table of contents and bookmarks
 				\section[%
 					\texorpdfstring{\zhdigits{\arabic{section}}、##2}{##2}%
-				]{\makebox[5em][s]{##2}}%
+				]{\hbadness=10000\makebox[5em][s]{##2}}%
 			}{%
 				\section[%
 					\texorpdfstring{\zhdigits{\arabic{section}}、##2}{##2}%
@@ -425,7 +425,7 @@
 		% Use different text for the table of contents and bookmarks
 		\texorpdfstring{%
 			\makebox[\textwidth][s]{%
-				\hfil\makebox[6em][s]{目录}\hfil%
+				\hfil\hbadness=10000\makebox[6em][s]{目录}\hfil%
 			}%
 		}{目录}%
 	}
