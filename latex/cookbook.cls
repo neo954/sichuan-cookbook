@@ -231,17 +231,17 @@
 		}
 
 		\newcommand{\ingredient}[2]{%
-			{%
-				\kafamily%
-				\noindent%
-				\mbox{%
-					\hspace{2em}%
-					\makebox[9em][s]{%
-						\mbox{####1}\hfil\mbox{####2}%
-					}%
-					\hspace{2.4em}%
+			\begingroup%
+			\kafamily%
+			\noindent%
+			\mbox{%
+				\hspace{2em}%
+				\makebox[9em][s]{%
+					\mbox{####1}\hfil\mbox{####2}%
 				}%
+				\hspace{2em}%
 			}%
+			\endgroup%
 		}
 
 		\newcommand{\preparation}{%
