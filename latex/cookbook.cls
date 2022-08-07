@@ -219,9 +219,9 @@
 
 	\newenvironment{recipe}[2][]{%
 		% Use endnote instead of footnote
-		\let\footnote=\endnote
-		\let\footnotemark=\endnotemark
-		\let\footnotetext=\endnotetext
+		\let\footnote=\endnote%
+		\let\footnotemark=\endnotemark%
+		\let\footnotetext=\endnotetext%
 
 		% Allow 0.9em overfull
 		\hfuzz=0.9em%
