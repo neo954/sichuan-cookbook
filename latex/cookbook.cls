@@ -33,10 +33,10 @@
 \LoadClass[openany]{book}
 \usepackage[
 	paper=a5paper,
-	top=25mm,
-	bottom=39mm,
-	inner=28mm,
-	outer=28mm,
+	top=24.5mm,
+	bottom=40.5mm,
+	inner=27.5mm,
+	outer=27.5mm,
 	headheight=5mm,
 	headsep=2mm,
 	footskip=5mm
@@ -121,7 +121,7 @@
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
 	%	Format
-		\Huge\filcenter\sffamily\bfseries%
+		\huge\filcenter\sffamily\bfseries%
 	}{%	Label
 	}{%	Sep
 		0em
@@ -133,7 +133,7 @@
 	%	Left
 		0pt
 	}{%	Before-sep
-		0pt
+		1\baselineskip
 	}{%	After-sep
 		0pt
 	}[%	Right-sep
@@ -142,7 +142,7 @@
 
 	\titleformat{\section}[hang]{%
 	%	Format
-		\LARGE\filcenter\rmfamily\bfseries%
+		\Large\filcenter\rmfamily\bfseries%
 	}{%	Label
 		\ifthenelse{\value{chapter}>999}{%
 		}{%
@@ -239,7 +239,7 @@
 					\makebox[9em][s]{%
 						\mbox{####1}\hfil\mbox{####2}%
 					}%
-					\hspace{2em}%
+					\hspace{2.4em}%
 				}%
 			}%
 		}
@@ -334,7 +334,7 @@
 			\theendnotes
 			\endgroup
 		}%
-		\vspace{1\baselineskip}
+		\vspace{1.5\baselineskip}
 	}
 
 	% A new counter used in the command \step
