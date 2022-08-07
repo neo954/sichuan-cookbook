@@ -77,14 +77,14 @@
 	}
 	\setCJKmainfont[
 		BoldFont=Noto Serif CJK SC Medium,
-		Ext-B=SimSun-ExtB,
-		Ext-C=SimSun-ExtB,
-		Ext-D=SimSun-ExtB,
-		Ext-E=ZhongHuaSongPlane02,
-		Ext-F=ZhongHuaSongPlane02,
-		Supplement=ZhongHuaSongPlane02,
-		Ext-G=sim-ch_n5100,
-		FallBack=ZhongHuaSongPlane02
+		Ext-B={[AutoFakeBold=1.2]{SimSun-ExtB}},
+		Ext-C={[AutoFakeBold=1.2]{SimSun-ExtB}},
+		Ext-D={[AutoFakeBold=1.2]{SimSun-ExtB}},
+		Ext-E={[AutoFakeBold=2.8]{ZhongHuaSongPlane02}},
+		Ext-F={[AutoFakeBold=2.8]{ZhongHuaSongPlane02}},
+		Supplement={[AutoFakeBold=2.8]{ZhongHuaSongPlane02}},
+		Ext-G={[AutoFakeBold=1.2]{sim-ch_n5100}},
+		FallBack={[AutoFakeBold=2.8]{ZhongHuaSongPlane02}}
 	]{Noto Serif CJK SC}
 	\setCJKsansfont[
 		BoldFont=Noto Sans CJK SC Bold
