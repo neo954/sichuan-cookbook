@@ -330,9 +330,9 @@
 	}{%
 		\ifthenelse{\equal{\value{endnote}}{0}}{%
 		}{%
-			\begingroup
-			\theendnotes
-			\endgroup
+			\begingroup%
+			\theendnotes%
+			\endgroup%
 		}%
 		\vspace{1.5\baselineskip}
 	}
