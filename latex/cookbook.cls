@@ -284,16 +284,16 @@
 				\noindent（二）制作方法%
 			}%
 			\renewcommand{\ingredient}[2]{%
-				{%
-					\noindent%
-					\mbox{%
-						\hspace{2.2em}%
-						\makebox[10em][s]{%
-							\mbox{########1}\hfil\mbox{########2}%
-						}%
-						\hspace{3.4em}%
+				\begingroup%
+				\noindent%
+				\mbox{%
+					\hspace{2.2em}%
+					\makebox[10em][s]{%
+						\mbox{########1}\hfil\mbox{########2}%
 					}%
+					\hspace{3.4em}%
 				}%
+				\endgroup%
 			}%
 			\renewcommand{\step}{%
 				\stepcounter{step0}%
