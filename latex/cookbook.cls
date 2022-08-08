@@ -271,12 +271,6 @@
 			\division{特点}%
 		}
 
-		% Reset the endnote counter
-		\setcounter{endnote}{0}
-		\settowidth{\spanwidth}{##2}%
-		% Reset the endnote counter, again
-		\setcounter{endnote}{0}
-
 		\newenvironment{subrecipe}[1]{%
 			\renewcommand{\ingredients}{%
 				\noindent（一）\makebox[3.7em][s]{原料}%
@@ -303,6 +297,10 @@
 			####1%
 		}{%
 		}
+
+		\settowidth{\spanwidth}{##2}%
+		% Reset the endnote counter
+		\setcounter{endnote}{0}%
 
 		\ifthenelse{\value{chapter}>999}{%
 			\ifthenelse{\lengthtest{\spanwidth<5em}}{%
