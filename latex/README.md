@@ -38,3 +38,17 @@ The goals of the Sichuan Cookbook 1972 LaTex Remake are listed as follows.
       possible.
 * [ ] Recreate the paperback book's front cover to a vector graphics image.
 * [ ] Recreate illustrations in the book to vector graphics images.
+
+### Fonts
+
+* Songti
+  * Noto Serif CJK SC
+  * HanaMinA
+  * HanaMinB
+  * sim-ch_n5100
+* Heiti
+  * Noto Sans CJK SC
+* Kaiti
+  * FandolKai
+  * TW-Kai
+  * TW-Kai-Ext-B
