@@ -109,6 +109,7 @@
 \usepackage{fancyhdr}
 	\pagestyle{fancy}
 \usepackage{xcolor}
+\usepackage{xparse}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{titlesec}
@@ -217,7 +218,7 @@
 		\setlength{\spanwidth}{0pt}%
 	}
 
-	\newenvironment{recipe}[2][]{%
+	\NewDocumentEnvironment{recipe}{ O{} m O{} }{%
 		% Use endnote instead of footnote
 		\let\footnote=\endnote%
 		\let\footnotemark=\endnotemark%
@@ -305,21 +306,21 @@
 
 		\ifthenelse{\value{chapter}>999}{%
 			\ifthenelse{\lengthtest{\spanwidth<5em}}{%
-				\section[##2]{\hbadness=10000\makebox[5em][s]{##2}}%
+				\section[##2]{\hbadness=10000\makebox[5em][s]{##2##3}}%
 			}{%
-				\section{##2}%
-			}
+				\section[##2]{##2##3}%
+			}%
 		}{%
 			\ifthenelse{\lengthtest{\spanwidth<5em}}{%
 				% Use different text for the table of contents and bookmarks
 				\section[%
 					\texorpdfstring{\zhdigits{\arabic{section}}、##2}{##2}%
-				]{\hbadness=10000\makebox[5em][s]{##2}}%
+				]{\hbadness=10000\makebox[5em][s]{##2##3}}%
 			}{%
 				\section[%
 					\texorpdfstring{\zhdigits{\arabic{section}}、##2}{##2}%
-				]{##2}%
-			}
+				]{##2##3}%
+			}%
 		}%
 		\ifthenelse{\equal{##1}{}}{%
 		}{%
