@@ -128,7 +128,7 @@
 		0em
 	}{%	Before-code
 	}[%	After-code
-	]
+	]%
 
 	\titlespacing{\chapter}{%
 	%	Left
@@ -139,7 +139,7 @@
 		0pt
 	}[%	Right-sep
 		0pt
-	]
+	]%
 
 	\titleformat{\section}[hang]{%
 	%	Format
@@ -157,7 +157,7 @@
 			{、}%
 		}%
 	}[%	After-code
-	]
+	]%
 
 	\titlespacing{\section}{%
 	%	Left
@@ -168,7 +168,7 @@
 		0pt
 	}[%	Right-sep
 		0pt
-	]
+	]%
 
 	\titleformat{\subsection}[hang]{%
 	%	Format
@@ -180,7 +180,7 @@
 	}{%	Before-code
 		{、}%
 	}[%	After-code
-	]
+	]%
 
 	\titlespacing{\subsection}{%
 	%	Left
@@ -191,7 +191,7 @@
 		0pt
 	}[%	Right-sep
 		0pt
-	]
+	]%
 
 	% A temporary variable, use to store the text width of the chapter name
 	\newlength{\spanwidth}%
@@ -203,20 +203,20 @@
 			\chapter*{\hbadness=10000\makebox[5em][s]{##1}}%
 		}{%
 			\chapter*{##1}%
-		}
+		}%
 		\thispagestyle{fancy}%
 		\addcontentsline{toc}{chapter}{%
 			% Use different text for the table of contents and bookmarks
 			\texorpdfstring{\hbadness=10000\makebox[12em][s]{##1}}{##1}%
 		}%
 		\setlength{\spanwidth}{0pt}%
-	}
+	}%
 
 	\newcommand\division[1]{%
 		\settowidth{\spanwidth}{##1}%
 		\subsection[##1]{\hbadness=10000\makebox[4em][s]{##1}：}
 		\setlength{\spanwidth}{0pt}%
-	}
+	}%
 
 	\NewDocumentEnvironment{recipe}{ O{} m O{} }{%
 		% Use endnote instead of footnote
@@ -229,7 +229,7 @@
 
 		\newcommand{\ingredients}{%
 			\division{原料}%
-		}
+		}%
 
 		\NewDocumentCommand{\ingredient}{ m O{} m }{%
 			\begingroup%
@@ -243,20 +243,20 @@
 				\hspace{2em}%
 			}%
 			\endgroup%
-		}
+		}%
 
 		\newcommand{\preparation}{%
 			\division{制作方法}%
-		}
+		}%
 
 		\newcommand{\step}{%
 			\stepcounter{step}%
 			\par\arabic{step}.%
-		}
+		}%
 
 		\newcommand{\suggestion}{%
 			\division{注意事项}%
-		}
+		}%
 
 		% With one optional argument
 		\newcommand{\hint}[1][]{%
@@ -265,11 +265,11 @@
 			}{%
 				\step{\sffamily####1}%
 			}%
-		}
+		}%
 
 		\newcommand{\features}{%
 			\division{特点}%
-		}
+		}%
 
 		\newenvironment{subrecipe}[1]{%
 			\renewcommand{\ingredients}{%
@@ -296,7 +296,7 @@
 			}%
 			####1%
 		}{%
-		}
+		}%
 
 		\settowidth{\spanwidth}{##2}%
 		% Reset the endnote counter
@@ -334,19 +334,19 @@
 			\endgroup%
 		}%
 		\vspace{2\baselineskip plus 1.5\baselineskip minus 0.5\baselineskip}
-	}
+	}%
 
 	% A new counter used in the command \step
-	\newcounter{step}[subsection]
+	\newcounter{step}[subsection]%
 	% A new counter used in the command \step
-	\newcounter{step0}[subsection]
+	\newcounter{step0}[subsection]%
 
 	% Customize the endnote
-	\makeatletter
+	\makeatletter%
 	\renewcommand{\@makeenmark}{%
 		\makebox{\rmfamily{\@theenmark}}%
-	}
-	\makeatother
+	}%
+	\makeatother%
 	% "24EA             Circled Digit Zero
 	% "2460 -> "2473    Circled Digit One - Circled Number Twenty
 	% "3251 -> "325F    Circled Number Twenty One - Circled Number Thirty Five
@@ -366,63 +366,63 @@
 		\symbol{"32B6}\or\symbol{"32B7}\or\symbol{"32B8}\or\symbol{"32B9}\or%
 		\symbol{"32BA}\or\symbol{"32BB}\or\symbol{"32BC}\or\symbol{"32BD}\or%
 		\symbol{"32BE}\or\symbol{"32BF}\else\@ctrerr\fi%
-	}
+	}%
 	\renewcommand{\theendnote}{%
 		\circled{\value{endnote}}%
-	}
+	}%
 
 	% Redefine the endnote heading
-	\makeatletter
+	\makeatletter%
 	\def\enoteheading{%
 		% The \hrule is .4pt high
 		\kern 4.8pt\hrule \@width 100pt \kern 4.8pt%
 		\nopagebreak%
-	}
-	\makeatother
+	}%
+	\makeatother%
 	% Redefine the enotesize
-	\def\enotesize{\footnotesize}
+	\def\enotesize{\footnotesize}%
 
 	% Customize the head and foot
-	\fancyhead{}	% Clear all fields
-	\fancyfoot{}	% Clear all fields
-	\fancyhead[RO,LE]{}
+	\fancyhead{}% Clear all fields
+	\fancyfoot{}% Clear all fields
+	\fancyhead[RO,LE]{}%
 	% Customize the page numbers
 	\fancyfoot[LE,RO]{%
 		\hspace{2em}%
 		{‧\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}‧}%
 		\hspace{2em}%
-	}
-	\fancyfoot[LO,CE]{}
-	\fancyfoot[CO,RE]{}
-	\renewcommand{\headrulewidth}{0pt}
-	\renewcommand{\footrulewidth}{0pt}
+	}%
+	\fancyfoot[LO,CE]{}%
+	\fancyfoot[CO,RE]{}%
+	\renewcommand{\headrulewidth}{0pt}%
+	\renewcommand{\footrulewidth}{0pt}%
 
 	% Customize the table of contents
-	\tocloftpagestyle{fancy}
-	\setlength{\cftbeforetoctitleskip}{0.4\baselineskip}
-	\setlength{\cftaftertoctitleskip}{0.6\baselineskip}
+	\tocloftpagestyle{fancy}%
+	\setlength{\cftbeforetoctitleskip}{0.4\baselineskip}%
+	\setlength{\cftaftertoctitleskip}{0.6\baselineskip}%
 	% Centering table of contents title by using \hfil
-	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily\bfseries}
-	\renewcommand{\cftaftertoctitle}{\hfil}
-	\renewcommand{\cftdot}{…}
-	\renewcommand\cftdotsep{0.2}
-	\cftsetpnumwidth{1.5em}
-	\cftsetrmarg{1.6em}
+	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily\bfseries}%
+	\renewcommand{\cftaftertoctitle}{\hfil}%
+	\renewcommand{\cftdot}{…}%
+	\renewcommand\cftdotsep{0.2}%
+	\cftsetpnumwidth{1.5em}%
+	\cftsetrmarg{1.6em}%
 	% Centering chapter titles by using \hfil
-	\renewcommand{\cftchapfont}{\hfil\normalsize\sffamily}
-	\renewcommand{\cftchapafterpnum}{\hfil}
-	\setlength{\cftchapindent}{1.6em}
-	\setlength{\cftchapnumwidth}{0em}
-	\renewcommand{\cftsecfont}{\normalsize\rmfamily}
-	\renewcommand{\cftsecpagefont}{\normalsize\rmfamily}
-	\renewcommand{\cftsecpresnum}{}
-	\renewcommand{\cftsecaftersnum}{}
-	\setlength{\cftsecindent}{0em}
-	\setlength{\cftsecnumwidth}{0em}
-	\renewcommand{\thechapter}{}
-	\renewcommand{\thesection}{}
-	\renewcommand{\thesubsection}{}
-	\renewcommand\cftsecdotsep{\cftdotsep}
+	\renewcommand{\cftchapfont}{\hfil\normalsize\sffamily}%
+	\renewcommand{\cftchapafterpnum}{\hfil}%
+	\setlength{\cftchapindent}{1.6em}%
+	\setlength{\cftchapnumwidth}{0em}%
+	\renewcommand{\cftsecfont}{\normalsize\rmfamily}%
+	\renewcommand{\cftsecpagefont}{\normalsize\rmfamily}%
+	\renewcommand{\cftsecpresnum}{}%
+	\renewcommand{\cftsecaftersnum}{}%
+	\setlength{\cftsecindent}{0em}%
+	\setlength{\cftsecnumwidth}{0em}%
+	\renewcommand{\thechapter}{}%
+	\renewcommand{\thesection}{}%
+	\renewcommand{\thesubsection}{}%
+	\renewcommand\cftsecdotsep{\cftdotsep}%
 	\renewcommand\contentsname{%
 		% Use different text for the table of contents and bookmarks
 		\texorpdfstring{%
@@ -430,10 +430,10 @@
 				\hfil\hbadness=10000\makebox[6em][s]{目录}\hfil%
 			}%
 		}{目录}%
-	}
-	\setcounter{tocdepth}{1}
-	\addtocontents{toc}{\cftpagenumbersoff{chapter}}
-	\addtocontents{toc}{\cftpagenumberson{section}}
+	}%
+	\setcounter{tocdepth}{1}%
+	\addtocontents{toc}{\cftpagenumbersoff{chapter}}%
+	\addtocontents{toc}{\cftpagenumberson{section}}%
 
 	\newenvironment{tocminipageleft}{%
 		\addtocontents{toc}{\protect\begin{minipage}[t]{0.45\textwidth}}%
@@ -442,24 +442,24 @@
 		\addtocontents{toc}{\protect\begin{minipage}[t]{0.08\textwidth}}%
 		\addtocontents{toc}{\protect\hfil}%
 		\addtocontents{toc}{\protect\end{minipage}}%
-	}
+	}%
 	\newenvironment{tocminipageright}{%
 		\addtocontents{toc}{\protect\begin{minipage}[t]{0.45\textwidth}}%
 	}{%
 		\addtocontents{toc}{\protect\end{minipage}}%
 		\addtocontents{toc}{\protect\vfil}%
-	}
+	}%
 	\newcommand{\tocclearpage}{%
 		\addtocontents{toc}{\protect\clearpage}%
-	}
+	}%
 
 	% Set the indentation to be two Chinese characters size.
-	\setlength{\parindent}{2em}
-	\setlength{\parskip}{0pt}
+	\setlength{\parindent}{2em}%
+	\setlength{\parskip}{0pt}%
 	% Set line spacing
-	\onehalfspacing
+	\onehalfspacing%
 }{%
-}
+}%
 
 % vim: filetype=tex noautoindent
 % vim: fileencoding=utf-8
