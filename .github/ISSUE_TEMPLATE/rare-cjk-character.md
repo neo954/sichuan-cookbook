@@ -9,7 +9,7 @@ assignees: neo954
 
 This character is included in the CJK Unified Ideographs Extension ? block.
 
-| | The Unicode Standard | Your Browser | 
+| | The Unicode Standard | Your Browser |
 |----|----|----|
 | U+????? | ![U+?????](https://user-images.githubusercontent.com/12424088/55306199-f89e0580-5485-11e9-94b7-6084d699598c.png) | ?? |
 
