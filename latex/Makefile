@@ -40,7 +40,7 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	git-revision.tex front-cover.tex cover-illustration.pdf \
 	chairman-mao-quotes.tex title-page.tex preface.tex \
 	$(wildcard recipe-*.tex) \
-	back-cover.tex
+	back-cover.tex back-cover-sheet.pdf
 	xelatex -no-pdf $< $(word 2, $^)
 	xelatex -no-pdf $< $(word 2, $^)
 	xelatex -no-pdf $< $(word 2, $^)
@@ -51,6 +51,13 @@ git-revision.tex: $(wildcard *.cls) $(wildcard *.tex)
 		--format=%H`'}' >>$@
 	echo '\\newcommand{\\gitauthordate}{'`git log -1 \
 		--format=%ai --date=short`'}' >>$@
+
+back-cover-sheet.xdv: back-cover-sheet.tex back-cover-background.pdf
+	xelatex -no-pdf $^
+
+back-cover-background.pdf: back-cover-background.eps
+
+cover-illustration.pdf: cover-illustration.eps
 
 %.xdv: %.tex
 	xelatex -no-pdf $^
