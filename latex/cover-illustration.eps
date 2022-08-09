@@ -47,8 +47,8 @@
 {pop currentdistillerparams /CoreDistVersion get 5000 lt} {true} ifelse
 {userdict /EPSHandler1_pdfmark /cleartomark load put
 userdict /EPSHandler1_ReadMetadata_pdfmark {flushfile cleartomark} bind put}
-{ userdict /EPSHandler1_pdfmark /pdfmark load put
-userdict /EPSHandler1_ReadMetadata_pdfmark {/PUT pdfmark} bind put } ifelse
+{userdict /EPSHandler1_pdfmark /pdfmark load put
+userdict /EPSHandler1_ReadMetadata_pdfmark {/PUT pdfmark} bind put} ifelse
 [/NamespacePush EPSHandler1_pdfmark
 [/_objdef {eps_metadata_stream} /type /stream /OBJ EPSHandler1_pdfmark
 [{eps_metadata_stream} 2 dict begin
