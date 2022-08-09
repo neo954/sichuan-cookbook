@@ -214,7 +214,7 @@
 
 	\newcommand\division[1]{%
 		\settowidth{\spanwidth}{##1}%
-		\subsection[##1]{\hbadness=10000\makebox[4em][s]{##1}：}
+		\subsection[##1]{\hbadness=10000\makebox[4em][s]{##1}：}%
 		\setlength{\spanwidth}{0pt}%
 	}%
 
@@ -349,7 +349,7 @@
 			\theendnotes%
 			\endgroup%
 		}%
-		\vspace{2\baselineskip plus 1.5\baselineskip minus 0.5\baselineskip}
+		\vspace{2\baselineskip plus 1.5\baselineskip minus 0.5\baselineskip}%
 	}%
 
 	% A new counter used in the command \step
