@@ -53,7 +53,7 @@ git-revision.tex: $(wildcard *.cls) $(wildcard *.tex)
 		--format=%ai --date=short`'}' >>$@
 
 back-cover-sheet.xdv: back-cover-sheet.tex back-cover-background.pdf
-	xelatex -no-pdf $^
+	xelatex -no-pdf $<
 
 back-cover-background.pdf: back-cover-background.eps
 
