@@ -52,8 +52,9 @@ git-revision.tex: $(wildcard *.cls) $(wildcard *.tex)
 	echo '\\newcommand{\\gitauthordate}{'`git log -1 \
 		--format=%ai --date=short`'}' >>$@
 
-back-cover-sheet.xdv: back-cover-sheet.tex back-cover-background.pdf
-	xelatex -no-pdf $<
+back-cover-sheet.xdv: back-cover-sheet.tex cookbook.cls \
+	back-cover-background.pdf
+	xelatex -no-pdf $< $(word 2, $^)
 
 back-cover-background.pdf: back-cover-background.eps
 
