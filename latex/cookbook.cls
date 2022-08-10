@@ -41,6 +41,7 @@
 	headsep=1.5mm,
 	footskip=5.5mm
 ]{geometry}
+\usepackage[zihao=5]{ctexsize}
 \usepackage{xeCJK}
 	\xeCJKDeclareCharClass{CJK}{%
 		"24EA,          % Circled Digit Zero
