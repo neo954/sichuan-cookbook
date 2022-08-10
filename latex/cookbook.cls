@@ -408,9 +408,13 @@
 	\fancyhead[RO,LE]{}%
 	% Customize the page numbers
 	\fancyfoot[LE,RO]{%
-		\hspace{2em}%
-		{‧\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}‧}%
-		\hspace{2em}%
+		\hspace{1.441em}%
+		\raisebox{-0.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
+		\hspace{-0.559em}%
+		\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}%
+		\hspace{-0.559em}%
+		\raisebox{-0.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
+		\hspace{1.441em}%
 	}%
 	\fancyfoot[LO,CE]{}%
 	\fancyfoot[CO,RE]{}%
