@@ -38,8 +38,8 @@
 	inner=27.5mm,
 	outer=27.5mm,
 	headheight=5mm,
-	headsep=2mm,
-	footskip=5mm
+	headsep=1.5mm,
+	footskip=5.5mm
 ]{geometry}
 \usepackage{xeCJK}
 	\xeCJKDeclareCharClass{CJK}{%
