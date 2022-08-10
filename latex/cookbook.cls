@@ -35,8 +35,8 @@
 	paper=a5paper,
 	top=24.5mm,
 	bottom=40.5mm,
-	inner=28.310225mm,
-	outer=28.310225mm,
+	inner=26.025736mm,
+	outer=26.025736mm,
 	headheight=5mm,
 	headsep=1.5mm,
 	footskip=5.5mm
