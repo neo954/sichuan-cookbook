@@ -134,7 +134,7 @@
 	%	Left
 		0pt
 	}{%	Before-sep
-		1\baselineskip
+		1.8\baselineskip
 	}{%	After-sep
 		0pt
 	}[%	Right-sep
@@ -351,7 +351,7 @@
 			\theendnotes%
 			\endgroup%
 		}%
-		\vspace{2\baselineskip plus 1.5\baselineskip minus 0.5\baselineskip}%
+		\vspace{2\baselineskip plus 1.5\baselineskip minus 1.5\baselineskip}%
 	}%
 
 	% A new counter used in the command \step
