@@ -287,8 +287,11 @@
 		}%
 
 		\newenvironment{subrecipe}[1]{%
+			% In footnote, the actual width of a Chinese character is 8pt,
+			% but em is 8.5pt. Here is a quick-and-dirty workaround.
+			\settowidth{\spanwidth}{饭}%
 			\renewcommand{\ingredients}{%
-				\noindent（一）\makebox[3.7em][s]{原料}：%
+				\noindent（一）\makebox[4\spanwidth][s]{原料}：%
 			}%
 			\renewcommand{\preparation}{%
 				\noindent（二）制作方法：%
@@ -297,11 +300,11 @@
 				\begingroup%
 				\noindent%
 				\mbox{%
-					\hspace{2.2em}%
-					\makebox[10em][s]{%
+					\hspace{2.35\spanwidth}%
+					\makebox[10.65\spanwidth][s]{%
 						\mbox{########1}\hfil\mbox{########2}%
 					}%
-					\hspace{3.4em}%
+					\hspace{3.5\spanwidth}%
 				}%
 				\endgroup%
 			}%
