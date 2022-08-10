@@ -288,10 +288,10 @@
 
 		\newenvironment{subrecipe}[1]{%
 			\renewcommand{\ingredients}{%
-				\noindent（一）\makebox[3.7em][s]{原料}%
+				\noindent（一）\makebox[3.7em][s]{原料}：%
 			}%
 			\renewcommand{\preparation}{%
-				\noindent（二）制作方法%
+				\noindent（二）制作方法：%
 			}%
 			\renewcommand{\ingredient}[2]{%
 				\begingroup%
