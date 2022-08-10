@@ -93,6 +93,8 @@
 	\setCJKmonofont[
 		BoldFont=Noto Sans Mono CJK SC Bold
 	]{Noto Sans Mono CJK SC}
+	\newCJKfontfamily[fang]\fsfamily[
+	]{FandolFang-Regular.otf}
 	\newCJKfontfamily[kai]\kafamily[
 		Ext-A=TW-Kai,
 		Ext-B=TW-Kai-Ext-B,
