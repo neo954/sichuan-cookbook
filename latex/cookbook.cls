@@ -405,7 +405,9 @@
 	% Customize the head and foot
 	\fancyhead{}% Clear all fields
 	\fancyfoot{}% Clear all fields
-	\fancyhead[RO,LE]{}%
+	\fancyhead[LE,RO]{}%
+	\fancyhead[CE,RE]{}%
+	\fancyhead[LO,CO]{}%
 	% Customize the page numbers
 	\fancyfoot[LE,RO]{%
 		\hspace{1.441em}%
@@ -416,8 +418,8 @@
 		\raisebox{-0.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
 		\hspace{1.441em}%
 	}%
-	\fancyfoot[LO,CE]{}%
-	\fancyfoot[CO,RE]{}%
+	\fancyfoot[CE,RE]{}%
+	\fancyfoot[LO,CO]{}%
 	\renewcommand{\headrulewidth}{0pt}%
 	\renewcommand{\footrulewidth}{0pt}%
 
