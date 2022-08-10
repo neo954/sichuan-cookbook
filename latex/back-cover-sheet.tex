@@ -28,27 +28,10 @@
 % OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 %
 \NeedsTeXFormat{LaTeX2e}
-\documentclass{book}
-\usepackage[
-	paper=a5paper,
-	top=24.5mm,
-	bottom=40.5mm,
-	inner=27.5mm,
-	outer=27.5mm,
-	headheight=5mm,
-	headsep=2mm,
-	footskip=5mm
-]{geometry}
-\usepackage{xeCJK}
-	\setCJKmainfont[
-		BoldFont=Noto Serif CJK SC Medium
-	]{Noto Serif CJK SC}
-	\setCJKsansfont[
+\documentclass{cookbook}
+	\newCJKfontfamily[hei]\hefamily[
 		BoldFont=Noto Sans CJK SC
 	]{Noto Sans CJK SC DemiLight}
-\usepackage[T1]{fontenc}
-\usepackage{setspace}
-\usepackage{emptypage}
 \usepackage{pdfoverlay}
 \pdfoverlaySetPDF{back-cover-background.pdf}
 
@@ -61,7 +44,7 @@
 \small%
 \doublespacing
 {%
-	\sffamily%
+	\hefamily%
 	成都市饮食公司技术培训班
 }
 
