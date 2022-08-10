@@ -89,7 +89,9 @@
 	\setCJKsansfont[
 		BoldFont=Noto Sans CJK SC Bold
 	]{Noto Sans CJK SC Medium}
-	\setCJKmonofont{Noto Sans Mono CJK SC}
+	\setCJKmonofont[
+		BoldFont=Noto Sans Mono CJK SC Bold
+	]{Noto Sans Mono CJK SC}
 	\newCJKfontfamily[kai]\kafamily[
 		Ext-A=TW-Kai,
 		Ext-B=TW-Kai-Ext-B,
