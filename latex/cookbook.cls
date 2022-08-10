@@ -466,7 +466,7 @@
 		\addtocontents{toc}{\protect\begin{minipage}[t]{.456\textwidth}}%
 	}{%
 		\addtocontents{toc}{\protect\end{minipage}}%
-		\addtocontents{toc}{\protect\begin{minipage}[t]{.088\textwidth}}%
+		\addtocontents{toc}{\protect\begin{minipage}[t]{.071\textwidth}}%
 		\addtocontents{toc}{\protect\hfil}%
 		\addtocontents{toc}{\protect\end{minipage}}%
 	}%
