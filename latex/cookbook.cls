@@ -207,7 +207,7 @@
 		\thispagestyle{fancy}%
 		\addcontentsline{toc}{chapter}{%
 			% Use different text for the table of contents and bookmarks
-			\texorpdfstring{\hbadness=10000\makebox[12em][s]{##1}}{##1}%
+			\texorpdfstring{\hbadness=10000\makebox[11em][s]{##1}}{##1}%
 		}%
 		\setlength{\spanwidth}{0pt}%
 	}%
@@ -417,8 +417,9 @@
 
 	% Customize the table of contents
 	\tocloftpagestyle{fancy}%
-	\setlength{\cftbeforetoctitleskip}{0.4\baselineskip}%
-	\setlength{\cftaftertoctitleskip}{0.6\baselineskip}%
+	\setlength{\cftbeforetoctitleskip}{2\baselineskip%
+		plus 0.5\baselineskip minus 0.5\baselineskip}%
+	\setlength{\cftaftertoctitleskip}{0\baselineskip}%
 	% Centering table of contents title by using \hfil
 	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily\bfseries}%
 	\renewcommand{\cftaftertoctitle}{\hfil}%
@@ -445,7 +446,7 @@
 		% Use different text for the table of contents and bookmarks
 		\texorpdfstring{%
 			\makebox[\textwidth][s]{%
-				\hfil\hbadness=10000\makebox[6em][s]{目录}\hfil%
+				\hfil\hbadness=10000\makebox[5em][s]{目录}\hfil%
 			}%
 		}{目录}%
 	}%
@@ -454,15 +455,15 @@
 	\addtocontents{toc}{\cftpagenumberson{section}}%
 
 	\newenvironment{tocminipageleft}{%
-		\addtocontents{toc}{\protect\begin{minipage}[t]{0.45\textwidth}}%
+		\addtocontents{toc}{\protect\begin{minipage}[t]{.456\textwidth}}%
 	}{%
 		\addtocontents{toc}{\protect\end{minipage}}%
-		\addtocontents{toc}{\protect\begin{minipage}[t]{0.08\textwidth}}%
+		\addtocontents{toc}{\protect\begin{minipage}[t]{.088\textwidth}}%
 		\addtocontents{toc}{\protect\hfil}%
 		\addtocontents{toc}{\protect\end{minipage}}%
 	}%
 	\newenvironment{tocminipageright}{%
-		\addtocontents{toc}{\protect\begin{minipage}[t]{0.45\textwidth}}%
+		\addtocontents{toc}{\protect\begin{minipage}[t]{.456\textwidth}}%
 	}{%
 		\addtocontents{toc}{\protect\end{minipage}}%
 		\addtocontents{toc}{\protect\vfil}%
