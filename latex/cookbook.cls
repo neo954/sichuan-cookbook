@@ -256,7 +256,6 @@
 				\stepcounter{step}%
 			}{%
 			}%
-			\mbox{\hspace{0.1em minus 0.1em}}%
 			\endgroup%
 		}%
 
