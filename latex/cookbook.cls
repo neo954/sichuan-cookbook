@@ -33,13 +33,13 @@
 \LoadClass[openany]{book}
 \usepackage[
 	paper=a5paper,
-	top=24.000000mm,
-	bottom=35.400000mm,
+	top=26.025736mm,
+	bottom=33.374264mm,
 	inner=26.025736mm,
 	outer=26.025736mm,
-	headheight=5.000000mm,
-	headsep=1.500000mm,
-	footskip=7.000000mm
+	headheight=5.271897mm,
+	headsep=3.690328mm,
+	footskip=7.380655mm
 ]{geometry}
 \usepackage[zihao=5]{ctexsize}
 \usepackage{xeCJK}
