@@ -38,7 +38,7 @@
 	inner=26.025736mm,
 	outer=26.025736mm,
 	headheight=5.271897mm,
-	headsep=3.690328mm,
+	headsep=2.108757mm,
 	footskip=7.380655mm,
 	marginparwidth=18.978828mm,
 	marginparsep=3.514598mm
