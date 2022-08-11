@@ -39,7 +39,9 @@
 	outer=26.025736mm,
 	headheight=5.271897mm,
 	headsep=3.690328mm,
-	footskip=7.380655mm
+	footskip=7.380655mm,
+	marginparwidth=18.978828mm,
+	marginparsep=3.514598mm
 ]{geometry}
 \usepackage[zihao=5]{ctexsize}
 \usepackage{xeCJK}
