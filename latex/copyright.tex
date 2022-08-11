@@ -3,11 +3,11 @@
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{.5\baselineskip}%
 \singlespacing%
-
+\null%
+\vfill%
 BSD 3-Clause License
 
-Copyright {\copyright} 2019 -- 2022 Quux System and Technology. All rights
-reserved.
+Copyright {\copyright} 2023 Quux System and Technology. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -36,7 +36,22 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-\vfill%
+\vspace{1.5\baselineskip}
+
+This book was composed in %
+% XeLaTeX
+\begingroup%
+\rmfamily%
+\footnotesize%
+X\kern-.125em\lower.5ex\hbox{\scalebox{-1}[1]{E}}\kern-.15em%
+L\kern-.36em\lower-.428571ex\hbox{\tiny{A}}\kern-.15em%
+T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX%
+\endgroup%
+.
+
+See also \texttt{https://github.com/neo954/sichuan-cookbook} for information
+about \textit{Sichuan Cookbook 1972}\!（四川菜谱）\!\!.
+
 \endgroup%
 
 % vim: filetype=tex noautoindent
