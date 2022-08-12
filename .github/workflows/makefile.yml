@@ -1,4 +1,4 @@
-name: Makefile CI
+name: Build the LaTeX book.
 
 on:
   push:
@@ -13,15 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
-    - name: configure
-      run: ./configure
-      
-    - name: Install dependencies
-      run: make
-      
-    - name: Run check
-      run: make check
-      
-    - name: Run distcheck
-      run: make distcheck
+
+    - name: Install build dependencies
+      run:  sudo apt-get install -y fonts-cns11643-kai fonts-hanazono fonts-noto texlive-full
+
+    - name: Build
+      run:  cd latex && make
