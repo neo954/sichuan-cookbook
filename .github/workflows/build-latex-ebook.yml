@@ -2,9 +2,9 @@ name: Build the LaTeX eBook
 
 on:
   push:
-    branches: [ "github-action" ]
+    branches: [ "devel" ]
   pull_request:
-    branches: [ "github-action" ]
+    branches: [ "devel" ]
 
 jobs:
   build-latex-ebook:
@@ -26,4 +26,4 @@ jobs:
         name: sichuan-cookbook
         path: latex/sichuan-cookbook.pdf
         if-no-files-found: error
-        retention-days: 30
+        retention-days: 90
