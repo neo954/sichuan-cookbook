@@ -113,8 +113,8 @@ make scan
 
 The book is recreated with XeLaTeX.
 ```
-sudo apt-get install texlive-latex-recommended texlive-xetex texlive-lang-cjk \
-    fonts-noto-cjk fonts-noto-cjk-extra
+sudo apt-get install -y fonts-cns11643-kai fonts-hanazono fonts-noto \
+	texlive-full
 ```
 
 Build the PDF with the following command.
