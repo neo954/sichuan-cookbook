@@ -21,7 +21,7 @@ jobs:
       run:  cd latex && make
 
     - name: Upload LaTeX ebook
-      use:  actions/upload-artifact@v3
+      uses:  actions/upload-artifact@v3
       with:
         name: sichuan-cookbook-pdf
         path: latex/sichuan-cookbook.pdf
