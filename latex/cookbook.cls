@@ -29,7 +29,7 @@
 %
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cookbook}
-	[2022/08/07 v0.0.3 LaTeX docment class for cookbook]
+	[2022/08/12 v0.0.3a XeLaTeX docment class for cookbook]
 \LoadClass[openany]{book}
 \usepackage[
 	paper=a5paper,
