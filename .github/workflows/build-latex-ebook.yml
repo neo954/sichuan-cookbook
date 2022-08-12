@@ -1,0 +1,29 @@
+name: Build the LaTeX eBook
+
+on:
+  push:
+    branches: [ "github-action" ]
+  pull_request:
+    branches: [ "github-action" ]
+
+jobs:
+  build-latex-ebook:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install build dependencies
+      run:  sudo apt-get install -y --no-install-recommends fonts-cns11643-kai fonts-hanazono fonts-noto-cjk fonts-noto-cjk-extra texlive-full
+
+    - name: Build
+      run:  cd latex && make
+
+    - name: Upload LaTeX ebook
+      uses:  actions/upload-artifact@v3
+      with:
+        name: sichuan-cookbook
+        path: latex/sichuan-cookbook.pdf
+        if-no-files-found: error
+        retention-days: 30
