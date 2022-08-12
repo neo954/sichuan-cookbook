@@ -25,3 +25,4 @@ jobs:
       with:
         name: sichuan-cookbook-pdf
         path: latex/sichuan-cookbook.pdf
+        if-no-files-found: error
