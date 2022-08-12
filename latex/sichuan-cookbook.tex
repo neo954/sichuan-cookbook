@@ -44,7 +44,7 @@
 		pdfcreator={XeLaTeX},
 		pdflang={zh-CN},
 		pdfinfo={
-			BuildDateTime={\zhtoday\zhcurrtime},
+			GitDescribeNotation={\gitcommitname},
 			GitCommitHash={\gitcommithash},
 			GitAuthorDate={\gitauthordate}
 		},
@@ -58,6 +58,7 @@
 
 % Front cover
 \input{front-cover.tex}
+\input{copyright.tex}
 \cleardoublepage
 
 \definecolor{pantone485}{cmyk}{0, 1, 1, 0}

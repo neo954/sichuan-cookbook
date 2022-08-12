@@ -33,13 +33,15 @@
 \LoadClass[openany]{book}
 \usepackage[
 	paper=a5paper,
-	top=24.000000mm,
-	bottom=35.400000mm,
+	top=26.025736mm,
+	bottom=33.373733mm,
 	inner=26.025736mm,
 	outer=26.025736mm,
-	headheight=5.000000mm,
-	headsep=1.500000mm,
-	footskip=7.000000mm
+	headheight=5.271897mm,
+	headsep=2.108757mm,
+	footskip=7.347997mm,
+	marginparwidth=18.978828mm,
+	marginparsep=3.514598mm
 ]{geometry}
 \usepackage[zihao=5]{ctexsize}
 \usepackage{xeCJK}
@@ -405,15 +407,21 @@
 	% Customize the head and foot
 	\fancyhead{}% Clear all fields
 	\fancyfoot{}% Clear all fields
-	\fancyhead[RO,LE]{}%
+	\fancyhead[LE,RO]{}%
+	\fancyhead[CE,RE]{}%
+	\fancyhead[LO,CO]{}%
 	% Customize the page numbers
 	\fancyfoot[LE,RO]{%
-		\hspace{2em}%
-		{‧\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}‧}%
-		\hspace{2em}%
+		\hspace{1.441em}%
+		\raisebox{-0.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
+		\hspace{-0.559em}%
+		\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}%
+		\hspace{-0.559em}%
+		\raisebox{-0.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
+		\hspace{1.441em}%
 	}%
-	\fancyfoot[LO,CE]{}%
-	\fancyfoot[CO,RE]{}%
+	\fancyfoot[CE,RE]{}%
+	\fancyfoot[LO,CO]{}%
 	\renewcommand{\headrulewidth}{0pt}%
 	\renewcommand{\footrulewidth}{0pt}%
 
@@ -460,7 +468,7 @@
 		\addtocontents{toc}{\protect\begin{minipage}[t]{.456\textwidth}}%
 	}{%
 		\addtocontents{toc}{\protect\end{minipage}}%
-		\addtocontents{toc}{\protect\begin{minipage}[t]{.088\textwidth}}%
+		\addtocontents{toc}{\protect\begin{minipage}[t]{.071\textwidth}}%
 		\addtocontents{toc}{\protect\hfil}%
 		\addtocontents{toc}{\protect\end{minipage}}%
 	}%
