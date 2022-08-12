@@ -7,7 +7,7 @@ on:
     branches: [ "action" ]
 
 jobs:
-  build:
+  build-latex-ebook:
 
     runs-on: ubuntu-latest
 
