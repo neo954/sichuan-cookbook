@@ -91,9 +91,9 @@ tarball](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alp
 
 #### Prerequisite
 
-The original book has a page size of 185 mm $\times$ 130 mm. This
-length-to-width ratio is roughly equal to $\sqrt{2} : 1$. Thus, with a 600 dpi
-resolution, the image size of all the pages will be 4370 px $\times$ 3091 px.
+The original book has a page size of 185mm $\times$ 130mm. This
+length-to-width ratio is roughly equal to $\sqrt{2} : 1$. Thus, with a 600dpi
+resolution, the image size of all the pages will be 4370px $\times$ 3091px.
 
 All the JPEG photos will be processed with ImageMagick, and then OCRed
 with Tesseract Open Source OCR Engine.
