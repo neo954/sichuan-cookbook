@@ -137,6 +137,6 @@ proofreading.
 Please report typos of a receipt with a new comment on the same issue page you
 claimed. Of course, pull requests are always welcome!
 
-[modeline1]: # ( vim: set filetype=markdown noautoindent: )
+[modeline1]: # ( vim: set filetype=markdown noautoindent nojoinspaces: )
 [modeline2]: # ( vim: set fileencoding=utf-8 spell spelllang=en: )
 [modeline3]: # ( vim: set textwidth=78 tabstop=4 shiftwidth=4 softtabstop=4: )
