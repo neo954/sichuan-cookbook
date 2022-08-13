@@ -46,9 +46,9 @@ FILELIST: \
 		$(wildcard jpeg/[bcpz]*.jpg)))))
 	ls -1 trim/* >$@
 
-# The original book has the page size 185 mm x 130 mm. This length-to-width
-# ratio is roughly equal to sqrt(2) : 1. Thus, with a 600 dpi resolution, the
-# image size of all the pages will be 4370 px x 3091 px.
+# The original book has the page size 185mm x 130mm. This length-to-width
+# ratio is roughly equal to sqrt(2) : 1. Thus, with a 600dpi resolution, the
+# image size of all the pages will be 4370px x 3091px.
 
 trim/a000.jpg: trim/%.jpg: jpeg/%.jpg
 	mkdir -p trim
