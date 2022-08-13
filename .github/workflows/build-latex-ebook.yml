@@ -16,11 +16,14 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Install extra fonts
+      run:  mkdir -p ~/.fonts && cp fonts/*.otf ~/.fonts
+
+    - name: Download extra fonts
+      run:  mkdir -p ~/.fonts && curl https://glyphwiki.org/font/gw2696945.ttf -o ~/.fonts/sim-ch_n5100_gw2696945.ttf
+
     - name: Install build dependencies
       run:  sudo apt-get install -y --no-install-recommends fonts-cns11643-kai fonts-hanazono fonts-noto-cjk fonts-noto-cjk-extra texlive-full
-
-    - name: Install extra fonts
-      run:  mkdir ~/.fonts && cp fonts/*.otf ~/.fonts
 
     - name: Build
       run:  cd latex && make
