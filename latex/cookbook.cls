@@ -490,6 +490,6 @@
 }{%
 }%
 
-% vim: filetype=tex noautoindent
+% vim: filetype=tex noautoindent nojoinspaces
 % vim: fileencoding=utf-8
 % vim: textwidth=78 tabstop=4 shiftwidth=4 softtabstop=4
