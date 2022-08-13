@@ -54,3 +54,7 @@ The goals of the Sichuan Cookbook 1972 LaTex Remake are listed as follows.
   * FandolKai
   * TW-Kai
   * TW-Kai-Ext-B
+
+[modeline1]: # ( vim: set filetype=markdown noautoindent nojoinspaces: )
+[modeline2]: # ( vim: set fileencoding=utf-8 spell spelllang=en: )
+[modeline3]: # ( vim: set textwidth=78 tabstop=4 shiftwidth=4 softtabstop=4: )
