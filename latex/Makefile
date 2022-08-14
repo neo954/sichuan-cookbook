@@ -54,6 +54,8 @@ git-revision.tex: $(wildcard *.cls) $(wildcard *.tex)
 	echo '\\newcommand{\\gitauthordate}{'`git log -1 \
 		--format=%ai --date=short`'}' >>$@
 	echo '\\newcommand{\\pdfbuildhost}{'`hostname -s`'}' >>$@
+	echo '\\newcommand{\\pdfbuildtime}{'`date \
+		"+%Y-%m-%d %H:%M:%S %z"`'}' >>$@
 
 back-cover-sheet.xdv: back-cover-sheet.tex cookbook.cls \
 	back-cover-background.pdf
