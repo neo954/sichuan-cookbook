@@ -271,23 +271,22 @@
 			\division{制作方法}%
 		}%
 
-		\newcommand{\step}{%
+		% With one optional argument
+		\newcommand{\step}[1][]{%
 			\stepcounter{step}%
-			\par\arabic{step}.%
+			\ifthenelse{\equal{####1}{}}{%
+				\par\arabic{step}.%
+			}{%
+				\par\arabic{step}.{\sffamily####1}%
+			}%
 		}%
 
 		\newcommand{\suggestion}{%
 			\division{注意事项}%
 		}%
 
-		% With one optional argument
-		\newcommand{\hint}[1][]{%
-			\ifthenelse{\equal{####1}{}}{%
-				\step%
-			}{%
-				\step{\sffamily####1}%
-			}%
-		}%
+		% Make command \hint as an alternative name of \step
+		\let\hint=\step%
 
 		\newcommand{\features}{%
 			\division{特点}%
