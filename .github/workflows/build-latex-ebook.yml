@@ -25,7 +25,7 @@ jobs:
     - name: Upload LaTeX ebook
       uses:  actions/upload-artifact@v3
       with:
-        name: sichuan-cookbook
+        name: sichuan-cookbook-pdf
         path: latex/sichuan-cookbook.pdf
         if-no-files-found: error
         retention-days: 90
