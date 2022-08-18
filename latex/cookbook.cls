@@ -119,6 +119,18 @@
 \usepackage{xparse}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage{subcaption}
+	% Caption label format
+	\DeclareCaptionLabelFormat{cookbook}{图#2}
+	% Caption separator style
+	\DeclareCaptionLabelSeparator{cookbook}{\hspace{1em}}
+	% Caption format
+	\DeclareCaptionFormat{cookbook}{%
+		\@hangfrom{\kafamily#1#2}%
+		\advance\caption@parindent\hangindent\relax%
+		\advance\caption@hangindent\hangindent\relax%
+		\caption@@par{\kafamily#3}\par%
+	}
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{ifthen}
@@ -403,6 +415,9 @@
 	\makeatother%
 	% Redefine the enotesize
 	\def\enotesize{\footnotesize}%
+
+	% Set the caption style
+	\captionsetup{format=cookbook,labelsep=cookbook,labelformat=cookbook}%
 
 	% Customize the head and foot
 	\fancyhead{}% Clear all fields
