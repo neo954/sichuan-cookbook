@@ -122,9 +122,10 @@
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{ifthen}
+\usepackage{endnotes}
 % Empty all blank pages created by \cleardoublepage
 \usepackage{emptypage}
-\usepackage{endnotes}
+	\pagestyle{empty}
 
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
