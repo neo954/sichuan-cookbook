@@ -39,7 +39,7 @@ pdf: $(OUTPUT_BASENAME).pdf
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	git-revision.tex front-cover.tex cover-illustration.pdf \
 	copyright.tex chairman-mao-quotes.tex title-page.tex preface.tex \
-	$(wildcard recipe-*.tex) \
+	$(wildcard recipe-*.tex) $(wildcard illustration-*.eps) \
 	back-cover.tex back-cover-sheet.pdf
 	xelatex -no-pdf $< $(word 2, $^)
 	xelatex -no-pdf $< $(word 2, $^)
