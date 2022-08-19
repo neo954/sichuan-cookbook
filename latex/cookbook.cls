@@ -307,7 +307,7 @@
 
 		\newenvironment{subrecipe}[1]{%
 			\renewcommand{\ingredients}{%
-				\noindent（一）\makebox[3.75em][s]{原料}：%
+				\noindent（一）{\hbadness=10000\makebox[3.75em][s]{原料}}：%
 			}%
 			\renewcommand{\preparation}{%
 				\noindent（二）制作方法：%
