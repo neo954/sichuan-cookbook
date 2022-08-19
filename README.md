@@ -58,10 +58,16 @@ the public on Jan 1, 2023.
 
 ## Download a digitized copy of the book
 
+### Sichuan Cookbook 1972 Remake
+
+[DOWNLOAD](#)
+
+### Scanned copy
+
 A draft copy of *[Sichuan Cookbook
 1972](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alpha/sichuan-cookbook-1972.pdf)*
-<sub>(75.6 MB)</sub> can be downloaded. This is an A5 paper size scanned copy
-with an unproofread OCR text underlayer.
+<sub>(75.6 MB)</sub> can be downloaded. This is a 185mm $\times$ 130mm paper
+size scanned copy with an unproofread OCR text underlayer.
 
 ## Set up a developing environment
 
