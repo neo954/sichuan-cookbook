@@ -43,10 +43,10 @@ The goal of this project is to digitize *Sichuan Cookbook 1972* properly.
 * [x] Run OCR (optical character recognition) on the binary images.
 * [x] Create a PDF book of the original book from the binary images and the
       OCR results.
-* [ ] Organize each recipe in the book with an abstract data structure, and
+* [x] Organize each recipe in the book with an abstract data structure, and
       save them as a LaTeX document.
-* [ ] Reproduce the appearance of the original book with LaTeX typesetting.
-* [ ] Render LaTeX documents and create a PDF book.
+* [x] Reproduce the appearance of the original book with LaTeX typesetting.
+* [x] Render LaTeX documents and create a PDF book.
 * [ ] Optionally, add comments to the book based on research.
 
 According to the Copyright Law of China, concerning a work of a legal
