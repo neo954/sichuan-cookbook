@@ -68,7 +68,7 @@ paperback book.
 ### Scanned copy
 
 A draft copy of *[Sichuan Cookbook
-1972](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alpha/sichuan-cookbook-1972.pdf)*
+1972](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-pre-alpha/sichuan-cookbook-1972.pdf)*
 <sub>(75.6 MB)</sub> can be downloaded. This is a 185mm $\times$ 130mm paper
 size scanned copy with an unproofread OCR text underlayer.
 
@@ -95,7 +95,7 @@ make -C jpeg
 ```
 
 Or, all the JPEG files can be downloaded in [one
-tarball](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alpha/sichuan-cookbook-1972.jpeg.tar)
+tarball](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-pre-alpha/sichuan-cookbook-1972.jpeg.tar)
 <sub>(625 MB)</sub>.
 
 #### Prerequisite
