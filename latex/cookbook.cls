@@ -110,6 +110,7 @@
 		Ext-D=TW-Kai-Ext-B,
 		Ext-E=TW-Kai-Ext-B,
 		Supplement=TW-Kai-Ext-B,
+		Patch=Patch-Kai,
 		FallBack=TW-Kai
 	]{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
