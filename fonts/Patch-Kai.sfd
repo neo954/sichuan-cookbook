@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1661578819
-ModificationTime: 1661616113
+ModificationTime: 1661616826
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -47,8 +47,8 @@ DEI: 91125
 LangName: 2052 "" "+iGVOAWl3TmYA"
 LangName: 1033 "" "" "Regular"
 Encoding: Custom
-UnicodeInterp: none
-NameList: AGL For New Fonts
+UnicodeInterp: simpchinese
+NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
