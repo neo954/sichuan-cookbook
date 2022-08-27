@@ -19,6 +19,9 @@ jobs:
     - name: Install build dependencies
       run:  sudo apt-get install -y --no-install-recommends fonts-cns11643-kai fonts-hanazono fonts-noto-cjk fonts-noto-cjk-extra texlive-full
 
+    - name: Install extra fonts
+      run:  mkdir ~/.fonts && cp fonts/*.otf ~/.fonts
+
     - name: Build
       run:  cd latex && make
 
