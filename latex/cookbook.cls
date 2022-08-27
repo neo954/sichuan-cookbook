@@ -80,14 +80,14 @@
 	}
 	\setCJKmainfont[
 		BoldFont=Noto Serif CJK SC Medium,
-		Ext-B={[AutoFakeBold=1.1]{HanaMinB}},
-		Ext-C={[AutoFakeBold=1.1]{HanaMinB}},
-		Ext-D={[AutoFakeBold=1.1]{HanaMinB}},
-		Ext-E={[AutoFakeBold=1.1]{HanaMinB}},
-		Ext-F={[AutoFakeBold=1.1]{HanaMinB}},
-		Supplement={[AutoFakeBold=1.1]{HanaMinA}},
-		Ext-G={[AutoFakeBold=1.1]{sim-ch_n5100}},
-		FallBack={[AutoFakeBold=1.1]{HanaMinA}}
+		Ext-B={[AutoFakeBold=1.2]{HanaMinB}},
+		Ext-C={[AutoFakeBold=1.2]{HanaMinB}},
+		Ext-D={[AutoFakeBold=1.2]{HanaMinB}},
+		Ext-E={[AutoFakeBold=1.2]{HanaMinB}},
+		Ext-F={[AutoFakeBold=1.2]{HanaMinB}},
+		Supplement={[AutoFakeBold=1.2]{HanaMinA}},
+		Ext-G={[AutoFakeBold=1.2]{sim-ch_n5100}},
+		FallBack={[AutoFakeBold=1.2]{HanaMinA}}
 	]{Noto Serif CJK SC}
 	\setCJKsansfont[
 		BoldFont=Noto Sans CJK SC Bold
