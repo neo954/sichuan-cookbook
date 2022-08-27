@@ -113,6 +113,8 @@ with Tesseract Open Source OCR Engine.
 sudo apt-get install imagemagick tesseract-ocr tesseract-ocr-chi-sim
 ```
 
+#### Compiling
+
 Build the PDF with the following commands.
 ```
 make -C jpeg
@@ -127,6 +129,19 @@ The book is recreated with XeLaTeX.
 ```
 sudo apt-get install -y fonts-cns11643-kai fonts-hanazono fonts-noto texlive-full
 ```
+
+#### The font - Patch-Kai
+
+A couple of Chinese character glyphs in Unicode CJK Extension E, Extension G
+do not exist in either Fandol-Kai or TW-Kai. An OpenType font, Patch-Kai is
+created to fill in the gap. Only a handful of glyphs is in it.
+
+Copy the font file to the local font directory.
+```
+cp fonts/Patch-Kai.otf ~/.fonts
+```
+
+#### Compiling
 
 Build the PDF with the following command.
 ```
