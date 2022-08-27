@@ -1,0 +1,52 @@
+SplineFontDB: 3.2
+FontName: Patch-Kai
+FullName: Patch Kai
+FamilyName: Patch
+Weight: Regular
+Copyright: Copyright (c) 2022, Quux System and Technology
+UComments: "2022-8-27: Created with FontForge (http://fontforge.org)"
+Version: 000.001
+ItalicAngle: 0
+UnderlinePosition: -100
+UnderlineWidth: 50
+Ascent: 800
+Descent: 200
+InvalidEm: 0
+LayerCount: 2
+Layer: 0 0 "Back" 1
+Layer: 1 0 "Fore" 0
+XUID: [1021 870 -974180029 14584068]
+OS2Version: 0
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 1
+CreationTime: 1661578819
+ModificationTime: 1661579731
+OS2TypoAscent: 0
+OS2TypoAOffset: 1
+OS2TypoDescent: 0
+OS2TypoDOffset: 1
+OS2TypoLinegap: 0
+OS2WinAscent: 0
+OS2WinAOffset: 1
+OS2WinDescent: 0
+OS2WinDOffset: 1
+HheadAscent: 0
+HheadAOffset: 1
+HheadDescent: 0
+HheadDOffset: 1
+OS2Vendor: 'PfEd'
+MarkAttachClasses: 1
+DEI: 91125
+Encoding: Custom
+UnicodeInterp: none
+NameList: AGL For New Fonts
+DisplaySize: -48
+AntiAlias: 1
+FitToEm: 0
+WinInfo: 0 24 9
+OnlyBitmaps: 1
+BeginPrivate: 0
+EndPrivate
+BeginChars: 2 0
+EndChars
+EndSplineFont
