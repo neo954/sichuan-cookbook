@@ -32,6 +32,8 @@
 
 二五三、子母烩。《七》本标题作“子母会”。“因鸽子与鸽蛋同配一菜，故名子母会（烩）。”《四》本《八》本括号部分在句号后面。《七》本无括号部分内容。据《标点符号用法》GB/T 15834-2011，将括号部分移至句号之前。
 
+二六七、炸斑指。“川一道”，疑为“汆一道”。
+
 [modeline1]: # ( vim: set filetype=markdown noautoindent nojoinspaces: )
 [modeline2]: # ( vim: set fileencoding=utf-8: )
 [modeline3]: # ( vim: set textwidth=78 tabstop=4 shiftwidth=4 softtabstop=4: )
