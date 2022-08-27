@@ -78,7 +78,7 @@
 	\xeCJKDeclareSubCJKBlock{Ext-H}{
 		"31350 -> "323AF
 	}
-	\xeCJKDeclareSubCJKBlock{Patch}{
+	\xeCJKDeclareSubCJKBlock{Patch-E}{
 		"2C081
 	}
 	\setCJKmainfont[
@@ -90,6 +90,7 @@
 		Ext-F={[AutoFakeBold=1.2]{HanaMinB}},
 		Supplement={[AutoFakeBold=1.2]{HanaMinA}},
 		Ext-G={[AutoFakeBold=1.2]{sim-ch_n5100}},
+		Patch-E={[AutoFakeBold=1.2]{HanaMinB}},
 		FallBack={[AutoFakeBold=1.2]{HanaMinA}}
 	]{Noto Serif CJK SC}
 	\setCJKsansfont[
@@ -110,7 +111,7 @@
 		Ext-D=TW-Kai-Ext-B,
 		Ext-E=TW-Kai-Ext-B,
 		Supplement=TW-Kai-Ext-B,
-		Patch=Patch-Kai,
+		Patch-E=Patch-Kai,
 		FallBack=TW-Kai
 	]{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
