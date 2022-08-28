@@ -54,6 +54,9 @@
 	\xeCJKDeclareSubCJKBlock{Ext-A}{
 		"3400 -> "4DBF
 	}
+	\xeCJKDeclareSubCJKBlock{Non-GB2312}{
+		"9183
+	}
 	\xeCJKDeclareSubCJKBlock{Ext-B}{
 		"20000 -> "2A6DF
 	}
@@ -113,6 +116,7 @@
 		Ext-G=Patch-Kai,
 		Supplement=TW-Kai-Ext-B,
 		Patch-E=Patch-Kai,
+		Non-GB2312=TW-Kai,
 		FallBack=TW-Kai
 	]{FandolKai-Regular.otf}
 \usepackage[T1]{fontenc}
