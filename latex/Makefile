@@ -39,7 +39,7 @@ pdf: $(OUTPUT_BASENAME).pdf
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	git-revision.tex front-cover.tex cover-illustration.pdf \
 	copyright.tex chairman-mao-quotes.tex title-page.tex preface.tex \
-	$(wildcard recipe-*.tex) \
+	$(wildcard recipe-*.tex) quux-logo.pdf \
 	illustration-001.pdf illustration-002a.pdf illustration-002b.pdf \
 	illustration-002c.pdf illustration-003.pdf illustration-004.pdf \
 	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
