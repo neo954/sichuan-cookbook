@@ -39,8 +39,12 @@ pdf: $(OUTPUT_BASENAME).pdf
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	git-revision.tex front-cover.tex cover-illustration.pdf \
 	copyright.tex chairman-mao-quotes.tex title-page.tex preface.tex \
-	$(wildcard recipe-*.tex) $(wildcard illustration-*.eps) \
-	back-cover.tex back-cover-sheet.pdf
+	$(wildcard recipe-*.tex) \
+	illustration-001.pdf illustration-002a.pdf illustration-002b.pdf \
+	illustration-002c.pdf illustration-003.pdf illustration-004.pdf \
+	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
+	illustration-008.pdf illustration-009.pdf illustration-010.pdf \
+	illustration-011.pdf back-cover.tex back-cover-sheet.pdf
 	xelatex -no-pdf $< $(word 2, $^)
 	xelatex -no-pdf $< $(word 2, $^)
 	xelatex -no-pdf $< $(word 2, $^)
