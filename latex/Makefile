@@ -44,7 +44,7 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	illustration-002c.pdf illustration-003.pdf illustration-004.pdf \
 	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
 	illustration-008.pdf illustration-009.pdf illustration-010.pdf \
-	illustration-011.pdf back-cover.tex back-cover-sheet.pdf
+	illustration-011.pdf back-cover.tex back-cover-page.pdf
 	xelatex -no-pdf $< $(word 2, $^)
 	xelatex -no-pdf $< $(word 2, $^)
 	xelatex -no-pdf $< $(word 2, $^)
@@ -61,7 +61,7 @@ git-revision.tex: $(wildcard *.cls) $(wildcard *.tex)
 	echo '\\newcommand{\\pdfbuildtime}{'`date \
 		"+%Y-%m-%d %H:%M:%S %z"`'}' >>$@
 
-back-cover-sheet.xdv: back-cover-sheet.tex cookbook.cls \
+back-cover-page.xdv: back-cover-page.tex cookbook.cls \
 	back-cover-background.pdf
 	xelatex -no-pdf $< $(word 2, $^)
 
