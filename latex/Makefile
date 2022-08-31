@@ -66,10 +66,6 @@ back-cover-page.xdv: back-cover-page.tex cookbook.cls \
 	back-cover-background.pdf
 	xelatex -no-pdf $< $(word 2, $^)
 
-back-cover-background.pdf: back-cover-background.eps
-
-cover-illustration.pdf: cover-illustration.eps
-
 %.xdv: %.tex
 	xelatex -no-pdf $^
 
