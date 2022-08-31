@@ -65,8 +65,8 @@ Remake](https://github.com/neo954/sichuan-cookbook/releases/download/v0.5.0-alph
 <sub>(1.85 MB)i</sub>. This is an A5 paper size remake edition of the original
 paperback book.
 
-See *[Notes on Textual Criticism](doc/NOTES-ON-TEXTUAL-CRITICISM.md)* (in
-Chinese).
+See *[Notes on Textual Criticism](doc/NOTES-ON-TEXTUAL-CRITICISM.md)*
+(校勘笔记).
 
 ### Scanned copy
 
