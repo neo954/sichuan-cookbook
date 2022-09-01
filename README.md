@@ -29,7 +29,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-*Sichuan Cookbook 1972* (四川菜谱) is a legendary classic book. It was
+*Sichuan Cookbook 1972* (四川菜谱 1972) is a legendary classic book. It was
 compiled by Chengdu Catering Company of Sichuan (四川省成都市饮食公司)
 and released in Jul 1972. In this book, many traditional recipes are described
 in detail. Many recipes have been lost now.
