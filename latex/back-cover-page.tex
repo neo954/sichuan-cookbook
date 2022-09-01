@@ -29,10 +29,11 @@
 %
 \NeedsTeXFormat{LaTeX2e}
 \documentclass{cookbook}
+	\newCJKfontfamily[hei]\hefamily[
+		BoldFont=Noto Sans CJK SC
+	]{Noto Sans CJK SC DemiLight}
 \usepackage{pdfoverlay}
-\pdfoverlaySetPDF{back-cover-background.pdf}
-
-\pagestyle{empty}
+	\pdfoverlaySetPDF{back-cover-background.pdf}
 \begin{document}
 
 \vspace*{\fill}
