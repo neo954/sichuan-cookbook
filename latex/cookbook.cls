@@ -259,7 +259,9 @@
 		}%
 
 		\NewDocumentCommand{\ingredient}{ m O{} m }{%
+			\hfuzz=1.5em% Suppress the overfull \hbox warning
 			\begingroup%
+			\hfuzz=13em%  Suppress the overfull \hbox warning
 			\kafamily%
 			\noindent%
 			\settowidth{\spanwidth}{####1####3}%
