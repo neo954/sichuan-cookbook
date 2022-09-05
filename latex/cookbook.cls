@@ -102,9 +102,6 @@
 	\setCJKmonofont[
 		BoldFont=Noto Sans Mono CJK SC Bold
 	]{Noto Sans Mono CJK SC}
-	\newCJKfontfamily[hei]\hefamily[
-		BoldFont=Noto Sans CJK SC
-	]{Noto Sans CJK SC DemiLight}
 	\newCJKfontfamily[fang]\fsfamily[
 	]{FandolFang-Regular.otf}
 	\newCJKfontfamily[kai]\kafamily[
