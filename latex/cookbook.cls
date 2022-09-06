@@ -34,12 +34,12 @@
 \usepackage[
 	paper=a5paper,
 	top=26.025736mm,
-	bottom=33.373733mm,
+	bottom=33.406392mm,
 	inner=26.025736mm,
 	outer=26.025736mm,
 	headheight=5.271897mm,
 	headsep=2.108757mm,
-	footskip=7.347997mm,
+	footskip=7.380656mm,
 	marginparwidth=18.978828mm,
 	marginparsep=3.514598mm
 ]{geometry}
