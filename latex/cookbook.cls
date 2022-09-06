@@ -437,11 +437,11 @@
 	% Customize the page numbers
 	\fancyfoot[LE,RO]{%
 		\hspace{1.441em}%
-		\raisebox{-0.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
-		\hspace{-0.559em}%
+		\raisebox{-.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
+		\hspace{-.559em}%
 		\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}%
-		\hspace{-0.559em}%
-		\raisebox{-0.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
+		\hspace{-.559em}%
+		\raisebox{-.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
 		\hspace{1.441em}%
 	}%
 	\fancyfoot[CE,RE]{}%
@@ -452,7 +452,7 @@
 	% Customize the table of contents
 	\tocloftpagestyle{fancy}%
 	\setlength{\cftbeforetoctitleskip}{2\baselineskip%
-		plus 0.5\baselineskip minus 0.5\baselineskip}%
+		plus .5\baselineskip minus .5\baselineskip}%
 	\setlength{\cftaftertoctitleskip}{0\baselineskip}%
 	% Centering table of contents title by using \hfil
 	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily\bfseries}%
