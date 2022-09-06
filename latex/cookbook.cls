@@ -480,7 +480,7 @@
 		% Use different text for the table of contents and bookmarks
 		\texorpdfstring{%
 			\makebox[\textwidth][s]{%
-				\hfil\hbadness=10000\makebox[5em][s]{目录}\hfil%
+				\hfil{\hbadness=10000\makebox[5em][s]{目录}}\hfil%
 			}%
 		}{目录}%
 	}%
