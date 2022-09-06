@@ -56,6 +56,8 @@
 
 \begin{document}
 \begin{cookbook}
+
+\pagestyle{empty}
 \pagenumbering{gobble}% Remove page numbers (and reset to 1)
 
 % Front cover
@@ -81,11 +83,10 @@
 \input{preface.tex}
 \cleardoublepage
 
-\pagestyle{fancy}
-
 \frontmatter
-
+\pagestyle{fancy}
 \pagenumbering{arabic}% Arabic page numbers (and reset to 1)
+
 \tableofcontents
 
 \mainmatter
@@ -487,7 +488,6 @@
 \cleardoublepage
 
 \backmatter
-
 \pagestyle{empty}
 
 \null%
