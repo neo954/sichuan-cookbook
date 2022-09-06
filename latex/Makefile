@@ -82,6 +82,9 @@ back-cover.xdv: back-cover.tex cookbook.cls \
 %.eps: %.png
 	convert $^ $@
 
+%.pdf: %.png
+	convert $^ $@
+
 %.pdf: %.eps
 	epstopdf --res=600 $^ $@
 
