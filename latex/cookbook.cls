@@ -29,7 +29,7 @@
 %
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cookbook}
-	[2022/09/05 v0.5.5a XeLaTeX document class for cookbook]
+	[2022/09/06 v0.5.5a XeLaTeX document class for cookbook]
 \LoadClass[openany]{book}
 \usepackage[
 	paper=a5paper,
@@ -44,7 +44,7 @@
 	marginparsep=3.514598mm
 ]{geometry}
 \usepackage[zihao=5]{ctexsize}
-\usepackage{xeCJK}
+\usepackage[quiet]{xeCJK}
 	\xeCJKDeclareCharClass{CJK}{%
 		"24EA,          % Circled Digit Zero
 		"2460 -> "2473, % Circled Digit One - Circled Number Twenty
