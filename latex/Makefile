@@ -57,9 +57,9 @@ git-revision.tex: $(wildcard *.cls) \
 		$$(git log -1 --format=%H)`'}' >>$@
 	echo '\\newcommand{\\gitcommithash}{'`git log -1 \
 		--format=%H`'}' >>$@
-	echo '\\newcommand{\\gitauthordate}{'`git log -1 \
-		--format=%ai --date=short`'}' >>$@
-	echo '\\newcommand{\\pdfbuildtime}{'`date \
+	echo '\\newcommand{\\gitcommitterdate}{'`git log -1 \
+		--format=%ci --date=short`'}' >>$@
+	echo '\\newcommand{\\pdfbuilddate}{'`date \
 		"+%Y-%m-%d %H:%M:%S %z"`'}' >>$@
 	echo '\\newcommand{\\pdfbuildhost}{'`hostname -s`'}' >>$@
 
