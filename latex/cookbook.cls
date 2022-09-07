@@ -506,11 +506,11 @@
 		\addtocontents{toc}{\protect\clearpage}%
 	}%
 
-	% Set the indentation to be two Chinese characters size.
-	\setlength{\parindent}{2em}%
-	\setlength{\parskip}{0pt}%
 	% Set line spacing
 	\onehalfspacing%
+	% Set the indentation to be two Chinese characters size.
+	\setlength{\parindent}{2em}%
+	\setlength{\parskip}{0\baselineskip}%
 }{%
 }%
 
