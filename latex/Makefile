@@ -71,7 +71,7 @@ back-cover.xdv: back-cover.tex cookbook.cls \
 	xelatex -no-pdf $^
 
 %.pdf: %.xdv
-	xdvipdfmx -r 600 -E -z 9 -o $@ $^
+	xdvipdfmx -q -r 600 -E -z 9 -o $@ $^
 
 %.ps: %.dvi
 	dvips -D 600 -j -Ppdf -o $@ $^
