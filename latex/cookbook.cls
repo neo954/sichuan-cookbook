@@ -251,8 +251,8 @@
 		\let\footnotemark=\endnotemark%
 		\let\footnotetext=\endnotetext%
 
-		% Allow 0.9em overfull
-		\hfuzz=0.9em%
+		% Allow .9em overfull
+		\hfuzz=.9em%
 
 		\newcommand{\ingredients}{%
 			\division{原料}%
@@ -458,7 +458,7 @@
 	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily\bfseries}%
 	\renewcommand{\cftaftertoctitle}{\hfil}%
 	\renewcommand{\cftdot}{…}%
-	\renewcommand\cftdotsep{0.2}%
+	\renewcommand\cftdotsep{.2}%
 	\cftsetpnumwidth{1.5em}%
 	\cftsetrmarg{1.6em}%
 	% Centering chapter titles by using \hfil
