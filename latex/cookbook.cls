@@ -418,7 +418,7 @@
 	\makeatletter%
 	\def\enoteheading{%
 		% The \hrule is .4pt high
-		\kern 4.8pt\hrule \@width 100pt \kern 4.8pt%
+		\kern 5.05pt\hrule \@width 105pt \kern 5.05pt%
 		\nopagebreak%
 	}%
 	\makeatother%
