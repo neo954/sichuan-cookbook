@@ -29,6 +29,7 @@
 %
 \documentclass{cookbook}
 \input{git-revision.tex}
+\usepackage{bookmark}
 \usepackage{hyperref}
 	\hypersetup{
 		bookmarks=true,
@@ -58,35 +59,51 @@
 \begin{cookbook}
 
 \pagestyle{empty}
-\pagenumbering{gobble}% Remove page numbers (and reset to 1)
-
+\pagenumbering{roman}%  Roman page numbers (and reset to 1)
+\bookmarksetup{startatroot}%
 % Front cover
+\hypertarget{front-cover}{}%
+\bookmark[dest=front-cover,level=section]{封面}%
 \input{front-cover.tex}
+\clearpage
+\hypertarget{inside-front-cover}{}%
+\bookmark[dest=inside-front-cover,level=section]{封二}%
 \cleardoublepage
 
+\hypertarget{title-page}{}%
+\bookmark[dest=title-page,level=section]{标题页}%
 \input{title-page.tex}
 \clearpage
+\hypertarget{copyright}{}%
+\bookmark[dest=copyright,level=section]{版权页}%
 \input{copyright.tex}
 \cleardoublepage
 
+\hypertarget{chairman-mao-quotes}{}%
+\bookmark[dest=chairman-mao-quotes,level=section]{毛主席語录}%
 \definecolor{pantone185c}{cmyk}{0, 1, 1, 0}
 \textcolor{pantone185c}{%
 	\input{chairman-mao-quotes.tex}
 }
 \cleardoublepage
 
-% Title page
+% Title page 1972
+\hypertarget{title-page-1972}{}%
+\bookmark[dest=title-page-1972,level=section]{1972年版标题页}%
 \input{title-page-1972.tex}
 \cleardoublepage
 
 % Preface
+\hypertarget{preface}{}%
+\bookmark[dest=preface,level=section]{1972年版编印说明}%
 \input{preface.tex}
 \cleardoublepage
 
 \frontmatter
 \pagestyle{fancy}
 \pagenumbering{arabic}% Arabic page numbers (and reset to 1)
-
+\hypertarget{table-of-contents}{}%
+\bookmark[dest=table-of-contents,level=section]{\contentsname}%
 \tableofcontents
 
 \mainmatter
@@ -489,11 +506,15 @@
 
 \backmatter
 \pagestyle{empty}
-
+\bookmarksetup{startatroot}%
+\hypertarget{inside-back-cover}{}%
+\bookmark[dest=inside-back-cover,level=section]{封三}%
 \null%
 \clearpage
 
 % Back cover
+\hypertarget{back-cover}{}%
+\bookmark[dest=back-cover,level=section]{封底}%
 \includepdf[pages=1]{back-cover.pdf}
 
 \end{cookbook}
