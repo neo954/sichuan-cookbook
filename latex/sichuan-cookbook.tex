@@ -59,7 +59,7 @@
 \begin{cookbook}
 
 \pagestyle{empty}
-\pagenumbering{roman}%  Roman page numbers (and reset to 1)
+\pagenumbering{Alph}%	Upper case letter page numbers (and reset to 1)
 \bookmarksetup{startatroot}%
 % Front cover
 \hypertarget{front-cover}{}%
@@ -101,7 +101,6 @@
 
 \frontmatter
 \pagestyle{fancy}
-\pagenumbering{arabic}% Arabic page numbers (and reset to 1)
 \hypertarget{table-of-contents}{}%
 \bookmark[dest=table-of-contents,level=section]{\contentsname}%
 \tableofcontents
@@ -506,6 +505,8 @@
 
 \backmatter
 \pagestyle{empty}
+\pagenumbering{Alph}%   Upper case letter page numbers (and reset to 1)
+\setcounter{page}{25}%  Letter Y
 \bookmarksetup{startatroot}%
 \hypertarget{inside-back-cover}{}%
 \bookmark[dest=inside-back-cover,level=section]{封三}%
