@@ -36,18 +36,17 @@
 	\pdfoverlaySetPDF{back-cover-background.pdf}
 \begin{document}
 
-\vspace*{\fill}
+\begingroup%
+\includegraphics[height=10mm, width=10mm]{quux-logo.pdf}%
+{\sffamily\tiny\kern-.5em\lower.5ex\hbox{\texttrademark}}%
+\endgroup%
+
+\vfill
 
 \begin{flushright}
 \footnotesize%
-\doublespacing
-{%
-	\hefamily%
-	成都市饮食公司技术培训班
-}
-
-工本费：每本\,0.55%
-	\mbox{\hspace{1.8em}}
+\hefamily%
+馄饨系统与科技
 \end{flushright}
 
 \end{document}
