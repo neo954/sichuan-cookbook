@@ -365,9 +365,8 @@
 		}%
 		\ifthenelse{\equal{##1}{}}{%
 		}{%
-			\begin{center}%
-			\sffamily（原##1）%
-			\end{center}%
+			\noindent%
+			\makebox[\textwidth][s]{\hfil\mbox{\sffamily（原##1）}\hfil}%
 		}%
 	}{%
 		\ifthenelse{\equal{\value{endnote}}{0}}{%
