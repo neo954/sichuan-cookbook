@@ -327,11 +327,11 @@
 				\begingroup%
 				\noindent%
 				\mbox{%
-					\hspace{2.625em}%
+					\hspace{2.210445em}%
 					\makebox[9.375em][s]{%
 						\mbox{########1}\hfil\mbox{########2}%
 					}%
-					\hspace{5.0625em}%
+					\hspace{5.477055em}%
 				}%
 				\endgroup%
 			}%
