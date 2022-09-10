@@ -367,6 +367,7 @@
 		}{%
 			\noindent%
 			\makebox[\textwidth][s]{\hfil\mbox{\sffamily（原##1）}\hfil}%
+			\nopagebreak%
 		}%
 	}{%
 		\ifthenelse{\equal{\value{endnote}}{0}}{%
