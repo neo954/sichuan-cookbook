@@ -317,9 +317,11 @@
 		\newenvironment{subrecipe}[1]{%
 			\renewcommand{\ingredients}{%
 				\noindent（一）{\hbadness=10000\makebox[3.75em][s]{原料}}：%
+				\nopagebreak%
 			}%
 			\renewcommand{\preparation}{%
 				\noindent（二）制作方法：%
+				\nopagebreak%
 			}%
 			\renewcommand{\ingredient}[2]{%
 				\begingroup%
@@ -338,6 +340,7 @@
 				\par\arabic{step0}.%
 			}%
 			####1%
+			\nopagebreak%
 		}{%
 		}%
 
