@@ -294,7 +294,7 @@
 		}%
 
 		\newcommand{\preparation}{%
-			\Needspace{2\baselineskip}%
+			\Needspace*{2\baselineskip}%
 			\division{制作方法}%
 		}%
 
@@ -309,7 +309,7 @@
 		}%
 
 		\newcommand{\suggestion}{%
-			\Needspace{2\baselineskip}%
+			\Needspace*{2\baselineskip}%
 			\division{注意事项}%
 		}%
 
@@ -317,7 +317,7 @@
 		\let\hint=\step%
 
 		\newcommand{\features}{%
-			\Needspace{2\baselineskip}%
+			\Needspace*{2\baselineskip}%
 			\division{特点}%
 		}%
 
@@ -382,7 +382,6 @@
 		}{%
 			\noindent%
 			\makebox[\textwidth][s]{\hfil\mbox{\sffamily（原##1）}\hfil}%
-			\nopagebreak%
 		}%
 	}{%
 		\ifthenelse{\equal{\value{endnote}}{0}}{%
@@ -391,8 +390,7 @@
 			\theendnotes%
 			\endgroup%
 		}%
-		\vspace{1.328353\baselineskip plus 1.671647\baselineskip%
-			minus .664176\baselineskip}%
+		\vspace{1\baselineskip plus .5\baselineskip}
 	}%
 
 	% A new counter used in the command \step
