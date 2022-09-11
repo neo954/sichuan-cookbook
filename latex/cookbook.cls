@@ -145,6 +145,7 @@
 \usepackage{setspace}
 \usepackage{ifthen}
 \usepackage{endnotes}
+\usepackage{needspace}
 % Empty all blank pages created by \cleardoublepage
 \usepackage{emptypage}
 	\pagestyle{empty}
@@ -293,6 +294,7 @@
 		}%
 
 		\newcommand{\preparation}{%
+			\Needspace{2\baselineskip}%
 			\division{制作方法}%
 		}%
 
@@ -307,6 +309,7 @@
 		}%
 
 		\newcommand{\suggestion}{%
+			\Needspace{2\baselineskip}%
 			\division{注意事项}%
 		}%
 
@@ -314,6 +317,7 @@
 		\let\hint=\step%
 
 		\newcommand{\features}{%
+			\Needspace{2\baselineskip}%
 			\division{特点}%
 		}%
 
@@ -351,6 +355,11 @@
 		% Reset the endnote counter
 		\setcounter{endnote}{0}%
 
+		\ifthenelse{\equal{##1}{}}{%
+			\Needspace{3.428571\baselineskip}%
+		}{%
+			\Needspace{4.428571\baselineskip}%
+		}
 		\ifthenelse{\value{chapter}>999}{%
 			\ifthenelse{\lengthtest{\spanwidth<5em}}{%
 				\section[##2]{\hbadness=10000\makebox[5em][s]{##2##3}}%
@@ -382,7 +391,8 @@
 			\theendnotes%
 			\endgroup%
 		}%
-		\vspace{2\baselineskip plus 1.5\baselineskip minus 1.5\baselineskip}%
+		\vspace{1.328353\baselineskip plus 1.671647\baselineskip%
+			minus .664176\baselineskip}%
 	}%
 
 	% A new counter used in the command \step
