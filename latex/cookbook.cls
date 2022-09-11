@@ -166,7 +166,7 @@
 	%	Left
 		0pt
 	}{%	Before-sep
-		1.8\baselineskip
+		1.8125\baselineskip
 	}{%	After-sep
 		0pt
 	}[%	Right-sep
@@ -391,7 +391,7 @@
 			\theendnotes%
 			\endgroup%
 		}%
-		\vspace{1\baselineskip plus .5\baselineskip}
+		\vspace{1\baselineskip plus 1\baselineskip}
 	}%
 
 	% A new counter used in the command \step
@@ -466,8 +466,8 @@
 
 	% Customize the table of contents
 	\tocloftpagestyle{fancy}%
-	\setlength{\cftbeforetoctitleskip}{2\baselineskip%
-		plus .5\baselineskip minus .5\baselineskip}%
+	\setlength{\cftbeforetoctitleskip}{1.625\baselineskip%
+		plus .0625\baselineskip minus .0625\baselineskip}
 	\setlength{\cftaftertoctitleskip}{0\baselineskip}%
 	% Centering table of contents title by using \hfil
 	\renewcommand{\cfttoctitlefont}{\hfil\Large\rmfamily\bfseries}%
