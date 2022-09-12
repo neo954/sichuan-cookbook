@@ -45,6 +45,7 @@
 ]{geometry}
 \usepackage[zihao=5]{ctexsize}
 \usepackage[quiet]{xeCJK}
+	\xeCJKsetup{CheckSingle=true}
 	\xeCJKDeclareCharClass{CJK}{%
 		"24EA,          % Circled Digit Zero
 		"2460 -> "2473, % Circled Digit One - Circled Number Twenty
