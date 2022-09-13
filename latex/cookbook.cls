@@ -363,9 +363,9 @@
 		\setcounter{endnote}{0}%
 
 		\ifthenelse{\equal{##1}{}}{%
-			\Needspace{3.428571\baselineskip}%
+			\Needspace*{3.428571\baselineskip}%
 		}{%
-			\Needspace{4.428571\baselineskip}%
+			\Needspace*{4.428571\baselineskip}%
 		}
 		\vspace*{\cookbookbeforerecipeskip}%
 		\ifthenelse{\value{chapter}>999}{%
