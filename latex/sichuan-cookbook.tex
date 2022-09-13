@@ -74,10 +74,12 @@
 
 \hypertarget{title-page}{}%
 \bookmark[dest=title-page,level=section]{标题页}%
+\enlargethispage{.5\baselineskip}
 \input{title-page.tex}
 \clearpage
 \hypertarget{copyright}{}%
 \bookmark[dest=copyright,level=section]{版权页}%
+\enlargethispage{1.25\baselineskip}
 \input{copyright.tex}
 \cleardoublepage
 
@@ -98,6 +100,7 @@
 % Preface
 \hypertarget{preface}{}%
 \bookmark[dest=preface,level=section]{编印说明}%
+\enlargethispage{.75\baselineskip}
 \input{preface.tex}
 \cleardoublepage
 
@@ -109,6 +112,11 @@
 
 \mainmatter
 
+\setlength{\cookbookbeforerecipeskip}{0\baselineskip plus .0625\baselineskip}%
+\setlength{\cookbookafterrecipeskip}{1\baselineskip plus 1.125\baselineskip%
+	minus .3125\baselineskip}%
+
+\addtocontents{toc}{\protect\enlargethispage{.5\baselineskip}}%
 \category{肉食类}
 
 \begin{tocminipageleft}
@@ -178,6 +186,7 @@
 \input{recipe-057.tex}
 \end{tocminipageright}
 
+\addtocontents{toc}{\protect\enlargethispage{.5\baselineskip}}%
 \category{鸡鸭类}
 
 \begin{tocminipageleft}
@@ -258,6 +267,7 @@
 \input{recipe-125.tex}
 \end{tocminipageright}
 
+\addtocontents{toc}{\protect\enlargethispage{.5\baselineskip}}%
 \category{鱼虾类}
 
 \begin{tocminipageleft}
@@ -308,6 +318,7 @@
 \input{recipe-163.tex}
 \end{tocminipageright}
 
+\addtocontents{toc}{\protect\enlargethispage{.5\baselineskip}}%
 \category{山海味类}
 
 \begin{tocminipageleft}
@@ -406,7 +417,7 @@
 \tocclearpage
 
 \addtocontents{toc}{\null}
-\addtocontents{toc}{\vspace{-.75\baselineskip plus .75\baselineskip}}
+\addtocontents{toc}{\vspace{-.6875\baselineskip plus .6875\baselineskip}}
 \category{其它类}
 
 \begin{tocminipageleft}
@@ -446,6 +457,7 @@
 \end{tocminipageright}
 
 \addtocounter{chapter}{2000}%
+\addtocontents{toc}{\protect\enlargethispage{.5\baselineskip}}%
 \category{重庆市部分菜肴}
 
 \begin{tocminipageleft}
