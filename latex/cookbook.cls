@@ -166,9 +166,9 @@
 	%	Left
 		0pt
 	}{%	Before-sep
-		1.8125\baselineskip
+		1\baselineskip
 	}{%	After-sep
-		0pt
+		0\baselineskip plus .125\baselineskip
 	}[%	Right-sep
 		0pt
 	]%
@@ -250,7 +250,9 @@
 		\setlength{\spanwidth}{0pt}%
 	}%
 
-	% The vertical space after recipe
+	% The vertical space before and after recipe
+	\newlength{\cookbookbeforerecipeskip}%
+	\setlength{\cookbookbeforerecipeskip}{0pt}%  Draft default value
 	\newlength{\cookbookafterrecipeskip}%
 	\setlength{\cookbookafterrecipeskip}{0pt}%  Draft default value
 
@@ -365,6 +367,7 @@
 		}{%
 			\Needspace{4.428571\baselineskip}%
 		}
+		\vspace*{\cookbookbeforerecipeskip}%
 		\ifthenelse{\value{chapter}>999}{%
 			\ifthenelse{\lengthtest{\spanwidth<5em}}{%
 				\section[##2]{\hbadness=10000\makebox[5em][s]{##2##3}}%
@@ -530,6 +533,7 @@
 	% Set the indentation to be two Chinese characters size.
 	\setlength{\parindent}{2em}%
 	\setlength{\parskip}{0\baselineskip}%
+	\setlength{\cookbookbeforerecipeskip}{0\baselineskip}%
 	\setlength{\cookbookafterrecipeskip}{1\baselineskip}%
 }{%
 }%
