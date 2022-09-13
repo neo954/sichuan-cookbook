@@ -40,12 +40,12 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	git-revision.tex front-cover.tex cover-illustration.pdf \
 	title-page.tex cooking-machine.png copyright.tex \
 	chairman-mao-quotes.tex title-page-1972.tex preface.tex \
-	$(wildcard recipe-*.tex) quux-logo.pdf \
+	$(wildcard recipe-*.tex) back-cover.tex quux-logo.pdf \
 	illustration-001.pdf illustration-002a.pdf illustration-002b.pdf \
 	illustration-002c.pdf illustration-003.pdf illustration-004.pdf \
 	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
 	illustration-008.pdf illustration-009.pdf illustration-010.pdf \
-	illustration-011.pdf back-cover.pdf
+	illustration-011.pdf back-cover-background.pdf
 	xelatex -no-pdf $< $(word 2, $^)
 	xelatex -no-pdf $< $(word 2, $^)
 	xelatex -no-pdf $< $(word 2, $^)
@@ -62,10 +62,6 @@ git-revision.tex: $(wildcard *.cls) \
 	echo '\\newcommand{\\pdfbuilddate}{'`date \
 		"+%Y-%m-%d %H:%M:%S %z"`'}' >>$@
 	echo '\\newcommand{\\pdfbuildhost}{'`hostname -s`'}' >>$@
-
-back-cover.xdv: back-cover.tex cookbook.cls \
-	back-cover-background.pdf
-	xelatex -no-pdf $< $(word 2, $^)
 
 %.xdv: %.tex
 	xelatex -no-pdf $^
