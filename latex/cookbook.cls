@@ -530,7 +530,7 @@
 	% Set the indentation to be two Chinese characters size.
 	\setlength{\parindent}{2em}%
 	\setlength{\parskip}{0\baselineskip}%
-	\setlength{\cookbookafterrecipeskip}{1\baselineskip plus 1\baselineskip}%
+	\setlength{\cookbookafterrecipeskip}{1\baselineskip}%
 }{%
 }%
 
