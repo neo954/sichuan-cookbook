@@ -116,6 +116,9 @@
 		Non-GB2312=TW-Kai,
 		FallBack=TW-Kai
 	]{FandolKai-Regular.otf}
+	\newCJKfontfamily[hei]\hefamily[
+		BoldFont=Noto Sans CJK SC
+	]{Noto Sans CJK SC DemiLight}
 \usepackage[T1]{fontenc}
 \usepackage[encoding=UTF8]{zhnumber}
 \usepackage{tocloft}
