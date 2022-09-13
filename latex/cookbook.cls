@@ -250,6 +250,10 @@
 		\setlength{\spanwidth}{0pt}%
 	}%
 
+	% The vertical space after recipe
+	\newlength{\cookbookafterrecipeskip}%
+	\setlength{\cookbookafterrecipeskip}{0pt}%  Draft default value
+
 	\NewDocumentEnvironment{recipe}{ O{} m O{} }{%
 		% Use endnote instead of footnote
 		\let\footnote=\endnote%
@@ -391,7 +395,7 @@
 			\theendnotes%
 			\endgroup%
 		}%
-		\vspace{1\baselineskip plus 1\baselineskip}
+		\vspace{\cookbookafterrecipeskip}%
 	}%
 
 	% A new counter used in the command \step
@@ -526,6 +530,7 @@
 	% Set the indentation to be two Chinese characters size.
 	\setlength{\parindent}{2em}%
 	\setlength{\parskip}{0\baselineskip}%
+	\setlength{\cookbookafterrecipeskip}{1\baselineskip plus 1\baselineskip}%
 }{%
 }%
 
