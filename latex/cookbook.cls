@@ -166,9 +166,9 @@
 	%	Left
 		0pt
 	}{%	Before-sep
-		1\baselineskip
+		1.0625\baselineskip
 	}{%	After-sep
-		0\baselineskip plus .125\baselineskip
+		0\baselineskip plus .0625\baselineskip
 	}[%	Right-sep
 		0pt
 	]%
