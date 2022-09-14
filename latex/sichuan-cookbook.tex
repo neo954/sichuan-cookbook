@@ -112,12 +112,10 @@
 
 \mainmatter
 
-\setlength{\cookbookbeforerecipeskip}{0\baselineskip plus .0625\baselineskip}%
-\setlength{\cookbookafterrecipeskip}{1\baselineskip plus 1.125\baselineskip%
-	minus .3125\baselineskip}%
-
 \addtocontents{toc}{\protect\enlargethispage{.5\baselineskip}}%
 \category{肉食类}
+\setlength{\cookbookafterrecipeskip}{1\baselineskip plus 1.125\baselineskip%
+	minus .3125\baselineskip}%
 
 \begin{tocminipageleft}
 \input{recipe-001.tex}
@@ -138,6 +136,7 @@
 \input{recipe-016.tex}
 \input{recipe-017.tex}
 \input{recipe-018.tex}
+\vspace{1\baselineskip}
 \input{recipe-019.tex}
 \input{recipe-020.tex}
 \input{recipe-021.tex}
@@ -172,6 +171,7 @@
 \input{recipe-045.tex}
 \input{recipe-046.tex}
 \input{recipe-047.tex}
+\vspace{1\baselineskip}
 \input{recipe-048.tex}
 \input{recipe-049.tex}
 \input{recipe-050.tex}
@@ -181,17 +181,23 @@
 \input{recipe-052.tex}
 \input{recipe-053.tex}
 \input{recipe-054.tex}
+\vspace{1\baselineskip}
 \input{recipe-055.tex}
 \input{recipe-056.tex}
+\vspace{1\baselineskip}
 \input{recipe-057.tex}
 \end{tocminipageright}
 
 \addtocontents{toc}{\protect\enlargethispage{.5\baselineskip}}%
 \category{鸡鸭类}
+\setlength{\cookbookafterrecipeskip}{.6875\baselineskip plus 1.25\baselineskip}%
 
 \begin{tocminipageleft}
+\enlargethispage{-1\baselineskip}
 \input{recipe-058.tex}
+\vspace{.3125\baselineskip}
 \input{recipe-059.tex}
+\vspace{.3125\baselineskip}
 \input{recipe-060.tex}
 \input{recipe-061.tex}
 \input{recipe-062.tex}
@@ -224,6 +230,7 @@
 \input{recipe-087.tex}
 \input{recipe-088.tex}
 \input{recipe-089.tex}
+\pagebreak
 \input{recipe-090.tex}
 \input{recipe-091.tex}
 \input{recipe-092.tex}
@@ -250,6 +257,7 @@
 \end{tocminipageleft}
 \begin{tocminipageright}
 \input{recipe-110.tex}
+\pagebreak
 \input{recipe-111.tex}
 \input{recipe-112.tex}
 \input{recipe-113.tex}
@@ -269,6 +277,7 @@
 
 \addtocontents{toc}{\protect\enlargethispage{.5\baselineskip}}%
 \category{鱼虾类}
+\setlength{\cookbookafterrecipeskip}{.6875\baselineskip plus 1\baselineskip}%
 
 \begin{tocminipageleft}
 \input{recipe-126.tex}
@@ -294,12 +303,15 @@
 \end{tocminipageright}
 \tocclearpage
 \begin{tocminipageleft}
+\enlargethispage{.25\baselineskip}
 \input{recipe-144.tex}
+\enlargethispage{.25\baselineskip}
 \input{recipe-145.tex}
 \input{recipe-146.tex}
 \input{recipe-147.tex}
 \input{recipe-148.tex}
 \input{recipe-149.tex}
+\pagebreak
 \input{recipe-150.tex}
 \input{recipe-151.tex}
 \input{recipe-152.tex}
@@ -320,6 +332,7 @@
 
 \addtocontents{toc}{\protect\enlargethispage{.5\baselineskip}}%
 \category{山海味类}
+\setlength{\cookbookafterrecipeskip}{.6875\baselineskip plus 1\baselineskip}%
 
 \begin{tocminipageleft}
 \input{recipe-164.tex}
@@ -364,6 +377,7 @@
 \end{tocminipageright}
 
 \category{甜食类}
+\setlength{\cookbookafterrecipeskip}{.6875\baselineskip plus 1\baselineskip}%
 
 \begin{tocminipageleft}
 \input{recipe-196.tex}
@@ -377,13 +391,16 @@
 \begin{tocminipageright}
 \input{recipe-203.tex}
 \input{recipe-204.tex}
+\enlargethispage{.25\baselineskip}
 \input{recipe-205.tex}
 \input{recipe-206.tex}
+\enlargethispage{.25\baselineskip}
 \input{recipe-207.tex}
 \input{recipe-208.tex}
 \end{tocminipageright}
 
 \category{蔬菜类}
+\setlength{\cookbookafterrecipeskip}{.6875\baselineskip plus 1\baselineskip}%
 
 \begin{tocminipageleft}
 \input{recipe-209.tex}
@@ -419,9 +436,13 @@
 \addtocontents{toc}{\null}
 \addtocontents{toc}{\vspace{-.6875\baselineskip plus .6875\baselineskip}}
 \category{其它类}
+\setlength{\cookbookafterrecipeskip}{1\baselineskip plus 1.125\baselineskip%
+	minus .3125\baselineskip}%
 
 \begin{tocminipageleft}
+\vspace{.25\baselineskip}
 \input{recipe-234.tex}
+\vspace{\fill}
 \input{recipe-235.tex}
 \input{recipe-236.tex}
 \input{recipe-237.tex}
@@ -451,6 +472,7 @@
 \input{recipe-259.tex}
 \input{recipe-260.tex}
 \input{recipe-261.tex}
+\pagebreak
 \input{recipe-262.tex}
 \input{recipe-263.tex}
 \input{recipe-264.tex}
@@ -459,9 +481,14 @@
 \addtocounter{chapter}{2000}%
 \addtocontents{toc}{\protect\enlargethispage{.5\baselineskip}}%
 \category{重庆市部分菜肴}
+\setlength{\cookbookafterrecipeskip}{.6875\baselineskip plus 1.1875\baselineskip}%
 
 \begin{tocminipageleft}
+\begingroup
+\raggedbottom
+\vspace{.25\baselineskip}
 \input{recipe-265.tex}
+\endgroup
 \input{recipe-266.tex}
 \input{recipe-267.tex}
 \input{recipe-268.tex}
@@ -515,6 +542,7 @@
 \input{recipe-309.tex}
 \input{recipe-310.tex}
 \input{recipe-311.tex}
+\vspace{1\baselineskip}
 \input{recipe-312.tex}
 \end{tocminipageright}
 
