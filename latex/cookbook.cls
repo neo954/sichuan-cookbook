@@ -303,7 +303,7 @@
 		}%
 
 		\newcommand{\preparation}{%
-			\Needspace*{2\baselineskip}%
+			\Needspace*{1.666666\baselineskip}%
 			\division{制作方法}%
 		}%
 
@@ -318,7 +318,7 @@
 		}%
 
 		\newcommand{\suggestion}{%
-			\Needspace*{2\baselineskip}%
+			\Needspace*{1.666666\baselineskip}%
 			\division{注意事项}%
 		}%
 
@@ -326,7 +326,7 @@
 		\let\hint=\step%
 
 		\newcommand{\features}{%
-			\Needspace*{2\baselineskip}%
+			\Needspace*{1.666666\baselineskip}%
 			\division{特点}%
 		}%
 
