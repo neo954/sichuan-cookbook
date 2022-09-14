@@ -227,6 +227,8 @@
 
 	% A temporary variable, use to store the text width of the chapter name
 	\newlength{\spanwidth}%
+	% A temporary variable, use to store the text height of the section name
+	\newlength{\spanheight}%
 
 	\newcommand\category[1]{%
 		% Calculate the text width of the chapter name
@@ -362,10 +364,14 @@
 		% Reset the endnote counter
 		\setcounter{endnote}{0}%
 
+		\setlength{\spanheight}{3.428571\baselineskip}%
+
 		\ifthenelse{\equal{##1}{}}{%
-			\Needspace*{3.428571\baselineskip}%
+			\Needspace*{\spanheight}%
 		}{%
-			\Needspace*{4.428571\baselineskip}%
+			\addtolength{\spanheight}{1\baselineskip}%
+			\Needspace*{1\spanheight}%
+			\addtolength{\spanheight}{-1\baselineskip}%
 		}
 		\vspace*{\cookbookbeforerecipeskip}%
 		\ifthenelse{\value{chapter}>999}{%
@@ -401,13 +407,14 @@
 		\makeatletter%
 		\par \penalty-100%
 		\begingroup%
-		\setlength{\dimen@}{5\baselineskip}%
+		\addtolength{\spanheight}{1.001\cookbookafterrecipeskip}%
+		\setlength{\dimen@}{\spanheight}%
 		\dimen@ii\pagegoal \advance\dimen@ii-\pagetotal%
 		\ifdim \dimen@>\dimen@ii%
 			% More than length
-			\vspace{\cookbookafterrecipeskip}%
-			\else%
+		\else%
 			% Less than length
+			\vspace{\cookbookafterrecipeskip}%
 		\fi%
 		\endgroup%
 		\makeatother%
