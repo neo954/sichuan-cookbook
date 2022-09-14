@@ -398,7 +398,19 @@
 			\theendnotes%
 			\endgroup%
 		}%
-		\vspace{\cookbookafterrecipeskip}%
+		\makeatletter%
+		\par \penalty-100%
+		\begingroup%
+		\setlength{\dimen@}{5\baselineskip}%
+		\dimen@ii\pagegoal \advance\dimen@ii-\pagetotal%
+		\ifdim \dimen@>\dimen@ii%
+			% More than length
+			\vspace{\cookbookafterrecipeskip}%
+			\else%
+			% Less than length
+		\fi%
+		\endgroup%
+		\makeatother%
 	}%
 
 	% A new counter used in the command \step
