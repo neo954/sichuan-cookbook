@@ -373,7 +373,10 @@
 			\Needspace*{1\spanheight}%
 			\addtolength{\spanheight}{-1\baselineskip}%
 		}
-		\vspace*{\cookbookbeforerecipeskip}%
+		\ifthenelse{\lengthtest{\cookbookbeforerecipeskip=0pt}}{%
+		}{%
+			\vspace*{\cookbookbeforerecipeskip}%
+		}%
 		\ifthenelse{\value{chapter}>999}{%
 			\ifthenelse{\lengthtest{\spanwidth<5em}}{%
 				\section[##2]{\hbadness=10000\makebox[5em][s]{##2##3}}%
