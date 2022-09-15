@@ -410,14 +410,22 @@
 		\makeatletter%
 		\par \penalty-100%
 		\begingroup%
-		\addtolength{\spanheight}{1.001\cookbookafterrecipeskip}%
 		\setlength{\dimen@}{\spanheight}%
 		\dimen@ii\pagegoal \advance\dimen@ii-\pagetotal%
 		\ifdim \dimen@>\dimen@ii%
 			% More than length
 		\else%
 			% Less than length
-			\vspace{\cookbookafterrecipeskip}%
+			\addtolength{\spanheight}{1\cookbookafterrecipeskip}%
+			\setlength{\dimen@}{\spanheight}%
+			\dimen@ii\pagegoal \advance\dimen@ii-\pagetotal%
+			\ifdim \dimen@>\dimen@ii%
+				% More than length
+				\pagebreak%
+			\else%
+				% Less than length
+				\vspace{\cookbookafterrecipeskip}%
+			\fi%
 		\fi%
 		\endgroup%
 		\makeatother%
