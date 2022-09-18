@@ -45,7 +45,10 @@
 ]{geometry}
 \usepackage[zihao=5]{ctexsize}
 \usepackage[quiet]{xeCJK}
-	\xeCJKsetup{CheckSingle=true}
+	\xeCJKsetup{
+		AutoFallBack=true,
+		CheckSingle=true
+	}
 	\xeCJKDeclareCharClass{CJK}{%
 		"24EA,          % Circled Digit Zero
 		"2460 -> "2473, % Circled Digit One - Circled Number Twenty
@@ -54,9 +57,6 @@
 	}
 	\xeCJKDeclareSubCJKBlock{Ext-A}{
 		"3400 -> "4DBF
-	}
-	\xeCJKDeclareSubCJKBlock{Non-GB2312}{
-		"9183
 	}
 	\xeCJKDeclareSubCJKBlock{Ext-B}{
 		"20000 -> "2A6DF
@@ -114,7 +114,6 @@
 		Ext-G=Patch-Kai,
 		Supplement=TW-Kai-Ext-B,
 		Patch-E=Patch-Kai,
-		Non-GB2312=TW-Kai,
 		FallBack=TW-Kai
 	]{FandolKai-Regular.otf}
 	\newCJKfontfamily[hei]\hefamily[
