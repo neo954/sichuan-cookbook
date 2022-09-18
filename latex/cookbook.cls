@@ -347,10 +347,6 @@
 				}%
 				\endgroup%
 			}%
-			\renewcommand{\step}{%
-				\stepcounter{step0}%
-				\par\arabic{step0}.%
-			}%
 			####1%
 			\nopagebreak%
 		}{%
@@ -429,8 +425,6 @@
 
 	% A new counter used in the command \step
 	\newcounter{step}[subsection]%
-	% A new counter used in the command \step
-	\newcounter{step0}[subsection]%
 
 	% Customize the endnote
 	\makeatletter%
