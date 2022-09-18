@@ -47,7 +47,8 @@
 \usepackage[quiet]{xeCJK}
 	\xeCJKsetup{
 		AutoFallBack=true,
-		CheckSingle=true
+		CheckSingle=true,
+		CJKecglue={\,}
 	}
 	\xeCJKDeclareCharClass{CJK}{%
 		"24EA,          % Circled Digit Zero
