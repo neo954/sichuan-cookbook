@@ -29,12 +29,12 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-*Sichuan Cookbook 1972* (四川菜谱 1972) is a legendary classic book. It was
-compiled by Chengdu Catering Company of Sichuan (四川省成都市饮食公司)
-and released in Jul 1972. In this book, many traditional recipes are described
-in detail. Many recipes have been lost now.
+*Sichuan Cookbook* (四川菜谱) is a legendary classic book. It was compiled by
+Chengdu Catering Company (成都市饮食公司) and released in Jul 1972. In this
+book, many traditional recipes are described in detail. Many recipes have been
+lost now.
 
-The goal of this project is to digitize *Sichuan Cookbook 1972* properly.
+The goal of this project is to digitize *Sichuan Cookbook* properly.
 
 * [x] Take photos of each page of the book with a digital camera.
 * [x] Process the photos, correct exposure, and perspective distortion, and
@@ -61,8 +61,8 @@ the public on Jan 1, 2023.
 ### Sichuan Cookbook 1972 Remake
 
 For a contemporary eBook, download *[Sichuan Cookbook 1972
-Remake](https://github.com/neo954/sichuan-cookbook/releases/download/v0.5.0-alpha/sichuan-cookbook.pdf)*
-<sub>(1.85 MB)i</sub>. This is an A5 paper size remake edition of the original
+Remake](https://github.com/neo954/sichuan-cookbook/releases/download/v0.6.0-alpha/sichuan-cookbook.pdf)*
+<sub>(2.05 MB)i</sub>. This is an A5 paper size remake edition of the original
 paperback book.
 
 See *[Notes on Textual Criticism](doc/NOTES-ON-TEXTUAL-CRITICISM.md)*
