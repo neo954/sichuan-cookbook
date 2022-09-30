@@ -38,9 +38,10 @@ pdf: $(OUTPUT_BASENAME).pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	git-revision.tex front-cover.tex cover-illustration.pdf \
-	title-page.tex cooking-machine.png copyright.tex \
-	chairman-mao-quotes.tex title-page-1972.tex preface.tex \
-	$(wildcard recipe-*.tex) back-cover.tex quux-logo.pdf \
+	inside-front-cover.tex title-page.tex cooking-machine.png \
+	copyright.tex chairman-mao-quotes.tex title-page-1972.tex \
+	preface.tex $(wildcard recipe-*.tex) inside-back-cover.tex \
+	back-cover.tex quux-logo.pdf \
 	illustration-001.pdf illustration-002a.pdf illustration-002b.pdf \
 	illustration-002c.pdf illustration-003.pdf illustration-004.pdf \
 	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
