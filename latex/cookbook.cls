@@ -139,6 +139,7 @@
 \usepackage{setspace}
 \usepackage{ifthen}
 \usepackage{endnotes}
+\usepackage{etoolbox}
 \usepackage{needspace}
 % Empty all blank pages created by \cleardoublepage
 \usepackage{emptypage}
@@ -463,6 +464,14 @@
 	\makeatother%
 	% Redefine the enotesize
 	\def\enotesize{\footnotesize}%
+
+	% End note marker = superscripted number in circle
+	\renewcommand\makeenmark{\textsuperscript{\theenmark}}%
+	% In the endnotes, change it without `\textsuperscript`, adding a space
+	\patchcmd{\theendnotes}%
+	{\makeatletter}%
+	{\makeatletter\renewcommand\makeenmark{\theenmark }}%
+	{}{}%
 
 	% Set the caption style
 	\captionsetup{format=cookbook,labelsep=cookbook,labelformat=cookbook}%
