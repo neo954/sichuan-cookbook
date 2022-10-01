@@ -44,9 +44,9 @@ The goal of this project is to digitize *Sichuan Cookbook* properly.
 * [x] Create a PDF book of the original book from the binary images and the
       OCR results.
 * [x] Organize each recipe in the book with an abstract data structure, and
-      save them as a LaTeX document.
-* [x] Reproduce the appearance of the original book with LaTeX typesetting.
-* [x] Render LaTeX documents and create a PDF book.
+      save them as a $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ document.
+* [x] Reproduce the appearance of the original book with $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ typesetting.
+* [x] Render $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ documents and create a PDF book.
 * [ ] Optionally, add comments to the book based on research.
 
 According to the Copyright Law of China, concerning a work of a legal
@@ -125,7 +125,7 @@ make scan
 
 #### Prerequisite
 
-The book is recreated with XeLaTeX.
+The book is recreated with $\mathrm{X\kern-.1em\lower.5ex\hbox{Ǝ}\kern-.15emL\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$.
 ```
 sudo apt-get install -y fonts-cns11643-kai fonts-hanazono fonts-noto texlive-full
 ```
