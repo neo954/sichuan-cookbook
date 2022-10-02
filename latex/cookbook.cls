@@ -350,7 +350,6 @@
 		}{%
 		}%
 
-		\settowidth{\spanwidth}{##2}%
 		% Reset the endnote counter
 		\setcounter{endnote}{0}%
 
@@ -367,6 +366,7 @@
 		}{%
 			\vspace*{\cookbookbeforerecipeskip}%
 		}%
+		\settowidth{\spanwidth}{##2}%
 		\ifthenelse{\value{chapter}>999}{%
 			\ifthenelse{\lengthtest{\spanwidth<5em}}{%
 				\section[##2]{\hbadness=10000\makebox[5em][s]{##2##3}}%
