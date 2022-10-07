@@ -132,7 +132,7 @@ trim/z999.png: trim/%.png: jpeg/%.jpg
 trim/b002.png trim/b022.png trim/b042.png trim/c008.png trim/p266.png trim/p300.png: trim/%.png: jpeg/%.jpg
 	convert $< \
 		-fill white -draw 'rectangle 0,0 3091,4370' \
-		-quality 100 -alpha off -grayscale Rec709Luma -depth 1 \
+		-quality 100 -alpha off -grayscale Rec709Luma -depth 4 \
 		$@
 
 # Retinex-based intensity correction and thresholding
