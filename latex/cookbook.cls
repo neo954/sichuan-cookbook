@@ -306,11 +306,13 @@
 		% With one optional argument
 		\newcommand{\step}[1][]{%
 			\stepcounter{step}%
+			\par\arabic{step}.\,%
 			\ifthenelse{\equal{####1}{}}{%
-				\par\arabic{step}.%
 			}{%
-				\par\arabic{step}.{\sffamily####1}%
+				{\sffamily####1}%
+				\hspace{1em}%
 			}%
+			\ignorespaces%
 		}%
 
 		\newcommand{\suggestion}{%
