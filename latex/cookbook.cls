@@ -359,6 +359,9 @@
 		% The height of the section title plus two lines
 		\setlength{\spanheight}{3.428571\baselineskip}%
 
+		% Suppress the underfull \vbox warning
+		\vbadness=10000%
+
 		\ifthenelse{\equal{##1}{}}{%
 			\Needspace*{\spanheight}%
 		}{%
