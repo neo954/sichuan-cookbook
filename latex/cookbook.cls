@@ -343,7 +343,7 @@
 					\makebox[9.375em][s]{%
 						\mbox{########1}\hfil\mbox{########2}%
 					}%
-					\hspace{5.477055em}%
+					\hspace{5.727055em}%
 				}%
 				\endgroup%
 				\hspace{0pt}%
