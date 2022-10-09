@@ -294,6 +294,8 @@
 			}{%
 			}%
 			\endgroup%
+			\hspace{0pt}%
+			\ignorespaces%
 		}%
 
 		\newcommand{\preparation}{%
@@ -344,6 +346,8 @@
 					\hspace{5.477055em}%
 				}%
 				\endgroup%
+				\hspace{0pt}%
+				\ignorespaces%
 			}%
 			####1%
 			\nopagebreak%
