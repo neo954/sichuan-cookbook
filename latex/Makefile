@@ -66,6 +66,7 @@ git-revision.tex: $(wildcard *.cls) \
 	echo '\\newcommand{\\pdfbuildhost}{'`hostname -s`'}' >>$@
 
 %.xdv: %.tex
+	$(RM) $(subst .tex,.aux,$<)
 	xelatex -no-pdf $^
 
 %.pdf: %.xdv
