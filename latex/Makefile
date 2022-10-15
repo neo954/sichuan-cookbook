@@ -47,9 +47,10 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
 	illustration-008.pdf illustration-009.pdf illustration-010.pdf \
 	illustration-011.pdf back-cover-background.pdf
-	xelatex -no-pdf $< $(word 2, $^)
-	xelatex -no-pdf $< $(word 2, $^)
-	xelatex -no-pdf $< $(word 2, $^)
+	$(RM) $(subst .tex,.aux,$<)
+	xelatex -no-pdf $< $(word 2,$^)
+	xelatex -no-pdf $< $(word 2,$^)
+	xelatex -no-pdf $< $(word 2,$^)
 
 git-revision.tex: $(wildcard *.cls) \
 	$(filter-out git-revision.tex, $(wildcard *.tex))
