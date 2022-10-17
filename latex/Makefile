@@ -34,7 +34,7 @@ build: pdf
 
 all: pdf
 
-pdf: $(OUTPUT_BASENAME).pdf book-cover.pdf
+pdf: $(OUTPUT_BASENAME).pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	git-revision.tex front-cover.tex cover-illustration.pdf \
