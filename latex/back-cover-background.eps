@@ -39,23 +39,9 @@
 %%BeginProlog
 101 dict begin
 /m/moveto
-/L/rlineto
-/C/rcurveto
-/q/gsave
-/Q/grestore
-/n/newpath
-/h/closepath
-/f/fill
-/f*/eofill
-/S/stroke
-/w/setlinewidth
-/J/setlinecap
-/j/setlinejoin
-/ml/setmiterlimit
-/d/setdash
-/sc/setcolor
-/scs/setcolorspace
-17{load def}repeat
+/l/lineto
+/c/curveto
+3{load def}repeat
 %%EndProlog
 /currentdistillerparams where
 {pop currentdistillerparams /CoreDistVersion get 5000 lt} {true} ifelse
@@ -117,18 +103,22 @@ currentfile 0 (% &&end EPS XMP packet marker&&)
 currentdict end /BDC EPSHandler1_pdfmark
 [/NamespacePop EPSHandler1_pdfmark
 
-q
-/DeviceRGB scs
-n
-419.537 595.309 m
-0 0 -51.084 0 -51.084 0 C
-0 0 0 -595.397 0 -595.397 C
-0 0 51.084 0 51.084 0 C
-0 0 0 595.397 0 595.397 C
-h
-0.971 0.968 0.946 sc
-f*
-Q
+gsave
+
+ % Background
+
+  % Rectangle
+    newpath
+    419.528 595.276 m
+    419.528 595.276 368.444 595.276 368.444 595.276 c
+    368.444 595.276 368.444 0 368.444 0 c
+    368.444 0 419.528 0 419.528 0 c
+    419.528 0 419.528 595.276 419.528 595.276 c
+    closepath
+    /DeviceRGB setcolorspace
+    0.903 0.904 0.894 setcolor
+    eofill
+ grestore
 showpage
 end
 /currentdistillerparams where
