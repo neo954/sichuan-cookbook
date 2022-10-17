@@ -144,6 +144,7 @@
 % Empty all blank pages created by \cleardoublepage
 \usepackage{emptypage}
 	\pagestyle{empty}
+\usepackage{nicefrac}
 
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
