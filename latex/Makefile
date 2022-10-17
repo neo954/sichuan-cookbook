@@ -34,7 +34,7 @@ build: pdf
 
 all: pdf
 
-pdf: $(OUTPUT_BASENAME).pdf
+pdf: $(OUTPUT_BASENAME).pdf book-cover.pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	git-revision.tex front-cover.tex cover-illustration.pdf \
@@ -64,6 +64,8 @@ git-revision.tex: $(wildcard *.cls) \
 	echo '\\newcommand{\\pdfbuilddate}{'`date \
 		"+%Y-%m-%d %H:%M:%S %z"`'}' >>$@
 	echo '\\newcommand{\\pdfbuildhost}{'`hostname -s`'}' >>$@
+
+book-cover.xdv: book-cover.tex git-revision.tex sichuan-cookbook.pdf
 
 %.xdv: %.tex
 	$(RM) $(subst .tex,.aux,$<)
