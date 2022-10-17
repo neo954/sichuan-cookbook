@@ -75,7 +75,19 @@
 \begin{document}
 \begin{bookcover}
 
-\definecolor{background-gray}{cmyk}{0 0 0.01 0.1}
+
+\newbookcoverpart{bg block}{%
+	\setpartposx{\marklength+\bleedwidth+\flapwidth+\wrapwidth+\coverwidth-51.496bp}%
+	\setpartposy{\marklength}%
+	\setpartheight{\coverheight+2\bleedwidth}%
+	\setpartwidth{51.496bp+\spinewidth+\coverwidth+\wrapwidth+\flapwidth+\bleedwidth}%
+}%
+
+\definecolor{warm gray 1}{cmyk}{0 0 0.01 0.1}%
+
+\bookcovercomponent{color}{bg block}{%
+	warm gray 1%
+}%
 
 \bookcovercomponent{normal}{front}{%
 	\includegraphics[page=1]{sichuan-cookbook.pdf}%
@@ -83,10 +95,6 @@
 
 \bookcovercomponent{normal}{back}{%
 	\includegraphics[page=324]{sichuan-cookbook.pdf}%
-}%
-
-\bookcovercomponent{color}{bg spine}{%
-	background-gray%
 }%
 
 \bookcovercomponent{normal}{spine}{%
@@ -101,10 +109,14 @@
 \CJKfontspec{Noto Sans CJK SC DemiLight}
 \huge\sffamily%
 \vspace{1\baselineskip}%
+\begingroup%
+\setstretch{.875}%
 四\\
 川\\
 菜\\
 谱
+
+\endgroup%
 
 \vspace{10\baselineskip}%
 
