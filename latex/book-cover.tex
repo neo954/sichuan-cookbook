@@ -89,9 +89,16 @@
 \begin{document}
 \begin{bookcover}
 
+\newbookcoverpart{bg front and flap and spine and more}{%
+	\setpartposx{\marklength+\bleedwidth+\flapwidth+\wrapwidth+\coverwidth-51.496bp}%
+	\setpartposy{\marklength}%
+	\setpartheight{\coverheight+2\bleedwidth}%
+	\setpartwidth{51.496bp+\spinewidth+\coverwidth+\wrapwidth+\flapwidth+\bleedwidth}%
+}%
+
 \definecolor{warm gray 1}{cmyk}{0 0 0.01 0.1}%
 
-\bookcovercomponent{color}{bg front and flap and spine}{%
+\bookcovercomponent{color}{bg front and flap and spine and more}{%
 	warm gray 1%
 }%
 
