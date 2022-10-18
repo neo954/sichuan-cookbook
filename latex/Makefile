@@ -95,9 +95,6 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 %.pdf: %.ps
 	ps2pdf -r600 $^ $@
 
-%.png: %.pdf
-	pdftoppm -r 600 -gray -png $^ >$@
-
 %.eps: %.vcf
 	qrencode -o $@ -t EPS -l L -m 0 <$^
 
