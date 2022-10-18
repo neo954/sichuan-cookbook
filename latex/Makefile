@@ -37,16 +37,15 @@ all: pdf
 pdf: $(OUTPUT_BASENAME).pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
-	git-revision.tex front-cover.tex cover-illustration.pdf \
-	inside-front-cover.tex title-page.tex cooking-machine.png \
+	git-revision.tex title-page.tex cooking-machine.png \
 	copyright.tex chairman-mao-quotes.tex title-page-1972.tex \
 	preface.tex $(wildcard recipe-*.tex) collation-notes.tex \
-	inside-back-cover.tex back-cover.tex quux-logo.pdf \
-	illustration-001.pdf illustration-002a.pdf illustration-002b.pdf \
-	illustration-002c.pdf illustration-003.pdf illustration-004.pdf \
-	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
-	illustration-008.pdf illustration-009.pdf illustration-010.pdf \
-	illustration-011.pdf back-cover-background.pdf
+	front-cover.pdf quux-logo.pdf illustration-001.pdf \
+	illustration-002a.pdf illustration-002b.pdf illustration-002c.pdf \
+	illustration-003.pdf illustration-004.pdf illustration-005.pdf \
+	illustration-006.pdf illustration-007.pdf illustration-008.pdf \
+	illustration-009.pdf illustration-010.pdf illustration-011.pdf \
+	back-cover.pdf
 	$(RM) $(subst .tex,.aux,$<)
 	xelatex -no-pdf $< $(word 2,$^)
 	xelatex -no-pdf $< $(word 2,$^)
@@ -65,7 +64,13 @@ git-revision.tex: $(wildcard *.cls) \
 		"+%Y-%m-%d %H:%M:%S %z"`'}' >>$@
 	echo '\\newcommand{\\pdfbuildhost}{'`hostname -s`'}' >>$@
 
-book-cover.xdv: book-cover.tex git-revision.tex sichuan-cookbook.pdf
+front-cover.xdv: front-cover.tex cookbook.cls cover-illustration.pdf
+
+back-cover.xdv: back-cover.tex cookbook.cls back-cover-background.pdf \
+	quux-logo.pdf
+
+book-cover.xdv: book-cover.tex git-revision.tex \
+	front-cover.pdf back-cover.pdf quux-logo.pdf
 
 %.xdv: %.tex
 	$(RM) $(subst .tex,.aux,$<)
