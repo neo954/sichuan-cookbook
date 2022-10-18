@@ -33,15 +33,15 @@
 \LoadClass[openany]{book}
 \usepackage[
 	paper=a5paper,
-	top=26.025736mm,
-	bottom=35.622505mm,
-	inner=26.025736mm,
-	outer=26.025736mm,
-	headheight=5.271897mm,
-	headsep=2.108757mm,
-	footskip=9.596769mm,
-	marginparwidth=18.978828mm,
-	marginparsep=3.514598mm
+	top=25.845833mm,
+	bottom=35.802408mm,
+	inner=25.845833mm,
+	outer=25.845833mm,
+	headheight=5.291666mm,
+	headsep=2.116666mm,
+	footskip=9.956575mm,
+	marginparwidth=15.875mm,
+	marginparsep=3.527777mm
 ]{geometry}
 \usepackage[zihao=5]{ctexsize}
 \usepackage[quiet]{xeCJK}
@@ -295,7 +295,7 @@
 			}{%
 			}%
 			\endgroup%
-			\hspace{0pt}%
+			\hspace{.0001em minus .0001em}% Teeny-tiny hspace to fill the gap
 			\ignorespaces%
 		}%
 
