@@ -31,6 +31,8 @@
 \documentclass[%
 	coverheight=210mm,
 	coverwidth=148mm,
+	% The spine width calculation
+	% For 80g printing paper, the thickness
 	spinewidth=17.44416mm,
 	flapwidth=0mm,
 	wrapwidth=0mm,
@@ -139,7 +141,7 @@
 \textcolor[cmyk]{0,0,0,.4}{\rule{1em}{1em}}%
 \textcolor[cmyk]{0,0,0,.8}{\rule{1em}{1em}}%
 \textcolor[cmyk]{0,0,0,1}{\rule{1em}{1em}}%
-\hfill%
+\hspace{1em}%
 \textcolor[cmyk]{1,0,0,0}{\rule{1em}{1em}}% C
 \textcolor[cmyk]{0,1,0,0}{\rule{1em}{1em}}% M
 \textcolor[cmyk]{0,0,1,0}{\rule{1em}{1em}}% Y
@@ -148,53 +150,22 @@
 \textcolor[cmyk]{1,0,1,0}{\rule{1em}{1em}}% CY
 \textcolor[cmyk]{1,1,1,0}{\rule{1em}{1em}}% CMY
 \textcolor[cmyk]{0,0,0,1}{\rule{1em}{1em}}% K
-\hfill%
+\hspace{1em}%
 \textcolor[cmyk]{.75,.62,.6,0}{\rule{1em}{1em}}%
+\hspace{1em}%
 \textcolor[cmyk]{.75,.75,0,0}{\rule{1em}{1em}}%
 \textcolor[cmyk]{0,.75,.75,0}{\rule{1em}{1em}}%
 \textcolor[cmyk]{.75,0,.75,0}{\rule{1em}{1em}}%
-\hfill%
+\hspace{1em}%
 \textcolor[cmyk]{.3,0,0,.3}{\rule{1em}{1em}}%
 \textcolor[cmyk]{0,.3,0,.3}{\rule{1em}{1em}}%
 \textcolor[cmyk]{0,0,.3,.3}{\rule{1em}{1em}}%
-\hfill%
-\textcolor[cmyk]{0,0,0,.25}{\rule{1em}{1em}}%
-\textcolor[cmyk]{0,0,0,.5}{\rule{1em}{1em}}%
-\textcolor[cmyk]{0,0,0,.75}{\rule{1em}{1em}}%
-\textcolor[cmyk]{0,0,0,1}{\rule{1em}{1em}}%
-\hspace{1em}
 }%
 
 \bookcovercomponent{normal}{above front}{%
 \Large%
 \null%
 \vfill%
-\hfill%
-\textcolor[cmyk]{0,0,0,.05}{\rule{1em}{1em}}%  5% K
-\textcolor[cmyk]{0,0,0,.1}{\rule{1em}{1em}}%  10% K
-\textcolor[cmyk]{0,0,0,.15}{\rule{1em}{1em}}% 15% K
-\textcolor[cmyk]{0,0,0,.2}{\rule{1em}{1em}}%  20% K
-\textcolor[cmyk]{0,0,0,.25}{\rule{1em}{1em}}% 25% K
-\textcolor[cmyk]{0,0,0,.3}{\rule{1em}{1em}}%  30% K
-\textcolor[cmyk]{0,0,0,.35}{\rule{1em}{1em}}% 35% K
-\textcolor[cmyk]{0,0,0,.4}{\rule{1em}{1em}}%  40% K
-\textcolor[cmyk]{0,0,0,.45}{\rule{1em}{1em}}% 45% K
-\textcolor[cmyk]{0,0,0,.5}{\rule{1em}{1em}}%  50% K
-\textcolor[cmyk]{0,0,0,.55}{\rule{1em}{1em}}% 55% K
-\textcolor[cmyk]{0,0,0,.6}{\rule{1em}{1em}}%  60% K
-\textcolor[cmyk]{0,0,0,.65}{\rule{1em}{1em}}% 65% K
-\textcolor[cmyk]{0,0,0,.7}{\rule{1em}{1em}}%  70% K
-\textcolor[cmyk]{0,0,0,.75}{\rule{1em}{1em}}% 75% K
-\textcolor[cmyk]{0,0,0,.8}{\rule{1em}{1em}}%  80% K
-\textcolor[cmyk]{0,0,0,.85}{\rule{1em}{1em}}% 85% K
-\textcolor[cmyk]{0,0,0,.9}{\rule{1em}{1em}}%  90% K
-\textcolor[cmyk]{0,0,0,.95}{\rule{1em}{1em}}% 95% K
-\textcolor[cmyk]{0,0,0,1}{\rule{1em}{1em}}%  100% K
-\hspace{1em}
-}%
-
-\bookcovercomponent{normal}{below back}{%
-\Large%
 \hfill%
 \textcolor[cmyk]{.25,0,0,0}{\rule{1em}{1em}}%
 \textcolor[cmyk]{.5,0,0,0}{\rule{1em}{1em}}%
@@ -208,6 +179,26 @@
 \textcolor[cmyk]{0,0,.5,0}{\rule{1em}{1em}}%
 \textcolor[cmyk]{0,0,.75,0}{\rule{1em}{1em}}%
 \textcolor[cmyk]{0,0,1,0}{\rule{1em}{1em}}%
+\textcolor[cmyk]{0,0,0,.25}{\rule{1em}{1em}}%
+\textcolor[cmyk]{0,0,0,.5}{\rule{1em}{1em}}%
+\textcolor[cmyk]{0,0,0,.75}{\rule{1em}{1em}}%
+\textcolor[cmyk]{0,0,0,1}{\rule{1em}{1em}}%
+\hspace{1em}
+}%
+
+\bookcovercomponent{normal}{below back}{%
+\Large%
+\hfill%
+\textcolor[cmyk]{0,0,0,.1}{\rule{1em}{1em}}% 10% K
+\textcolor[cmyk]{0,0,0,.2}{\rule{1em}{1em}}% 20% K
+\textcolor[cmyk]{0,0,0,.3}{\rule{1em}{1em}}% 30% K
+\textcolor[cmyk]{0,0,0,.4}{\rule{1em}{1em}}% 40% K
+\textcolor[cmyk]{0,0,0,.5}{\rule{1em}{1em}}% 50% K
+\textcolor[cmyk]{0,0,0,.6}{\rule{1em}{1em}}% 60% K
+\textcolor[cmyk]{0,0,0,.7}{\rule{1em}{1em}}% 70% K
+\textcolor[cmyk]{0,0,0,.8}{\rule{1em}{1em}}% 80% K
+\textcolor[cmyk]{0,0,0,.9}{\rule{1em}{1em}}% 90% K
+\textcolor[cmyk]{0,0,0,1}{\rule{1em}{1em}}% 100% K
 \hspace{1em}
 }%
 
@@ -232,7 +223,7 @@
 \footnotesize\sffamily%
 \vspace{.5\baselineskip}
 \CJKfontspec{Noto Sans CJK SC DemiLight}%
-\hspace{.5em}四川菜谱1972重制版\hspace{1em}封面
+\hspace{.5em}四川菜谱1972重制版\hspace{2em}封面
 }%
 
 \bookcovercomponent{normal}{below front}{%
