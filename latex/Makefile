@@ -28,13 +28,11 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-OUTPUT_BASENAME := sichuan-cookbook
-
-build: pdf
+build: sichuan-cookbook.pdf
 
 all: pdf
 
-pdf: $(OUTPUT_BASENAME).pdf
+pdf: book-cover.pdf sichuan-cookbook.pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	git-revision.tex title-page.tex cooking-machine.png \
