@@ -68,7 +68,7 @@ back-cover.xdv: back-cover.tex cookbook.cls back-cover-background.pdf \
 	quux-logo.pdf
 
 book-cover.xdv: book-cover.tex git-revision.tex \
-	front-cover.pdf back-cover.pdf quux-logo.pdf
+	front-cover.pdf back-cover.pdf quux-logo.pdf position-indicator.pdf
 
 %.xdv: %.tex
 	$(RM) $(subst .tex,.aux,$<)
