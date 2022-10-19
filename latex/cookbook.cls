@@ -349,7 +349,7 @@
 					\hspace{5.727055em}%
 				}%
 				\endgroup%
-				\hspace{0pt}%
+				\hspace{.0001em minus .0001em}% Teeny-tiny hspace
 				\ignorespaces%
 			}%
 			####1%
