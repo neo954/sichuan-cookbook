@@ -35,7 +35,7 @@ all: pdf
 pdf: book-cover.pdf sichuan-cookbook.pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
-	git-revision.tex title-page.tex cooking-machine.png \
+	git-revision.tex title-page.tex zanthoxylum-planispinum.jpg \
 	copyright.tex chairman-mao-quotes.tex title-page-1972.tex \
 	preface.tex $(wildcard recipe-*.tex) collation-notes.tex \
 	front-cover.pdf quux-logo.pdf illustration-001.pdf \
