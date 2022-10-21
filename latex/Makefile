@@ -86,9 +86,6 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 %.eps: %.png
 	convert $^ $@
 
-%.pdf: %.png
-	convert $^ $@
-
 %.pdf: %.eps
 	epstopdf --res=600 $^ $@
 
@@ -113,6 +110,6 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 clean:
 	$(RM) git-revision.tex
 	$(RM) *.aux *.dvi *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
-		*.pdf *.ps *.txt *.toc *.xdv *.ent
+		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent
 
 .PHONY: all build clean pdf
