@@ -35,15 +35,15 @@ all: pdf
 pdf: book-cover.pdf sichuan-cookbook.pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
-	git-revision.tex title-page.tex zanthoxylum-planispinum.jpg \
+	git-revision.tex title-page.tex \
 	copyright.tex chairman-mao-quotes.tex title-page-1972.tex \
 	preface.tex $(wildcard recipe-*.tex) collation-notes.tex \
-	front-cover.pdf quux-logo.pdf illustration-001.pdf \
-	illustration-002a.pdf illustration-002b.pdf illustration-002c.pdf \
-	illustration-003.pdf illustration-004.pdf illustration-005.pdf \
-	illustration-006.pdf illustration-007.pdf illustration-008.pdf \
-	illustration-009.pdf illustration-010.pdf illustration-011.pdf \
-	back-cover.pdf
+	front-cover.pdf quux-logo.pdf zanthoxylum-planispinum.pdf \
+	illustration-001.pdf illustration-002a.pdf illustration-002b.pdf \
+	illustration-002c.pdf illustration-003.pdf illustration-004.pdf \
+	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
+	illustration-008.pdf illustration-009.pdf illustration-010.pdf \
+	illustration-011.pdf back-cover.pdf
 	$(RM) $(subst .tex,.aux,$<)
 	xelatex -no-pdf $< $(word 2,$^)
 	xelatex -no-pdf $< $(word 2,$^)
