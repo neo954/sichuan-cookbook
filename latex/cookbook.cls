@@ -495,11 +495,11 @@
 	% Customize the page numbers
 	\fancyfoot[LE,RO]{%
 		\hspace{1.441em}%
-		\raisebox{-.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
+		\lower.559em\hbox{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
 		\hspace{-.559em}%
 		\makebox[2em][s]{\hfil\mbox{\thepage}\hfil}%
 		\hspace{-.559em}%
-		\raisebox{-.559em}{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
+		\lower.559em\hbox{\scalebox{2.236}[2.236]{\symbol{"2027}}}%
 		\hspace{1.441em}%
 	}%
 	\fancyfoot[CE,RE]{}%
