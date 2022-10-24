@@ -295,7 +295,7 @@
 			}{%
 			}%
 			\endgroup%
-			\hspace{.0001em minus .0001em}% Teeny-tiny hspace to fill the gap
+			\hspace{.001pt minus .001pt}% Teeny-tiny hspace to fill the gap
 			\ignorespaces%
 		}%
 
@@ -349,7 +349,7 @@
 					\hspace{5.727055em}%
 				}%
 				\endgroup%
-				\hspace{.0001em minus .0001em}% Teeny-tiny hspace
+				\hspace{.001pt minus .001pt}% Teeny-tiny hspace
 				\ignorespaces%
 			}%
 			####1%
