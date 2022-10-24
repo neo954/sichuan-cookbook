@@ -31,9 +31,15 @@
 \documentclass[%
 	coverheight=210mm,
 	coverwidth=148mm,
+	% Double A Uncoated Paper
+	%  Weight      Thickness    Description
+	% --------------------------------------------------------------------
+	%  70 gsm    93.6 micron    Copy paper for everyday use
+	%  80 gsm   103.2 micron    Premium multi-purpose copy paper
+	%
 	% The spine width calculation
-	% For 80g printing paper, the thickness
-	spinewidth=17.44416mm,
+	% ( 324 / 2 ) * 103.2 micron = 16.7184 mm
+	spinewidth=16.7184mm, % For 80 gsm copy paper
 	flapwidth=0mm,
 	wrapwidth=0mm,
 	bleedwidth=3mm,
