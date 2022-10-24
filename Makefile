@@ -139,7 +139,7 @@ trim/b002.png trim/b022.png trim/b042.png trim/c008.png trim/p266.png trim/p300.
 # https://www.hpl.hp.com/techreports/2002/HPL-2002-82.html
 
 # Margins will be filled with background color of the page.
-# 3/4 inch width margin on top. With 600 dpi, it is 45 0px.
+# 3/4 inch width margin on top. With 600 dpi, it is 450 px.
 # 5/8 inch width margin on left and right. With 600 dpi, it is 375 px.
 # 1/4 inch width margin on bottom. With 600 dpi, it is 150 px.
 trim/%.png: jpeg/%.jpg
