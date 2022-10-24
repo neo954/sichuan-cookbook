@@ -125,7 +125,7 @@ trim/z999.png: trim/%.png: jpeg/%.jpg
 		png:- | \
 	convert png:- \
 		-filter Gaussian -resize 3091x4370 \
-		-fill '#ffffcc' -draw 'rectangle 2896,0 3091,4370' \
+		-fill '#e6e6e3' -draw 'rectangle 2896,0 3091,4370' \
 		-quality 100 -alpha off +dither -colors 16 \
 		$@
 
