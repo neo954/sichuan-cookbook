@@ -44,7 +44,7 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
 	illustration-008.pdf illustration-009.pdf illustration-010.pdf \
 	illustration-011.pdf back-cover.pdf
-	$(RM) $(subst .tex,.aux,$<)
+	$(RM) $(subst .tex,.aux,$<) $(subst .tex,.toc,$<)
 	xelatex -no-pdf $< $(word 2,$^)
 	xelatex -no-pdf $< $(word 2,$^)
 	xelatex -no-pdf $< $(word 2,$^)
@@ -71,7 +71,7 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 	front-cover.pdf back-cover.pdf quux-logo.pdf position-indicator.pdf
 
 %.xdv: %.tex
-	$(RM) $(subst .tex,.aux,$<)
+	$(RM) $(subst .tex,.aux,$<) $(subst .tex,.toc,$<)
 	xelatex -no-pdf $^
 
 %.pdf: %.xdv
