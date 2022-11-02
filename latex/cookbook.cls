@@ -145,6 +145,8 @@
 \usepackage{emptypage}
 	\pagestyle{empty}
 \usepackage{nicefrac}
+\usepackage{hyperref}
+\usepackage{pgffor}
 
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
@@ -357,6 +359,11 @@
 		}{%
 		}%
 
+		% Create label for reference
+		\newcommand{\makealabel}[1]{%
+			\label{####1}%
+		}
+
 		% Reset the endnote counter
 		\setcounter{endnote}{0}%
 		% The height of the section title plus two lines
@@ -395,6 +402,8 @@
 				]{##2##3}%
 			}%
 		}%
+		\def\@currentlabelname{##2}%    Hack the current label name
+		\makealabel{recipe:\arabic{section}}%
 		\ifthenelse{\equal{##1}{}}{%
 		}{%
 			\noindent%
@@ -562,6 +571,29 @@
 	}%
 	\newcommand{\tocclearpage}{%
 		\addtocontents{toc}{\protect\clearpage}%
+	}%
+
+	% Reference to the recipe sequence number
+	\newcommand{\recipenum}[1]{%
+		\hyperref[recipe:##1]{\zhdigits{##1}}%
+	}%
+
+	% Reference to the recipe name
+	\newcommand{\recipename}[1]{%
+		\nameref{recipe:##1}%
+	}%
+
+	% Refernce to the recipe sequence number with name
+	\newcommand{\reciperef}[1]{%
+		\hyperref[recipe:##1]{\zhdigits{##1}、\nameref{recipe:##1}}%
+	}%
+
+	% Reference for multiple recipes
+	\newcommand{\recipelist}[1]{%
+		\foreach \r [count=\k] in {##1} {%
+			\ifnum\k>1{、}\fi%
+			\recipenum{\r}%
+		}%
 	}%
 
 	% Set line spacing
