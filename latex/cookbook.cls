@@ -117,6 +117,18 @@
 \usepackage[encoding=UTF8]{zhnumber}
 \usepackage{tocloft}
 \usepackage{fancyhdr}
+\usepackage{imakeidx}
+	\makeindex[%
+		title=索引,
+		noautomatic=true,
+		columns=2,
+		columnsep=30pt,
+	]
+	\indexsetup{%
+		level=\indextitle,
+		firstpagestyle=fancy,
+		othercode=,
+	}
 \usepackage{xcolor}
 \usepackage{xparse}
 \usepackage{graphicx}
@@ -266,6 +278,10 @@
 			\division{原料}%
 		}%
 
+		\newcommand{\ingredientindex}[1]{%
+			\index{####1}%
+		}%
+
 		\NewDocumentCommand{\ingredient}{ m O{} m }{%
 			\hfuzz=1.5em% Suppress the overfull \hbox warning
 			\begingroup%
@@ -281,6 +297,7 @@
 				}%
 			}{%
 			}%
+			\ingredientindex{####1}%
 			\mbox{%
 				\hspace{2em}%
 				\makebox[9em][s]{%
@@ -341,6 +358,7 @@
 			\renewcommand{\ingredient}[2]{%
 				\begingroup%
 				\noindent%
+				\ingredientindex{########1}%
 				\mbox{%
 					\hspace{2.210445em}%
 					\makebox[9.375em][s]{%
@@ -592,6 +610,15 @@
 			\ifnum\k>1{、}\fi%
 			\recipenum{\r}%
 		}%
+	}%
+
+	\newcommand{\indextitle}[1]{%
+		\begin{center}%
+		{%
+			\Large\rmfamily\bfseries%
+			\hbadness=10000\makebox[5em][s]{##1}%
+		}%
+		\end{center}%
 	}%
 
 	% Set line spacing
