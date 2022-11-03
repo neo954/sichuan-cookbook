@@ -145,10 +145,11 @@ function indexentry()
 	"干豌豆")		keyword="豌豆!${keyword}"			;;
 	"青黄豆")		keyword="黄豆!${keyword}"			;;
 	"新鲜蚕豆")		keyword="蚕豆"						;;
-	"青鲜嫩蚕豆仁")	keyword="蚕豆!蚕豆仁"				;;
+	"青嫩鲜蚕豆仁")	keyword="蚕豆!蚕豆仁"				;;
 	"扁豆仁")		keyword="扁豆!${keyword}"			;;
 	"醪糟")			;;
 	"醪糟"*)		keyword="醪糟!${keyword}"			;;
+	"酒米粉")		keyword="酒米!${keyword}"			;;
 	"韭菜")			;;
 	"韭菜"*)		keyword="韭菜!${keyword}"			;;
 	"菠菜")			;;
@@ -272,6 +273,7 @@ function indexentry()
 	"嫩公鸡")		keyword="鸡!${keyword}"				;;
 	"公鸡")			keyword="鸡!${keyword}"				;;
 	"嫩肥母鸡")		keyword="鸡!${keyword}"				;;
+	"水盆仔鸡")		keyword="鸡!${keyword}"				;;
 	"公鸡翅")		keyword="鸡翅!${keyword}"			;;
 	"鸡化油")		keyword="鸡油!${keyword}"			;;
 	"化鸡油")		keyword="鸡油!${keyword}"			;;
