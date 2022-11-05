@@ -116,9 +116,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[encoding=UTF8]{zhnumber}
 \usepackage{tocloft}
-\usepackage{makeidx}
 \usepackage{fancyhdr}
-	\pagestyle{fancy}
 \usepackage{xcolor}
 \usepackage{xparse}
 \usepackage{graphicx}
