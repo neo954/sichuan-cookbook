@@ -102,6 +102,20 @@
 	\setpartwidth{51.496bp+\spinewidth+\coverwidth+\wrapwidth+\flapwidth+\bleedwidth}%
 }%
 
+\newbookcoverpart{back mark}{%
+	\setpartposx{0bp}%
+	\setpartposy{\marklength+\bleedwidth}%
+	\setpartheight{\coverheight}%
+	\setpartwidth{\marklength}%
+}
+
+\newbookcoverpart{front mark}{%
+	\setpartposx{\marklength+2\bleedwidth+2\flapwidth+2\wrapwidth+2\coverwidth+\spinewidth}%
+	\setpartposy{\marklength+\bleedwidth}%
+	\setpartheight{\coverheight}%
+	\setpartwidth{\marklength}%
+}
+
 \definecolor{pantone warm gray 1 c}{cmyk}{0 0 0.01 0.1}%
 
 \bookcovercomponent{color}{bg front and flap and spine and more}{%
@@ -360,6 +374,25 @@
 \>\textsc{pdf} build date:        \>\texttt{\pdfbuilddate}\\
 \>\textsc{pdf} build host:        \>\texttt{\pdfbuildhost}
 \end{tabbing}
+}%
+
+\bookcovercomponent{normal}{back mark}{%
+\Large%
+\vspace{1em}%
+\hfill%
+\includegraphics[page=1]{position-indicator.pdf}%
+\vspace{1em}
+\vfill%
+\vspace{1em}%
+\hfill%
+\includegraphics[page=1]{position-indicator.pdf}%
+\vspace{1em}
+}%
+
+\bookcovercomponent{normal}{front mark}{%
+\Large%
+\vspace{1em}%
+\includegraphics[page=1]{position-indicator.pdf}%
 }%
 
 \end{bookcover}
