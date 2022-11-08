@@ -70,6 +70,7 @@ function indexentry()
 	case "${keyword}" in
 	"生菜")			;;
 	"生细"*)		keyword="${keyword#生细}"			;;
+	"生鲜"*)		keyword="${keyword#生鲜}"			;;
 	"生"*)			keyword="${keyword#生}"				;;
 	"细"*)			keyword="${keyword#细}"				;;
 	"活"*)			keyword="${keyword#活}"				;;
@@ -77,6 +78,7 @@ function indexentry()
 	"鲜"*)			keyword="${keyword#鲜}"				;;
 	"好"*)			keyword="${keyword#好}"				;;
 	"熟"*)			keyword="${keyword#熟}"				;;
+	"嫩豆腐")		;;
 	"嫩"*)			keyword="${keyword#嫩}"				;;
 	"老"*)			keyword="${keyword#老}"				;;
 	"大米"*)		;;
@@ -87,6 +89,7 @@ function indexentry()
 	"大金钩"*)		;;
 	"大红"*)		keyword="${keyword#大红}"			;;
 	"大"*)			keyword="${keyword#大}"				;;
+	"剥净鲜"*)		keyword="${keyword#剥净鲜}"			;;
 	"剥净"*)		keyword="${keyword#剥净}"			;;
 	"剔刺"*)		keyword="${keyword#剔刺}"			;;
 	"去壳"*)		keyword="${keyword#去壳}"			;;
@@ -113,13 +116,22 @@ function indexentry()
 	esac
 
 	case "${keyword}" in
+	*"银耳")		keyword="银耳"						;;
+	"五香面")		keyword="五香粉!${keyword}"			;;
 	"食盐")			keyword="盐!${keyword}"				;;
 	"香料面")		keyword="香料!${keyword}"			;;
+	"整香料")		keyword="香料!${keyword}"			;;
 	"大料面")		keyword="八角!${keyword}"			;;
 	"干辣椒")		keyword="辣椒!${keyword}"			;;
 	"干海椒")		keyword="辣椒!${keyword}"			;;
 	"干口蘑")		keyword="口蘑!${keyword}"			;;
 	"口蘑豆豉")		keyword="豆豉!${keyword}"			;;
+	"酱油")			;;
+	*"酱油"*)		keyword="酱油!${keyword}"			;;
+	"窝油") 		keyword="酱油!${keyword}"			;;
+	"红食色") 		keyword="红色素!${keyword}"			;;
+	"萝卜") 		;;
+	*"萝卜"*) 		keyword="萝卜!${keyword}"			;;
 	"姜")			;;
 	"姜"*)			keyword="姜!${keyword}"				;;
 	"子姜")			keyword="姜!${keyword}"				;;
@@ -128,6 +140,8 @@ function indexentry()
 	"冰糖"*)		keyword="冰糖!${keyword}"			;;
 	"鸡蛋")			;;
 	"鸡蛋"*)		keyword="鸡蛋!${keyword}"			;;
+	"蛋皮")			keyword="鸡蛋!${keyword}"			;;
+	"蛋黄粉")		keyword="鸡蛋!${keyword}"			;;
 	"花椒")			;;
 	"花椒"*)		keyword="花椒!${keyword}"			;;
 	*"花椒")		keyword="花椒!${keyword}"			;;
@@ -141,6 +155,7 @@ function indexentry()
 	"干冬菇")		keyword="冬菇!${keyword}"			;;
 	"豌豆")			;;
 	"豌豆"*)		keyword="豌豆!${keyword}"			;;
+	"豆尖")			keyword="豌豆!豌豆尖!${keyword}"	;;
 	"嫩豌豆")		keyword="豌豆!${keyword}"			;;
 	"干豌豆")		keyword="豌豆!${keyword}"			;;
 	"青黄豆")		keyword="黄豆!${keyword}"			;;
@@ -157,9 +172,11 @@ function indexentry()
 	"莴笋")			;;
 	"莴笋"*)		keyword="莴笋!${keyword}"			;;
 	"丝瓜皮")		keyword="丝瓜!${keyword}"			;;
+	"豆腐乳水")		;;
+	*"豆腐乳水"*)	keyword="豆腐乳水"					;;
 	"豆腐")			;;
-	"豆腐"*)		keyword="豆腐!${keyword}"			;;
-	"嫩豆腐")		keyword="豆腐!${keyword}" 			;;
+	"豆腐皮")		;;
+	*"豆腐"*)		keyword="豆腐!${keyword}"			;;
 	"鸡脯肉")		keyword="鸡脯!${keyword}"			;;
 	"鸡脯茸子")		keyword="鸡脯!${keyword}"			;;
 	"鸡腿肉")		keyword="鸡腿!${keyword}"			;;
@@ -182,7 +199,8 @@ function indexentry()
 	"蒜苗")			;;
 	"蒜苗段")		keyword="蒜苗!${keyword}"			;;
 	"蒜"*)			keyword="蒜!${keyword}"				;;
-	"大蒜"*)		keyword="蒜!${keyword}"				;;
+	"大蒜")			keyword="蒜!${keyword}"				;;
+	"大蒜片")		keyword="蒜!蒜片!${keyword}"		;;
 	"独蒜")			keyword="蒜!${keyword}"				;;
 	"青菜心")		keyword="青菜!${keyword}"			;;
 	"绿色小菜")		keyword="青菜!${keyword}"			;;
@@ -206,6 +224,8 @@ function indexentry()
 	"肥瘦熟火腿")	keyword="火腿!肥瘦火腿"				;;
 	*"火腿汤")		keyword="汤!${keyword}"				;;
 	*"火腿"*)		keyword="火腿!${keyword}"			;;
+	*"宣腿"*)		keyword="火腿!${keyword}"			;;
+	"小毛鱼翅")		keyword="鱼翅!${keyword}"			;;
 	"莲米")			keyword="莲子!${keyword}"			;;
 	"整猪头")		keyword="猪头"						;;
 	"猪头肉")		keyword="猪头!${keyword}"			;;
@@ -239,7 +259,9 @@ function indexentry()
 	"肥瘦猪肉丝")	keyword="猪肥瘦肉!${keyword}"		;;
 	"瘦猪肉")		keyword="猪瘦肉!${keyword}"			;;
 	"瘦肉")			keyword="猪瘦肉!${keyword}"			;;
+	"猪排骨")		;;
 	"排骨")			keyword="猪排骨!${keyword}"			;;
+	"猪"*"排骨")	keyword="猪排骨!${keyword}"			;;
 	"猪肘")			;;
 	"猪肘"*)		keyword="猪肘!${keyword}"			;;
 	"肘子排骨汤")	keyword="汤!${keyword}"				;;
@@ -250,6 +272,9 @@ function indexentry()
 	"岩鲤鱼")		keyword="鲤鱼!${keyword}"			;;
 	"鲢鱼肉")		keyword="鲢鱼!${keyword}"			;;
 	"鲢鱼头")		keyword="鲢鱼!${keyword}"			;;
+	"罐头蟹黄")		keyword="蟹黄!${keyword}"			;;
+	"刺参")			keyword="海参!${keyword}"			;;
+	"开乌参")		keyword="海参!乌参"					;;
 	*"清汤")		keyword="汤!${keyword}"				;;
 	*"奶汤")		keyword="汤!${keyword}"				;;
 	*"鸡汤")		keyword="汤!${keyword}"				;;
@@ -257,9 +282,9 @@ function indexentry()
 	*"肉汤")		keyword="汤!${keyword}"				;;
 	*"骨汤")		keyword="汤!${keyword}"				;;
 	"二汤")			keyword="汤!${keyword}"				;;
-	"黄秧白心")		keyword="黄秧白!${keyword}"			;;
-	"黄秧白菜")		keyword="黄秧白!${keyword}"			;;
-	"黄秧白菜心")	keyword="黄秧白!${keyword}"			;;
+	"白菜心")		keyword="白菜!${keyword}"			;;
+	"白菜秧心子")	keyword="白菜!${keyword}"			;;
+	"黄秧白"*)		keyword="白菜!${keyword}"			;;
 	"黄豆芽")		keyword="黄豆!${keyword}"			;;
 	"黄豆芽瓣")		keyword="黄豆!黄豆芽!${keyword}"	;;
 	"仔鸡翅膀")		keyword="鸡翅!${keyword}"			;;
@@ -292,6 +317,7 @@ function indexentry()
 	"熟鸡蛋白")		keyword="鸡蛋!${keyword}"			;;
 	"熟鸡脯肉")		keyword="鸡脯!${keyword}"			;;
 	"熟鸡脯皮")		keyword="鸡脯!${keyword}"			;;
+	"白鸡脯肉")		keyword="鸡脯!鸡脯肉"				;;
 	"熟鸡皮")		keyword="鸡!${keyword}"				;;
 	"熟阉鸡腿")		keyword="鸡腿!${keyword}"			;;
 	"阉鸡腿")		keyword="鸡腿!${keyword}"			;;
@@ -309,9 +335,8 @@ function indexentry()
 	"水发鸡松")		keyword="鸡松菌!${keyword}"			;;
 	"水发笋子")		keyword="笋!${keyword}"				;;
 	"干笋")			keyword="笋!${keyword}"				;;
-	"有壳笋子")		keyword="笋!${keyword}"				;;
-	"有壳冬笋")		keyword="笋!${keyword}"				;;
-	"冬笋"*)		keyword="笋!冬笋"					;;
+	"有壳笋子")		keyword="笋"						;;
+	*"冬笋"*)		keyword="笋!冬笋"					;;
 	"水发兰片")		keyword="笋!${keyword}"				;;
 	"水发兰片尖")	keyword="笋!${keyword}"				;;
 	"玉兰片")		keyword="笋!${keyword}"				;;
