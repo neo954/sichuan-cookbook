@@ -52,6 +52,7 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
 	bash tinker-index.sh $(subst .tex,.idx,$<)
 	makeindex $(subst .tex,.idx,$<)
 	xelatex -no-pdf $< $(word 2,$^)
+	bash tinker-index.sh $(subst .tex,.idx,$<)
 
 git-revision.tex: $(wildcard *.cls) $(wildcard *.eps) \
 	$(filter-out git-revision.tex, $(wildcard *.tex))
