@@ -352,7 +352,7 @@ function indexentry()
 	esac
 
 	echo '\indexentry{'"${keyword}"'|hyperpage}{'"${page}"'}'
-	echo -n "[${keyword}>${page}]" >&2
+	echo -n "[${keyword}@${page}]" >&2
 }
 
 echo "Tinker index file ${INDEX_FILE} ..." >&2
