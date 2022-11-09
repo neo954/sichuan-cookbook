@@ -355,7 +355,7 @@ function indexentry()
 	echo -n "[${keyword}>${page}]" >&2
 }
 
-echo "Tinker index file ..." >&2
+echo "Tinker index file ${INDEX_FILE} ..." >&2
 
 while read -r LINE
 do
