@@ -355,7 +355,7 @@ function indexentry()
 	echo -n "[${keyword}@${page}]" >&2
 }
 
-echo "Tinker index file ${INDEX_FILE} ..." >&2
+echo "Tinker index file ${INDEX_FILE} ..."
 
 while read -r LINE
 do
@@ -382,9 +382,9 @@ do
 	done
 
 	indexentry "${KEYWORD}" "${PAGE}"
-done <"${INDEX_FILE}" >"${INDEX_FILE}.new"
+done <"${INDEX_FILE}" 2>&1 >"${INDEX_FILE}.new"
 
-echo >&2
+echo
 
 mv "${INDEX_FILE}.new" "${INDEX_FILE}"
 
