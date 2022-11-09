@@ -370,6 +370,7 @@
 				\hspace{.001pt minus .001pt}% Teeny-tiny hspace
 				\ignorespaces%
 			}%
+			\ingredientindex{####1}%
 			####1%
 			\nopagebreak%
 		}{%
