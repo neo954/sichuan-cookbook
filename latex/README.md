@@ -39,7 +39,8 @@ The goals of the Sichuan Cookbook 1972 LaTex Remake are listed as follows.
 * [ ] Recreate the paperback book's front cover to a vector graphics image.
 * [ ] Recreate illustrations in the book to vector graphics images.
 * [ ] Keep the LaTeX code in each recipe file simple and clear. Providing
-      structured data, which can be further processed elsewhere.
+      structured data, which can be further processed elsewhere. (Like convert
+      into JSON or XML.)
 
 ### Fonts
 
