@@ -61,8 +61,8 @@ the public on Jan 1, 2023.
 ### Sichuan Cookbook 1972 Remake
 
 For a contemporary eBook, download *[Sichuan Cookbook 1972
-Remake](https://github.com/neo954/sichuan-cookbook/releases/download/v0.6.0-alpha/sichuan-cookbook.pdf)*
-<sub>(2.05 MB)i</sub>. This is an A5 paper size remake edition of the original
+Remake](https://github.com/neo954/sichuan-cookbook/releases/download/v0.7.5-alpha/sichuan-cookbook.pdf)*
+<sub>(2.67 MB)i</sub>. This is an A5 paper size remake edition of the original
 paperback book.
 
 ### Scanned copy
