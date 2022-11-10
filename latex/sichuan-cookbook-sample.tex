@@ -1,0 +1,214 @@
+% BSD 3-Clause License
+%
+% Copyright (c) 2023 Quux System and Technology. All rights reserved.
+%
+% Redistribution and use in source and binary forms, with or without
+% modification, are permitted provided that the following conditions are met:
+%
+% 1. Redistributions of source code must retain the above copyright notice, this
+%    list of conditions and the following disclaimer.
+%
+% 2. Redistributions in binary form must reproduce the above copyright notice,
+%    this list of conditions and the following disclaimer in the documentation
+%    and/or other materials provided with the distribution.
+%
+% 3. Neither the name of the copyright holder nor the names of its
+%    contributors may be used to endorse or promote products derived from
+%    this software without specific prior written permission.
+%
+% THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+% AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+% IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+% DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+% FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+% DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+% SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+% CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+% OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+% OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+%
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass{cookbook}
+\input{git-revision.tex}
+\usepackage{bookmark}
+	\hypersetup{
+		unicode=true,
+		pdfduplex={DuplexFlipLongEdge},
+		pdfprintscaling={AppDefault},
+		pdfpicktraybypdfsize={true},
+		pdfcreator={XeLaTeX},
+		pdfproducer={Quux System and Technology},
+		pdftoolbar={true},
+		pdftitle={四川菜谱1972重制版（预览）},
+		pdfsubject={四川菜谱},
+		pdfauthor={成都市饮食公司},
+		pdfkeywords={川菜},
+		pdflang={zh-CN},
+		pdfinfo={
+			GitCommitName={\gitcommitname},
+			GitCommitHash={\gitcommithash},
+			GitCommitterDate={\gitcommitterdate},
+			PDFBuildHost={\pdfbuildhost}
+		},
+		hidelinks
+	}
+\usepackage{pdfpages}
+\usepackage{pdfoverlay}
+
+\newcommand{\blankpage}[1]{%
+	\thispagestyle{empty}
+	\begingroup%
+	\null%
+	\vfill%
+	\begin{center}
+	\zihao{3}\kafamily%
+	第#1页不包括\\ 在此预览版之内。
+	\end{center}
+	\vfill%
+	\endgroup%
+	\clearpage
+	\thispagestyle{empty}
+	\begingroup%
+	\null%
+	\vfill%
+	\begin{center}
+	\zihao{3}\kafamily%
+	此页故意留白。
+	\end{center}
+	\vfill%
+	\endgroup%
+}%
+
+\begin{document}
+\begin{cookbook}
+
+\pagestyle{empty}
+\pagenumbering{Alph}%	Upper case letter page numbers (and reset to 1)
+\bookmarksetup{startatroot}%
+% Front cover
+\hypertarget{front-cover}{}%
+\bookmark[dest=front-cover,level=section]{封面}%
+\includepdf[pages=1]{sichuan-cookbook.pdf}
+\clearpage
+\hypertarget{inside-front-cover}{}%
+\bookmark[dest=inside-front-cover,level=section]{封二}%
+\includepdf[pages=2]{sichuan-cookbook.pdf}
+\cleardoublepage
+
+\hypertarget{half-title}{}%
+\bookmark[dest=half-title,level=section]{书名页}%
+\pdfoverlaySetPDF{preview.pdf}
+\includepdf[pages=3]{sichuan-cookbook.pdf}
+\cleardoublepage
+
+\hypertarget{frontispiece}{}%
+\bookmark[dest=frontispiece,level=section]{卷首插图}%
+\pdfoverlaySetPDF{preview.pdf}
+\includepdf[pages=5]{sichuan-cookbook.pdf}
+\cleardoublepage
+
+\hypertarget{title-page}{}%
+\bookmark[dest=title-page,level=section]{标题页}%
+\pdfoverlaySetPDF{preview.pdf}
+\includepdf[pages=7]{sichuan-cookbook.pdf}
+\clearpage
+\hypertarget{copyright}{}%
+\bookmark[dest=copyright,level=section]{版权页}%
+\pdfoverlaySetPDF{sample.pdf}
+\includepdf[pages=8]{sichuan-cookbook.pdf}
+\cleardoublepage
+
+\hypertarget{chairman-mao-quotes}{}%
+\bookmark[dest=chairman-mao-quotes,level=section]{毛主席語录}%
+\includepdf[pages=9]{sichuan-cookbook.pdf}
+\cleardoublepage
+
+% Title page 1972
+\hypertarget{title-page-1972}{}%
+\bookmark[dest=title-page-1972,level=section]{1972年标题页}%
+\includepdf[pages=11]{sichuan-cookbook.pdf}
+\cleardoublepage
+
+% Preface
+\hypertarget{preface}{}%
+\bookmark[dest=preface,level=section]{编印说明}%
+\includepdf[pages=13]{sichuan-cookbook.pdf}
+\cleardoublepage
+
+\frontmatter
+
+\pagestyle{fancy}
+\hypertarget{table-of-contents}{}%
+\bookmark[dest=table-of-contents,level=section]{目录}%
+\includepdf[pages={15-21}]{sichuan-cookbook.pdf}
+
+\mainmatter
+
+\hypertarget{chapter1}{}%
+\bookmark[dest=chapter1,level=chapter]{肉食类}%
+\includepdf[pages={23-26}]{sichuan-cookbook.pdf}
+\cleardoublepage
+
+\hypertarget{chapter2}{}%
+\bookmark[dest=chapter2,level=chapter]{鸡鸭类}%
+\hypertarget{chapter3}{}%
+\bookmark[dest=chapter3,level=chapter]{鱼虾类}%
+\blankpage{5--194}
+\cleardoublepage
+
+\setcounter{page}{195}%
+\hypertarget{chapter4}{}%
+\bookmark[dest=chapter4,level=chapter]{山海味类}%
+\includepdf[pages={217-218}]{sichuan-cookbook.pdf}
+\cleardoublepage
+
+\hypertarget{chapter5}{}%
+\bookmark[dest=chapter5,level=chapter]{甜食类}%
+\hypertarget{chapter6}{}%
+\bookmark[dest=chapter6,level=chapter]{蔬菜类}%
+\hypertarget{chapter7}{}%
+\bookmark[dest=chapter7,level=chapter]{其它类}%
+\hypertarget{chapter8}{}%
+\bookmark[dest=chapter8,level=chapter]{重庆市部分菜肴}%
+\blankpage{197--300}
+\cleardoublepage
+
+\appendix
+
+\setcounter{page}{301}%
+\bookmarksetup{startatroot}%
+\hypertarget{collation-notes}{}%
+\bookmark[dest=collation-notes,level=section]{校勘记}%
+\includepdf[pages={323-324}]{sichuan-cookbook.pdf}
+\cleardoublepage
+\blankpage{303--306}
+\cleardoublepage
+\hypertarget{index}{}%
+\bookmark[dest=index,level=section]{索引}%
+\includepdf[pages={329-330}]{sichuan-cookbook.pdf}
+\cleardoublepage
+\blankpage{309--324}
+\cleardoublepage
+
+\backmatter
+
+\pagestyle{empty}
+\pagenumbering{Alph}%   Upper case letter page numbers (and reset to 1)
+\setcounter{page}{25}%  Letter Y
+\bookmarksetup{startatroot}%
+\hypertarget{inside-back-cover}{}%
+\bookmark[dest=inside-back-cover,level=section]{封三}%
+\includepdf[pages={349}]{sichuan-cookbook.pdf}
+\clearpage
+
+% Back cover
+\hypertarget{back-cover}{}%
+\bookmark[dest=back-cover,level=section]{封底}%
+\includepdf[pages={350}]{sichuan-cookbook.pdf}
+
+\end{cookbook}
+\end{document}
+
+% vim: filetype=tex noautoindent nojoinspaces
+% vim: fileencoding=utf-8 formatoptions+=m
+% vim: textwidth=78 tabstop=4 shiftwidth=4 softtabstop=4

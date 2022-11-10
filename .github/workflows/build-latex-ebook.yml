@@ -35,5 +35,6 @@ jobs:
         path: |
           latex/book-cover.pdf
           latex/sichuan-cookbook.pdf
+          latex/sichuan-cookbook-sample.pdf
         if-no-files-found: error
         retention-days: 90
