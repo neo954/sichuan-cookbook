@@ -32,9 +32,11 @@ GPG_SIGNING_KEY:=A8B78637C10E5FC5306D8C63354783CF5CD9EE77
 
 build: sichuan-cookbook.pdf
 
+sample: sichuan-cookbook-sample.pdf
+
 all: pdf
 
-pdf: book-cover.pdf sichuan-cookbook.pdf
+pdf: book-cover.pdf sichuan-cookbook.pdf sichuan-cookbook-sample.pdf
 
 signed: book-cover.s.pdf sichuan-cookbook.s.pdf
 
@@ -70,6 +72,9 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	makeindex $(subst .tex,.idx,$<)
 	xelatex -no-pdf $< $(word 2,$^)
 	bash tinker-index.sh $(subst .tex,.idx,$<)
+
+sichuan-cookbook-sample.xdv: sichuan-cookbook-sample.tex cookbook.cls \
+	preview.pdf sample.pdf sichuan-cookbook.pdf
 
 git-revision.tex: $(wildcard *.cls) $(wildcard *.eps) \
 	$(filter-out git-revision.tex, $(wildcard *.tex))
