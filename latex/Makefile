@@ -35,10 +35,11 @@ all: pdf
 pdf: book-cover.pdf sichuan-cookbook.pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls \
-	git-revision.tex title-page.tex \
+	git-revision.tex half-title.tex frontispiece.tex title-page.tex \
 	copyright.tex chairman-mao-quotes.tex title-page-1972.tex \
 	preface.tex $(wildcard recipe-*.tex) collation-notes.tex \
-	front-cover.pdf quux-logo.pdf zanthoxylum-planispinum.pdf \
+	front-cover.pdf quux-logo.pdf \
+	sagittaria-sagittifolia.pdf zanthoxylum-planispinum.pdf \
 	illustration-001.pdf illustration-002a.pdf illustration-002b.pdf \
 	illustration-002c.pdf illustration-003.pdf illustration-004.pdf \
 	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
