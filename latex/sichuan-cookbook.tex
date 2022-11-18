@@ -585,8 +585,16 @@
 
 \pagestyle{empty}
 \pagenumbering{Alph}%   Upper case letter page numbers (and reset to 1)
-\setcounter{page}{25}%  Letter Y
+\setcounter{page}{23}%  Letter W
 \bookmarksetup{startatroot}%
+\null%
+\clearpage
+\hypertarget{colophon}{}%
+\bookmark[dest=colophon,level=section]{版次标记}%
+\enlargethispage{1.75\baselineskip}
+\input{colophon.tex}
+\cleardoublepage
+
 \hypertarget{inside-back-cover}{}%
 \bookmark[dest=inside-back-cover,level=section]{封三}%
 \null%
