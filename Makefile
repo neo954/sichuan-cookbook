@@ -278,5 +278,8 @@ deps: FILELIST
 		echo "proof/$${PAGE_ONE}-$${PAGE_TWO}-$${SIDE}.png: $${FILE_ONE} $${FILE_TWO}" ; \
 	done <$< >$@
 
+latex:
+	$(MAKE) -C latex all
+
 include deps
-.PHONY: all build clean pdf txt
+.PHONY: all build clean pdf txt latex
