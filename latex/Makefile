@@ -93,7 +93,7 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 	convert $^ $@
 
 %.pdf: %.eps
-	epstopdf --res=600 $^ $@
+	epstopdf --res=600 --hires $^ $@
 
 %.pdf: %.ps
 	ps2pdf -r600 $^ $@
