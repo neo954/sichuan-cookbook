@@ -28,11 +28,15 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+GPG_SIGNING_KEY:=A8B78637C10E5FC5306D8C63354783CF5CD9EE77
+
 build: sichuan-cookbook.pdf
 
 all: pdf
 
 pdf: book-cover.pdf sichuan-cookbook.pdf
+
+signed: book-cover-signed.pdf sichuan-cookbook-signed.pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	half-title.tex frontispiece.tex title-page.tex copyright.tex \
@@ -76,6 +80,14 @@ back-cover.xdv: back-cover.tex cookbook.cls back-cover-background.pdf \
 book-cover.xdv: book-cover.tex git-revision.tex \
 	front-cover.pdf back-cover.pdf quux-logo.pdf position-indicator.pdf
 
+%-signed.pdf: %.pdf
+	cat $^ >$^.tmp
+	gpg --export -a $(GPG_SIGNING_KEY) >>$^.tmp
+	gpg --clear-sign --not-dash-escaped \
+		--local-user $(GPG_SIGNING_KEY) \
+		--output=$@ $^.tmp
+	$(RM) $^.tmp
+
 %.xdv: %.tex
 	$(RM) $(subst .tex,.aux,$<) $(subst .tex,.toc,$<)
 	xelatex -no-pdf $^
@@ -116,6 +128,6 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 clean:
 	$(RM) git-revision.tex
 	$(RM) *.aux *.dvi *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
-		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent
+		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent *.tmp
 
 .PHONY: all build clean pdf
