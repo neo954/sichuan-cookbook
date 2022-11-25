@@ -38,6 +38,8 @@ pdf: book-cover.pdf sichuan-cookbook.pdf
 
 signed: book-cover-signed.pdf sichuan-cookbook-signed.pdf
 
+distilled: book-cover-distilled.pdf sichuan-cookbook-distilled.pdf
+
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	half-title.tex frontispiece.tex title-page.tex copyright.tex \
 	chairman-mao-quotes.tex title-page-1972.tex preface.tex \
@@ -88,6 +90,10 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 		--output=$@ $^.tmp
 	$(RM) $^.tmp
 
+%-distilled.pdf: %.pdf
+	gs -dNoOutputFonts -dNOPAUSE -dNOCACHE -dBATCH \
+		-sDEVICE=pdfwrite -r600 -sOutputFile=$@ $^
+
 %.xdv: %.tex
 	$(RM) $(subst .tex,.aux,$<) $(subst .tex,.toc,$<)
 	xelatex -no-pdf $^
@@ -99,7 +105,7 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 	dvips -D 600 -j -Ppdf -o $@ $^
 
 %.eps: %.ps
-	ps2eps $^
+	ps2eps -r 600 $^
 
 %.eps: %.png
 	convert $^ $@
