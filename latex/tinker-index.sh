@@ -281,6 +281,9 @@ function indexentry()
 	*"花椒")
 		keyword="花椒!${keyword}"
 		;;
+	"椒麻")
+		keyword="花椒!${keyword}"
+		;;
 	"胡椒")
 		;;
 	"胡椒"*)
