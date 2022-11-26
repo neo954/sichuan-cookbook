@@ -36,11 +36,11 @@ all: pdf
 
 pdf: book-cover.pdf sichuan-cookbook.pdf
 
-signed: book-cover-signed.pdf sichuan-cookbook-signed.pdf
+signed: book-cover.s.pdf sichuan-cookbook.s.pdf
 
-distilled: book-cover-distilled.pdf sichuan-cookbook-distilled.pdf
+distilled: book-cover.d.pdf sichuan-cookbook.d.pdf
 
-outlined: book-cover-outlined.pdf sichuan-cookbook-outlined.pdf
+outlined: book-cover.o.pdf sichuan-cookbook.o.pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	half-title.tex frontispiece.tex title-page.tex copyright.tex \
@@ -84,7 +84,7 @@ back-cover.xdv: back-cover.tex cookbook.cls back-cover-background.pdf \
 book-cover.xdv: book-cover.tex git-revision.tex \
 	front-cover.pdf back-cover.pdf quux-logo.pdf position-indicator.pdf
 
-%-signed.pdf: %.pdf
+%.s.pdf: %.pdf
 	cat $^ >$^.tmp
 	gpg --export -a $(GPG_SIGNING_KEY) >>$^.tmp
 	gpg --clear-sign --not-dash-escaped \
@@ -92,13 +92,13 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 		--output=$@ $^.tmp
 	$(RM) $^.tmp
 
-%-distilled.pdf: %.pdf
+%.d.pdf: %.pdf
 	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
 		-dAutoRotatePages=/None \
 		-sDEVICE=pdfwrite -r600 \
 		-sOutputFile=$@ $^
 
-%-outlined.pdf: %.pdf
+%.o.pdf: %.pdf
 	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
 		-dAutoRotatePages=/None \
 		-dNoOutputFonts \
