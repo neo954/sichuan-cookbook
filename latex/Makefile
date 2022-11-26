@@ -40,6 +40,8 @@ signed: book-cover-signed.pdf sichuan-cookbook-signed.pdf
 
 distilled: book-cover-distilled.pdf sichuan-cookbook-distilled.pdf
 
+outlined: book-cover-outlined.pdf sichuan-cookbook-outlined.pdf
+
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	half-title.tex frontispiece.tex title-page.tex copyright.tex \
 	chairman-mao-quotes.tex title-page-1972.tex preface.tex \
@@ -91,8 +93,17 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 	$(RM) $^.tmp
 
 %-distilled.pdf: %.pdf
-	gs -dNoOutputFonts -dNOPAUSE -dNOCACHE -dBATCH \
-		-sDEVICE=pdfwrite -r600 -sOutputFile=$@ $^
+	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
+		-dAutoRotatePages=/None \
+		-sDEVICE=pdfwrite -r600 \
+		-sOutputFile=$@ $^
+
+%-outlined.pdf: %.pdf
+	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
+		-dAutoRotatePages=/None \
+		-dNoOutputFonts \
+		-sDEVICE=pdfwrite -r600 \
+		-sOutputFile=$@ $^
 
 %.xdv: %.tex
 	$(RM) $(subst .tex,.aux,$<) $(subst .tex,.toc,$<)
@@ -136,4 +147,4 @@ clean:
 	$(RM) *.aux *.dvi *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
 		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent *.tmp
 
-.PHONY: build all clean pdf signed distilled
+.PHONY: build all clean pdf signed distilled outlined
