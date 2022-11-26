@@ -136,4 +136,4 @@ clean:
 	$(RM) *.aux *.dvi *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
 		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent *.tmp
 
-.PHONY: all build clean pdf
+.PHONY: build all clean pdf signed distilled
