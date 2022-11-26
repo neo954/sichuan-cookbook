@@ -281,4 +281,4 @@ latex:
 	$(MAKE) -C latex all
 
 include deps
-.PHONY: all build clean pdf txt latex
+.PHONY: build all scan proof clean latex
