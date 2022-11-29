@@ -29,8 +29,8 @@
 %
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[%
-	coverheight=210mm,
-	coverwidth=148mm,
+	coverheight=210mm+6mm,
+	coverwidth=148mm+6mm,
 	% Double A Uncoated Paper
 	%  Weight      Thickness    Description
 	% --------------------------------------------------------------------
@@ -40,12 +40,12 @@
 	%
 	% The spine width calculation
 	% ( 352 / 2 ) * 104.72 micron = 18.43072 mm
-	spinewidth=18.43072mm, % For 80 gsm copy paper
-	flapwidth=0mm,
-	wrapwidth=0mm,
+	spinewidth=18.43072mm+6mm, % For 80 gsm copy paper
+	flapwidth=72mm,
+	wrapwidth=5mm,
 	bleedwidth=3mm,
 	marklength=12mm,
-	foldingmargin=true,
+	foldingmargin=false,
 	markthick=0.4pt,
 	markcolor=black,
 	pagecolor=white,
@@ -128,11 +128,17 @@
 }%
 
 \bookcovercomponent{normal}{front}{%
+	\null%
+	\vfill%
 	\includegraphics[page=1]{front-cover.pdf}%
+	\vfill%
 }%
 
 \bookcovercomponent{normal}{back}{%
-	\includegraphics[page=1]{back-cover.pdf}%
+	\null%
+	\vfill%
+	\hfill\includegraphics[page=1]{back-cover.pdf}%
+	\vfill%
 }%
 
 \bookcovercomponent{normal}{spine}{%
@@ -140,7 +146,7 @@
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0\baselineskip}%
 \null%
-\vspace{26.025736mm}%
+\vspace{26.025736mm+3mm}%
 \begin{center}%
 \begingroup%
 \huge\rmfamily\bfseries%
@@ -153,7 +159,7 @@
 \includegraphics[height=10mm, width=10mm]{quux-logo.pdf}%
 {\sffamily\tiny\kern-.5em\lower.5ex\hbox{\texttrademark}}%
 \end{center}%
-\vspace{26.025736mm}%
+\vspace{26.025736mm+3mm}%
 }%
 
 % Color bars
@@ -387,6 +393,10 @@
 \hfill%
 \includegraphics[page=1]{position-indicator.pdf}%
 \vspace{1em}
+\vfill%
+
+\hfill\rotatebox{-90}{\footnotesize Hardcover Dust Jacket}
+
 \vfill%
 \vspace{1em}%
 \hfill%
