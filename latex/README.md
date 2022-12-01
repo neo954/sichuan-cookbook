@@ -33,12 +33,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 The goals of the Sichuan Cookbook 1972 LaTex Remake are listed as follows.
 
-* [ ] A decent remake of the entire book with modern information technology.
-* [ ] Keep the same typography as the original paperback book as close as
+* [x] A decent remake of the entire book with modern information technology.
+* [x] Keep the same typography as the original paperback book as close as
       possible.
-* [ ] Recreate the paperback book's front cover to a vector graphics image.
-* [ ] Recreate illustrations in the book to vector graphics images.
-* [ ] Keep the LaTeX code in each recipe file simple and clear. Providing
+* [x] Recreate the paperback book's front cover to a vector graphics image.
+* [x] Recreate illustrations in the book to vector graphics images.
+* [x] Keep the LaTeX code in each recipe file simple and clear. Providing
       structured data, which can be further processed elsewhere. (Like convert
       into JSON or XML.)
 
@@ -55,6 +55,7 @@ The goals of the Sichuan Cookbook 1972 LaTex Remake are listed as follows.
   * FandolKai
   * TW-Kai
   * TW-Kai-Ext-B
+  * Patch-Kai
 
 [modeline1]: # ( vim: set filetype=markdown noautoindent nojoinspaces: )
 [modeline2]: # ( vim: set fileencoding=utf-8 spell spelllang=en: )
