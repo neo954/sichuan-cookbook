@@ -110,7 +110,7 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 	xelatex -no-pdf $^
 
 %.pdf: %.xdv
-	xdvipdfmx -r 600 -E -z 9 -o $@ $^
+	xdvipdfmx -r 600 -E -z 9 -V 7 -o $@ $^
 
 %.ps: %.dvi
 	dvips -D 600 -j -Ppdf -o $@ $^
@@ -122,7 +122,7 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 	convert $^ $@
 
 %.pdf: %.eps
-	epstopdf --res=600 --hires $^ $@
+	epstopdf --res=600 --hires --gsopt=-dCompatibilityLevel=1.7 $^ $@
 
 %.pdf: %.ps
 	ps2pdf -r600 $^ $@
