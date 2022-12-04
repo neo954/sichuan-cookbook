@@ -42,6 +42,11 @@ distilled: book-cover.d.pdf sichuan-cookbook.d.pdf
 
 outlined: book-cover.o.pdf sichuan-cookbook.o.pdf
 
+zip: sichuan-cookbook-pdf.zip
+
+sichuan-cookbook-pdf.zip: book-cover.pdf sichuan-cookbook.pdf
+	zip -9 $@ $^
+
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	half-title.tex frontispiece.tex title-page.tex copyright.tex \
 	chairman-mao-quotes.tex title-page-1972.tex preface.tex \
@@ -145,6 +150,6 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 clean:
 	$(RM) git-revision.tex
 	$(RM) *.aux *.dvi *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
-		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent *.tmp
+		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent *.tmp *.zip
 
-.PHONY: build all clean pdf signed distilled outlined
+.PHONY: build all clean pdf signed distilled outlined zip
