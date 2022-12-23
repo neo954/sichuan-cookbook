@@ -42,6 +42,8 @@ distilled: book-cover.d.pdf sichuan-cookbook.d.pdf
 
 outlined: book-cover.o.pdf sichuan-cookbook.o.pdf
 
+print: book-cover.o.pdf sichuan-cookbook-i.o.pdf
+
 zip: sichuan-cookbook-pdf.zip
 
 sichuan-cookbook-pdf.zip: book-cover.pdf sichuan-cookbook.pdf
@@ -88,6 +90,14 @@ back-cover.xdv: back-cover.tex cookbook.cls back-cover-background.pdf \
 
 book-cover.xdv: book-cover.tex git-revision.tex \
 	front-cover.pdf back-cover.pdf quux-logo.pdf position-indicator.pdf
+
+sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
+	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
+		-dAutoRotatePages=/None \
+		-dFirstPage=3 -dLastPage=346 \
+		-dNoOutputFonts \
+		-sDEVICE=pdfwrite -r600 \
+		-sOutputFile=$@ $^
 
 %.s.pdf: %.pdf
 	cat $^ >$^.tmp
@@ -152,4 +162,4 @@ clean:
 	$(RM) *.aux *.dvi *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
 		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent *.tmp *.zip
 
-.PHONY: build all clean pdf signed distilled outlined zip
+.PHONY: build all clean pdf print signed distilled outlined zip
