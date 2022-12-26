@@ -49,12 +49,12 @@ The goal of this project is to digitize *Sichuan Cookbook* properly.
 * [x] Render $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ documents and create a PDF book.
 * [x] Optionally, add comments to the book based on research.
 
-According to the Copyright Law of China, concerning a work of a legal
-person or other organization, the term of protection for the copyrights to
-that work shall be 50 years and shall end on Dec 31 of the 50th year after the
-work's first publication. Thus, after Dec 31, 2022, Sichuan Cookbook 1972 will
-enter the public domain. Therefore, this project is planned to be released to
-the public on Jan 1, 2023.
+According to the Copyright Law of China, concerning a work of a legal person
+or other organization, the term of protection for the copyrights to that work
+shall be 50 years and shall end on Dec 31 of the 50th year after the work's
+first publication. Thus, after Dec 31, 2022, the first edition of the
+paperback book, *Sichuan Cookbook* (四川菜谱), entered the public domain.
+Therefore, this project has been released to the public on Jan 1, 2023.
 
 ## Download a digitized copy of the book
 
