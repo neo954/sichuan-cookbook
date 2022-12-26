@@ -47,7 +47,7 @@ The goal of this project is to digitize *Sichuan Cookbook* properly.
       save them as a $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ document.
 * [x] Reproduce the appearance of the original book with $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ typesetting.
 * [x] Render $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ documents and create a PDF book.
-* [ ] Optionally, add comments to the book based on research.
+* [x] Optionally, add comments to the book based on research.
 
 According to the Copyright Law of China, concerning a work of a legal
 person or other organization, the term of protection for the copyrights to
