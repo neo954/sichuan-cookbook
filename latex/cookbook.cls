@@ -301,7 +301,7 @@
 			\mbox{%
 				\hspace{2em}%
 				\makebox[9em][s]{%
-					\mbox{####1####2}\hfil\mbox{####3}%
+					\mbox{####1####2}\hfil\mbox{\null####3}%
 				}%
 				\hspace{2em}%
 			}%
