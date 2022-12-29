@@ -89,7 +89,8 @@ Adobe Lightroom Classic for RAW decoding, perspective distortion correction,
 and some other minor adjustments. To keep large JPEG photos out of
 the git repository, all the JPEG photos are stored in
 ``user-images.githubusercontent.com``. Download all the JPEG photos with the
-following command.  All these JPEG photos are around 625 MiB.
+following command. Please notice the size of all these JPEG photos is around
+625 MiB.
 ```
 make -C jpeg
 ```
@@ -131,7 +132,7 @@ sudo apt-get install -y fonts-cns11643-kai fonts-hanazono fonts-noto texlive-ful
 
 A couple of Chinese character glyphs in Unicode CJK Extension E, Extension G
 do not exist in either Fandol-Kai or TW-Kai. An OpenType font, Patch-Kai is
-created to fill in the gap. Only a handful of glyphs is in it.
+created to fill in the gap. Only a handful of glyphs are in it.
 
 Copy the font file to the local font directory.
 ```
