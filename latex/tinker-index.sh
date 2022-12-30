@@ -336,6 +336,9 @@ function indexentry()
 	"醪糟"*)
 		keyword="醪糟!${keyword}"
 		;;
+	"干酒米粉")
+		keyword="酒米!酒米粉"
+		;;
 	"酒米粉")
 		keyword="酒米!${keyword}"
 		;;
