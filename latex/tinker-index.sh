@@ -679,6 +679,9 @@ function indexentry()
 	"二汤")
 		keyword="汤!${keyword}"
 		;;
+	"盐白菜")
+		keyword="白菜!${keyword}"
+		;;
 	"乌鸡白菜")
 		keyword="白菜!${keyword}"
 		;;
