@@ -84,6 +84,12 @@ function indexentry()
 	"生鲜"*)
 		keyword="${keyword#生鲜}"
 		;;
+	"新鲜"*)
+		keyword="${keyword#新鲜}"
+		;;
+	"新"*)
+		keyword="${keyword#新}"
+		;;
 	"生"*)
 		keyword="${keyword#生}"
 		;;
@@ -203,11 +209,23 @@ function indexentry()
 	*"银耳")
 		keyword="银耳"
 		;;
+	"绍酒")
+		keyword="黄酒!${keyword}"
+		;;
+	"料酒")
+		keyword="黄酒!${keyword}"
+		;;
 	"菜")
 		keyword="青菜!${keyword}"
 		;;
 	"菜心")
 		keyword="青菜!青菜心!${keyword}"
+		;;
+	"小菜")
+		keyword="青菜!${keyword}"
+		;;
+	"泡青菜")
+		keyword="青菜!${keyword}"
 		;;
 	"五香面")
 		keyword="五香粉!${keyword}"
@@ -264,9 +282,13 @@ function indexentry()
 		keyword="姜!${keyword}"
 		;;
 	"冰糖")
+		keyword="糖!${keyword}"
 		;;
 	"冰糖"*)
-		keyword="冰糖!${keyword}"
+		keyword="糖!冰糖!${keyword}"
+		;;
+	*"糖"*)
+		keyword="糖!${keyword}"
 		;;
 	"鸡蛋")
 		;;
@@ -343,10 +365,10 @@ function indexentry()
 		keyword="醪糟!${keyword}"
 		;;
 	"干酒米粉")
-		keyword="酒米!酒米粉"
+		keyword="糯米!酒米粉"
 		;;
-	"酒米粉")
-		keyword="酒米!${keyword}"
+	"酒米"*)
+		keyword="糯米!${keyword}"
 		;;
 	"韭菜")
 		;;
@@ -405,6 +427,9 @@ function indexentry()
 	"芝麻酱")
 		keyword="芝麻!${keyword}"
 		;;
+	"黑芝麻")
+		keyword="芝麻!${keyword}"
+		;;
 	"麻油")
 		keyword="香油!${keyword}"
 		;;
@@ -452,8 +477,11 @@ function indexentry()
 	"青菜心")
 		keyword="青菜!${keyword}"
 		;;
-	"绿色小菜")
+	"青叶菜")
 		keyword="青菜!${keyword}"
+		;;
+	"绿色小菜")
+		keyword="青菜!小菜!${keyword}"
 		;;
 	"绿色菜叶")
 		keyword="青菜!${keyword}"
