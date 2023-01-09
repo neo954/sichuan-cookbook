@@ -203,6 +203,12 @@ function indexentry()
 	*"银耳")
 		keyword="银耳"
 		;;
+	"菜")
+		keyword="青菜!${keyword}"
+		;;
+	"菜心")
+		keyword="青菜!青菜心!${keyword}"
+		;;
 	"五香面")
 		keyword="五香粉!${keyword}"
 		;;
@@ -612,6 +618,9 @@ function indexentry()
 	"瘦肉")
 		keyword="猪瘦肉!${keyword}"
 		;;
+	"猪肋骨")
+		keyword="猪骨!${keyword}"
+		;;
 	"猪排骨")
 		;;
 	"排骨")
@@ -714,6 +723,9 @@ function indexentry()
 		;;
 	"仔母鸡")
 		keyword="鸡!${keyword}"
+		;;
+	"鸡骨头")
+		keyword="鸡骨!${keyword}"
 		;;
 	"仔鸡肉")
 		keyword="鸡肉!${keyword}"
@@ -900,6 +912,18 @@ do
 	PAGE="${PAGE%\}*}"
 
 	# Processing
+	case "${KEYWORD}" in
+	"鸡足（或鸡骨、猪肋骨均可）")
+		KEYWORD="鸡足或鸡骨或猪肋骨"
+		;;
+	"鲜豌豆（或黄豆）")
+		KEYWORD="鲜豌豆或鲜黄豆"
+		;;
+	"鲜菜（或心）")
+		KEYWORD="鲜菜或鲜菜心"
+		;;
+	esac
+
 	KEYWORD="${KEYWORD%%（*}"
 
 	while [[ "${KEYWORD}" =~ 、 ]]
