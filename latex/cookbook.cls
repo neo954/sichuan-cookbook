@@ -122,7 +122,7 @@
 		title=索引,
 		noautomatic=true,
 		columns=2,
-		columnsep=13bp,
+		columnsep=12bp,
 	]
 	\indexsetup{%
 		level=\indextitle,
