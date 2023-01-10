@@ -978,7 +978,7 @@ function stroke_encode()
 	while [ -n "${word}" ]
 	do
 		stroke="${stroke}$(awk "/^${word:0:1}/ { printf \"%s\", \$2 }" \
-			stroke.txt)"
+			stroke.txt)${word:0:1}"
 		word="${word:1}"
 	done
 
