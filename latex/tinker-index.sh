@@ -486,6 +486,9 @@ function indexentry()
 	"绿色菜叶")
 		keyword="青菜!${keyword}"
 		;;
+	"瓢儿白")
+		keyword="青菜!${keyword}"
+		;;
 	"青笋片")
 		keyword="青笋!${keyword}"
 		;;
