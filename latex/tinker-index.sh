@@ -944,88 +944,35 @@ function sort_in_stoke()
 	read -r k1 k2 k3 < <(echo "${keyword}")
 	IFS="${old_ifs}"
 
-	s1="$(num_to_letter "$(stroke "${k1}")")"
+	s1="$(stroke_encode "${k1}")"
 	keyword="${s1}@${k1}"
 
 	if [ -n "${k2}" ]
 	then
-		s2="$(num_to_letter "$(stroke "${k2}")")"
+		s2="$(stroke_encode "${k2}")"
 		keyword="${keyword}!${s2}@${k2}"
 	fi
 
 	if [ -n "${k3}" ]
 	then
-		s3="$(num_to_letter "$(stroke "${k3}")")"
+		s3="$(stroke_encode "${k3}")"
 		keyword="${keyword}!${s3}@${k3}"
 	fi
 
 	echo "${keyword}"
 }
 
-function stroke()
+function stroke_encode()
 {
-	local char="${1:0:1}"
+	local word="$1"
 
-	awk "/^${char}/ { print length(\$2) }" sunwb-strokeorder.txt
-}
+	while [ -n "${word}" ]
+	do
+		awk "/^${word:0:1}/ { printf \"%s\", \$2 }" stroke.txt
+		word="${word:1}"
+	done
 
-function num_to_letter()
-{
-	case "$1" in
-	'1')	echo 'A'	;;
-	'2')	echo 'B'	;;
-	'3')	echo 'C'	;;
-	'4')	echo 'D'	;;
-	'5')	echo 'E'	;;
-	'6')	echo 'F'	;;
-	'7')	echo 'G'	;;
-	'8')	echo 'H'	;;
-	'9')	echo 'I'	;;
-	'10')	echo 'J'	;;
-	'11')	echo 'K'	;;
-	'12')	echo 'L'	;;
-	'13')	echo 'M'	;;
-	'14')	echo 'N'	;;
-	'15')	echo 'O'	;;
-	'16')	echo 'P'	;;
-	'17')	echo 'Q'	;;
-	'18')	echo 'R'	;;
-	'19')	echo 'S'	;;
-	'20')	echo 'T'	;;
-	'21')	echo 'U'	;;
-	'22')	echo 'V'	;;
-	'23')	echo 'W'	;;
-	'24')	echo 'X'	;;
-	'25')	echo 'Y'	;;
-	'26')	echo 'Z'	;;
-	'27')	echo 'a'	;;
-	'28')	echo 'b'	;;
-	'29')	echo 'c'	;;
-	'30')	echo 'd'	;;
-	'31')	echo 'e'	;;
-	'32')	echo 'f'	;;
-	'33')	echo 'g'	;;
-	'34')	echo 'h'	;;
-	'35')	echo 'i'	;;
-	'36')	echo 'j'	;;
-	'37')	echo 'k'	;;
-	'38')	echo 'l'	;;
-	'39')	echo 'm'	;;
-	'40')	echo 'n'	;;
-	'41')	echo 'o'	;;
-	'42')	echo 'p'	;;
-	'43')	echo 'q'	;;
-	'44')	echo 'r'	;;
-	'45')	echo 's'	;;
-	'46')	echo 't'	;;
-	'47')	echo 'u'	;;
-	'48')	echo 'v'	;;
-	'49')	echo 'w'	;;
-	'50')	echo 'x'	;;
-	'51')	echo 'y'	;;
-	'52')	echo 'z'	;;
-	*)	echo '0'	;;
-	esac
+	echo
 }
 
 echo "Tinker index file ${INDEX_FILE} ..."
