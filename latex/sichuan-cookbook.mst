@@ -21,7 +21,7 @@ group_skip     ""
 
 headings_flag 1
 heading_prefix "\n  %\n  \\lettergroup{"
-heading_suffix "}\n  %\n"
+heading_suffix "}\n  %"
 
 %numhead_positive "数字"
 %numhead_negative "数字"
