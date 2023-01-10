@@ -20,7 +20,7 @@ postamble "\n\n\\end{theindex}\n"
 group_skip     ""
 
 headings_flag 1
-heading_prefix "  %\n  \\lettergroup{"
+heading_prefix "\n  %\n  \\lettergroup{"
 heading_suffix "}\n  %\n"
 
 %numhead_positive "数字"
