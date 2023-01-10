@@ -930,7 +930,7 @@ function indexentry()
 	keyword="$(sort_in_stoke "${keyword}")"
 
 	echo '\indexentry{'"${keyword}"'|hyperpage}{'"${page}"'}'
-	echo -n "[${keyword}@${page}]" >&2
+	echo -n "[${keyword}|${page}]" >&2
 }
 
 function sort_in_stoke()
@@ -962,17 +962,28 @@ function sort_in_stoke()
 	echo "${keyword}"
 }
 
+CACHE_FILE="stroke.cache"
+
 function stroke_encode()
 {
 	local word="$1"
+	local stroke=""
+
+	# Cache file
+	stroke="$(awk "/^${word}\\t/ { printf \"%s\", \$2 }" "${CACHE_FILE}" \
+		2> /dev/null)"
+
+	[ -n "${stroke}" ] && echo "${stroke}" && return
 
 	while [ -n "${word}" ]
 	do
-		awk "/^${word:0:1}/ { printf \"%s\", \$2 }" stroke.txt
+		stroke="${stroke}$(awk "/^${word:0:1}/ { printf \"%s\", \$2 }" \
+			stroke.txt)"
 		word="${word:1}"
 	done
 
-	echo
+	echo -e "${1}\t${stroke}" >>"${CACHE_FILE}"
+	echo "${stroke}"
 }
 
 echo "Tinker index file ${INDEX_FILE} ..."
