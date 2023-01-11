@@ -963,7 +963,7 @@ function stoke_encode()
 }
 
 STROKE_CACHE="stroke.cache"
-STROKE_DICT="stroke.txt"
+STROKE_DICT="stroke.dict"
 
 function stroke_seek()
 {
