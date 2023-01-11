@@ -160,6 +160,7 @@ sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 clean:
 	$(RM) git-revision.tex
 	$(RM) *.aux *.dvi *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
-		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent *.tmp *.zip
+		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent *.tmp *.zip \
+		*.cache
 
 .PHONY: build all clean pdf print signed distilled outlined zip
