@@ -42,7 +42,17 @@ The goals of the Sichuan Cookbook 1972 LaTex Remake are listed as follows.
       structured data, which can be further processed elsewhere. (Like convert
       into JSON or XML.)
 
-### Fonts
+The following extra works have been done.
+
+* [x] A half title page.
+* [x] A frontispiece.
+* [x] A new title page for the remake edition.
+* [x] A copyright page.
+* [x] Collation notes.
+* [x] Generated ingredients index ordered by number of strokes.
+* [x] Colophon.
+
+### Fonts Used in This Book
 
 * Songti
   * Noto Serif CJK SC
