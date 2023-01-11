@@ -1,29 +1,18 @@
 preamble "\\begin{theindex}
-  \\providecommand*\\lettergroup[1]{%
+  \\input{stroke.tex}%
+  \\providecommand*\\indexgroup[1]{%
   \\indexspace
-  \\item {\\sffamily【\\,\\ifthenelse{\\equal{#1}{A}}{一画}{%
-  \\ifthenelse{\\equal{#1}{B}}{二画}{\\ifthenelse{\\equal{#1}{C}}{三画}{%
-  \\ifthenelse{\\equal{#1}{D}}{四画}{\\ifthenelse{\\equal{#1}{E}}{五画}{%
-  \\ifthenelse{\\equal{#1}{F}}{六画}{\\ifthenelse{\\equal{#1}{G}}{七画}{%
-  \\ifthenelse{\\equal{#1}{H}}{八画}{\\ifthenelse{\\equal{#1}{I}}{九画}{%
-  \\ifthenelse{\\equal{#1}{J}}{十画}{\\ifthenelse{\\equal{#1}{K}}{十一画}{%
-  \\ifthenelse{\\equal{#1}{L}}{十二画}{\\ifthenelse{\\equal{#1}{M}}{十三画}{%
-  \\ifthenelse{\\equal{#1}{N}}{十四画}{\\ifthenelse{\\equal{#1}{O}}{十五画}{%
-  \\ifthenelse{\\equal{#1}{P}}{十六画}{\\ifthenelse{\\equal{#1}{Q}}{十七画}{%
-  \\ifthenelse{\\equal{#1}{R}}{十八画}{\\ifthenelse{\\equal{#1}{S}}{十九画}{%
-  \\ifthenelse{\\equal{#1}{T}}{二十画}{\\ifthenelse{\\equal{#1}{U}}{二十一画}{%
-  \\ifthenelse{\\equal{#1}{V}}{二十二画}{二十二画以上}}}}}}}}}}}}}}}}}}}}}}%
-  \\,】}\\nopagebreak}\n"
+  \\item {\\sffamily【\\,\\stroke{#1}\\,】}\\nopagebreak}\n"
 
 postamble "\n\n\\end{theindex}\n"
 
 group_skip     ""
 
 headings_flag 1
-heading_prefix "\n  %\n  \\lettergroup{"
+heading_prefix "\n  %\n  \\indexgroup{"
 heading_suffix "}\n  %"
 
-%numhead_positive "数字"
-%numhead_negative "数字"
-%symhead_positive "符号"
-%symhead_negative "符号"
+numhead_positive "数字"
+numhead_negative "数字"
+symhead_positive "符号"
+symhead_negative "符号"
