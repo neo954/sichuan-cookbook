@@ -927,13 +927,13 @@ function indexentry()
 		keyword="${keyword#水发}!${keyword}";;
 	esac
 
-	keyword="$(sort_in_stoke "${keyword}")"
+	keyword="$(stoke_encode "${keyword}")"
 
 	echo '\indexentry{'"${keyword}"'|hyperpage}{'"${page}"'}'
 	echo -n "[${keyword}|${page}]" >&2
 }
 
-function sort_in_stoke()
+function stoke_encode()
 {
 	local keyword="$1"
 	local k1 k2 k3
@@ -944,45 +944,46 @@ function sort_in_stoke()
 	read -r k1 k2 k3 < <(echo "${keyword}")
 	IFS="${old_ifs}"
 
-	s1="$(stroke_encode "${k1}")"
+	s1="$(stroke_seek "${k1}")"
 	keyword="${s1}@${k1}"
 
 	if [ -n "${k2}" ]
 	then
-		s2="$(stroke_encode "${k2}")"
+		s2="$(stroke_seek "${k2}")"
 		keyword="${keyword}!${s2}@${k2}"
 	fi
 
 	if [ -n "${k3}" ]
 	then
-		s3="$(stroke_encode "${k3}")"
+		s3="$(stroke_seek "${k3}")"
 		keyword="${keyword}!${s3}@${k3}"
 	fi
 
 	echo "${keyword}"
 }
 
-CACHE_FILE="stroke.cache"
+STROKE_CACHE="stroke.cache"
+STROKE_DICT="stroke.txt"
 
-function stroke_encode()
+function stroke_seek()
 {
 	local word="$1"
 	local stroke=""
 
 	# Cache file
-	stroke="$(awk "/^${word}\\t/ { printf \"%s\", \$2 }" "${CACHE_FILE}" \
-		2> /dev/null)"
+	stroke="$(awk "/^${word}\\t/ { printf \"%s\", \$2 }" \
+		"${STROKE_CACHE}" 2>/dev/null)"
 
 	[ -n "${stroke}" ] && echo "${stroke}" && return
 
 	while [ -n "${word}" ]
 	do
-		stroke="${stroke}$(awk "/^${word:0:1}/ { printf \"%s\", \$2 }" \
-			stroke.txt)${word:0:1}"
+		stroke="${stroke}$(awk "/^${word:0:1}/ { print \$2 \$1 }" \
+			"${STROKE_DICT}")"
 		word="${word:1}"
 	done
 
-	echo -e "${1}\t${stroke}" >>"${CACHE_FILE}"
+	echo -e "${1}\t${stroke}" >>"${STROKE_CACHE}"
 	echo "${stroke}"
 }
 
