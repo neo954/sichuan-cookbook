@@ -933,11 +933,19 @@ function indexentry()
 	echo -n "[${keyword}|${page}]" >&2
 }
 
+STROKE_L2_CACHE="stroke.l2.cache"
+
 function stoke_encode()
 {
 	local keyword="$1"
 	local k1 k2 k3
 	local s1 s2 s3
+
+	# Cache file
+	stroke="$(awk "/^${keyword}\\t/ { printf \"%s\", \$2 }" \
+		"${STROKE_L2_CACHE}" 2>/dev/null)"
+
+	[ -n "${stroke}" ] && echo "${stroke}" && return
 
 	old_ifs="$IFS"
 	IFS="!"
@@ -945,21 +953,22 @@ function stoke_encode()
 	IFS="${old_ifs}"
 
 	s1="$(stroke_seek "${k1}")"
-	keyword="${s1}@${k1}"
+	stroke="${s1}@${k1}"
 
 	if [ -n "${k2}" ]
 	then
 		s2="$(stroke_seek "${k2}")"
-		keyword="${keyword}!${s2}@${k2}"
+		stroke="${stroke}!${s2}@${k2}"
 	fi
 
 	if [ -n "${k3}" ]
 	then
 		s3="$(stroke_seek "${k3}")"
-		keyword="${keyword}!${s3}@${k3}"
+		stroke="${stroke}!${s3}@${k3}"
 	fi
 
-	echo "${keyword}"
+	echo -e "${1}\t${stroke}" >>"${STROKE_L2_CACHE}"
+	echo "${stroke}"
 }
 
 STROKE_CACHE="stroke.cache"
