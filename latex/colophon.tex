@@ -45,8 +45,25 @@
 
 \vfill
 
+\begingroup%
+% Enlarge the \textwidth 10mm
+\begin{list}{}{%
+        \setlength{\topsep}{0pt}%
+        \setlength{\leftmargin}{-5mm}%
+        \setlength{\rightmargin}{-5mm}%
+        \setlength{\listparindent}{\parindent}%
+        \setlength{\itemindent}{\parindent}%
+        \setlength{\parsep}{\parskip}%
+}%
+\item[]%
+
+\begin{tikzpicture}[every node/.style={inner sep=0pt}]
+\node[text width=82mm,align=left](Text){%
+\null%
+\vspace{2.625\baselineskip}%
+
 \begin{tabbing}
-\hspace{9.5625em}\= \kill
+\hspace{9.5em}\= \kill
 \textsc{git} commit name:       \>\texttt{\gitcommitname}\\
 \textsc{git} commit hash:       \>\texttt{\gitcommithash}\\
 \textsc{git} committer date:    \>\texttt{\gitcommitterdate}\\
@@ -54,12 +71,37 @@
 \textsc{pdf} build host:        \>\texttt{\pdfbuildhost}
 \end{tabbing}
 
+\vspace{1\baselineskip}%
+
 This book is composed in \XeLaTeX.
 
-\vspace{1\baselineskip}
+\vspace{1\baselineskip}%
 
 \textsc{Quux} System and Technology
 
+\vspace{2.1875\baselineskip}%
+\null%
+};
+\node[shift={(-10mm,10mm)},anchor=north west](CNW)
+at (Text.north west) {\pgfornament[width=18mm]{61}};
+\node[shift={(10mm,10mm)},anchor=north east](CNE)
+at (Text.north east) {\pgfornament[width=18mm,symmetry=v]{61}};
+\node[shift={(-10mm,-10mm)},anchor=south west](CSW)
+at (Text.south west) {\pgfornament[width=18mm,symmetry=h]{61}};
+\node[shift={(10mm,-10mm)},anchor=south east](CSE)
+at (Text.south east) {\pgfornament[width=18mm,symmetry=c]{61}};
+\node[shift={(0mm,10mm)}](CN) at (Text.north) {};
+\node[shift={(0mm,-10mm)}](CS) at (Text.south) {};
+\pgfornamenthline{CNW}{CN}{north}{87}
+\pgfornamenthline{CN}{CNE}{north}{87}
+\pgfornamenthline{CSW}{CS}{south}{87}
+\pgfornamenthline{CS}{CSE}{south}{87}
+\pgfornamentvline{CNW}{CSW}{west}{87}
+\pgfornamentvline{CNE}{CSE}{east}{87}
+\end{tikzpicture}
+
+\end{list}
+\endgroup%
 \endgroup%
 
 % vim: filetype=tex noautoindent nojoinspaces spell spelllang=en
