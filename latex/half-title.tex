@@ -34,7 +34,17 @@
 \vfill%
 
 \begin{center}%
+
+\begin{tikzpicture}[every node/.style={inner sep=0pt}]
+\node[text width=80mm,align=center](Text){%
 {\zihao{1}\bfseries \makebox[3.666666em][s]{四川菜谱}}%
+};
+\node[shift={(0mm,12.5mm)},anchor=north](CN)
+at (Text.north) {\pgfornament[width=28mm,symmetry=h]{75}};
+\node[shift={(0mm,-12.5mm)},anchor=south](CS)
+at (Text.south) {\pgfornament[width=28mm]{75}};
+\end{tikzpicture}
+
 \end{center}%
 
 \vfill%
