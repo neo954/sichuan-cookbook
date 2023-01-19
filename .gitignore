@@ -15,6 +15,7 @@ epub
 fonts/*.eps
 fonts/*.svg
 jpeg/*.jpg
+latex/*.cache
 latex/git-revision.tex
 proof
 trim
