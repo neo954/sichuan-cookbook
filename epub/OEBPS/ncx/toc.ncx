@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="urn:uuid:70d696aa-7fd1-48c9-9beb-a872fc400495" />
+    <meta name="dtb:depth" content="2" />
+    <meta name="dtb:totalPageCount" content="0" />
+    <meta name="dtb:maxPageNumber" content="0" />
+  </head>
+<docTitle>
+  <text>四川菜谱1972重制版</text>
+</docTitle>
+<navMap>
+  <navPoint id="navPoint1">
+    <navLabel>
+      <text>封面</text>
+    </navLabel>
+    <content src="../Text/cover.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint2">
+    <navLabel>
+      <text>书名页</text>
+    </navLabel>
+    <content src="../Text/half-title.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint3">
+    <navLabel>
+      <text>卷首插图</text>
+    </navLabel>
+    <content src="../Text/frontispiece.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint4">
+    <navLabel>
+      <text>标题页</text>
+    </navLabel>
+    <content src="../Text/title-page.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint5">
+    <navLabel>
+      <text>版权页</text>
+    </navLabel>
+    <content src="../Text/copyright.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint6">
+    <navLabel>
+      <text>毛主席語录</text>
+    </navLabel>
+    <content src="../Text/chairman-mao-quotes.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint7">
+    <navLabel>
+      <text>1972年标题页</text>
+    </navLabel>
+    <content src="../Text/title-page-1972.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint8">
+    <navLabel>
+      <text>目录</text>
+    </navLabel>
+    <content src="../Text/nav.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint9">
+    <navLabel>
+      <text>肉食类</text>
+    </navLabel>
+    <content src="../Text/chapter-001.xhtml" />
+    <navPoint id="navPoint10">
+      <navLabel>
+        <text>回锅肉</text>
+      </navLabel>
+      <content src="../Text/recipe-001.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint11">
+      <navLabel>
+        <text>鱼香肉片</text>
+      </navLabel>
+      <content src="../Text/recipe-002.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint12">
+      <navLabel>
+        <text>小滑肉</text>
+      </navLabel>
+      <content src="../Text/recipe-003.xhtml" />
+    </navPoint>
+  </navPoint>
+  <navPoint id="navPoint13">
+    <navLabel>
+      <text>鸡鸭类</text>
+    </navLabel>
+    <content src="../Text/chapter-002.xhtml" />
+    <navPoint id="navPoint14">
+      <navLabel>
+        <text>怪味鸡</text>
+      </navLabel>
+      <content src="../.." />
+    </navPoint>
+  </navPoint>
+  <navPoint id="navPoint15">
+    <navLabel>
+      <text>鱼虾类</text>
+    </navLabel>
+    <content src="../Text/chapter-003.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint16">
+    <navLabel>
+      <text>山海味类</text>
+    </navLabel>
+    <content src="../Text/chapter-004.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint17">
+    <navLabel>
+      <text>甜食类</text>
+    </navLabel>
+    <content src="../Text/chapter-005.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint18">
+    <navLabel>
+      <text>蔬菜类</text>
+    </navLabel>
+    <content src="../Text/chapter-006.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint19">
+    <navLabel>
+      <text>其它类</text>
+    </navLabel>
+    <content src="../Text/chapter-007.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint20">
+    <navLabel>
+      <text>重庆市部分菜肴</text>
+    </navLabel>
+    <content src="../Text/chapter-008.xhtml" />
+  </navPoint>
+  <navPoint id="navPoint21">
+    <navLabel>
+      <text>校勘记</text>
+    </navLabel>
+    <content src="../.." />
+  </navPoint>
+  <navPoint id="navPoint22">
+    <navLabel>
+      <text>索引</text>
+    </navLabel>
+    <content src="../.." />
+  </navPoint>
+  <navPoint id="navPoint23">
+    <navLabel>
+      <text>版次标记</text>
+    </navLabel>
+    <content src="../.." />
+  </navPoint>
+  <navPoint id="navPoint24">
+    <navLabel>
+      <text>封底</text>
+    </navLabel>
+    <content src="../.." />
+  </navPoint>
+</navMap>
+</ncx>
