@@ -1,0 +1,27 @@
+body {
+	font-family: serif;
+	font-style: normal;
+	font-size: 10.5pt;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.huge {
+	font-size: 22pt;
+}
+
+.large {
+	font-size: 15pt;
+}
+
+.normalsize {
+	font-size: 10.5pt;
+}
+
+.small {
+	font-size: 9pt;
+}
+
+.footnotesize {
+	font-size: 7.5pt;
+}
