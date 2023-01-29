@@ -95,11 +95,14 @@
 \begin{document}
 \begin{bookcover}
 
+\newlength{\backcoverstripwidth}% Width of the grey strip on the back cover
+\setlength{\backcoverstripwidth}{51.496bp}%
+
 \newbookcoverpart{bg front and flap and spine and more}{%
-	\setpartposx{\marklength+\bleedwidth+\flapwidth+\wrapwidth+\coverwidth-51.496bp}%
+	\setpartposx{\marklength+\bleedwidth+\flapwidth+\wrapwidth+\coverwidth-\backcoverstripwidth}%
 	\setpartposy{\marklength}%
 	\setpartheight{\coverheight+2\bleedwidth}%
-	\setpartwidth{51.496bp+\spinewidth+\coverwidth+\wrapwidth+\flapwidth+\bleedwidth}%
+	\setpartwidth{\backcoverstripwidth+\spinewidth+\coverwidth+\wrapwidth+\flapwidth+\bleedwidth}%
 }%
 
 \newbookcoverpart{back mark}{%
