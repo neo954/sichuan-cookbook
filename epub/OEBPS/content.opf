@@ -15,36 +15,36 @@
     <meta name="cover" content="cover-illustration.png"/>
   </metadata>
   <manifest>
-    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
-    <item id="sgc-nav.css" href="Styles/sgc-nav.css" media-type="text/css"/>
-    <item id="nav.xhtml" href="Text/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
-    <item id="recipe-001.xhtml" href="Text/recipe-001.xhtml" media-type="application/xhtml+xml"/>
-    <item id="recipe-002.xhtml" href="Text/recipe-002.xhtml" media-type="application/xhtml+xml"/>
-    <item id="ncx" href="ncx/toc.ncx" media-type="application/x-dtbncx+xml"/>
-    <item id="cover-illustration.png" href="Images/cover-illustration.png" media-type="image/png" properties="cover-image"/>
-    <item id="back-cover-background.png" href="Images/back-cover-background.png" media-type="image/png"/>
-    <item id="illustration-001.png" href="Images/illustration-001.png" media-type="image/png"/>
-    <item id="illustration-002a.png" href="Images/illustration-002a.png" media-type="image/png"/>
-    <item id="illustration-002b.png" href="Images/illustration-002b.png" media-type="image/png"/>
-    <item id="illustration-002c.png" href="Images/illustration-002c.png" media-type="image/png"/>
-    <item id="illustration-003.png" href="Images/illustration-003.png" media-type="image/png"/>
-    <item id="illustration-004.png" href="Images/illustration-004.png" media-type="image/png"/>
-    <item id="illustration-005.png" href="Images/illustration-005.png" media-type="image/png"/>
-    <item id="illustration-006.png" href="Images/illustration-006.png" media-type="image/png"/>
-    <item id="illustration-007.png" href="Images/illustration-007.png" media-type="image/png"/>
-    <item id="illustration-008.png" href="Images/illustration-008.png" media-type="image/png"/>
-    <item id="illustration-009.png" href="Images/illustration-009.png" media-type="image/png"/>
-    <item id="illustration-010.png" href="Images/illustration-010.png" media-type="image/png"/>
-    <item id="illustration-011.png" href="Images/illustration-011.png" media-type="image/png"/>
-    <item id="half-title.xhtml" href="Text/half-title.xhtml" media-type="application/xhtml+xml"/>
-    <item id="frontispiece.xhtml" href="Text/frontispiece.xhtml" media-type="application/xhtml+xml" properties="svg"/>
-    <item id="title-page.xhtml" href="Text/title-page.xhtml" media-type="application/xhtml+xml"/>
-    <item id="sagittaria-sagittifolia.jpg" href="Images/sagittaria-sagittifolia.jpg" media-type="image/jpeg"/>
-    <item id="zanthoxylum-planispinum.jpg" href="Images/zanthoxylum-planispinum.jpg" media-type="image/jpeg"/>
-    <item id="copyright.xhtml" href="Text/copyright.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chairman-mao-quotes.xhtml" href="Text/chairman-mao-quotes.xhtml" media-type="application/xhtml+xml"/>
-    <item id="title-page-1972.xhtml" href="Text/title-page-1972.xhtml" media-type="application/xhtml+xml"/>
-    <item id="recipe.css" href="Styles/recipe.css" media-type="text/css"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="sgc-nav.css" href="styles/sgc-nav.css" media-type="text/css"/>
+    <item id="cookbook.css" href="styles/cookbook.css" media-type="text/css"/>
+    <item id="cover.xhtml" href="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item id="nav.xhtml" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="cover-illustration.png" href="images/cover-illustration.png" media-type="image/png" properties="cover-image"/>
+    <item id="back-cover-background.png" href="images/back-cover-background.png" media-type="image/png"/>
+    <item id="illustration-001.png" href="images/illustration-001.png" media-type="image/png"/>
+    <item id="illustration-002a.png" href="images/illustration-002a.png" media-type="image/png"/>
+    <item id="illustration-002b.png" href="images/illustration-002b.png" media-type="image/png"/>
+    <item id="illustration-002c.png" href="images/illustration-002c.png" media-type="image/png"/>
+    <item id="illustration-003.png" href="images/illustration-003.png" media-type="image/png"/>
+    <item id="illustration-004.png" href="images/illustration-004.png" media-type="image/png"/>
+    <item id="illustration-005.png" href="images/illustration-005.png" media-type="image/png"/>
+    <item id="illustration-006.png" href="images/illustration-006.png" media-type="image/png"/>
+    <item id="illustration-007.png" href="images/illustration-007.png" media-type="image/png"/>
+    <item id="illustration-008.png" href="images/illustration-008.png" media-type="image/png"/>
+    <item id="illustration-009.png" href="images/illustration-009.png" media-type="image/png"/>
+    <item id="illustration-010.png" href="images/illustration-010.png" media-type="image/png"/>
+    <item id="illustration-011.png" href="images/illustration-011.png" media-type="image/png"/>
+    <item id="half-title.xhtml" href="half-title.xhtml" media-type="application/xhtml+xml"/>
+    <item id="frontispiece.xhtml" href="frontispiece.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item id="title-page.xhtml" href="title-page.xhtml" media-type="application/xhtml+xml"/>
+    <item id="sagittaria-sagittifolia.jpg" href="images/sagittaria-sagittifolia.jpg" media-type="image/jpeg"/>
+    <item id="zanthoxylum-planispinum.jpg" href="images/zanthoxylum-planispinum.jpg" media-type="image/jpeg"/>
+    <item id="copyright.xhtml" href="copyright.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chairman-mao-quotes.xhtml" href="chairman-mao-quotes.xhtml" media-type="application/xhtml+xml"/>
+    <item id="title-page-1972.xhtml" href="title-page-1972.xhtml" media-type="application/xhtml+xml"/>
+    <item id="recipe-001.xhtml" href="recipe-001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="recipe-002.xhtml" href="recipe-002.xhtml" media-type="application/xhtml+xml"/>
   </manifest>
   <spine toc="ncx">
     <itemref idref="cover.xhtml"/>
@@ -59,7 +59,7 @@
     <itemref idref="recipe-002.xhtml"/>
   </spine>
   <guide>
-    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
-    <reference type="toc" title="Table of Contents" href="Text/nav.xhtml"/>
+    <reference type="cover" title="Cover" href="cover.xhtml"/>
+    <reference type="toc" title="Table of Contents" href="nav.xhtml"/>
   </guide>
 </package>
