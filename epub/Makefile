@@ -37,11 +37,10 @@ all: epub
 epub: $(OUTPUT_BASENAME).epub
 
 sichuan-cookbook.epub: mimetype META-INF/container.xml \
-	OEBPS/content.opf \
-	$(wildcard OEBPS/Images/*) \
-	$(wildcard OEBPS/ncx/*) \
-	$(wildcard OEBPS/Style/*) \
-	$(wildcard OEBPS/Text/*)
+	OEBPS/content.opf OEBPS/toc.ncx \
+	$(wildcard OEBPS/style/*) \
+	$(wildcard OEBPS/images/*) \
+	$(wildcard OEBPS/*.xhtml)
 	zip -9 $@ $^
 
 validation:
