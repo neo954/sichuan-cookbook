@@ -49,7 +49,7 @@ The goal of this project is to digitize *Sichuan Cookbook* properly.
 * [x] Render $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ documents and create a PDF book.
 * [x] Optionally, add comments to the book based on research.
 
-![Sichuan Cookbook 1972 Remake](https://user-images.githubusercontent.com/12424088/218411911-47653fbb-4790-4531-b7f0-1539ac396582.png)
+![Sichuan Cookbook 1972 Remake](https://user-images.githubusercontent.com/12424088/219829436-a9b9cbe1-0f75-4a0c-8683-4948953561e4.png)
 
 According to the Copyright Law of China, concerning a work of a legal person
 or other organization, the term of protection for the copyrights to that work
