@@ -1,0 +1,11 @@
+---
+name: Report a typo
+about: A typographical error
+title: Typo, U+?????, in recipe ???
+labels: proofreading
+assignees: neo954
+
+---
+
+PDF version ?.??.??
+Page ??, line ???
