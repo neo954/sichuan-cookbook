@@ -22,6 +22,9 @@ jobs:
     - name: Download extra fonts
       run:  mkdir -p ~/.fonts && curl https://glyphwiki.org/font/gw2696945.ttf -o ~/.fonts/sim-ch_n5100_gw2696945.ttf
 
+    - name: Update the package index
+      run:  sudo apt-get update
+
     - name: Install build dependencies
       run:  sudo apt-get install -y --no-install-recommends fonts-cns11643-kai fonts-hanazono fonts-noto-cjk fonts-noto-cjk-extra texlive-full
 
