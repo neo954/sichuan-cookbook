@@ -924,7 +924,8 @@ function indexentry()
 	"水发还带")
 		;;
 	"水发"*)
-		keyword="${keyword#水发}!${keyword}";;
+		keyword="${keyword#水发}!${keyword}"
+		;;
 	esac
 
 	keyword="$(stoke_encode "${keyword}")"
