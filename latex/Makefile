@@ -94,7 +94,7 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
 		-dAutoRotatePages=/None \
-		-dFirstPage=3 -dLastPage=348 \
+		-dFirstPage=3 -dLastPage=350 \
 		-dNoOutputFonts \
 		-sDEVICE=pdfwrite -r600 \
 		-sOutputFile=$@ $^
