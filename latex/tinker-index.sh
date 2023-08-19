@@ -1001,10 +1001,10 @@ echo "Tinker index file ${INDEX_FILE} ..."
 while read -r LINE
 do
 	[[ "${LINE}" =~ ^\\indexentry\{ ]] || continue
-	KEYWORD="${LINE#*{}"
+	KEYWORD="${LINE#*\{}"
 	KEYWORD="${KEYWORD%%\}*}"
 	KEYWORD="${KEYWORD%%|*}"
-	PAGE="${LINE##*{}"
+	PAGE="${LINE##*\{}"
 	PAGE="${PAGE%\}*}"
 
 	# Processing
