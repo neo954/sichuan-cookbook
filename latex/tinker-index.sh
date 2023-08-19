@@ -33,6 +33,10 @@
 #
 # Process the ingredient index file externally.
 
+STROKE_DICT="stroke.dict"
+STROKE_CACHE="stroke.cache"
+STROKE_L2_CACHE="stroke.l2.cache"
+
 export LC_ALL="en_US.UTF-8"
 
 INDEX_FILE="$1"
@@ -934,8 +938,6 @@ function indexentry()
 	echo -n "[${keyword}|${page}]" >&2
 }
 
-STROKE_L2_CACHE="stroke.l2.cache"
-
 function stoke_encode()
 {
 	local keyword="$1"
@@ -971,9 +973,6 @@ function stoke_encode()
 	echo -e "${1}\t${stroke}" >>"${STROKE_L2_CACHE}"
 	echo "${stroke}"
 }
-
-STROKE_CACHE="stroke.cache"
-STROKE_DICT="stroke.dict"
 
 function stroke_seek()
 {
