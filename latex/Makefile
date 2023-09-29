@@ -51,6 +51,11 @@ zip: sichuan-cookbook-pdf.zip
 sichuan-cookbook-pdf.zip: book-cover.pdf sichuan-cookbook.pdf
 	zip -9 $@ $^
 
+toc.html: sichuan-cookbook.toc
+	./toc-gen.sh $^ >$@
+
+sichuan-cookbook.toc: sichuan-cookbook.xdv
+
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	half-title-page.tex frontispiece.tex title-page.tex \
 	copyright-page.tex quotes-from-chairman-mao.tex title-page-1972.tex \
