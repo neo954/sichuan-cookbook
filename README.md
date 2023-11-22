@@ -31,8 +31,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 *Sichuan Cookbook* (四川菜谱) is a legendary classic book. It was compiled by
 Chengdu Catering Company (成都市饮食公司) and released in Jul 1972. In this
-book, many traditional recipes are described in detail. Many recipes have been
-lost now.
+book, 312 traditional recipes are described in detail. Many dishes described
+in this book are no longer served in restaurants nowadays.
 
 The goal of this project is to digitize *Sichuan Cookbook* properly.
 
