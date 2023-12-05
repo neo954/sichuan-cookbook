@@ -9,9 +9,9 @@
     <dc:subject>四川菜谱</dc:subject>
     <dc:creator id="cre">成都市饮食公司</dc:creator>
     <meta property="role" refines="#cre" scheme="marc:relators">aut</meta>
-    <meta property="dcterms:modified">2023-01-28T01:13:12Z</meta>
+    <meta property="dcterms:modified">2023-12-05T21:37:29Z</meta>
     <dc:identifier id="BookId">urn:uuid:70d696aa-7fd1-48c9-9beb-a872fc400495</dc:identifier>
-    <meta content="1.9.2" name="Sigil version"/>
+    <meta content="1.9.20" name="Sigil version"/>
     <meta name="cover" content="cover-illustration.png"/>
   </metadata>
   <manifest>
