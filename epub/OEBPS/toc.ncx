@@ -14,7 +14,7 @@
     <navLabel>
       <text>封面</text>
     </navLabel>
-    <content src="cover.xhtml" />
+    <content src="front-cover.xhtml" />
   </navPoint>
   <navPoint id="navPoint2">
     <navLabel>
