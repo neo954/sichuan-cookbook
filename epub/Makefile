@@ -44,7 +44,7 @@ sichuan-cookbook.epub: mimetype META-INF/container.xml \
 	zip -X -9 $@ $^
 
 validate: $(OUTPUT_BASENAME).epub
-	epubcheck $^
+	epubcheck $<
 
 clean:
 	$(RM) *.epub
