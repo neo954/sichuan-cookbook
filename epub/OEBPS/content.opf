@@ -17,7 +17,7 @@
   <manifest>
     <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
     <item id="cookbook.css" href="styles/cookbook.css" media-type="text/css"/>
-    <item id="cover.xhtml" href="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item id="front-cover.xhtml" href="front-cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
     <item id="nav.xhtml" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
     <item id="cover-illustration.png" href="images/cover-illustration.png" media-type="image/png" properties="cover-image"/>
     <item id="back-cover-background.png" href="images/back-cover-background.png" media-type="image/png"/>
@@ -356,9 +356,10 @@
     <item id="recipe-312.xhtml" href="recipe-312.xhtml" media-type="application/xhtml+xml"/>
     <item id="collation-notes.xhtml" href="collation-notes.xhtml" media-type="application/xhtml+xml"/>
     <item id="colophon.xhtml" href="colophon.xhtml" media-type="application/xhtml+xml"/>
+    <item id="back-cover.xhtml" href="back-cover.xhtml" media-type="application/xhtml+xml"/>
   </manifest>
   <spine toc="ncx">
-    <itemref idref="cover.xhtml"/>
+    <itemref idref="front-cover.xhtml"/>
     <itemref idref="half-title.xhtml"/>
     <itemref idref="frontispiece.xhtml"/>
     <itemref idref="title-page.xhtml"/>
@@ -680,9 +681,10 @@
     <itemref idref="recipe-312.xhtml"/>
     <itemref idref="collation-notes.xhtml"/>
     <itemref idref="colophon.xhtml"/>
+    <itemref idref="back-cover.xhtml"/>
   </spine>
   <guide>
-    <reference type="cover" title="Cover" href="cover.xhtml"/>
+    <reference type="cover" title="Cover" href="front-cover.xhtml"/>
     <reference type="toc" title="Table of Contents" href="nav.xhtml"/>
   </guide>
 </package>
