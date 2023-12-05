@@ -41,7 +41,7 @@ sichuan-cookbook.epub: mimetype META-INF/container.xml \
 	$(wildcard OEBPS/style/*) \
 	$(wildcard OEBPS/images/*) \
 	$(wildcard OEBPS/*.xhtml)
-	zip -9 $@ $^
+	zip -X -9 $@ $^
 
 validation:
 
