@@ -74,6 +74,9 @@
 	\xeCJKDeclareSubCJKBlock{Ext-F}{
 		"2CEB0 -> "2EBEF
 	}
+	\xeCJKDeclareSubCJKBlock{Ext-I}{
+		"2EBF0 -> "2EE5F
+	}
 	\xeCJKDeclareSubCJKBlock{Supplement}{
 		"2F800 -> "2FA1F
 	}
