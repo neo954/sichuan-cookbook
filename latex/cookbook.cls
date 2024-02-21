@@ -600,7 +600,7 @@
 
 	% Reference to the recipe name
 	\newcommand{\recipename}[1]{%
-		\nameref{recipe:##1}%
+		\hyperref[recipe:##1]{\nameref{recipe:##1}}%
 	}%
 
 	% Refernce to the recipe sequence number with name
