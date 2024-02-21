@@ -608,6 +608,11 @@
 		\hyperref[recipe:##1]{\zhdigits{##1}、\nameref{recipe:##1}}%
 	}%
 
+	% Refernce to the recipe page number and name
+	\newcommand{\recipepage}[1]{%
+		\hyperref[recipe:##1]{第\pageref{recipe:##1}页\nameref{recipe:##1}}%
+	}%
+
 	% Reference for multiple recipes
 	\newcommand{\recipelist}[1]{%
 		\foreach \r [count=\k] in {##1} {%
