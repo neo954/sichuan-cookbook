@@ -61,3 +61,7 @@ done < "${LATEX_TOC}"
 
 echo '</ul></li>'
 echo '</ul>'
+
+# vim: filetype=bash noautoindent nojoinspaces
+# vim: fileencoding=utf-8 formatoptions+=m
+# vim: textwidth=78 tabstop=4 shiftwidth=4 softtabstop=4
