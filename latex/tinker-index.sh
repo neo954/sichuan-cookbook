@@ -678,6 +678,15 @@ function indexentry()
 	"干猪肉皮")
 		keyword="猪肉皮!${keyword}"
 		;;
+	"黄牛肉"|"瘦牛肉")
+		keyword="牛肉!${keyword}"
+		;;
+	"黄牛尾")
+		keyword="牛尾!${keyword}"
+		;;
+	"黄牛鞭")
+		keyword="牛鞭!${keyword}"
+		;;
 	"鲤鱼肉")
 		keyword="鲤鱼!${keyword}"
 		;;
