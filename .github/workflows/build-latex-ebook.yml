@@ -16,9 +16,6 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Install extra fonts
-      run:  mkdir -p ~/.fonts && cp fonts/*.otf ~/.fonts
-
     - name: Download extra fonts
       run:  mkdir -p ~/.fonts && curl https://glyphwiki.org/font/gw2696945.ttf -o ~/.fonts/sim-ch_n5100_gw2696945.ttf
 
