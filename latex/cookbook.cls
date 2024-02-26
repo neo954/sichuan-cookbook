@@ -110,9 +110,6 @@
 		Ext-B=TW-Kai-Ext-B,
 		Ext-C=TW-Kai-Ext-B,
 		Ext-D=TW-Kai-Ext-B,
-		Ext-E=Patch-Kai,
-		Ext-F=Patch-Kai,
-		Ext-G=Patch-Kai,
 		Supplement=TW-Kai-Ext-B,
 		FallBack=TW-Kai
 	]{FandolKai-Regular.otf}
