@@ -130,17 +130,6 @@ The book is recreated with $\mathrm{X\kern-.1em\lower.5ex\hbox{Ǝ}\kern-.15emL\k
 sudo apt-get install -y fonts-cns11643-kai fonts-hanazono fonts-noto texlive-full
 ```
 
-#### The font - Patch-Kai
-
-A couple of Chinese character glyphs in Unicode CJK Extension E, Extension G
-do not exist in either Fandol-Kai or TW-Kai. An OpenType font, Patch-Kai is
-created to fill in the gap. Only a handful of glyphs are in it.
-
-Copy the font file to the local font directory.
-```
-cp fonts/Patch-Kai.otf ~/.fonts
-```
-
 #### Compiling
 
 Build the PDF with the following command.
