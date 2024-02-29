@@ -162,6 +162,6 @@ clean:
 	$(RM) git-revision.tex
 	$(RM) *.aux *.dvi *.gif *.idx *.ilg *.ind *.jpg *.log *.out \
 		*.pdf *.png *.ps *.txt *.toc *.xdv *.ent *.tmp *.zip \
-		*.cache
+		*.cache *.html
 
 .PHONY: build all clean pdf print signed distilled outlined zip
