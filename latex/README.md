@@ -65,7 +65,6 @@ The following extra works have been done.
   * FandolKai
   * TW-Kai
   * TW-Kai-Ext-B
-  * Patch-Kai
 
 [modeline1]: # ( vim: set filetype=markdown noautoindent nojoinspaces: )
 [modeline2]: # ( vim: set fileencoding=utf-8 spell spelllang=en: )
