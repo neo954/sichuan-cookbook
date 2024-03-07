@@ -31,7 +31,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## Sichuan Cookbook 1972 LaTeX Remake
 
-The goals of the Sichuan Cookbook 1972 LaTex Remake are listed as follows.
+The goals of the Sichuan Cookbook 1972 LaTeX Remake are listed as follows.
 
 * [x] A decent remake of the entire book with modern information technology.
 * [x] Keep the same typography as the original paperback book as close as
