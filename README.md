@@ -61,7 +61,7 @@ project was made publicly available on January 1, 2023.
 ### Sichuan Cookbook 1972 Remake
 
 For a modern eBook format, download the *[Sichuan Cookbook 1972
-Remake](https://github.com/neo954/sichuan-cookbook/releases/download/v1.0.3/sichuan-cookbook.v1.0.3.pdf)*
+Remake](https://github.com/neo954/sichuan-cookbook/releases/download/v1.0.4/sichuan-cookbook.v1.0.4.pdf)*
 <sub>(3.46 MB)</sub> in A5 paper size (210mm x 148mm), a remade edition of the
 original paperback.
 
