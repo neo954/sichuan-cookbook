@@ -51,10 +51,10 @@ rich culinary history.
 
 According to the Copyright Law of China, concerning a work of a legal person
 or other organization, the term of protection for the copyrights to that work
-shall be 50 years and shall end on Dec 31 of the 50th year after the work's
-first publication. Consequently, the first edition of the *Sichuan Cookbook*
-(四川菜谱) entered the public domain after December 31, 2022. This project was
-made publicly available on January 1, 2023.
+shall be 50 years and shall end on December 31 of the 50th year after the
+work's first publication. Consequently, the first edition of the *Sichuan
+Cookbook* (四川菜谱) entered the public domain after December 31, 2022. This
+project was made publicly available on January 1, 2023.
 
 ## Download a Digitized Copy of the Book
 
