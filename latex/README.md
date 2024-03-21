@@ -31,40 +31,53 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## Sichuan Cookbook 1972 LaTeX Remake
 
-The goals of the Sichuan Cookbook 1972 LaTeX Remake are listed as follows.
+### Project Goals
 
-* [x] A decent remake of the entire book with modern information technology.
-* [x] Keep the same typography as the original paperback book as close as
-      possible.
-* [x] Recreate the paperback book's front cover to a vector graphics image.
-* [x] Recreate illustrations in the book to vector graphics images.
-* [x] Keep the LaTeX code in each recipe file simple and clear. Providing
-      structured data, which can be further processed elsewhere. (Like convert
-      into JSON or XML.)
+The objectives of the Sichuan Cookbook 1972 LaTeX Remake project are:
 
-The following extra works have been done.
+* [x] To produce a high-quality remake of the entire book utilizing modern
+      information technology.
+* [x] To maintain typography that closely matches the original paperback
+      edition.
+* [x] To convert the paperback book's front cover into a vector graphic image.
+* [x] To convert illustrations within the book into vector graphic images.
+* [x] To ensure that the LaTeX code in each recipe file remains simple and
+      clear, providing structured data for further processing (e.g., conversion
+      into JSON or XML formats).
 
-* [x] A half title page.
-* [x] A frontispiece.
-* [x] A new title page for the remake edition.
-* [x] A copyright page.
-* [x] Collation notes.
-* [x] Generated ingredients index ordered by number of strokes.
-* [x] Colophon.
+### Additional Achievements
+
+In addition to the main goals, the project has successfully completed the
+following tasks:
+
+* [x] Creation of a half-title page.
+* [x] Creation of a frontispiece.
+* [x] Design of a new title page for the remake edition.
+* [x] Compilation of a copyright page.
+* [x] Compilation of collation notes.
+* [x] Generation of an ingredients index, ordered by the number of strokes.
+* [x] Creation of a colophon.
 
 ### Fonts Used in This Book
 
-* Songti
-  * Noto Serif CJK SC
-  * HanaMinA
-  * HanaMinB
-  * sim-ch_n5100
-* Heiti
-  * Noto Sans CJK SC
-* Kaiti
-  * FandolKai
-  * TW-Kai
-  * TW-Kai-Ext-B
+The following fonts have been utilized in this book:
+
+#### Songti
+
+* Noto Serif CJK SC
+* HanaMinA
+* HanaMinB
+* sim-ch_n5100
+
+#### Heiti
+
+* Noto Sans CJK SC
+
+#### Kaiti
+
+* FandolKai
+* TW-Kai
+* TW-Kai-Ext-B
 
 [modeline1]: # ( vim: set filetype=markdown noautoindent nojoinspaces: )
 [modeline2]: # ( vim: set fileencoding=utf-8 spell spelllang=en: )
