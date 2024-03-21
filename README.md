@@ -29,129 +29,130 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-*Sichuan Cookbook* (四川菜谱) is a legendary classic book. It was compiled by
-Chengdu Catering Company (成都市饮食公司) and released in Jul 1972. In this
-book, 312 traditional recipes are described in detail. Many dishes described
-in this book are no longer served in restaurants nowadays.
+*Sichuan Cookbook* (四川菜谱) is a renowned classic, first published in July
+1972 by Chengdu Catering Company (成都市饮食公司). It contains 312 traditional
+recipes, many of which are no longer served in modern restaurants. The aim of
+this project is to digitize the *Sichuan Cookbook* correctly, preserving its
+rich culinary history.
 
-The goal of this project is to digitize *Sichuan Cookbook* properly.
-
-* [x] Take photos of each page of the book with a digital camera.
-* [x] Process the photos, correct exposure, and perspective distortion, and
-      adjust the type area.
-* [x] Create binary images from the processed photos.
-* [x] Run OCR (optical character recognition) on the binary images.
-* [x] Create a PDF book of the original book from the binary images and the
-      OCR results.
-* [x] Organize each recipe in the book with an abstract data structure, and
-      save them as a $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ document.
-* [x] Reproduce the appearance of the original book with $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ typesetting.
-* [x] Render $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$ documents and create a PDF book.
-* [x] Optionally, add comments to the book based on research.
+* [x] Photograph each page of the book using a digital camera.
+* [x] Enhance the photos, correcting exposure and perspective distortion, and
+      adjust the typographical area.
+* [x] Convert the enhanced photos into binary images.
+* [x] Perform Optical Character Recognition (OCR) on the binary images.
+* [x] Generate a PDF of the original book from the binary images and the OCR
+      results.
+* [x] Abstract each recipe into a data structure and document them in
+      $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$.
+* [x] Replicate the original book's appearance using
+      $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$
+      typesetting.
+* [x] Compile the
+      $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$
+      documents to create a final PDF version.
+* [x] Optionally, annotate the book with additional research findings.
 
 ![Sichuan Cookbook 1972 Remake](https://user-images.githubusercontent.com/12424088/219829436-a9b9cbe1-0f75-4a0c-8683-4948953561e4.png)
 
 According to the Copyright Law of China, concerning a work of a legal person
 or other organization, the term of protection for the copyrights to that work
 shall be 50 years and shall end on Dec 31 of the 50th year after the work's
-first publication. Thus, after Dec 31, 2022, the first edition of the
-paperback book, *Sichuan Cookbook* (四川菜谱), entered the public domain.
-Therefore, this project has been released to the public on Jan 1, 2023.
+first publication. Consequently, the first edition of the *Sichuan Cookbook*
+(四川菜谱) entered the public domain after December 31, 2022. This project was
+made publicly available on January 1, 2023.
 
-## Download a digitized copy of the book
+## Download a Digitized Copy of the Book
 
 ### Sichuan Cookbook 1972 Remake
 
-For a contemporary eBook, download *[Sichuan Cookbook 1972
+For a modern eBook format, download the *[Sichuan Cookbook 1972
 Remake](https://github.com/neo954/sichuan-cookbook/releases/download/v1.0.3/sichuan-cookbook.v1.0.3.pdf)*
-<sub>(3.46 MB)</sub>. This is an A5 paper size (210mm $\times$ 148mm) remake
-edition of the original paperback book.
+<sub>(3.46 MB)</sub> in A5 paper size (210mm x 148mm), a remade edition of the
+original paperback.
 
-### Scanned copy
+### Scanned Copy
 
-A draft copy of *[Sichuan Cookbook
+You can download a draft of the *[Sichuan Cookbook
 1972](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-pre-alpha/sichuan-cookbook-1972.pdf)*
-<sub>(75.6 MB)</sub> can be downloaded. This is a 185mm $\times$ 130mm paper
-size scanned copy with an unproofread OCR text underlayer.
+<sub>(75.6 MB)</sub>, which is a scanned copy in 185mm x 130mm paper size with
+an unproofed OCR text layer, for reference.
 
-## Set up a developing environment
+## Developing Environment Setup
 
-### The selection of operating system
+### Operating System Selection
 
-Debian or Ubuntu is preferred. But other Linux distros can be used. I do not
-see any obstruction here. Apple macOS can also be used, if all the command
-line tools needed are properly installed.
+Preferred operating systems are Debian or Ubuntu, though other Linux
+distributions are compatible. Apple macOS is also suitable if necessary
+command-line tools are installed.
 
-## Build a digitized copy of the book
+## Digitizing the Book
 
-### The digitized remaster of the book
+### Remastered Digital Version
 
-Each page of the book was captured by a digital camera, and then processed with
-Adobe Lightroom Classic for RAW decoding, perspective distortion correction,
-and some other minor adjustments. To keep large JPEG photos out of
-the git repository, all the JPEG photos are stored in
-``user-images.githubusercontent.com``. Download all the JPEG photos with the
-following command. Please notice the size of all these JPEG photos is around
-625 MiB.
-```
-make -C jpeg
-```
+* Each book page was photographed with a digital camera and processed with
+  Adobe Lightroom Classic for RAW decoding, perspective distortion correction,
+  and other minor adjustments.
+* To avoid bloating the git repository, all JPEG photos are hosted on
+  ``user-images.githubusercontent.com``. Download all JPEG photos
+  <sub>(625 MiB)</sub> using the following command:
+  ```
+  make -C jpeg
+  ```
+* Alternatively, download all JPEG files in a single tarball from
+  [here](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-pre-alpha/sichuan-cookbook-1972.jpeg.tar)
+  <sub>(625 MB)</sub>.
 
-Or, all the JPEG files can be downloaded in [one
-tarball](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-pre-alpha/sichuan-cookbook-1972.jpeg.tar)
-<sub>(625 MB)</sub>.
+#### Prerequisites for Image Processing
 
-#### Prerequisite
+* The original book's dimensions (185mm x 130mm) are maintained, corresponding
+  to an aspect ratio of approximately √2:1.
+* For 600dpi resolution, the digital image size should be 4370px x 3091px.
+* All JPEG photos are processed with ImageMagick and performed OCR with
+  Tesseract Open Source OCR Engine.
+  ```
+  sudo apt-get install imagemagick tesseract-ocr tesseract-ocr-chi-sim
+  ```
 
-The original book has a page size of 185mm $\times$ 130mm. This
-length-to-width ratio is roughly equal to $\sqrt{2} : 1$. Thus, with a 600dpi
-resolution, the image size of all the pages will be 4370px $\times$ 3091px.
+#### Compilation Instructions
 
-All the JPEG photos will be processed with ImageMagick, and then OCRed
-with Tesseract Open Source OCR Engine.
-```
-sudo apt-get install imagemagick tesseract-ocr tesseract-ocr-chi-sim
-```
+* Compile the processed images into a PDF using the following commands:
+  ```
+  make -C jpeg
+  make scan
+  ```
+
+### LaTeX Remake of the Book
+
+#### Prerequisites for LaTeX Remake
+
+* The book is recreated using
+  $\mathrm{X\kern-.1em\lower.5ex\hbox{Ǝ}\kern-.15emL\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$
+  with support for multiple fonts:
+  ```
+  sudo apt-get install -y fonts-cns11643-kai fonts-hanazono fonts-noto texlive-full
+  ```
 
 #### Compiling
 
-Build the PDF with the following commands.
-```
-make -C jpeg
-make scan
-```
+* Compile the
+  $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$
+  remake into a PDF with the following command:
+  ```
+  make -C latex
+  ```
 
-### The LaTeX remake of the book
-
-#### Prerequisite
-
-The book is recreated with $\mathrm{X\kern-.1em\lower.5ex\hbox{Ǝ}\kern-.15emL\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$.
-```
-sudo apt-get install -y fonts-cns11643-kai fonts-hanazono fonts-noto texlive-full
-```
-
-#### Compiling
-
-Build the PDF with the following command.
-```
-make -C latex
-```
-# Contributing
+# Contributing to the Project
 
 ## Proofreading
 
-For each receipt under the `latex` directory, proofreading is wanted. If you
-want to help to proofread, please claim the unassigned working items from
-[GitHub
-issues](https://github.com/neo954/sichuan-cookbook/issues?q=is%3Aissue+is%3Aopen+Proofread+sort%3Acreated-asc+no%3Aassignee).
-
-This [A4 paper size scanned copy for
-printing](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alpha/sichuan-cookbook-1972-proof-a4.pdf)
-<sub>(80.6 MB)</sub> is preferred to be utilized as a reference for
-proofreading.
-
-Please report typos of a receipt with a new comment on the same issue page you
-claimed. Of course, pull requests are always welcome!
+* We invite contributions for proofreading each recipe under the latex
+  directory.
+* Volunteers can claim unassigned tasks listed in the [GitHub
+  issues](https://github.com/neo954/sichuan-cookbook/issues?q=is%3Aissue+is%3Aopen+Proofread+sort%3Acreated-asc+no%3Aassignee).
+* Utilize the [A4 paper size scanned copy for
+  printing](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alpha/sichuan-cookbook-1972-proof-a4.pdf)  <sub>(80.6 MB)</sub> as a reference for proofreading.
+* Report any typographical errors by commenting on the issue page where you
+  claimed the task. Pull requests for corrections are highly encouraged.
 
 [modeline1]: # ( vim: set filetype=markdown noautoindent nojoinspaces: )
 [modeline2]: # ( vim: set fileencoding=utf-8 spell spelllang=en: )
