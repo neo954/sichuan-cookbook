@@ -42,14 +42,9 @@ rich culinary history.
 * [x] Perform Optical Character Recognition (OCR) on the binary images.
 * [x] Generate a PDF of the original book from the binary images and the OCR
       results.
-* [x] Abstract each recipe into a data structure and document them in
-      $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$.
-* [x] Replicate the original book's appearance using
-      $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$
-      typesetting.
-* [x] Compile the
-      $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$
-      documents to create a final PDF version.
+* [x] Abstract each recipe into a data structure and document them in LaTeX.
+* [x] Replicate the original book's appearance using LaTeX typesetting.
+* [x] Compile the LaTeX documents to create a final PDF version.
 * [x] Optionally, annotate the book with additional research findings.
 
 ![Sichuan Cookbook 1972 Remake](https://user-images.githubusercontent.com/12424088/219829436-a9b9cbe1-0f75-4a0c-8683-4948953561e4.png)
@@ -125,18 +120,14 @@ command-line tools are installed.
 
 #### Prerequisites for LaTeX Remake
 
-* The book is recreated using
-  $\mathrm{X\kern-.1em\lower.5ex\hbox{Ǝ}\kern-.15emL\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$
-  with support for multiple fonts:
+* The book is recreated using XeLaTeX with support for multiple fonts:
   ```
   sudo apt-get install -y fonts-cns11643-kai fonts-hanazono fonts-noto texlive-full
   ```
 
 #### Compiling
 
-* Compile the
-  $\mathrm{L\kern-.36em\lower-.428571ex\hbox{\small{A}}\kern-.15emT\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}$
-  remake into a PDF with the following command:
+* Compile the LaTeX remake into a PDF with the following command:
   ```
   make -C latex
   ```
