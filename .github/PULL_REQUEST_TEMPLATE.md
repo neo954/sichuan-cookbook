@@ -1,22 +1,22 @@
 <!-- Thank you for your contribution to Sichuan Cookbook!
-    Please replace {Please write here} with your description -->
+    Please replace {PLEASE WRITE HERE} with your description -->
 
 ### What was the problem?
 
-{Please write here}
+{PLEASE WRITE HERE}
 
 ### How this pull request fixes the problem?
 
-{Please write here}
+{PLEASE WRITE HERE}
 
 ### Check lists (check `x` in `[ ]` of list items)
 
 - [ ] Proofreading
 - [ ] New feature
 - [ ] Test passed
-- [ ] Coding style (indentation, etc)
+- [ ] Coding style (indentation, etc.)
 
-### Additional Comments (if any)
+### Additional comments (if any)
 
-{Please write here}
+{PLEASE WRITE HERE}
 
