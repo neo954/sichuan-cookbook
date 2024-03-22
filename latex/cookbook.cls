@@ -627,9 +627,9 @@
 		\end{center}%
 	}%
 
-	% Set line spacing
+	% Set the line spacing to 1.5.
 	\onehalfspacing%
-	% Set the indentation to be two Chinese characters size.
+	% Set the paragraph indentation to the width of two Chinese characters.
 	\setlength{\parindent}{2em}%
 	\setlength{\parskip}{0\baselineskip}%
 	\setlength{\cookbookbeforerecipeskip}{0\baselineskip}%
