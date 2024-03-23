@@ -50,7 +50,7 @@ sichuan-cookbook-pdf.zip: book-cover.pdf sichuan-cookbook.pdf
 	zip -9 $@ $^
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
-	half-title.tex frontispiece.tex title-page.tex copyright.tex \
+	half-title.tex frontispiece.tex title-page.tex copyright-page.tex \
 	quotes-from-chairman-mao.tex title-page-1972.tex \
 	editorial-notes-1972.tex \
 	$(wildcard recipe-*.tex) collation-notes.tex colophon.tex \
