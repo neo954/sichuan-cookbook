@@ -51,7 +51,7 @@ sichuan-cookbook-pdf.zip: book-cover.pdf sichuan-cookbook.pdf
 
 sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	half-title.tex frontispiece.tex title-page.tex copyright.tex \
-	chairman-mao-quotes.tex title-page-1972.tex preface.tex \
+	chairman-mao-quotes.tex title-page-1972.tex editorial-notes-1972.tex \
 	$(wildcard recipe-*.tex) collation-notes.tex colophon.tex \
 	front-cover.pdf quux-logo.pdf \
 	sagittaria-sagittifolia.pdf zanthoxylum-planispinum.pdf \
