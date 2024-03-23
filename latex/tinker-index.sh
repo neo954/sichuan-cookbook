@@ -50,25 +50,31 @@ fi
 KEYWORD=""
 PAGE=""
 
-function indexentry()
+#
+# index_entry   Unify the keyword, and generate the LaTeX code used to
+#               generate the index.
+#
+#       $1      The entry to be indexed
+#
+function index_entry()
 {
 	local keyword="$1"
 	local page="$2"
 
 	case "${keyword}" in
 	"葱姜末")
-		indexentry "葱末" "${page}"
-		indexentry "姜末" "${page}"
+		index_entry "葱末" "${page}"
+		index_entry "姜末" "${page}"
 		return
 		;;
 	"鸡足鸭掌")
-		indexentry "鸡足" "${page}"
-		indexentry "鸭掌" "${page}"
+		index_entry "鸡足" "${page}"
+		index_entry "鸭掌" "${page}"
 		return
 		;;
 	"净鸡腿脯肉")
-		indexentry "鸡腿肉" "${page}"
-		indexentry "鸡脯肉" "${page}"
+		index_entry "鸡腿肉" "${page}"
+		index_entry "鸡脯肉" "${page}"
 		return
 		;;
 	esac
@@ -941,13 +947,19 @@ function indexentry()
 		;;
 	esac
 
-	keyword="$(stoke_encode "${keyword}")"
+	keyword="$(encode_word "${keyword}")"
 
 	echo '\indexentry{'"${keyword}"'|hyperpage}{'"${page}"'}'
 	echo -n "[${keyword}|${page}]" >&2
 }
 
-function stoke_encode()
+#
+# encode_word   Encode a single Chinese word based on the strokes numbers of
+#               each character in the word.
+#
+#       $1      The word
+#
+function encode_word()
 {
 	local keyword="$1"
 	local k1 k2 k3
@@ -964,18 +976,18 @@ function stoke_encode()
 	read -r k1 k2 k3 < <(echo "${keyword}")
 	IFS="${old_ifs}"
 
-	s1="$(stroke_seek "${k1}")"
+	s1="$(encode_char "${k1}")"
 	stroke="${s1}@${k1}"
 
 	if [ -n "${k2}" ]
 	then
-		s2="$(stroke_seek "${k2}")"
+		s2="$(encode_char "${k2}")"
 		stroke="${stroke}!${s2}@${k2}"
 	fi
 
 	if [ -n "${k3}" ]
 	then
-		s3="$(stroke_seek "${k3}")"
+		s3="$(encode_char "${k3}")"
 		stroke="${stroke}!${s3}@${k3}"
 	fi
 
@@ -983,7 +995,13 @@ function stoke_encode()
 	echo "${stroke}"
 }
 
-function stroke_seek()
+#
+# encode_char   Encode a single Chinese character based on its number of
+#               strokes.
+#
+#       $1      The character
+#
+function encode_char()
 {
 	local word="$1"
 	local stroke=""
@@ -1033,17 +1051,17 @@ do
 
 	while [[ "${KEYWORD}" =~ 、 ]]
 	do
-		indexentry "${KEYWORD%%、*}" "${PAGE}"
+		index_entry "${KEYWORD%%、*}" "${PAGE}"
 		KEYWORD="${KEYWORD#*、}"
 	done
 
 	while [[ "${KEYWORD}" =~ 或 ]]
 	do
-		indexentry "${KEYWORD%%或*}" "${PAGE}"
+		index_entry "${KEYWORD%%或*}" "${PAGE}"
 		KEYWORD="${KEYWORD#*或}"
 	done
 
-	indexentry "${KEYWORD}" "${PAGE}"
+	index_entry "${KEYWORD}" "${PAGE}"
 done <"${INDEX_FILE}" 2>&1 >"${INDEX_FILE}.new"
 
 echo
