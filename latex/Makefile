@@ -54,14 +54,13 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	copyright-page.tex quotes-from-chairman-mao.tex title-page-1972.tex \
 	editorial-notes-1972.tex \
 	$(wildcard recipe-*.tex) collation-notes.tex colophon.tex \
-	front-cover.pdf quux-logo.pdf \
-	sagittaria-sagittifolia.pdf zanthoxylum-planispinum.pdf \
-	illustration-001.pdf illustration-002a.pdf illustration-002b.pdf \
-	illustration-002c.pdf illustration-003.pdf illustration-004.pdf \
-	illustration-005.pdf illustration-006.pdf illustration-007.pdf \
-	illustration-008.pdf illustration-009.pdf illustration-010.pdf \
-	illustration-011.pdf back-cover.pdf tinker-index.sh \
-	sichuan-cookbook.mst
+	front-cover.pdf quux-logo.pdf sagittaria-sagittifolia.pdf \
+	zanthoxylum-planispinum.pdf illustration-001.pdf \
+	illustration-002a.pdf illustration-002b.pdf illustration-002c.pdf \
+	illustration-003.pdf illustration-004.pdf illustration-005.pdf \
+	illustration-006.pdf illustration-007.pdf illustration-008.pdf \
+	illustration-009.pdf illustration-010.pdf illustration-011.pdf \
+	back-cover.pdf tinker-index.sh sichuan-cookbook.mst
 	$(RM) $(subst .tex,.aux,$<) $(subst .tex,.toc,$<)
 	xelatex -no-pdf $< $(word 2,$^)
 	bash tinker-index.sh $(subst .tex,.idx,$<)
