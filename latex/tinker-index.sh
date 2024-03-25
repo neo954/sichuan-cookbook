@@ -40,6 +40,8 @@ STROKE_L2_CACHE="stroke.l2.cache"
 export LC_ALL="en_US.UTF-8"
 
 INDEX_FILE="$1"
+INDEX_MD5="${INDEX_FILE}.md5"
+INDEX_CACHE="${INDEX_FILE}.cache"
 
 if [ ! -f "${INDEX_FILE}" ]
 then
@@ -1025,6 +1027,14 @@ function encode_char()
 
 echo "Tinker index file ${INDEX_FILE} ..."
 
+[ -f "${INDEX_MD5}" ] &&
+	md5sum -c "${INDEX_MD5}" &&
+	[ -f "${INDEX_CACHE}" ] &&
+	cp "${INDEX_CACHE}" "${INDEX_FILE}" &&
+	exit 0
+
+md5sum "${INDEX_FILE}" >"${INDEX_MD5}"
+
 while read -r LINE
 do
 	[[ "${LINE}" =~ ^\\indexentry\{ ]] || continue
@@ -1062,11 +1072,11 @@ do
 	done
 
 	index_entry "${KEYWORD}" "${PAGE}"
-done <"${INDEX_FILE}" 2>&1 >"${INDEX_FILE}.new"
+done <"${INDEX_FILE}" 2>&1 >"${INDEX_CACHE}"
 
 echo
 
-mv "${INDEX_FILE}.new" "${INDEX_FILE}"
+cp "${INDEX_CACHE}" "${INDEX_FILE}"
 
 # vim: filetype=bash noautoindent nojoinspaces
 # vim: fileencoding=utf-8 formatoptions+=m
