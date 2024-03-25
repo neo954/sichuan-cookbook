@@ -85,12 +85,15 @@ git-revision.tex: $(wildcard *.cls) $(wildcard *.eps) \
 	echo '\\newcommand{\\pdfbuildhost}{'`hostname -s`'}' >>$@
 
 front-cover.xdv: front-cover.tex cookbook.cls cover-illustration.pdf
+	xelatex -no-pdf $< $(word 2,$^)
 
 back-cover.xdv: back-cover.tex cookbook.cls back-cover-background.pdf \
 	quux-logo.pdf
+	xelatex -no-pdf $< $(word 2,$^)
 
 book-cover.xdv: book-cover.tex git-revision.tex \
 	front-cover.pdf back-cover.pdf quux-logo.pdf position-indicator.pdf
+	xelatex -no-pdf $<
 
 sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
