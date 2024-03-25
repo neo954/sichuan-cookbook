@@ -49,6 +49,15 @@ then
 	exit 1
 fi
 
+# Check if all the external commands needed are exist
+for cmd in awk md5sum cp
+do
+	! type "${cmd}" >/dev/null 2>&1 &&
+		echo "${0##*/}: Command \"${cmd}\" not found" >&2 &&
+		exit 1
+done
+unset cmd
+
 KEYWORD=""
 PAGE=""
 
@@ -1027,6 +1036,7 @@ function encode_char()
 
 echo "Tinker index file ${INDEX_FILE} ..."
 
+# When the MD5 checksum matched, just copy the saved processed version
 [ -f "${INDEX_MD5}" ] &&
 	md5sum -c "${INDEX_MD5}" &&
 	[ -f "${INDEX_CACHE}" ] &&
