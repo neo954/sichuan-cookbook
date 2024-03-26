@@ -32,16 +32,18 @@
 	[2024/03/23 v1.0.3 XeLaTeX document class]
 \LoadClass[openany]{book}
 \usepackage[
-	paper=a5paper,
-	top=25.845833mm,
-	bottom=35.802408mm,
-	inner=25.845833mm,
-	outer=25.845833mm,
-	headheight=5.291666mm,
-	headsep=2.116666mm,
-	footskip=9.956575mm,
-	marginparwidth=15.875mm,
-	marginparsep=3.527777mm
+	paper=a5paper,          % The paper size
+	top=25.845833mm,        % Top margin
+	bottom=35.802408mm,     % Bottom margin
+	inner=25.845833mm,      % Inner margin (the binding edge)
+	outer=25.845833mm,      % Outer margin
+	headheight=5.291666mm,  % Header height
+	headsep=2.116666mm,     % Space between the header and text
+	footskip=9.956575mm,    % Space from the baseline of the last line of text
+	                        %     to the baseline of the footer
+	marginparwidth=15.875mm,% Width of the margin notes
+	marginparsep=3.527777mm % Separation between the margin notes and the main
+	                        %     text
 ]{geometry}
 \usepackage[zihao=5]{ctexsize}
 \usepackage[quiet]{xeCJK}
@@ -261,7 +263,7 @@
 
 	% The vertical space before and after recipe
 	\newlength{\cookbookbeforerecipeskip}%
-	\setlength{\cookbookbeforerecipeskip}{0pt}%  Draft default value
+	\setlength{\cookbookbeforerecipeskip}{0pt}% Draft default value
 	\newlength{\cookbookafterrecipeskip}%
 	\setlength{\cookbookafterrecipeskip}{0pt}%  Draft default value
 
@@ -419,7 +421,7 @@
 				]{##2##3}%
 			}%
 		}%
-		\def\@currentlabelname{##2}%    Hack the current label name
+		\def\@currentlabelname{##2}% Hack the current label name
 		\makealabel{recipe:\arabic{section}}%
 		\ifthenelse{\equal{##1}{}}{%
 		}{%
