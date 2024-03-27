@@ -17,6 +17,7 @@ fonts/*.svg
 jpeg/*.jpg
 latex/*.cache
 latex/*.idx.md5
+latex/*.pdf
 latex/git-revision.tex
 proof
 trim
