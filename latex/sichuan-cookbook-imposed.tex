@@ -1,0 +1,108 @@
+% BSD 3-Clause License
+%
+% Copyright (c) 2024 Quux System and Technology. All rights reserved.
+%
+% Redistribution and use in source and binary forms, with or without
+% modification, are permitted provided that the following conditions are met:
+%
+% 1. Redistributions of source code must retain the above copyright notice, this
+%    list of conditions and the following disclaimer.
+%
+% 2. Redistributions in binary form must reproduce the above copyright notice,
+%    this list of conditions and the following disclaimer in the documentation
+%    and/or other materials provided with the distribution.
+%
+% 3. Neither the name of the copyright holder nor the names of its
+%    contributors may be used to endorse or promote products derived from
+%    this software without specific prior written permission.
+%
+% THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+% AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+% IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+% DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+% FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+% DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+% SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+% CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+% OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+% OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+%
+
+% This script is designed to impose the entire book, generating a printer-ready
+% PDF specifically for hardcover book production. It efficiently manages
+% printer spreads and compensates for page creep.
+%
+% The book will be printed on A4-sized paper. I have decided that each
+% signature will consist of four A4 sheets, resulting in each signature
+% effectively containing 16 pages for an A5-sized book.
+%
+% The book totals 352 pages, including the front and back covers, with 348
+% inner pages when these covers are excluded. This leads to a total of 21 and
+% 3/4 signatures. The initial 3/4 signature, positioned at the beginning,
+% includes 12 pages. Pages E, G, and I, specifically designed in color, may be
+% produced separately using a different type of paper. This is followed by 21
+% full signatures, each containing 16 pages, summing up to 21 and 3/4
+% signatures. This strategic layout simplifies the manufacturing process,
+% allowing for separate and specialized production of the color pages.
+
+%
+% [Number of pages] / (4 - 1) = [Number of spreads]
+% [Number of spreads] x [Thickness of paper] = [Total creep]
+%
+% For a single signature
+
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[openany]{book}
+\usepackage[
+	paper=landscape,a4paper,% The paper size
+	top=0.000000mm,         % Top margin
+	bottom=0.000000mm,      % Bottom margin
+	inner=0.000000mm,       % Inner margin (the binding edge)
+	outer=0.000000mm,       % Outer margin
+	headheight=0.000000mm,  % Header height
+	headsep=0.000000mm,     % Space between the header and text
+	footskip=0.000000mm,    % Space from the baseline of the last line of text
+	                        %     to the baseline of the footer
+	marginparwidth=0.000mm, % Width of the margin notes
+	marginparsep=0.000000mm % Separation between the margin notes and the main
+	                        %     text
+]{geometry}
+\input{git-revision.tex}
+\usepackage{bookmark}
+	\hypersetup{
+		unicode=true,
+		pdfduplex={DuplexFlipShortEdge},
+		pdfprintscaling={AppDefault},
+		pdfpicktraybypdfsize={true},
+		pdfcreator={XeLaTeX},
+		pdfproducer={Quux Script-Shift Scribe},
+		pdftoolbar={true},
+		pdftitle={Sichuan Cookbook 1972 Remake},
+		pdfsubject={312 Traditional Recipes: The Culinary History of Sichuan},
+		pdfauthor={Chengdu Catering Company},
+		pdfkeywords={Chinese-food, cookbook, culture, food, recipe, %
+			Sichuan, Szechuan, Szechwan},
+		pdflang={zh-CN},
+		pdfinfo={
+			GitCommitName={\gitcommitname},
+			GitCommitHash={\gitcommithash},
+			GitCommitterDate={\gitcommitterdate},
+			PDFBuildDate={\pdfbuilddate},
+			PDFBuildHost={\pdfbuildhost}
+		},
+		hidelinks
+	}
+\usepackage{scalefnt}
+\usepackage{pdfpages}
+\usepackage{pdfoverlay}
+
+\begin{document}
+
+\pagestyle{empty}
+
+
+\end{document}
+
+% vim: filetype=tex noautoindent nojoinspaces
+% vim: fileencoding=utf-8 formatoptions+=m
+% vim: textwidth=78 tabstop=4 shiftwidth=4 softtabstop=4
