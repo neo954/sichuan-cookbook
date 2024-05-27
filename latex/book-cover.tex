@@ -38,9 +38,20 @@
 	%  80 gsm  104.72 micron    Premium multi-purpose copy paper
 	%  90 gsm  107.16 micron    Copy paper for color printing
 	%
+	% 100 gsm  118.36 micron    Presentation
+	% 120 gsm  145.24 micron    Colour Documents
+	% Navigator Office paper Solutions
+	%
 	% The spine width calculation
-	% ( 352 / 2 ) * 104.72 micron = 18.43072 mm
-	spinewidth=18.43072mm+6mm, % For 80 gsm copy paper
+	%
+	% Inner pagers - 100 gsm papers
+	% ( 352 / 2 ) * 118.36 micron = 20.82432 mm
+	% Common made endpapers - 120 gsm papers
+	% 2 * 5 * 145.24 micon = 1.4524 mm
+	% Bookcover - 3mm wood pieces + 1 mm leather
+	% 2 * 3 mm + 2 * 1 mm = 8 mm
+	%
+	spinewidth=20.82432mm+1.4524mm+8mm,
 	flapwidth=72mm,
 	wrapwidth=5mm,
 	bleedwidth=3mm,
