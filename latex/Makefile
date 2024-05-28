@@ -44,6 +44,8 @@ outlined: book-cover.o.pdf sichuan-cookbook.o.pdf
 
 print: book-cover.o.pdf sichuan-cookbook-i.o.pdf
 
+imposed: sichuan-cookbook-imposed.pdf
+
 zip: sichuan-cookbook-pdf.zip
 
 sichuan-cookbook-pdf.zip: book-cover.pdf sichuan-cookbook.pdf
@@ -70,6 +72,9 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	makeindex $(subst .tex,.idx,$<)
 	xelatex -no-pdf $< $(word 2,$^)
 	bash tinker-index.sh $(subst .tex,.idx,$<)
+
+sichuan-cookbook-imposed.xdv: sichuan-cookbook-imposed.tex \
+	sichuan-cookbook.pdf
 
 git-revision.tex: $(wildcard *.cls) $(wildcard *.eps) \
 	$(filter-out git-revision.tex, $(wildcard *.tex))

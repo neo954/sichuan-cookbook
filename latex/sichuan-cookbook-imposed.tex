@@ -27,10 +27,11 @@
 % OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 % OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 %
-
-% This script is designed to impose the entire book, generating a printer-ready
-% PDF specifically for hardcover book production. It efficiently manages
-% printer spreads and compensates for page creep.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This LaTeX file is designed to impose the entire book, generating a
+% printer-ready PDF specifically for hardcover book production. It efficiently
+% manages printer spreads and compensates for page creep.
 %
 % The book will be printed on A4-sized paper. I have decided that each
 % signature will consist of four A4 sheets, resulting in each signature
@@ -44,6 +45,12 @@
 % full signatures, each containing 16 pages, summing up to 21 and 3/4
 % signatures. This strategic layout simplifies the manufacturing process,
 % allowing for separate and specialized production of the color pages.
+%
+%
+%
+%
+% The inner pages will be constructed using 104 gsm acid-free paper. The
+% lining pages will be made from 90 gsm kozo washi paper.
 
 %
 % [Number of pages] / (4 - 1) = [Number of spreads]
@@ -67,6 +74,8 @@
 	marginparsep=0.000000mm % Separation between the margin notes and the main
 	                        %     text
 ]{geometry}
+\usepackage[zihao=5]{ctexsize}
+\usepackage[T1]{fontenc}
 \input{git-revision.tex}
 \usepackage{bookmark}
 	\hypersetup{
@@ -78,7 +87,7 @@
 		pdfproducer={Quux Script-Shift Scribe},
 		pdftoolbar={true},
 		pdftitle={Sichuan Cookbook 1972 Remake},
-		pdfsubject={312 Traditional Recipes: The Culinary History of Sichuan},
+		pdfsubject={Imposition for Hardcover Book},
 		pdfauthor={Chengdu Catering Company},
 		pdfkeywords={Chinese-food, cookbook, culture, food, recipe, %
 			Sichuan, Szechuan, Szechwan},
@@ -92,14 +101,123 @@
 		},
 		hidelinks
 	}
-\usepackage{scalefnt}
+%\usepackage{scalefnt}
 \usepackage{pdfpages}
-\usepackage{pdfoverlay}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{forloop}
+%\usepackage{pdfoverlay}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The thickness of inner paper
+\newlength{\paperthickness}%
+\setlength{\paperthickness}{0.124mm}%
+
+% The length of page creep
+\newlength{\pagecreep}%
+\setlength{\pagecreep}{\paperthickness}%
+
+\newlength{\signatureheight}
+\setlength{\signatureheight}{50mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}%
+\setlength{\parskip}{0\baselineskip}%
 
 \begin{document}
 
-\pagestyle{empty}
+% Signature A (3/4)
+\begin{textblock*}{\baselineskip}% Signature mark
+	(.5\paperwidth-.309523em,\paperheight-\signatureheight)
+\rotatebox{-90}{\scriptsize{\rule{.619047em}{.619047em} A (3/4)}}
+\end{textblock*}
+\includepdf[
+	pages={14,3,4,13},
+	delta={\the\dimexpr4\pagecreep\relax\space 0},
+	nup=2x1,
+	noautoscale
+]{sichuan-cookbook.pdf}
+\includepdf[
+	pages={12,5,6,11},
+	delta={\the\dimexpr2\pagecreep\relax\space 0},
+	nup=2x1,
+	noautoscale
+]{sichuan-cookbook.pdf}
+\includepdf[
+	pages={10,7,8,9},
+	delta={\the\dimexpr0\pagecreep\relax\space 0},
+	nup=2x1,
+	noautoscale
+]{sichuan-cookbook.pdf}
 
+\newcounter{n}
+\newcounter{r0}
+\newcounter{r1}
+\newcounter{r2}
+\newcounter{r3}
+\newcounter{r4}
+\newcounter{r5}
+\newcounter{r6}
+\newcounter{r7}
+\newcounter{r8}
+\newcounter{r9}
+\newcounter{r10}
+\newcounter{r11}
+\newcounter{r12}
+\newcounter{r13}
+\newcounter{r14}
+\newcounter{r15}
+
+\forloop{n}{2}{\value{n} < 23}{%
+
+\setcounter{r0}{\value{n} * 16 - 17}
+\setcounter{r1}{\value{r0} + 1}
+\setcounter{r2}{\value{r1} + 1}
+\setcounter{r3}{\value{r2} + 1}
+\setcounter{r4}{\value{r3} + 1}
+\setcounter{r5}{\value{r4} + 1}
+\setcounter{r6}{\value{r5} + 1}
+\setcounter{r7}{\value{r6} + 1}
+\setcounter{r8}{\value{r7} + 1}
+\setcounter{r9}{\value{r8} + 1}
+\setcounter{r10}{\value{r9} + 1}
+\setcounter{r11}{\value{r10} + 1}
+\setcounter{r12}{\value{r11} + 1}
+\setcounter{r13}{\value{r12} + 1}
+\setcounter{r14}{\value{r13} + 1}
+\setcounter{r15}{\value{r14} + 1}
+
+% Signature B to V
+\begin{textblock*}{\baselineskip}% Signature mark
+	(.5\paperwidth-.309523em,\paperheight-\signatureheight)
+\rotatebox{-90}{\scriptsize{\rule{.619047em}{.619047em} \Alph{n}}}
+\end{textblock*}
+\includepdf[
+	pages={\arabic{r15},\arabic{r0},\arabic{r1},\arabic{r14}},
+	delta={\the\dimexpr6\pagecreep\relax\space 0},
+	nup=2x1,
+	noautoscale
+]{sichuan-cookbook.pdf}
+\includepdf[
+	pages={\arabic{r13},\arabic{r2},\arabic{r3},\arabic{r12}},
+	delta={\the\dimexpr4\pagecreep\relax\space 0},
+	nup=2x1,
+	noautoscale
+]{sichuan-cookbook.pdf}
+\includepdf[
+	pages={\arabic{r11},\arabic{r4},\arabic{r5},\arabic{r10}},
+	delta={\the\dimexpr2\pagecreep\relax\space 0},
+	nup=2x1,
+	noautoscale
+]{sichuan-cookbook.pdf}
+\includepdf[
+	pages={\arabic{r9},\arabic{r6},\arabic{r7},\arabic{r8}},
+	delta={\the\dimexpr0\pagecreep\relax\space 0},
+	nup=2x1,
+	noautoscale
+]{sichuan-cookbook.pdf}
+}
 
 \end{document}
 
