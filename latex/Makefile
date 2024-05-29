@@ -75,6 +75,7 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 
 sichuan-cookbook-imposed.xdv: sichuan-cookbook-imposed.tex \
 	sichuan-cookbook.pdf
+	xelatex -no-pdf $<
 
 git-revision.tex: $(wildcard *.cls) $(wildcard *.eps) \
 	$(filter-out git-revision.tex, $(wildcard *.tex))
@@ -102,6 +103,7 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 
 signature-marks-test.xdv: signature-marks-test.tex \
 	sichuan-cookbook-imposed.pdf
+	xelatex -no-pdf $<
 
 sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
