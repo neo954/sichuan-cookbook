@@ -47,16 +47,8 @@
 % allowing for separate and specialized production of the color pages.
 %
 %
+% The inner pages will be constructed using 100 gsm printing paper.
 %
-%
-% The inner pages will be constructed using 104 gsm acid-free paper. The
-% lining pages will be made from 90 gsm kozo washi paper.
-
-%
-% [Number of pages] / (4 - 1) = [Number of spreads]
-% [Number of spreads] x [Thickness of paper] = [Total creep]
-%
-% For a single signature
 
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[openany]{book}
@@ -115,7 +107,7 @@
 
 % The length of page creep
 \newlength{\pagecreep}%
-\setlength{\pagecreep}{1.570796\paperthickness}%
+\setlength{\pagecreep}{1.570796\paperthickness}% pi / 2
 
 \newlength{\signatureheight}
 \setlength{\signatureheight}{93mm}
