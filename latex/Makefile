@@ -100,6 +100,9 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 	front-cover.pdf back-cover.pdf quux-logo.pdf position-indicator.pdf
 	xelatex -no-pdf $<
 
+signature-marks-test.xdv: signature-marks-test.tex \
+	sichuan-cookbook-imposed.pdf
+
 sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
 		-dAutoRotatePages=/None \
