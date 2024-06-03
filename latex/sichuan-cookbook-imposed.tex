@@ -113,8 +113,8 @@
 \newlength{\pagecreep}%
 \setlength{\pagecreep}{1.570796\paperthickness}% pi / 2
 
-\newlength{\signatureheight}
-\setlength{\signatureheight}{93mm}
+\newlength{\signaturemarkheight}
+\setlength{\signaturemarkheight}{93mm}
 \newlength{\diagonalmarkkern}
 \setlength{\diagonalmarkkern}{26.5mm}
 \newlength{\diagonalmarkoffset}
@@ -133,7 +133,7 @@
 % Signature A (3/4)
 
 \begin{textblock*}{\baselineskip}% Signature mark
-	(.5\paperwidth-.309523em,\paperheight-\signatureheight)
+	(.5\paperwidth-.309523em,\paperheight-\signaturemarkheight)
 	\rotatebox{-90}{%
 		\scriptsize{%
 			\rule{1.625ex}{1.625ex}%
@@ -204,7 +204,7 @@
 % Signature B to V
 
 \begin{textblock*}{\baselineskip}% Signature mark
-	(.5\paperwidth-.309523em,\paperheight-\signatureheight)
+	(.5\paperwidth-.309523em,\paperheight-\signaturemarkheight)
 	\rotatebox{-90}{%
 		\scriptsize{%
 			\rule{1.625ex}{1.625ex}%
