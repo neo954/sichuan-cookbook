@@ -104,6 +104,7 @@
 %\usepackage{scalefnt}
 \usepackage{pdfpages}
 \usepackage[absolute,overlay]{textpos}
+\usepackage{nicefrac}
 \usepackage{forloop}
 %\usepackage{pdfoverlay}
 
@@ -115,10 +116,14 @@
 
 % The length of page creep
 \newlength{\pagecreep}%
-\setlength{\pagecreep}{\paperthickness}%
+\setlength{\pagecreep}{1.570796\paperthickness}%
 
 \newlength{\signatureheight}
-\setlength{\signatureheight}{50mm}
+\setlength{\signatureheight}{98mm}
+\newlength{\diagonalmarkkern}
+\setlength{\diagonalmarkkern}{36.5mm}
+\newlength{\diagonalmarkoffset}
+\setlength{\diagonalmarkoffset}{1mm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -127,10 +132,22 @@
 
 \begin{document}
 
+\newcounter{n}
+\setcounter{n}{1}
+
 % Signature A (3/4)
+
 \begin{textblock*}{\baselineskip}% Signature mark
 	(.5\paperwidth-.309523em,\paperheight-\signatureheight)
-\rotatebox{-90}{\scriptsize{\rule{.619047em}{.619047em} A (3/4)}}
+	\rotatebox{-90}{%
+		\scriptsize{%
+			\rule{1.625ex}{1.625ex}%
+			\kern\diagonalmarkkern%
+			\rule{1.625ex}{1.625ex}% Diagonal mark
+			\kern-\diagonalmarkkern%
+			\Alph{n} (\nicefrac{3}{4})%
+		}%
+	}%
 \end{textblock*}
 \includepdf[
 	pages={14,3,4,13},
@@ -151,7 +168,6 @@
 	noautoscale
 ]{sichuan-cookbook.pdf}
 
-\newcounter{n}
 \newcounter{r0}
 \newcounter{r1}
 \newcounter{r2}
@@ -171,27 +187,38 @@
 
 \forloop{n}{2}{\value{n} < 23}{%
 
-\setcounter{r0}{\value{n} * 16 - 17}
-\setcounter{r1}{\value{r0} + 1}
-\setcounter{r2}{\value{r1} + 1}
-\setcounter{r3}{\value{r2} + 1}
-\setcounter{r4}{\value{r3} + 1}
-\setcounter{r5}{\value{r4} + 1}
-\setcounter{r6}{\value{r5} + 1}
-\setcounter{r7}{\value{r6} + 1}
-\setcounter{r8}{\value{r7} + 1}
-\setcounter{r9}{\value{r8} + 1}
-\setcounter{r10}{\value{r9} + 1}
+\setcounter{r0} {\value{n} * 16 - 17}
+\setcounter{r1} {\value{r0}  + 1}
+\setcounter{r2} {\value{r1}  + 1}
+\setcounter{r3} {\value{r2}  + 1}
+\setcounter{r4} {\value{r3}  + 1}
+\setcounter{r5} {\value{r4}  + 1}
+\setcounter{r6} {\value{r5}  + 1}
+\setcounter{r7} {\value{r6}  + 1}
+\setcounter{r8} {\value{r7}  + 1}
+\setcounter{r9} {\value{r8}  + 1}
+\setcounter{r10}{\value{r9}  + 1}
 \setcounter{r11}{\value{r10} + 1}
 \setcounter{r12}{\value{r11} + 1}
 \setcounter{r13}{\value{r12} + 1}
 \setcounter{r14}{\value{r13} + 1}
 \setcounter{r15}{\value{r14} + 1}
 
+\addtolength{\diagonalmarkkern}{\diagonalmarkoffset}%
+
 % Signature B to V
+
 \begin{textblock*}{\baselineskip}% Signature mark
 	(.5\paperwidth-.309523em,\paperheight-\signatureheight)
-\rotatebox{-90}{\scriptsize{\rule{.619047em}{.619047em} \Alph{n}}}
+	\rotatebox{-90}{%
+		\scriptsize{%
+			\rule{1.625ex}{1.625ex}%
+			\kern\diagonalmarkkern%
+			\rule{1.625ex}{1.625ex}% Diagonal mark
+			\kern-\diagonalmarkkern%
+			\Alph{n}%
+		}%
+	}%
 \end{textblock*}
 \includepdf[
 	pages={\arabic{r15},\arabic{r0},\arabic{r1},\arabic{r14}},
