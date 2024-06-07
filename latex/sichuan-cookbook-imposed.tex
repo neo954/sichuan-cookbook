@@ -110,8 +110,9 @@
 \setlength{\paperthickness}{0.124mm}%
 
 % The page creep compensation for a single piece of paper
+\newcommand{\halfpi}{1.5707963}% pi / 2 = 1.5707963
 \newlength{\pagecreep}%
-\setlength{\pagecreep}{1.570796\paperthickness}% pi / 2
+\setlength{\pagecreep}{\halfpi\paperthickness}%
 
 \newlength{\signaturemarkheight}
 \setlength{\signaturemarkheight}{93mm}
