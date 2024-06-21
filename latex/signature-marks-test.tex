@@ -98,13 +98,16 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% 100 gsm  118.36 micron    Presentation
+%
 % The thickness of inner paper
 \newlength{\paperthickness}%
-\setlength{\paperthickness}{0.124mm}%
+\setlength{\paperthickness}{0.11836mm}%
 
-% The length of page creep
+% The page creep compensation for a single piece of paper
+\newcommand{\halfpi}{1.5707963}% pi / 2 = 1.5707963
 \newlength{\pagecreep}%
-\setlength{\pagecreep}{1.570796\paperthickness}%
+\setlength{\pagecreep}{\halfpi\paperthickness}%
 
 \newlength{\cropmargin}%
 
@@ -114,6 +117,7 @@
 \setlength{\parskip}{0\baselineskip}%
 
 \begin{document}
+\enlargethispage{5mm}%
 \newcounter{n}%
 \setcounter{n}{1}%
 \newcounter{p}%
