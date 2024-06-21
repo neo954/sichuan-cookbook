@@ -104,11 +104,6 @@
 \newlength{\paperthickness}%
 \setlength{\paperthickness}{0.11836mm}%
 
-% The page creep compensation for a single piece of paper
-\newcommand{\halfpi}{1.5707963}% pi / 2 = 1.5707963
-\newlength{\pagecreep}%
-\setlength{\pagecreep}{\halfpi\paperthickness}%
-
 \newlength{\cropmargin}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -119,19 +114,19 @@
 \begin{document}
 \enlargethispage{5mm}%
 \newcounter{n}%
-\setcounter{n}{1}%
+\setcounter{n}{0}%
 \newcounter{p}%
-\setcounter{p}{1}%
+\setcounter{p}{167}%
 \null%
 \hfill%
-\setlength{\cropmargin}{.5\textwidth-3\paperthickness}%
+\setlength{\cropmargin}{.5\paperwidth-4\paperthickness}%
+\forloop[-1]{n}{22}{\value{n} > 1}{%
 \includegraphics[page=\arabic{p},scale=1,trim={\cropmargin, 0, \cropmargin, 0},clip]{sichuan-cookbook-imposed.pdf}%
-\setcounter{p}{\value{p} + 6}%
-\setlength{\cropmargin}{.5\textwidth-4\paperthickness}%
-\forloop{n}{2}{\value{n} < 23}{%
-\includegraphics[page=\arabic{p},scale=1,trim={\cropmargin, 0, \cropmargin, 0},clip]{sichuan-cookbook-imposed.pdf}%
-\setcounter{p}{\value{p} + 8}%
+\setcounter{p}{\value{p} - 8}%
 }% \forloop
+\setlength{\cropmargin}{.5\paperwidth-3\paperthickness}%
+\setcounter{p}{1}%
+\includegraphics[page=\arabic{p},scale=1,trim={\cropmargin, 0, \cropmargin, 0},clip]{sichuan-cookbook-imposed.pdf}%
 \hfill%
 \null%
 \end{document}
