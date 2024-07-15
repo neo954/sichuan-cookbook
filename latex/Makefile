@@ -30,6 +30,8 @@
 
 GPG_SIGNING_KEY:=A8B78637C10E5FC5306D8C63354783CF5CD9EE77
 
+imposed: sichuan-cookbook-imposed.pdf
+
 build: sichuan-cookbook.pdf
 
 all: pdf
@@ -43,8 +45,6 @@ distilled: book-cover.d.pdf sichuan-cookbook.d.pdf
 outlined: book-cover.o.pdf sichuan-cookbook.o.pdf
 
 print: book-cover.o.pdf sichuan-cookbook-i.o.pdf
-
-imposed: sichuan-cookbook-imposed.pdf
 
 zip: sichuan-cookbook-pdf.zip
 
