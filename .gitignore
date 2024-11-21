@@ -19,6 +19,7 @@ jpeg/*.jpg
 latex/*.cache
 latex/*.idx.md5
 latex/*.pdf
+latex/*.idx.md5
 latex/git-revision.tex
 proof
 trim
