@@ -33,21 +33,22 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ### Project Goals
 
-The objectives of the Sichuan Cookbook 1972 LaTeX Remake project are:
+The primary objectives of the Sichuan Cookbook 1972 LaTeX Remake project are
+as follows:
 
-* [x] To produce a high-quality remake of the entire book utilizing modern
+* [x] To create a high-quality remake of the entire book using modern
       information technology.
-* [x] To maintain typography that closely matches the original paperback
-      edition.
-* [x] To convert the paperback book's front cover into a vector graphic image.
-* [x] To convert illustrations within the book into vector graphic images.
+* [x] To replicate the typography of the original paperback edition as closely
+      as possible.
+* [x] To convert the paperback book's front cover into a vector graphic.
+* [x] To convert the book's illustrations into vector graphics.
 * [x] To ensure that the LaTeX code in each recipe file remains simple and
-      clear, providing structured data for further processing (e.g., conversion
-      into JSON or XML formats).
+      clear, enabling easy data extraction for future processing (e.g.,
+      conversion to JSON or XML formats).
 
 ### Additional Achievements
 
-In addition to the main goals, the project has successfully completed the
+In addition to the primary goals, the project has successfully completed the
 following tasks:
 
 * [x] Creation of a half-title page.
@@ -55,12 +56,12 @@ following tasks:
 * [x] Design of a new title page for the remake edition.
 * [x] Compilation of a copyright page.
 * [x] Compilation of collation notes.
-* [x] Generation of an ingredients index, ordered by the number of strokes.
+* [x] Generation of an ingredients index, sorted by the number of strokes.
 * [x] Creation of a colophon.
 
 ### Fonts Used in This Book
 
-The following fonts have been utilized in this book:
+The following fonts have been used throughout this book:
 
 #### Songti
 
