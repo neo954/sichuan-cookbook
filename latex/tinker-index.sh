@@ -574,6 +574,9 @@ function index_entry()
 	"莲米")
 		keyword="莲子!${keyword}"
 		;;
+	"乳猪")
+		keyword="猪!${keyword}"
+		;;
 	"整猪头")
 		keyword="猪头"
 		;;
