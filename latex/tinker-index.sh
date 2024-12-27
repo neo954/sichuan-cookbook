@@ -825,7 +825,7 @@ function index_entry()
 		keyword="猪肉!${keyword}"
 		;;
 	"腱子肉")
-		keyword="猪瘦肉!${keyword}"
+		keyword="牛肉!${keyword}"
 		;;
 	"熟猪肥膘肉")
 		keyword="猪肥膘!猪肥膘肉!${keyword}";;
