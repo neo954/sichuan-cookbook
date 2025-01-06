@@ -128,10 +128,12 @@ trim/z999.png: trim/%.png: jpeg/%.jpg
 		-quality 100 -alpha off +dither -colors 16 \
 		$@
 
-trim/b002.png trim/b022.png trim/b042.png trim/c008.png trim/p266.png trim/p300.png: trim/%.png: jpeg/%.jpg
+trim/b000.png trim/b002.png trim/b022.png trim/b042.png trim/c008.png \
+	trim/p266.png trim/p300.png trim/z998.png: trim/%.png: jpeg/p300.jpg
 	convert $< \
+		-filter Gaussian -resize 3091x4370 \
 		-fill white -draw 'rectangle 0,0 3091,4370' \
-		-quality 100 -alpha off -grayscale Rec709Luma -depth 4 \
+		-quality 100 -alpha off +dither -colors 16 \
 		$@
 
 # Retinex-based intensity correction and thresholding
