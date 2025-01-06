@@ -68,8 +68,8 @@ original paperback.
 ### Scanned Copy
 
 You can download a draft of the *[Sichuan Cookbook
-1972](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-pre-alpha/sichuan-cookbook-1972.pdf)*
-<sub>(75.6 MB)</sub>, which is a scanned copy in 185mm x 130mm paper size with
+1972](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.4-pre-alpha/sichuan-cookbook-1972-scan.pdf)*
+<sub>(138 MB)</sub>, which is a scanned copy in 185mm x 130mm paper size with
 an unproofed OCR text layer, for reference.
 
 ## Developing Environment Setup
@@ -141,7 +141,8 @@ command-line tools are installed.
 * Volunteers can claim unassigned tasks listed in the [GitHub
   issues](https://github.com/neo954/sichuan-cookbook/issues?q=is%3Aissue+is%3Aopen+Proofread+sort%3Acreated-asc+no%3Aassignee).
 * Utilize the [A4 paper size scanned copy for
-  printing](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.3-alpha/sichuan-cookbook-1972-proof-a4.pdf)  <sub>(80.6 MB)</sub> as a reference for proofreading.
+  printing](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.4-pre-alpha/sichuan-cookbook-1972-proof-a4.pdf)
+<sub>(145 MB)</sub> as a reference for proofreading.
 * Report any typographical errors by commenting on the issue page where you
   claimed the task. Pull requests for corrections are highly encouraged.
 
