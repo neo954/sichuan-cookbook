@@ -37,17 +37,19 @@
 		pdfprintscaling={AppDefault},
 		pdfpicktraybypdfsize={true},
 		pdfcreator={XeLaTeX},
-		pdfproducer={Quux System and Technology},
+		pdfproducer={Quux Script-Shift Scribe},
 		pdftoolbar={true},
-		pdftitle={四川菜谱1972重制版（预览）},
-		pdfsubject={四川菜谱},
-		pdfauthor={成都市饮食公司},
-		pdfkeywords={川菜},
+		pdftitle={Sichuan Cookbook 1972 Remake (Preview)},
+		pdfsubject={312 Traditional Recipes: The Culinary History of Sichuan},
+		pdfauthor={Chengdu Catering Company},
+		pdfkeywords={Chinese-food, cookbook, culture, food, recipe, %
+			Sichuan, Szechuan, Szechwan},
 		pdflang={zh-CN},
 		pdfinfo={
 			GitCommitName={\gitcommitname},
 			GitCommitHash={\gitcommithash},
 			GitCommitterDate={\gitcommitterdate},
+			PDFBuildDate={\pdfbuilddate},
 			PDFBuildHost={\pdfbuildhost}
 		},
 		hidelinks
@@ -96,7 +98,7 @@
 \cleardoublepage
 
 \hypertarget{half-title}{}%
-\bookmark[dest=half-title,level=section]{书名页}%
+\bookmark[dest=half-title-page,level=section]{书名页}%
 \pdfoverlaySetPDF{preview.pdf}
 \includepdf[pages=3]{sichuan-cookbook.pdf}
 \cleardoublepage
@@ -112,14 +114,14 @@
 \pdfoverlaySetPDF{preview.pdf}
 \includepdf[pages=7]{sichuan-cookbook.pdf}
 \clearpage
-\hypertarget{copyright}{}%
-\bookmark[dest=copyright,level=section]{版权页}%
+\hypertarget{copyright-page}{}%
+\bookmark[dest=copyright-page,level=section]{版权页}%
 \pdfoverlaySetPDF{sample.pdf}
 \includepdf[pages=8]{sichuan-cookbook.pdf}
 \cleardoublepage
 
-\hypertarget{chairman-mao-quotes}{}%
-\bookmark[dest=chairman-mao-quotes,level=section]{毛主席語录}%
+\hypertarget{quotes-from-chairman-mao}{}%
+\bookmark[dest=quotes-from-chairman-mao,level=section]{毛主席语录}%
 \includepdf[pages=9]{sichuan-cookbook.pdf}
 \cleardoublepage
 
@@ -129,9 +131,9 @@
 \includepdf[pages=11]{sichuan-cookbook.pdf}
 \cleardoublepage
 
-% Preface
-\hypertarget{preface}{}%
-\bookmark[dest=preface,level=section]{编印说明}%
+% Editorial notes 1972
+\hypertarget{editorial-notes-1972}{}%
+\bookmark[dest=editorial-notes-1972,level=section]{1972年编印说明}%
 \includepdf[pages=13]{sichuan-cookbook.pdf}
 \cleardoublepage
 
