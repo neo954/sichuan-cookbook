@@ -62,14 +62,14 @@ project was made publicly available on January 1, 2023.
 
 For a modern eBook format, download the *[Sichuan Cookbook 1972
 Remake](https://github.com/neo954/sichuan-cookbook/releases/download/v1.0.5/sichuan-cookbook.v1.0.5.pdf)*
-<sub>(3.46 MB)</sub> in A5 paper size (210mm x 148mm), a remade edition of the
+<sub>(3.46 MB)</sub> in A5 paper size (210mm × 148mm), a remade edition of the
 original paperback.
 
 ### Scanned Copy
 
 You can download a draft of the *[Sichuan Cookbook
 1972](https://github.com/neo954/sichuan-cookbook/releases/download/v0.0.4-pre-alpha/sichuan-cookbook-1972-scan.pdf)*
-<sub>(138 MB)</sub>, which is a scanned copy in 185mm x 130mm paper size with
+<sub>(138 MB)</sub>, which is a scanned copy in 185mm × 130mm paper size with
 an unproofed OCR text layer, for reference.
 
 ## Developing Environment Setup
@@ -99,7 +99,7 @@ command-line tools are installed.
 
 #### Prerequisites for Image Processing
 
-* The original book's dimensions (185mm x 130mm) are maintained, corresponding
+* The original book's dimensions (185mm × 130mm) are maintained, corresponding
   to an aspect ratio of approximately √2:1.
 * For 600dpi resolution, the digital image size should be 4370px x 3091px.
 * All JPEG photos are processed with ImageMagick and performed OCR with
