@@ -80,6 +80,10 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 
 sichuan-cookbook-sample.xdv: sichuan-cookbook-sample.tex cookbook.cls \
 	preview.pdf sample.pdf sichuan-cookbook.pdf
+	$(RM) $(subst .tex,.aux,$<) $(subst .tex,.toc,$<)
+	xelatex -no-pdf $< $(word 2,$^)
+	makeindex $(subst .tex,.idx,$<)
+	xelatex -no-pdf $< $(word 2,$^)
 
 git-revision.tex: $(wildcard *.cls) $(wildcard *.eps) \
 	$(filter-out git-revision.tex, $(wildcard *.tex))
