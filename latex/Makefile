@@ -95,6 +95,11 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 	front-cover.pdf back-cover.pdf quux-logo.pdf position-indicator.pdf
 	xelatex -no-pdf $<
 
+sichuan-cookbook.pdf: sichuan-cookbook.xdv
+	xdvipdfmx -r 600 -E -z 9 -V 7 -o $@ $^
+	hyperxmp-add-bytecount $@
+	hyperxmp-add-bytecount $@
+
 sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
 		-dAutoRotatePages=/None \
