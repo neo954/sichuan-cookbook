@@ -32,6 +32,13 @@
 \input{git-revision.tex}
 \usepackage{bookmark}
 \usepackage{hyperxmp}
+\usepackage{totpages}
+\AtBeginDocument{%
+	\hypersetup{%
+		pdfpagerange={1-\ref*{TotPages}},
+		pdfnumpages={\ref*{TotPages}}
+	}%
+}
 	\hypersetup{
 		unicode=true,
 		pdfduplex={DuplexFlipLongEdge},
@@ -65,10 +72,8 @@
 		pdfpubtype={book},
 		pdfvolumenum={0},
 		pdfissuenum={0},
-		pdfpagerange={1-352},
 		pdfisbn={0},
 		pdfbookedition={[en]First electronic edition},
-		pdfnumpages={352},
 		pdflang={zh-CN},
 		pdfmetalang={en},
 		pdfurl={https://github.com/neo954/sichuan-cookbook/releases/download/v1.0.6/sichuan-cookbook.v1.0.6.pdf},
