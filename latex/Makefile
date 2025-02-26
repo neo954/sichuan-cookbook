@@ -114,6 +114,11 @@ sichuan-cookbook.pdf: sichuan-cookbook.xdv
 	hyperxmp-add-bytecount $@
 	hyperxmp-add-bytecount $@
 
+sichuan-cookbook-sample.pdf: sichuan-cookbook-sample.xdv
+	xdvipdfmx -r 600 -E -z 9 -V 7 -o $@ $^
+	hyperxmp-add-bytecount $@
+	hyperxmp-add-bytecount $@
+
 sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
 		-dAutoRotatePages=/None \
