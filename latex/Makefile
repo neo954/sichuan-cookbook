@@ -96,7 +96,7 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 	xelatex -no-pdf $<
 
 book-cover.pdf sichuan-cookbook.pdf: %.pdf: %.xdv
-	xdvipdfmx -r 600 -E -z 9 -V 7 -o $@ $^
+	xdvipdfmx -r 600 -E -z 9 -V 5 -o $@ $^
 	hyperxmp-add-bytecount $@
 	hyperxmp-add-bytecount $@
 
@@ -134,7 +134,7 @@ sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 	xelatex -no-pdf $^
 
 %.pdf: %.xdv
-	xdvipdfmx -r 600 -E -z 9 -V 7 -o $@ $^
+	xdvipdfmx -r 600 -E -z 9 -V 5 -o $@ $^
 
 %.ps: %.dvi
 	dvips -D 600 -j -Ppdf -o $@ $^
@@ -146,7 +146,7 @@ sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 	convert $^ $@
 
 %.pdf: %.eps
-	epstopdf --res=600 --hires --gsopt=-dCompatibilityLevel=1.7 $^ $@
+	epstopdf --res=600 --hires --gsopt=-dCompatibilityLevel=1.5 $^ $@
 
 %.pdf: %.ps
 	ps2pdf -r600 $^ $@
