@@ -1,6 +1,6 @@
 % BSD 3-Clause License
 %
-% Copyright (c) 2023, 2024 Quux System and Technology. All rights reserved.
+% Copyright (c) 2023--2025 Quux System and Technology. All rights reserved.
 %
 % Redistribution and use in source and binary forms, with or without
 % modification, are permitted provided that the following conditions are met:
@@ -54,19 +54,53 @@
 ]{bookcover}
 \input{git-revision.tex}
 \usepackage{hyperref}
+\usepackage{hyperxmp}
 	\hypersetup{
 		unicode=true,
-		pdfduplex={DuplexFlipShortEdge},
+		pdfduplex={DuplexFlipLongEdge},
 		pdfprintscaling={AppDefault},
 		pdfpicktraybypdfsize={true},
 		pdfcreator={XeLaTeX},
 		pdfproducer={Quux Script-Shift Scribe},
 		pdftoolbar={true},
-		pdftitle={Sichuan Cookbook 1972 Remake},
-		pdfsubject={Book Cover Design},
+		pdftitle={Sichuan Cookbook 1972 Remake: Book Cover},
+		pdfsubject={Back Cover, Spine, Front Cover, with Bleed},
 		pdfauthor={GONG Jie},
-		pdfkeywords={Book cover},
+		pdfauthortitle={},
+		pdfcopyright={Copyright (c) 2023--2025 Quux System and Technology},
+		pdfkeywords={Sichuan, cookbook, book cover, front cover, back cover, %
+			spine, print-ready, with bleed, publishing, graphic design, %
+			book design, book layout, cover art, book printing, bleed area, %
+			book publishing, book mockup, printable cover},
+		pdflicenseurl={https://opensource.org/license/bsd-3-clause},
+		pdfcaptionwriter={GONG Jie},
+		pdfcontactaddress={},
+		pdfcontactcity={Fengtai District},
+		pdfcontactregion={Beijing Municipality},
+		pdfcontactcountry={China},
+		pdfcontactpostcode={100000},
+		pdfcontactemail={},
+		pdfcontactphone={},
+		pdfcontacturl={%
+			https://github.com/neo954/sichuan-cookbook
+		},
+		pdfdocumentid={uuid:a71e3a09-19e9-438a-b6f3-c15bf4e2308a},
+		pdfversionid={\gitcommitname},
+		pdfpublication={},
+		pdfpublisher={Quux System and Technology},
+		pdfpubtype={book},
+		pdfvolumenum={0},
+		pdfissuenum={0},
+		pdfisbn={0},
+		pdfbookedition={[en]First electronic edition},
 		pdflang={zh-CN},
+		pdfmetalang={en},
+		pdfurl={https://github.com/neo954/sichuan-cookbook/releases/download/{\gitcommitname}/book-cover.{\gitcommitname}.pdf},
+		pdfdoi={},
+		pdfidentifier={},
+		pdfpagerange={1},
+		pdfnumpages={1},
+		pdfbytes={168438},
 		pdfinfo={
 			GitCommitName={\gitcommitname},
 			GitCommitHash={\gitcommithash},
@@ -75,6 +109,11 @@
 			PDFBuildHost={\pdfbuildhost}
 		},
 		hidelinks
+	}
+	\XMPLangAlt{zh-CN}{
+		pdftitle={四川菜谱1972重制版：书籍封面},
+		pdfsubject={封底、书脊、封面，出血},
+		pdfcopyright={版权所有 (c) 2023--2025 馄饨系统与科技}
 	}
 \usepackage[zihao=5]{ctexsize}
 \usepackage[quiet]{xeCJK}
