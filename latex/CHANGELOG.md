@@ -29,6 +29,20 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+# 2025-03-31 - Version 1.0.6
+
+* Fix DE (的) in recipe 116.
+* Fix XIAN (馅) in recipe 116.
+* Fix FEN (粉) in recipe 118.
+* Fix ZUO (作) in recipe 107.
+* Fix character spacing when #3 for \ingredient begins with a left parenthesis
+* Use the simplified form of YU (语) in the quotes-from-chairman-mao page.
+* Remove the enumeration commas (顿号) between the numbers that indicate
+  approximate figures.
+* Collation note for recipe 252.
+* Collation note for QIZIKUAI (旗子块).
+* Collation note for KOUMO (口蘑).
+
 # 2024-12-30 - Version 1.0.5
 
 * Corrected YACAI (芽菜) in recipe 133
