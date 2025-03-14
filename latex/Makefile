@@ -92,6 +92,9 @@ front-cover.xdv: front-cover.tex cookbook.cls cover-illustration.pdf
 back-cover.xdv: back-cover.tex cookbook.cls back-cover-background.pdf \
 	quux-logo.pdf
 
+multiple-language-copyright.xdv: multiple-language-copyright.tex \
+	cookbook.cls git-revision.tex
+
 book-cover.xdv: book-cover.tex git-revision.tex \
 	front-cover.pdf back-cover.pdf quux-logo.pdf position-indicator.pdf
 
