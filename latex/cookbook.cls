@@ -303,10 +303,10 @@
 			\mbox{%
 				\hspace{2em}%
 				\makebox[9em][s]{%
-					\ifthenelse{\lengthtest{\spanwidth>9em}}{%
-						\mbox{####1####2####3}%
-					}{%
+					\ifthenelse{\lengthtest{\spanwidth<9em}}{%
 						\mbox{####1####2}\hfil\mbox{\null####3}%
+					}{%
+						\mbox{####1####2####3}%
 					}%
 				}%
 				\hspace{2em}%
