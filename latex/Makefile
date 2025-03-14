@@ -79,6 +79,8 @@ git-revision.tex: $(wildcard *.cls) $(wildcard *.eps) \
 		$$(git log -1 --format=%H)`'}' >>$@
 	echo '\\newcommand{\\gitcommithash}{'`git log -1 \
 		--format=%H`'}' >>$@
+	echo '\\newcommand{\\gitabbrcommithash}{'`git log -1 \
+		--format=%h`'}' >>$@
 	echo '\\newcommand{\\gitcommitterdate}{'`git log -1 \
 		--format=%ci --date=short`'}' >>$@
 	echo '\\newcommand{\\pdfbuilddate}{'`date \
