@@ -102,8 +102,6 @@ book-cover.pdf sichuan-cookbook.pdf: %.pdf: %.xdv
 	xdvipdfmx -d 5 -r 600 -E -z 9 -V 5 -o $@ $^
 	hyperxmp-add-bytecount $@ || \
 		/usr/share/texlive/texmf-dist/scripts/hyperxmp/hyperxmp-add-bytecount.pl $@
-	hyperxmp-add-bytecount $@ || \
-		/usr/share/texlive/texmf-dist/scripts/hyperxmp/hyperxmp-add-bytecount.pl $@
 
 sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 	gs -dBATCH -dNOCACHE -dNOPAUSE -dSAFER \
