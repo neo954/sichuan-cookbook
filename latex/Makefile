@@ -99,7 +99,7 @@ book-cover.xdv: book-cover.tex git-revision.tex \
 	front-cover.pdf back-cover.pdf quux-logo.pdf position-indicator.pdf
 
 book-cover.pdf sichuan-cookbook.pdf: %.pdf: %.xdv
-	xdvipdfmx -r 600 -E -z 9 -V 5 -o $@ $^
+	xdvipdfmx -d 5 -r 600 -E -z 9 -V 5 -o $@ $^
 	hyperxmp-add-bytecount $@ || \
 		/usr/share/texlive/texmf-dist/scripts/hyperxmp/hyperxmp-add-bytecount.pl $@
 	hyperxmp-add-bytecount $@ || \
@@ -139,7 +139,7 @@ sichuan-cookbook-i.o.pdf: sichuan-cookbook.pdf
 	xelatex -no-pdf $^
 
 %.pdf: %.xdv
-	xdvipdfmx -r 600 -E -z 9 -V 5 -o $@ $^
+	xdvipdfmx -d 5 -r 600 -E -z 9 -V 5 -o $@ $^
 
 %.ps: %.dvi
 	dvips -D 600 -j -Ppdf -o $@ $^
