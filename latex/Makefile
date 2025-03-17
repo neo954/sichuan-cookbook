@@ -60,7 +60,7 @@ sichuan-cookbook.xdv: sichuan-cookbook.tex cookbook.cls git-revision.tex \
 	illustration-003.pdf illustration-004.pdf illustration-005.pdf \
 	illustration-006.pdf illustration-007.pdf illustration-008.pdf \
 	illustration-009.pdf illustration-010.pdf illustration-011.pdf \
-	multiple-language-copyright.pdf \
+	multi-language-copyright.pdf \
 	back-cover.pdf tinker-index.sh sichuan-cookbook.mst
 	$(RM) $(subst .tex,.aux,$<) $(subst .tex,.toc,$<)
 	xelatex -no-pdf $< $(word 2,$^)
@@ -92,7 +92,7 @@ front-cover.xdv: front-cover.tex cookbook.cls cover-illustration.pdf
 back-cover.xdv: back-cover.tex cookbook.cls back-cover-background.pdf \
 	quux-logo.pdf
 
-multiple-language-copyright.xdv: multiple-language-copyright.tex \
+multi-language-copyright.xdv: multi-language-copyright.tex \
 	cookbook.cls git-revision.tex
 
 book-cover.xdv: book-cover.tex git-revision.tex \
