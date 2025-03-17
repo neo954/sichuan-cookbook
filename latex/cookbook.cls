@@ -157,8 +157,8 @@
 \usepackage{emptypage}
 	\pagestyle{empty}
 \usepackage{nicefrac}
-\usepackage{hyperref}
 \usepackage{pgffor}
+\usepackage{hyperref}
 
 \newenvironment{cookbook}{%
 	\titleformat{\chapter}[display]{%
