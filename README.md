@@ -29,6 +29,14 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+:warning: This project,
+[Sichuan Cookbook](https://github.com/neo954/sichuan-cookbook), is focused on
+**authentic culinary instructions**, not a **software or technical guide**.
+Please note that on platforms like GitHub, the terminology **cookbook** is
+often associated with software-related guide, which is not the case here.
+
+----
+
 *Sichuan Cookbook* (四川菜谱) is a renowned classic, first published in July
 1972 by Chengdu Catering Company (成都市饮食公司). It contains 312 traditional
 recipes, many of which are no longer served in modern restaurants. The aim of
