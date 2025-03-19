@@ -85,8 +85,10 @@ git-revision.tex: $(wildcard *.cls) $(wildcard *.eps) \
 		--format=%ci`'}' >>$@
 	touch $@.ts
 	touch -d 2025-01-01T00:00:00Z $@.tz
+	# Human-readable format (ISO 8601)
 	echo '\\newcommand{\\pdfbuilddate}{'`date -r $@.ts \
 		"+%F %T %z"`'}' >>$@
+	# PDF metadata format (alternative format)
 	echo '\\newcommand{\\pdfbuilddatealt}{'`date -r $@.ts \
 		"+D:%Y%m%d%H%M%S"``date -r $@.tz "++%H'%M'"`'}' >>$@
 	echo '\\newcommand{\\pdfbuildhost}{'`hostname -s`'}' >>$@
