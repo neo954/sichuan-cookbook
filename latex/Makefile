@@ -82,7 +82,7 @@ git-revision.tex: $(wildcard *.cls) $(wildcard *.eps) \
 	echo '\\newcommand{\\gitabbrcommithash}{'`git log -1 \
 		--format=%h`'}' >>$@
 	echo '\\newcommand{\\gitcommitterdate}{'`git log -1 \
-		--format=%ci --date=short`'}' >>$@
+		--format=%ci`'}' >>$@
 	echo '\\newcommand{\\pdfbuilddate}{'`date \
 		"+%Y-%m-%d %H:%M:%S %z"`'}' >>$@
 	echo '\\newcommand{\\pdfbuildhost}{'`hostname -s`'}' >>$@
