@@ -83,9 +83,14 @@ git-revision.tex: $(wildcard *.cls) $(wildcard *.eps) \
 		--format=%h`'}' >>$@
 	echo '\\newcommand{\\gitcommitterdate}{'`git log -1 \
 		--format=%ci`'}' >>$@
-	echo '\\newcommand{\\pdfbuilddate}{'`date \
-		"+%Y-%m-%d %H:%M:%S %z"`'}' >>$@
+	touch $@.ts
+	touch -d 2025-01-01T00:00:00Z $@.tz
+	echo '\\newcommand{\\pdfbuilddate}{'`date -r $@.ts \
+		"+%F %T %z"`'}' >>$@
+	echo '\\newcommand{\\pdfbuilddatealt}{'`date -r $@.ts \
+		"+D:%Y%m%d%H%M%S"``date -r $@.tz "++%H'%M'"`'}' >>$@
 	echo '\\newcommand{\\pdfbuildhost}{'`hostname -s`'}' >>$@
+	$(RM) $@.ts $@.tz
 
 front-cover.xdv: front-cover.tex cookbook.cls cover-illustration.pdf
 
