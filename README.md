@@ -29,6 +29,8 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+# Sichuan Cookbook (四川菜谱) Digital Remake
+
 :warning: This project,
 [Sichuan Cookbook](https://github.com/neo954/sichuan-cookbook), is focused on
 **authentic culinary instructions**, not a **software or technical guide**.
