@@ -31,11 +31,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Sichuan Cookbook (四川菜谱) Digital Remake
 
-:warning: This project,
-[Sichuan Cookbook](https://github.com/neo954/sichuan-cookbook), is focused on
-**authentic culinary instructions**, not a **software or technical guide**.
-Please note that on platforms like GitHub, the terminology **cookbook** is
-often associated with software-related guide, which is not the case here.
+> [!NOTE]
+> This project, [Sichuan Cookbook](https://github.com/neo954/sichuan-cookbook),
+> is focused on **authentic culinary instructions**, not a **software or
+> technical guide**. Please note that on platforms like GitHub, the
+> terminology **cookbook** is often associated with software-related guide,
+> which is not the case here.
 
 ----
 
