@@ -2,9 +2,9 @@ name: Build LaTeX eBook
 
 on:
   push:
-    branches: [ "devel", "v1.0" ]
+    branches: [ "devel", "v1.0", "ubuntu-26.04" ]
   pull_request:
-    branches: [ "devel", "v1.0" ]
+    branches: [ "devel", "v1.0", "ubuntu-26.04" ]
 
 jobs:
   build-latex-ebook:
