@@ -29,6 +29,10 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+# 2026-05-25 - Version 1.0.6.2
+
+* Deep communist red for quotes from Chairman Mao
+
 # 2025-12-31 - Version 1.0.6.1
 
 * Fix PDF metadata Korean language code.
