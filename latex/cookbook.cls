@@ -88,6 +88,9 @@
 	\xeCJKDeclareSubCJKBlock{Ext-H}{
 		"31350 -> "323AF
 	}
+	\xeCJKDeclareSubCJKBlock{Ext-J}{
+		"323B0 -> "3347F
+	}
 	\setCJKmainfont[
 		BoldFont=Noto Serif CJK SC Medium,
 		Ext-B={[AutoFakeBold=1.025]{HanaMinB}},
